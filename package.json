@@ -11,6 +11,7 @@
     "react-dom": "^16.13.1",
     "react-feather": "^2.0.8",
     "react-scripts": "3.4.3",
+    "reakit": "^1.2.5",
     "storybook": "^6.0.22",
     "tailwindcss": "^1.8.10"
   },
