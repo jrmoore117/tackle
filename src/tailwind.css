@@ -1,3 +1,160 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ---------- BASE BUTTON ---------- */
+.button {
+   @apply py-2 px-3 font-sans text-sm rounded transition duration-200 ease-in-out;
+}
+
+/* ---------- PRIMARY BUTTONS ---------- */
+.button--primary--default {
+   @apply text-gray-900 bg-white border-1 border-gray-500;
+}
+.button--primary--default:focus {
+   @apply outline-none animate-btn-ping-gray;
+}
+.button.button--primary--default:active {
+   @apply bg-gray-100;
+}
+.button--primary--default:hover {
+   @apply bg-gray-0;
+}
+
+.button--primary--blue {
+   @apply text-white bg-blue-500 border-1 border-blue-600;
+}
+.button--primary--blue:focus {
+   @apply outline-none animate-btn-ping-blue;
+}
+.button.button--primary--blue:active {
+   @apply bg-blue-600;
+}
+.button--primary--blue:hover {
+   @apply bg-blue-400;
+}
+
+.button--primary--red {
+   @apply text-white bg-red-500 border-1 border-red-600;
+}
+.button--primary--red:focus {
+   @apply outline-none animate-btn-ping-red;
+}
+.button.button--primary--red:active {
+   @apply bg-red-600;
+}
+.button--primary--red:hover {
+   @apply bg-red-400;
+}
+
+.button--primary--green {
+   @apply text-white bg-green-500 border-1 border-green-600;
+}
+.button--primary--green:focus {
+   @apply outline-none animate-btn-ping-green;
+}
+.button.button--primary--green:active {
+   @apply bg-green-600;
+}
+.button--primary--green:hover {
+   @apply bg-green-400;
+}
+
+.button--primary--purple {
+   @apply text-white bg-purple-500 border-1 border-purple-600;
+}
+.button--primary--purple:focus {
+   @apply outline-none animate-btn-ping-purple;
+}
+.button.button--primary--purple:active {
+   @apply bg-purple-600;
+}
+.button--primary--purple:hover {
+   @apply bg-purple-400;
+}
+
+.button--primary--indigo {
+   @apply text-white bg-indigo-500 border-1 border-indigo-600;
+}
+.button--primary--indigo:focus {
+   @apply outline-none animate-btn-ping-indigo;
+}
+.button.button--primary--indigo:active {
+   @apply bg-indigo-600;
+}
+.button--primary--indigo:hover {
+   @apply bg-indigo-400;
+}
+
+/* ---------- SECONDARY BUTTONS ---------- */
+.button--secondary--default {
+   @apply text-gray-900 border-1;
+   background-color: transparent;
+   border-color: transparent;
+}
+.button--secondary--default:focus {
+   @apply border-gray-300 outline-none animate-btn-ping-gray;
+}
+.button--secondary--default:hover {
+   @apply bg-gray-100;
+}
+
+.button--secondary--blue {
+   @apply text-blue-500 border-1;
+   background-color: transparent;
+   border-color: transparent;
+}
+.button--secondary--blue:focus {
+   @apply border-blue-100 outline-none animate-btn-ping-blue;
+}
+.button--secondary--blue:hover {
+   @apply bg-blue-0;
+}
+
+.button--secondary--red {
+   @apply text-red-500 border-1;
+   background-color: transparent;
+   border-color: transparent;
+}
+.button--secondary--red:focus {
+   @apply border-red-100 outline-none animate-btn-ping-red;
+}
+.button--secondary--red:hover {
+   @apply bg-red-0;
+}
+
+.button--secondary--green {
+   @apply text-green-500 border-1;
+   background-color: transparent;
+   border-color: transparent;
+}
+.button--secondary--green:focus {
+   @apply border-green-100 outline-none animate-btn-ping-green;
+}
+.button--secondary--green:hover {
+   @apply bg-green-0;
+}
+
+.button--secondary--purple {
+   @apply text-purple-500 border-1;
+   background-color: transparent;
+   border-color: transparent;
+}
+.button--secondary--purple:focus {
+   @apply border-purple-100 outline-none animate-btn-ping-purple;
+}
+.button--secondary--purple:hover {
+   @apply bg-purple-0;
+}
+
+.button--secondary--indigo {
+   @apply text-indigo-500 border-1;
+   background-color: transparent;
+   border-color: transparent;
+}
+.button--secondary--indigo:focus {
+   @apply border-indigo-100 outline-none animate-btn-ping-indigo;
+}
+.button--secondary--indigo:hover {
+   @apply bg-indigo-0;
+}
