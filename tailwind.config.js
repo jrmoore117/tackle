@@ -2,13 +2,64 @@ module.exports = {
    future: {},
    purge: [],
    theme: {
-      extend: {},
+      extend: {
+         borderWidth: {
+            '1': '1px',
+         },
+         animation: {
+            'btn-ping-blue': 'btn-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1',
+            'btn-ping-red': 'btn-ping-red 0.65s cubic-bezier(0,.656,0,.58) 1',
+            'btn-ping-green': 'btn-ping-green 0.65s cubic-bezier(0,.656,0,.58) 1',
+            'btn-ping-purple': 'btn-ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1',
+            'btn-ping-indigo': 'btn-ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1',
+            'btn-ping-gray': 'btn-ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1',
+         },
+         keyframes: {
+            'btn-ping-blue': {
+               '15%': { boxShadow: '0 0 0 3px #bdd7ff' },
+               '100%': { boxShadow: '0 0 0 6px transparent' },
+            },
+            'btn-ping-red': {
+               '15%': { boxShadow: '0 0 0 3px #fcc6cb' },
+               '100%': { boxShadow: '0 0 0 6px transparent' },
+            },
+            'btn-ping-green': {
+               '15%': { boxShadow: '0 0 0 3px #b3ead4' },
+               '100%': { boxShadow: '0 0 0 6px transparent' },
+            },
+            'btn-ping-purple': {
+               '15%': { boxShadow: '0 0 0 3px #dbd5ff' },
+               '100%': { boxShadow: '0 0 0 6px transparent' },
+            },
+            'btn-ping-indigo': {
+               '15%': { boxShadow: '0 0 0 3px #c3cce6' },
+               '100%': { boxShadow: '0 0 0 6px transparent' },
+            },
+            'btn-ping-gray': {
+               '15%': { boxShadow: '0 0 0 3px #e2e5ea' },
+               '100%': { boxShadow: '0 0 0 6px transparent' },
+            },
+         },
+      },
       fontFamily: {
          sans: ['Poppins', 'sans-serif'],
       },
       colors: {
          black: '#000',
          white: '#fff',
+         blue: {
+            '0': '#e9f2ff',
+            '100': '#bdd7ff',
+            '200': '#92bdff',
+            '300': '#66a3ff',
+            '400': '#3a88ff',
+            '500': '#247bff',
+            '600': '#206fe6',
+            '700': '#1956b3',
+            '800': '#123e80',
+            '900': '#0b254c',
+            '1000': '#040c19',
+         },
          red: {
             '0': '#feecee',
             '100': '#fcc6cb',
@@ -34,19 +85,6 @@ module.exports = {
             '800': '#005d38',
             '900': '#003822',
             '1000': '#00130b',
-         },
-         blue: {
-            '0': '#e9f2ff',
-            '100': '#bdd7ff',
-            '200': '#92bdff',
-            '300': '#66a3ff',
-            '400': '#3a88ff',
-            '500': '#247bff',
-            '600': '#206fe6',
-            '700': '#1956b3',
-            '800': '#123e80',
-            '900': '#0b254c',
-            '1000': '#040c19',
          },
          purple: {
             '0': '#f3f1ff',
@@ -101,12 +139,13 @@ module.exports = {
          'outline-indigo': '0 0 0 3px #9baad5',
          gray: '0 1px 2px 0 #e2e5ea',
          'outline-gray': '0 0 0 3px #e2e5ea',
-      }
+      },
    },
    variants: {
-      backgroundColor: ['active'],
+      backgroundColor: ['active', 'hover'],
       borderColor: ['responsive', 'hover', 'focus'],
       borderWidth: ['responsive', 'focus'],
+      animation: ['responsive', 'focus', 'active'],
    },
    plugins: [],
 }
