@@ -4,12 +4,26 @@
 
 /* ---------- BASE BUTTON ---------- */
 .button {
-   @apply py-2 px-3 font-sans text-sm rounded transition duration-200 ease-in-out;
+   @apply h-10 px-4 font-sans text-sm rounded flex items-center justify-center transition duration-200 ease-in-out;
+}
+
+/* ---------- SMALL BUTTON ---------- */
+.button.button--primary--small {
+   @apply h-8;
+}
+
+/* ---------- DISABLED BUTTONS ---------- */
+.button.button--primary--disabled {
+   @apply text-gray-500 bg-gray-0 border-1 border-gray-500;
+}
+
+.button.button--secondary--disabled {
+   @apply text-gray-500 bg-gray-0;
 }
 
 /* ---------- PRIMARY BUTTONS ---------- */
 .button--primary--default {
-   @apply text-gray-900 bg-white border-1 border-gray-500;
+   @apply text-gray-900 bg-white border-1 border-gray-500 shadow-gray;
 }
 .button--primary--default:focus {
    @apply outline-none animate-btn-ping-gray;
@@ -22,7 +36,7 @@
 }
 
 .button--primary--blue {
-   @apply text-white bg-blue-500 border-1 border-blue-600;
+   @apply text-white bg-blue-500 border-1 border-blue-600 shadow-blue;
 }
 .button--primary--blue:focus {
    @apply outline-none animate-btn-ping-blue;
@@ -35,7 +49,7 @@
 }
 
 .button--primary--red {
-   @apply text-white bg-red-500 border-1 border-red-600;
+   @apply text-white bg-red-500 border-1 border-red-600 shadow-red;
 }
 .button--primary--red:focus {
    @apply outline-none animate-btn-ping-red;
@@ -48,7 +62,7 @@
 }
 
 .button--primary--green {
-   @apply text-white bg-green-500 border-1 border-green-600;
+   @apply text-white bg-green-500 border-1 border-green-600 shadow-green;
 }
 .button--primary--green:focus {
    @apply outline-none animate-btn-ping-green;
@@ -61,7 +75,7 @@
 }
 
 .button--primary--purple {
-   @apply text-white bg-purple-500 border-1 border-purple-600;
+   @apply text-white bg-purple-500 border-1 border-purple-600 shadow-purple;
 }
 .button--primary--purple:focus {
    @apply outline-none animate-btn-ping-purple;
@@ -74,7 +88,7 @@
 }
 
 .button--primary--indigo {
-   @apply text-white bg-indigo-500 border-1 border-indigo-600;
+   @apply text-white bg-indigo-500 border-1 border-indigo-600 shadow-indigo;
 }
 .button--primary--indigo:focus {
    @apply outline-none animate-btn-ping-indigo;
