@@ -1,5 +1,5 @@
 import React, { cloneElement } from 'react';
-import { Button as Btn } from "reakit/Button";
+import { Button as Btn } from 'reakit/Button';
 import { Loader } from 'react-feather';
 import PropTypes from 'prop-types';
 
@@ -26,12 +26,16 @@ const Button = ({
             ${className || null}
          `}
          onAnimationEnd={(e) => e.target.blur()}
-         disabled={isLoading || isDisabled}
+         disabled={isDisabled || isLoading}
          {...props}
       >
-         {leftIcon && !isLoading ? cloneElement(leftIcon, { className: "h-4 w-4 mr-2" }) : null}
-         {isLoading ? <Loader className="mx-2 text-gray-700 animate-spin" /> : label}
-         {rightIcon && !isLoading ? cloneElement(rightIcon, { className: "h-4 w-4 ml-2" }) : null}
+         {leftIcon && !isLoading && 
+            cloneElement(leftIcon, { className: "h-4 w-4 mr-2" })}
+         {isLoading
+            ? <Loader className="mx-2 text-gray-700 animate-spin" />
+            : label}
+         {rightIcon && !isLoading && 
+            cloneElement(rightIcon, { className: "h-4 w-4 ml-2" })}
       </Btn>
    );
 }
