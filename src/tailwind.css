@@ -74,6 +74,19 @@
    @apply bg-green-400;
 }
 
+.button--primary--yellow {
+   @apply text-gray-900 bg-yellow-500 border-1 border-yellow-500 shadow-yellow;
+}
+.button--primary--yellow:focus {
+   @apply outline-none animate-btn-ping-yellow;
+}
+.button.button--primary--yellow:active {
+   @apply bg-yellow-600;
+}
+.button--primary--yellow:hover {
+   @apply bg-yellow-400;
+}
+
 .button--primary--purple {
    @apply text-white bg-purple-500 border-1 border-purple-600 shadow-purple;
 }
@@ -149,6 +162,18 @@
    @apply bg-green-0;
 }
 
+.button--secondary--yellow {
+   @apply text-gray-900 border-1;
+   background-color: transparent;
+   border-color: transparent;
+}
+.button--secondary--yellow:focus {
+   @apply border-yellow-100 outline-none animate-btn-ping-yellow;
+}
+.button--secondary--yellow:hover {
+   @apply bg-yellow-100;
+}
+
 .button--secondary--purple {
    @apply text-purple-500 border-1;
    background-color: transparent;
@@ -171,4 +196,25 @@
 }
 .button--secondary--indigo:hover {
    @apply bg-indigo-0;
+}
+
+
+/* ---------- TEXT FIELDS ---------- */
+.textfield {
+   @apply h-10 px-2 font-sans text-sm text-gray-900 border-1 border-gray-500 shadow-gray rounded flex items-center;
+}
+.textfield:focus {
+   @apply outline-none;
+}
+
+.textfield.textfield--default:focus {
+   @apply shadow-outline-blue border-blue-500;
+}
+
+.textfield--success:focus {
+   @apply shadow-outline-green border-green-500;
+}
+
+.textfield--error:focus {
+   @apply shadow-outline-red border-red-500;
 }
