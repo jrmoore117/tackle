@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from './Button';
-import { Twitter, Twitch, DollarSign } from 'react-feather';
+import { AlertCircle, Twitter, Twitch, DollarSign } from 'react-feather';
 
 export default {
    component: Button,
@@ -12,7 +12,6 @@ const Template = args => <Button {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
    label: 'Primary',
-   onClick: () => console.log('working!'),
 };
 
 export const PrimaryBlue = Template.bind({});
@@ -36,6 +35,13 @@ PrimaryGreen.args = {
    color: 'green',
 };
 
+export const PrimaryYellow = Template.bind({});
+PrimaryYellow.args = {
+   label: 'Primary',
+   variant: 'primary',
+   color: 'yellow',
+};
+
 export const PrimaryPurple = Template.bind({});
 PrimaryPurple.args = {
    label: 'Primary',
@@ -52,10 +58,10 @@ PrimaryIndigo.args = {
 
 export const PrimaryWithLeftIcon = Template.bind({});
 PrimaryWithLeftIcon.args = {
-   label: 'Tweet',
+   label: 'Alert',
    variant: 'primary',
-   color: 'blue',
-   leftIcon: <Twitter />,
+   color: 'yellow',
+   leftIcon: <AlertCircle />,
 };
 
 export const PrimaryIconOnly = Template.bind({});
@@ -122,6 +128,13 @@ SecondaryGreen.args = {
    color: 'green',
 };
 
+export const SecondaryYellow = Template.bind({});
+SecondaryYellow.args = {
+   label: 'Secondary',
+   variant: 'secondary',
+   color: 'yellow',
+};
+
 export const SecondaryPurple = Template.bind({});
 SecondaryPurple.args = {
    label: 'Secondary',
@@ -142,6 +155,13 @@ SecondaryWithLeftIcon.args = {
    variant: 'secondary',
    color: 'blue',
    leftIcon: <Twitter />,
+};
+
+export const SecondaryIconOnly = Template.bind({});
+SecondaryIconOnly.args = {
+   label: <Twitch />,
+   variant: 'secondary',
+   color: 'purple',
 };
 
 export const SecondarySmallWithRightIcon = Template.bind({});
