@@ -2,7 +2,12 @@ import React from 'react';
 import { Input } from "reakit/Input";
 import PropTypes from 'prop-types';
 
-const TextField = ({ type, className, errors, ...props }) => {
+const TextField = ({
+  type,
+  className,
+  errors,
+  ...props
+}) => {
   return (
     <Input
       type={type}
@@ -17,7 +22,7 @@ const TextField = ({ type, className, errors, ...props }) => {
 
 TextField.propTypes = {
   className: PropTypes.string,
-  type: PropTypes.oneOf(['text', 'password']),
+  type: PropTypes.oneOf(['text', 'password']), // add other types later.
 }
 
 export default TextField;
