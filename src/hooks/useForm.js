@@ -1,31 +1,27 @@
 import { useState } from "react";
+import { useRadioState } from "reakit/Radio";
 
-const useForm = ({ initialValues, validators }) => {
+const useForm = ({ initialValues, validators } = {}) => {
    const [values, setValues] = useState(initialValues);
    const [errors, setErrors] = useState({});
    return {
-      reset: () => {
-         setValues(initialValues);
-         setErrors({});
-      },
       set: (name) => ({
          name: name,
          value: values[name],
          errors: errors[name],
+         checked: values[name],
          onChange: (event) => {
             const { name, value } = event.target;
-            // validate input value
+            // Validate input value.
             if (validators[name] && value === '') {
                setErrors(Object.assign({}, errors, { [name]: null }));
             } else if (validators[name]) {
                setErrors(Object.assign({}, errors, { [name]: validators[name](value) }));
             }
-            // set new value to state
-            if (typeof values[name] === 'object') {
-               setValues(Object.assign({}, values, { [name]: { value: value } }));
-            } else {
-               setValues(Object.assign({}, values, { [name]: value }));
-            }
+            // Set new value to state.
+            name.toLowerCase().includes('checkbox')
+               ? setValues(Object.assign({}, values, { [name]: !values[name] }))
+               : setValues(Object.assign({}, values, { [name]: value }))
          },
       }),
       handleSubmit: (event, callback) => {
@@ -40,6 +36,11 @@ const useForm = ({ initialValues, validators }) => {
          }
          callback(values);
       },
+      reset: () => {
+         setValues(initialValues);
+         setErrors({});
+      },
+      useRadio: useRadioState,
    }
 }
 
