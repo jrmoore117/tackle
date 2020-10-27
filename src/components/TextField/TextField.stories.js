@@ -2,6 +2,9 @@ import React from 'react';
 import TextField from './TextField';
 import FormMessage from './FormMessage';
 import Button from '../Button/Button';
+import Checkbox from "../Checkbox/Checkbox";
+import { Radio, RadioGroup } from '../Radio/Radio';
+
 import useForm from '../../hooks/useForm';
 
 export default {
@@ -10,12 +13,13 @@ export default {
 };
 
 export const FormExampleWithValidations = () => {
-   const { set, reset, handleSubmit } = useForm({ 
-      initialValues: { 
+   const { set, reset, handleSubmit, useRadio } = useForm({
+      initialValues: {
          firstName: '',
          lastName: '',
          username: '',
          password: '',
+         testCheckbox: false,
       },
       validators: {
          firstName: (value) => value.length < 5
@@ -29,8 +33,9 @@ export const FormExampleWithValidations = () => {
             : null,
       },
    });
+   const radio = useRadio();
    const callback = (values) => {
-      console.log("Callback working!", values);
+      console.log("Callback working!", { ...values, radioValue: radio.state }); // figure out how to better incorporate radio.state into useForm's state.
       reset();
    }
    return (
@@ -49,6 +54,12 @@ export const FormExampleWithValidations = () => {
          <FormMessage {...set("username")} />
          <TextField type="password" placeholder="Password" {...set("password")} className="w-full mt-2" />
          <FormMessage {...set("password")} />
+         <Checkbox {...set("testCheckbox")} />
+         <RadioGroup {...radio} aria-label="fruits">
+            <Radio {...radio} label="Apple" value="apple" />
+            <Radio {...radio} label="Orange" value="orange" />
+            <Radio {...radio} label="Watermelon" value="watermelon" />
+         </RadioGroup>
          <Button type="submit" label="Sumbit" color="blue" className="mt-2" />
       </form>
    );
