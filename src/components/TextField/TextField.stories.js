@@ -40,7 +40,12 @@ export const FormExampleWithValidations = () => {
    }
    return (
       <form onSubmit={(event) => handleSubmit(event, callback)} className="flex flex-col">
-         <div className="flex">
+         <RadioGroup {...radio} aria-label="prefix">
+            <Radio {...radio} label="Mr." value="Mr." />
+            <Radio {...radio} label="Ms." value="Ms." />
+            <Radio {...radio} label="Mrs." value="Mrs." />
+         </RadioGroup>
+         <div className="flex mt-2">
             <div className="mr-2 flex-1">
                <TextField placeholder="First Name" {...set("firstName")} className="w-full" />
                <FormMessage {...set("firstName")} />
@@ -54,12 +59,7 @@ export const FormExampleWithValidations = () => {
          <FormMessage {...set("username")} />
          <TextField type="password" placeholder="Password" {...set("password")} className="w-full mt-2" />
          <FormMessage {...set("password")} />
-         <Checkbox {...set("testCheckbox")} />
-         <RadioGroup {...radio} aria-label="fruits">
-            <Radio {...radio} label="Apple" value="apple" />
-            <Radio {...radio} label="Orange" value="orange" />
-            <Radio {...radio} label="Watermelon" value="watermelon" />
-         </RadioGroup>
+         <Checkbox {...set("testCheckbox")} label="Save Password?" className="mt-2 mr-2" />
          <Button type="submit" label="Sumbit" color="blue" className="mt-2" />
       </form>
    );
