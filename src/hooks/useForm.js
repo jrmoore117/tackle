@@ -13,9 +13,9 @@ const useForm = ({ initialValues, validators } = {}) => {
          onChange: (event) => {
             const { name, value } = event.target;
             // Validate input value.
-            if (validators[name] && value === '') {
+            if (validators && validators[name] && value === '') {
                setErrors(Object.assign({}, errors, { [name]: null }));
-            } else if (validators[name]) {
+            } else if (validators && validators[name]) {
                setErrors(Object.assign({}, errors, { [name]: validators[name](value) }));
             }
             // Set new value to state.
@@ -28,11 +28,15 @@ const useForm = ({ initialValues, validators } = {}) => {
          event.preventDefault();
          // Prevent callback execution if errors present.
          for (const name in errors) {
-            if (errors[name]) return console.error('Form input values do not meet requirements.');
+            if (errors && errors[name]) {
+               return console.error('Form input values do not meet requirements.');
+            }
          }
          // Prevent callback execution if empty form fields break any validation rules.
          for (const name in values) {
-            if (validators[name] && validators[name](values[name])) return console.error('Empty form inputs cannot be validated.');
+            if (validators && validators[name] && validators[name](values[name])) {
+               return console.error('Empty form inputs cannot be validated.');
+            }
          }
          callback(values);
       },
