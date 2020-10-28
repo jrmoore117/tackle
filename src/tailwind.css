@@ -29,7 +29,7 @@
    @apply outline-none animate-btn-ping-gray;
 }
 .button.button--primary--default:active {
-   @apply bg-gray-100;
+   @apply bg-gray-100 shadow-none;
 }
 .button--primary--default:hover {
    @apply bg-gray-0;
@@ -42,7 +42,7 @@
    @apply outline-none animate-btn-ping-blue;
 }
 .button.button--primary--blue:active {
-   @apply bg-blue-600;
+   @apply bg-blue-600 shadow-none;
 }
 .button--primary--blue:hover {
    @apply bg-blue-400;
@@ -55,7 +55,7 @@
    @apply outline-none animate-btn-ping-red;
 }
 .button.button--primary--red:active {
-   @apply bg-red-600;
+   @apply bg-red-600 shadow-none;
 }
 .button--primary--red:hover {
    @apply bg-red-400;
@@ -68,7 +68,7 @@
    @apply outline-none animate-btn-ping-green;
 }
 .button.button--primary--green:active {
-   @apply bg-green-600;
+   @apply bg-green-600 shadow-none;
 }
 .button--primary--green:hover {
    @apply bg-green-400;
@@ -81,7 +81,7 @@
    @apply outline-none animate-btn-ping-yellow;
 }
 .button.button--primary--yellow:active {
-   @apply bg-yellow-600;
+   @apply bg-yellow-600 shadow-none;
 }
 .button--primary--yellow:hover {
    @apply bg-yellow-400;
@@ -94,7 +94,7 @@
    @apply outline-none animate-btn-ping-purple;
 }
 .button.button--primary--purple:active {
-   @apply bg-purple-600;
+   @apply bg-purple-600 shadow-none;
 }
 .button--primary--purple:hover {
    @apply bg-purple-400;
@@ -107,7 +107,7 @@
    @apply outline-none animate-btn-ping-indigo;
 }
 .button.button--primary--indigo:active {
-   @apply bg-indigo-600;
+   @apply bg-indigo-600 shadow-none;
 }
 .button--primary--indigo:hover {
    @apply bg-indigo-400;
@@ -201,7 +201,7 @@
 
 /* ---------- TEXT FIELDS ---------- */
 .textfield {
-   @apply h-10 px-2 font-sans text-sm text-gray-900 border-1 border-gray-500 shadow-gray rounded flex items-center;
+   @apply h-10 px-2 font-sans text-sm text-gray-900 border-1 border-gray-500 shadow-gray rounded flex items-center transition duration-200 ease-in-out;
 }
 .textfield:focus {
    @apply outline-none;
@@ -217,4 +217,32 @@
 
 .textfield--error:focus {
    @apply shadow-outline-red border-red-500;
+}
+
+
+/* ---------- RADIO BUTTONS ---------- */
+.radio {
+   @apply mr-2 h-5 w-5 shadow-gray border-1 border-gray-500 rounded-full outline-none appearance-none cursor-pointer transition duration-200;
+}
+.radio:hover {
+   @apply bg-gray-100;
+}
+.radio:checked {
+   @apply bg-blue-500 border-2 border-blue-200 shadow-none animate-radio-ping-blue;
+}
+
+
+/* ---------- CHECKBOXES ---------- */
+.checkbox {
+   @apply mr-2 h-5 w-5 shadow-gray border-1 border-gray-500 rounded outline-none cursor-pointer appearance-none transition duration-200 flex items-center justify-center;
+}
+.checkbox:hover {
+   @apply bg-gray-100;
+}
+.checkbox:checked {
+   @apply bg-blue-500 border-2 border-blue-200 shadow-none animate-radio-ping-blue;
+}
+.checkbox:checked::before {
+   content: url("check.svg");
+   transform: translateY(3px) rotate(-5deg);
 }
