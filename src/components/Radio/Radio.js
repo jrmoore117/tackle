@@ -4,12 +4,14 @@ import PropTypes from 'prop-types';
 
 export const Radio = ({ label, className, ...props }) => {
    return (
-      <label className="mr-4">
+      <label className="mr-4 flex items-center">
          <RadioButton
-            className={`radio radio--default mr-1`}
+            className={`radio radio--default`}
             {...props}
          />
-         {label}
+         <span className="cursor-pointer select-none">
+            {label}
+         </span>
       </label>
    );
 }
@@ -22,7 +24,7 @@ Radio.propTypes = {
 export const RadioGroup = ({ className, ...props }) => {
    return (
       <RadioButtonGroup
-         className={`radiogroup ${className}`}
+         className={`radiogroup flex ${className}`}
          {...props}
       />
    );
