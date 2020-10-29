@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useRadioState } from "reakit/Radio";
 
 const useForm = ({ initialValues, validators } = {}) => {
    const [values, setValues] = useState(initialValues);
@@ -44,7 +43,44 @@ const useForm = ({ initialValues, validators } = {}) => {
          setValues(initialValues);
          setErrors({});
       },
-      useRadio: useRadioState,
+      helpers: {
+         checkIfEmail: (email) => {
+            const regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return !regex.test(email);
+         },
+         checkIfPhoneNumber: (phoneNumber) => {
+            const regex = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
+            return regex.test(phoneNumber);
+         },
+         checkIfProtocolUrl: (url) => {
+            // Protocol required.
+            const regex = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#()?&//=]*)/;
+            return !regex.test(url);
+         },
+         checkIfUrl: (url) => {
+            // Protocol optional.
+            const regex = /(https?:\/\/)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/;
+            return !regex.test(url);
+         },
+         checkPasswordStrength: (password) => {
+            // Requires 1 lowercase letter, 1 uppercase letter, 1 number, and at least 8 characters.
+            const regex = /(?=(.*[0-9]))((?=.*[A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z]))^.{8,}$/;
+            return !regex.test(password);
+         },
+         checkPasswordStrengthStrict: (password) => {
+            // Requires 1 lowercase letter, 1 uppercase letter, 1 number, 1 special character, and at least 8 characters.
+            const regex = /(?=(.*[0-9]))(?=.*[\!@#$%^&*()\\[\]{}\-_+=~`|:;"'<>,./?])(?=.*[a-z])(?=(.*[A-Z]))(?=(.*)).{8,}/;
+            return !regex.test(password);
+         },
+         checkAlphanumeric: (string) => {
+            const regex = /^[a-zA-Z0-9]*$/;
+            return !regex.test(string);
+         },
+         checkAlphanumericWithSpaces: (string) => {
+            const regex = /^[a-zA-Z0-9 ]*$/;
+            return !regex.test(string);
+         },
+      }
    }
 }
 
