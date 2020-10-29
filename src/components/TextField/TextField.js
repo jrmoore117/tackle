@@ -7,18 +7,16 @@ const TextField = ({
   className,
   errors,
   ...props
-}) => {
-  return (
-    <Input
-      type={type}
-      className={`
-        textfield textfield--${errors ? 'error' : 'default'}
-        ${className}
-      `}
-      {...props}
-    />
-  );
-}
+}) => (
+  <Input
+    type={type}
+    className={`
+      textfield textfield--${errors ? 'error' : 'default'}
+      ${className}
+    `}
+    {...props}
+  />
+);
 
 TextField.propTypes = {
   className: PropTypes.string,

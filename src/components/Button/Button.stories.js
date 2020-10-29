@@ -193,3 +193,10 @@ SecondaryLoading.args = {
    variant: 'secondary',
    isLoading: true,
 };
+
+export const TertiaryBlue = Template.bind({});
+TertiaryBlue.args = {
+   label: 'Tertiary',
+   variant: 'tertiary',
+   color: 'blue'
+};

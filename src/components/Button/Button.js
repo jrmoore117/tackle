@@ -15,30 +15,28 @@ const Button = ({
    leftIcon,
    rightIcon,
    ...props
-}) => {
-   return (
-      <Btn
-         as={as}
-         className={`
-            button button--${variant}--${color}
-            ${isDisabled && `button--${variant}--disabled`}
-            ${isSmall && 'button--primary--small'}
-            ${className || null}
-         `}
-         onAnimationEnd={(e) => e.target.blur()}
-         disabled={isDisabled || isLoading}
-         {...props}
-      >
-         {leftIcon && !isLoading && 
-            cloneElement(leftIcon, { className: "h-4 w-4 mr-2" })}
-         {isLoading
-            ? <Loader className="mx-2 text-gray-700 animate-spin" />
-            : label}
-         {rightIcon && !isLoading && 
-            cloneElement(rightIcon, { className: "h-4 w-4 ml-2" })}
-      </Btn>
-   );
-}
+}) => (
+   <Btn
+      as={as}
+      className={`
+         button button--${variant}--${color}
+         ${isDisabled && `button--${variant}--disabled`}
+         ${isSmall && 'button--primary--small'}
+         ${className || null}
+      `}
+      onAnimationEnd={(e) => e.target.blur()}
+      disabled={isDisabled || isLoading}
+      {...props}
+   >
+      {leftIcon && !isLoading && 
+         cloneElement(leftIcon, { className: "h-4 w-4 mr-2" })}
+      {isLoading
+         ? <Loader className="mx-2 text-gray-700 animate-spin" />
+         : label}
+      {rightIcon && !isLoading && 
+         cloneElement(rightIcon, { className: "h-4 w-4 ml-2" })}
+   </Btn>
+);
 
 Button.defaultProps = {
    as: 'button',

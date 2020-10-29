@@ -1,6 +1,6 @@
 import React from 'react';
 import { Radio, RadioGroup } from './Radio';
-import useForm from '../../hooks/useForm';
+import { useRadioState } from "reakit/Radio";
 
 export default {
    component: Radio,
@@ -8,8 +8,7 @@ export default {
 };
 
 export const ExampleRadioButtons = () => {
-   const { useRadio } = useForm();
-   const radio = useRadio();
+   const radio = useRadioState();
    return(
       <RadioGroup>
          <Radio label="One" value="one" {...radio} />

@@ -4,6 +4,7 @@ import FormMessage from './FormMessage';
 import Button from '../Button/Button';
 import Checkbox from "../Checkbox/Checkbox";
 import { Radio, RadioGroup } from '../Radio/Radio';
+import { useRadioState } from "reakit/Radio";
 
 import useForm from '../../hooks/useForm';
 
@@ -13,7 +14,7 @@ export default {
 };
 
 export const FormExampleWithValidations = () => {
-   const { set, reset, handleSubmit, useRadio } = useForm({
+   const { set, reset, handleSubmit, helpers } = useForm({
       initialValues: {
          firstName: '',
          lastName: '',
@@ -25,17 +26,17 @@ export const FormExampleWithValidations = () => {
          firstName: (value) => value.length < 5
             ? 'Your name must be at least 5 characters long. Sorry, Chad!'
             : null,
-         username: (value) => value.length < 5
-            ? 'Your username must be at least 5 characters long.'
+         username: (value) => helpers.checkAlphanumericWithSpaceCharacters(value)
+            ? 'Please enter a valid email.'
             : null,
-         password: (value) => value.length < 8
-            ? 'Your password must be at least 8 characters long.'
+         password: (value) => helpers.checkPasswordStrength(value)
+            ? 'Password requires 1 lowercase letter, 1 uppercase letter, 1 number, and at least 8 characters.'
             : null,
       },
    });
-   const radio = useRadio();
+   const radio = useRadioState();
    const callback = (values) => {
-      console.log("Callback working!", { ...values, radioValue: radio.state }); // figure out how to better incorporate radio.state into useForm's state.
+      console.log("Callback working!", { ...values, radioValue: radio.state });
       reset();
    }
    return (
