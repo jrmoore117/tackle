@@ -50,7 +50,7 @@ module.exports = {
                '100%': { boxShadow: '0 0 0 6px transparent' },
             },
             'btn-ping-yellow': {
-               '15%': { boxShadow: '0 0 0 3px #fff5d4' },
+               '15%': { boxShadow: '0 0 0 3px #ffeeb8' },
                '100%': { boxShadow: '0 0 0 6px transparent' },
             },
             'btn-ping-purple': {
