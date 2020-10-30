@@ -20,7 +20,7 @@ export const FormExampleWithValidations = () => {
          lastName: '',
          username: '',
          password: '',
-         testCheckbox: false,
+         savePassword: false,
       },
       validators: {
          firstName: (value) => value.length < 5
@@ -60,7 +60,7 @@ export const FormExampleWithValidations = () => {
          <FormMessage {...set("username")} />
          <TextField type="password" placeholder="Password" {...set("password")} className="w-full mt-2" />
          <FormMessage {...set("password")} />
-         <Checkbox {...set("testCheckbox")} label="Save Password?" className="mt-2 mr-2" />
+         <Checkbox {...set("savePassword")} label="Save Password?" className="mt-2 mr-2" />
          <Button type="submit" label="Sumbit" color="blue" className="mt-2" />
       </form>
    );
