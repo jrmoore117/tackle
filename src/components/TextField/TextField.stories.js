@@ -27,7 +27,7 @@ export const FormExampleWithValidations = () => {
             ? 'Your name must be at least 5 characters long. Sorry, Chad!'
             : null,
          username: (value) => helpers.checkIfAlphanumeric(value)
-            ? 'Please enter a valid email.'
+            ? 'Only letters or numbers allowed.'
             : null,
          password: (value) => helpers.checkPasswordStrength(value)
             ? 'Password requires 1 lowercase letter, 1 uppercase letter, 1 number, and at least 8 characters.'
