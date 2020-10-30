@@ -72,11 +72,11 @@ const useForm = ({ initialValues, validators } = {}) => {
             const regex = /(?=(.*[0-9]))(?=.*[\!@#$%^&*()\\[\]{}\-_+=~`|:;"'<>,./?])(?=.*[a-z])(?=(.*[A-Z]))(?=(.*)).{8,}/;
             return !regex.test(password);
          },
-         checkAlphanumeric: (string) => {
+         checkIfAlphanumeric: (string) => {
             const regex = /^[a-zA-Z0-9]*$/;
             return !regex.test(string);
          },
-         checkAlphanumericWithSpaces: (string) => {
+         checkIfAlphanumericWithSpaces: (string) => {
             const regex = /^[a-zA-Z0-9 ]*$/;
             return !regex.test(string);
          },
