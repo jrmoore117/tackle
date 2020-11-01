@@ -21,7 +21,7 @@ const Button = ({
       className={`
          button button--${variant}--${color}
          ${isDisabled && `button--${variant}--disabled`}
-         ${isSmall && 'button--primary--small'}
+         ${isSmall && 'button--small'}
          ${className || null}
       `}
       onAnimationEnd={(e) => e.target.blur()}
