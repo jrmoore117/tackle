@@ -23,17 +23,24 @@ module.exports = {
             'outline-gray': '0 0 0 3px #e2e5ea',
          },
          animation: {
-            'btn-ping-blue': 'btn-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1',
+            'ping-blue': 'ping-blue 1s cubic-bezier(0,.656,0,.58) infinite',
+            'btn-ping-blue': 'ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1',
             'radio-ping-blue': 'radio-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1',
-            'btn-ping-red': 'btn-ping-red 0.65s cubic-bezier(0,.656,0,.58) 1',
-            'btn-ping-green': 'btn-ping-green 0.65s cubic-bezier(0,.656,0,.58) 1',
-            'btn-ping-yellow': 'btn-ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1',
-            'btn-ping-purple': 'btn-ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1',
-            'btn-ping-indigo': 'btn-ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1',
-            'btn-ping-gray': 'btn-ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1',
+            'ping-red': 'ping-red 1s cubic-bezier(0,.656,0,.58) infinite',
+            'btn-ping-red': 'ping-red 0.65s cubic-bezier(0,.656,0,.58) 1',
+            'ping-green': 'ping-green 1s cubic-bezier(0,.656,0,.58) infinite',
+            'btn-ping-green': 'ping-green 0.65s cubic-bezier(0,.656,0,.58) 1',
+            'ping-yellow': 'ping-yellow 1s cubic-bezier(0,.656,0,.58) infinite',
+            'btn-ping-yellow': 'ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1',
+            'ping-purple': 'ping-purple 1s cubic-bezier(0,.656,0,.58) infinite',
+            'btn-ping-purple': 'ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1',
+            'ping-indigo': 'ping-indigo 1s cubic-bezier(0,.656,0,.58) infinite',
+            'btn-ping-indigo': 'ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1',
+            'ping-gray': 'ping-gray 1s cubic-bezier(0,.656,0,.58) infinite',
+            'btn-ping-gray': 'ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1',
          },
          keyframes: {
-            'btn-ping-blue': {
+            'ping-blue': {
                '15%': { boxShadow: '0 0 0 3px #bdd7ff' },
                '100%': { boxShadow: '0 0 0 6px transparent' },
             },
@@ -41,27 +48,27 @@ module.exports = {
                '20%': { boxShadow: '0 0 0 2px #bdd7ff' },
                '100%': { boxShadow: '0 0 0 4px transparent' },
             },
-            'btn-ping-red': {
+            'ping-red': {
                '15%': { boxShadow: '0 0 0 3px #fcc6cb' },
                '100%': { boxShadow: '0 0 0 6px transparent' },
             },
-            'btn-ping-green': {
+            'ping-green': {
                '15%': { boxShadow: '0 0 0 3px #b3ead4' },
                '100%': { boxShadow: '0 0 0 6px transparent' },
             },
-            'btn-ping-yellow': {
-               '15%': { boxShadow: '0 0 0 3px #ffeeb8' },
+            'ping-yellow': {
+               '15%': { boxShadow: '0 0 0 3px #ffe79b' },
                '100%': { boxShadow: '0 0 0 6px transparent' },
             },
-            'btn-ping-purple': {
+            'ping-purple': {
                '15%': { boxShadow: '0 0 0 3px #dbd5ff' },
                '100%': { boxShadow: '0 0 0 6px transparent' },
             },
-            'btn-ping-indigo': {
+            'ping-indigo': {
                '15%': { boxShadow: '0 0 0 3px #c3cce6' },
                '100%': { boxShadow: '0 0 0 6px transparent' },
             },
-            'btn-ping-gray': {
+            'ping-gray': {
                '15%': { boxShadow: '0 0 0 3px #e2e5ea' },
                '100%': { boxShadow: '0 0 0 6px transparent' },
             },
@@ -118,7 +125,7 @@ module.exports = {
             '200': '#ffeeb8',
             '300': '#ffe79b',
             '400': '#ffe07e',
-            '500': '#ffdc70',
+            '500': '#ffdc70', // ffd557
             '600': '#e6c665',
             '700': '#b39a4e',
             '800': '#806e38',
