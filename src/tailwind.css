@@ -3,27 +3,77 @@
 @tailwind utilities;
 
 /* ---------- BASE BUTTON ---------- */
+.box {
+   @apply p-5 border-1 border-gray-200 rounded;
+}
+
+.box--default {
+   @apply shadow-gray;
+}
+
+.box--frame {
+   @apply shadow-none;
+}
+
+.box--tinted-frame {
+   @apply shadow-none bg-gray-0;
+}
+
+.box--well {
+   @apply bg-gray-0 shadow-inner;
+}
+
+.box--ping--blue {
+   @apply animate-ping-blue;
+}
+
+.box--ping--red {
+   @apply animate-ping-red;
+}
+
+.box--ping--green {
+   @apply animate-ping-green;
+}
+
+.box--ping--yellow {
+   @apply animate-ping-yellow;
+}
+
+.box--ping--purple {
+   @apply animate-ping-purple;
+}
+
+.box--ping--indigo {
+   @apply animate-ping-indigo;
+}
+
+.box--ping--gray {
+   @apply animate-ping-gray;
+}
+
+
+/* ---------- BASE BUTTON ---------- */
 .button {
    @apply h-10 px-4 font-sans text-sm rounded flex items-center justify-center transition duration-200 ease-in-out;
 }
 
 /* ---------- SMALL BUTTON ---------- */
-.button.button--primary--small {
+.button.button--small {
    @apply h-8;
 }
 
 /* ---------- DISABLED BUTTONS ---------- */
 .button.button--primary--disabled {
-   @apply text-gray-500 bg-gray-0 border-1 border-gray-500;
+   @apply select-none text-gray-500 bg-gray-0 border-1 border-gray-200;
 }
 
 .button.button--secondary--disabled {
-   @apply text-gray-500 bg-gray-0;
+   @apply select-none text-gray-500 bg-gray-0;
 }
 
 /* ---------- PRIMARY BUTTONS ---------- */
 .button--primary--default {
-   @apply text-gray-900 bg-white border-1 border-gray-500 shadow-gray;
+   @apply text-gray-900 bg-white border-1 border-gray-200 shadow-gray;
 }
 .button--primary--default:focus {
    @apply outline-none animate-btn-ping-gray;
@@ -75,7 +125,7 @@
 }
 
 .button--primary--yellow {
-   @apply text-gray-900 bg-yellow-500 border-1 border-yellow-500 shadow-yellow;
+   @apply text-gray-900 bg-yellow-500 border-1 border-yellow-600 shadow-yellow;
 }
 .button--primary--yellow:focus {
    @apply outline-none animate-btn-ping-yellow;
