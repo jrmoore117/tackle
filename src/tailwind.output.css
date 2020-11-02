@@ -18153,7 +18153,7 @@ video {
 /* ---------- BASE BUTTON ---------- */
 
 .box {
-  padding: 1.25rem;
+  padding: 1rem;
   border-width: 1px;
   --border-opacity: 1;
   border-color: #e2e5ea;

@@ -4,7 +4,7 @@
 
 /* ---------- BASE BUTTON ---------- */
 .box {
-   @apply p-5 border-1 border-gray-200 rounded;
+   @apply p-4 border-1 border-gray-200 rounded;
 }
 
 .box--default {
