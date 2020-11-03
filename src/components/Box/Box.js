@@ -5,12 +5,14 @@ const Box = ({
    children,
    variant,
    color,
+   pingColor,
    ...props
 }) => (
    <div
-      className={variant === 'ping'
-         ? `box box--ping--${color}`
-         : `box box--${variant}`}
+      className={`
+         box box--${variant}--${color}
+         ${pingColor && `animate-ping-${pingColor}`}
+      `}
       {...props}
    >
       {children}
@@ -19,6 +21,7 @@ const Box = ({
 
 Box.defaultProps = {
    variant: 'default',
+   color: 'white',
 }
 
 Box.propTypes = {
