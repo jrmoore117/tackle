@@ -2,54 +2,195 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ---------- BASE BUTTON ---------- */
+/* ---------- ACCORDION ---------- */
+.accordion {
+   @apply bg-white border-1 border-gray-200 shadow-gray rounded overflow-hidden;
+}
+
+.accordion-panel-header {
+   @apply p-4 border-gray-200 cursor-pointer select-none flex items-center text-gray-900 transition duration-200 ease-in-out;
+}
+.accordion-panel-header:hover {
+   @apply text-blue-500;
+}
+
+.accordion-panel-content {
+   @apply p-4 bg-gray-0;
+}
+
+
+/* ---------- BASE BADGE ---------- */
+.badge {
+   @apply text-white text-xs px-2 py-1 rounded;
+}
+
+.badge.badge--small {
+   @apply px-1 py-0 font-light;
+}
+
+.badge.badge--rounded {
+   @apply rounded-full;
+}
+
+/* ---------- DEFAULT BADGE ---------- */
+.badge--default--blue {
+   @apply text-blue-900 bg-blue-200;
+}
+
+.badge--default--red {
+   @apply text-red-900 bg-red-200;
+}
+
+.badge--default--green {
+   @apply text-green-900 bg-green-200;
+}
+
+.badge--default--yellow {
+   @apply text-yellow-900 bg-yellow-200;
+}
+
+.badge--default--purple {
+   @apply text-purple-900 bg-purple-200;
+}
+
+.badge--default--indigo {
+   @apply text-indigo-900 bg-indigo-200;
+}
+
+.badge--default--gray {
+   @apply text-gray-900 bg-gray-200;
+}
+
+/* ---------- SOLID BADGE ---------- */
+.badge--solid--blue {
+   @apply bg-blue-500;
+}
+
+.badge--solid--red {
+   @apply bg-red-500;
+}
+
+.badge--solid--green {
+   @apply bg-green-500;
+}
+
+.badge--solid--yellow {
+   @apply text-gray-900 bg-yellow-500;
+}
+
+.badge--solid--purple {
+   @apply bg-purple-500;
+}
+
+.badge--solid--indigo {
+   @apply bg-indigo-500;
+}
+
+.badge--solid--gray {
+   @apply text-gray-900 bg-gray-500;
+}
+
+
+/* ---------- BASE BOX ---------- */
 .box {
    @apply bg-white p-4 border-1 rounded;
 }
 
-.box--default {
+/* ---------- DEFAULT BOXES ---------- */
+.box--default--white {
    @apply border-gray-200 shadow-gray;
 }
 
-.box--frame {
+.box--default--blue {
+   @apply text-white bg-gradient-to-b from-blue-400 to-blue-500 border-blue-500;
+}
+
+.box--default--red {
+   @apply text-white bg-gradient-to-b from-red-400 to-red-500 border-red-500;
+}
+
+.box--default--green {
+   @apply text-white bg-gradient-to-b from-green-400 to-green-500 border-green-500;
+}
+
+.box--default--yellow {
+   @apply text-white bg-gradient-to-b from-yellow-400 to-yellow-500 border-yellow-500;
+}
+
+.box--default--purple {
+   @apply text-white bg-gradient-to-b from-purple-400 to-purple-500 border-purple-500;
+}
+
+.box--default--indigo {
+   @apply text-white bg-gradient-to-b from-indigo-400 to-indigo-500 border-indigo-500;
+}
+
+.box--default--gray {
+   @apply text-white bg-gradient-to-b from-gray-400 to-gray-500;
+}
+
+/* ---------- FRAMES ---------- */
+.box--frame--white {
    @apply border-gray-200 shadow-none;
 }
 
-.box--tinted-frame {
-   @apply border-gray-200 shadow-none bg-gray-0;
+.box--frame--blue {
+   @apply bg-blue-0 border-blue-200 shadow-none;
 }
 
-.box--well {
-   @apply border-gray-200 bg-gray-0 shadow-inner;
+.box--frame--red {
+   @apply bg-red-0 border-red-200 shadow-none;
 }
 
-.box--ping--blue {
-   @apply border-blue-200 animate-ping-blue;
+.box--frame--green {
+   @apply bg-green-0 border-green-200 shadow-none;
 }
 
-.box--ping--red {
-   @apply border-red-200 animate-ping-red;
+.box--frame--yellow {
+   @apply bg-yellow-0 border-yellow-200 shadow-none;
 }
 
-.box--ping--green {
-   @apply border-green-200 animate-ping-green;
+.box--frame--purple {
+   @apply bg-purple-0 border-purple-200 shadow-none;
 }
 
-.box--ping--yellow {
-   @apply border-yellow-200 animate-ping-yellow;
+.box--frame--indigo {
+   @apply bg-indigo-0 border-indigo-200 shadow-none;
 }
 
-.box--ping--purple {
-   @apply border-purple-200 animate-ping-purple;
+.box--frame--gray {
+   @apply bg-gray-0 border-gray-200 shadow-none;
 }
 
-.box--ping--indigo {
-   @apply border-indigo-200 animate-ping-indigo;
+/* ---------- WELLS ---------- */
+.box--well--white, .box--well--gray {
+   @apply border-gray-200 bg-gray-0 shadow-inner-gray;
 }
 
-.box--ping--gray {
-   @apply animate-ping-gray;
+.box--well--blue {
+   @apply border-blue-200 bg-blue-0 shadow-inner-blue;
 }
+
+.box--well--red {
+   @apply border-red-200 bg-red-0 shadow-inner-red;
+}
+
+.box--well--green {
+   @apply border-green-200 bg-green-0 shadow-inner-green;
+}
+
+.box--well--yellow {
+   @apply border-yellow-200 bg-yellow-0 shadow-inner-yellow;
+}
+
+.box--well--purple {
+   @apply border-purple-200 bg-purple-0 shadow-inner-purple;
+}
+
+.box--well--indigo {
+   @apply border-indigo-200 bg-indigo-0 shadow-inner-indigo;
+}
+
 
 
 /* ---------- BASE BUTTON ---------- */
@@ -76,7 +217,7 @@
    @apply text-gray-900 bg-white border-1 border-gray-200 shadow-gray;
 }
 .button--primary--default:focus {
-   @apply outline-none animate-btn-ping-gray;
+   @apply outline-none animate-btn-ping-blue;
 }
 .button.button--primary--default:active {
    @apply bg-gray-100 shadow-none;
@@ -262,6 +403,38 @@
 }
 
 
+/* ---------- CHECKBOXES ---------- */
+.checkbox {
+   @apply mr-2 h-5 w-5 bg-white shadow-gray border-1 border-gray-500 rounded outline-none cursor-pointer appearance-none transition duration-200 flex items-center justify-center;
+}
+.checkbox:hover {
+   @apply bg-gray-100;
+}
+.checkbox:checked {
+   @apply bg-blue-500 border-2 border-blue-200 shadow-none animate-radio-ping-blue;
+}
+.checkbox::before {
+   content: url("check.svg");
+   transform: translateY(3px) rotate(-5deg);
+   visibility: hidden;
+}
+.checkbox:checked::before {
+   visibility: visible;
+}
+
+
+/* ---------- RADIO BUTTONS ---------- */
+.radio {
+   @apply mr-2 h-5 w-5 bg-white shadow-gray border-1 border-gray-500 rounded-full outline-none appearance-none cursor-pointer transition duration-200 flex items-center justify-center;
+}
+.radio:hover {
+   @apply bg-gray-100;
+}
+.radio:checked {
+   @apply bg-blue-500 border-2 border-blue-200 shadow-none animate-radio-ping-blue;
+}
+
+
 /* ---------- TEXT FIELDS ---------- */
 .textfield {
    @apply h-10 px-2 font-sans text-sm text-gray-900 border-1 border-gray-500 shadow-gray rounded flex items-center transition duration-200 ease-in-out;
@@ -280,36 +453,4 @@
 
 .textfield--error:focus {
    @apply shadow-outline-red border-red-500;
-}
-
-
-/* ---------- RADIO BUTTONS ---------- */
-.radio {
-   @apply mr-2 h-5 w-5 shadow-gray border-1 border-gray-500 rounded-full outline-none appearance-none cursor-pointer transition duration-200 flex items-center justify-center;
-}
-.radio:hover {
-   @apply bg-gray-100;
-}
-.radio:checked {
-   @apply bg-blue-500 border-2 border-blue-200 shadow-none animate-radio-ping-blue;
-}
-
-
-/* ---------- CHECKBOXES ---------- */
-.checkbox {
-   @apply mr-2 h-5 w-5 shadow-gray border-1 border-gray-500 rounded outline-none cursor-pointer appearance-none transition duration-200 flex items-center justify-center;
-}
-.checkbox::before {
-   content: url("check.svg");
-   transform: translateY(3px) rotate(-5deg);
-   visibility: hidden;
-}
-.checkbox:hover {
-   @apply bg-gray-100;
-}
-.checkbox:checked {
-   @apply bg-blue-500 border-2 border-blue-200 shadow-none animate-radio-ping-blue;
-}
-.checkbox:checked::before {
-   visibility: visible;
 }
