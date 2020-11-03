@@ -21,7 +21,7 @@ export const Accordion = ({
       }
    });
    return (
-      <div className="border-1 border-gray-200 shadow-gray rounded overflow-hidden">
+      <div className="accordion">
          {childrenWithProps}
       </div>
    );
@@ -43,7 +43,7 @@ export const Panel = ({
 }) => (
    <div>
       <div
-         className={`p-4 border-gray-200 cursor-pointer select-none flex items-center text-gray-900 hover:text-blue-500 transition duration-200 ease-in-out ${isLast && !isOpen ? '' : 'border-b-1'}`}
+         className={`accordion-panel-header ${isLast && !isOpen ? '' : 'border-b-1'}`}
          onClick={() => togglePanel(index)}
       >
          {icon
@@ -53,7 +53,11 @@ export const Panel = ({
                : <ChevronRight className="h-4 w-4 mr-2" />}
          {label}
       </div>
-      <div className={isOpen ? `p-4 bg-gray-0 ${!isLast ? 'border-b-1 border-gray-200' : ''}` : 'hidden'}>
+      <div
+         className={isOpen
+            ? `accordion-panel-content ${!isLast ? 'border-b-1 border-gray-200' : ''}`
+            : 'hidden'}
+      >
          {children}
       </div>
    </div>
