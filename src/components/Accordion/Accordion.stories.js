@@ -1,6 +1,6 @@
 import React from 'react';
 import { Accordion, Panel } from './Accordion';
-import { Key } from 'react-feather';
+import { Key, Bell } from 'react-feather';
 
 export default {
    component: Accordion,
@@ -9,14 +9,14 @@ export default {
 
 export const ExampleAccordion = () => (
    <Accordion>
+      <Panel label="About">
+         <div>Info about something</div>
+      </Panel>
+      <Panel icon={<Bell />} label="Notifications">
+         <div>Notifications settings</div>
+      </Panel>
       <Panel icon={<Key />} label="Security">
-         <div>Ready...</div>
-      </Panel>
-      <Panel label="Panel 2">
-         <div>Set...</div>
-      </Panel>
-      <Panel label="Panel 3">
-         <div>Go!</div>
+         <div>Security settings</div>
       </Panel>
    </Accordion>
 );

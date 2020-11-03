@@ -43,14 +43,14 @@ export const Panel = ({
 }) => (
    <div>
       <div
-         className={`p-4 border-gray-200 cursor-pointer select-none flex items-center text-gray-900 ${isLast && !isOpen ? '' : 'border-b-1'}`}
+         className={`p-4 border-gray-200 cursor-pointer select-none flex items-center text-gray-900 hover:text-blue-500 transition duration-200 ease-in-out ${isLast && !isOpen ? '' : 'border-b-1'}`}
          onClick={() => togglePanel(index)}
       >
          {icon
             ? React.cloneElement(icon, { className: 'h-4 w-4 mr-2' })
             : isOpen
-               ? <ChevronDown className="h-5 w-5 mr-2" />
-               : <ChevronRight className="h-5 w-5 mr-2" />}
+               ? <ChevronRight className="h-4 w-4 mr-2 transform rotate-90" />
+               : <ChevronRight className="h-4 w-4 mr-2" />}
          {label}
       </div>
       <div className={isOpen ? `p-4 bg-gray-0 ${!isLast ? 'border-b-1 border-gray-200' : ''}` : 'hidden'}>
