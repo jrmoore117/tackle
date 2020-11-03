@@ -18153,23 +18153,32 @@ video {
 /* ---------- BASE BUTTON ---------- */
 
 .box {
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
   padding: 1rem;
   border-width: 1px;
-  --border-opacity: 1;
-  border-color: #e2e5ea;
-  border-color: rgba(226, 229, 234, var(--border-opacity));
   border-radius: 0.25rem;
 }
 
 .box--default {
+  --border-opacity: 1;
+  border-color: #e2e5ea;
+  border-color: rgba(226, 229, 234, var(--border-opacity));
   box-shadow: 0 1px 2px 0 #e2e5ea;
 }
 
 .box--frame {
+  --border-opacity: 1;
+  border-color: #e2e5ea;
+  border-color: rgba(226, 229, 234, var(--border-opacity));
   box-shadow: none;
 }
 
 .box--tinted-frame {
+  --border-opacity: 1;
+  border-color: #e2e5ea;
+  border-color: rgba(226, 229, 234, var(--border-opacity));
   box-shadow: none;
   --bg-opacity: 1;
   background-color: #f9fafb;
@@ -18177,6 +18186,9 @@ video {
 }
 
 .box--well {
+  --border-opacity: 1;
+  border-color: #e2e5ea;
+  border-color: rgba(226, 229, 234, var(--border-opacity));
   --bg-opacity: 1;
   background-color: #f9fafb;
   background-color: rgba(249, 250, 251, var(--bg-opacity));
@@ -18184,26 +18196,44 @@ video {
 }
 
 .box--ping--blue {
+  --border-opacity: 1;
+  border-color: #92bdff;
+  border-color: rgba(146, 189, 255, var(--border-opacity));
   animation: ping-blue 1s cubic-bezier(0,.656,0,.58) infinite;
 }
 
 .box--ping--red {
+  --border-opacity: 1;
+  border-color: #faa1a8;
+  border-color: rgba(250, 161, 168, var(--border-opacity));
   animation: ping-red 1s cubic-bezier(0,.656,0,.58) infinite;
 }
 
 .box--ping--green {
+  --border-opacity: 1;
+  border-color: #80ddb8;
+  border-color: rgba(128, 221, 184, var(--border-opacity));
   animation: ping-green 1s cubic-bezier(0,.656,0,.58) infinite;
 }
 
 .box--ping--yellow {
+  --border-opacity: 1;
+  border-color: #ffeeb8;
+  border-color: rgba(255, 238, 184, var(--border-opacity));
   animation: ping-yellow 1s cubic-bezier(0,.656,0,.58) infinite;
 }
 
 .box--ping--purple {
+  --border-opacity: 1;
+  border-color: #c3b9ff;
+  border-color: rgba(195, 185, 255, var(--border-opacity));
   animation: ping-purple 1s cubic-bezier(0,.656,0,.58) infinite;
 }
 
 .box--ping--indigo {
+  --border-opacity: 1;
+  border-color: #9baad5;
+  border-color: rgba(155, 170, 213, var(--border-opacity));
   animation: ping-indigo 1s cubic-bezier(0,.656,0,.58) infinite;
 }
 
@@ -18814,6 +18844,12 @@ video {
   justify-content: center;
 }
 
+.checkbox::before {
+  content: url("check.svg");
+  transform: translateY(3px) rotate(-5deg);
+  visibility: hidden;
+}
+
 .checkbox:hover {
   --bg-opacity: 1;
   background-color: #edeff2;
@@ -18833,8 +18869,7 @@ video {
 }
 
 .checkbox:checked::before {
-  content: url("check.svg");
-  transform: translateY(3px) rotate(-5deg);
+  visibility: visible;
 }
 
 @media (min-width: 640px) {

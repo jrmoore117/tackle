@@ -4,47 +4,47 @@
 
 /* ---------- BASE BUTTON ---------- */
 .box {
-   @apply p-4 border-1 border-gray-200 rounded;
+   @apply bg-white p-4 border-1 rounded;
 }
 
 .box--default {
-   @apply shadow-gray;
+   @apply border-gray-200 shadow-gray;
 }
 
 .box--frame {
-   @apply shadow-none;
+   @apply border-gray-200 shadow-none;
 }
 
 .box--tinted-frame {
-   @apply shadow-none bg-gray-0;
+   @apply border-gray-200 shadow-none bg-gray-0;
 }
 
 .box--well {
-   @apply bg-gray-0 shadow-inner;
+   @apply border-gray-200 bg-gray-0 shadow-inner;
 }
 
 .box--ping--blue {
-   @apply animate-ping-blue;
+   @apply border-blue-200 animate-ping-blue;
 }
 
 .box--ping--red {
-   @apply animate-ping-red;
+   @apply border-red-200 animate-ping-red;
 }
 
 .box--ping--green {
-   @apply animate-ping-green;
+   @apply border-green-200 animate-ping-green;
 }
 
 .box--ping--yellow {
-   @apply animate-ping-yellow;
+   @apply border-yellow-200 animate-ping-yellow;
 }
 
 .box--ping--purple {
-   @apply animate-ping-purple;
+   @apply border-purple-200 animate-ping-purple;
 }
 
 .box--ping--indigo {
-   @apply animate-ping-indigo;
+   @apply border-indigo-200 animate-ping-indigo;
 }
 
 .box--ping--gray {
@@ -299,6 +299,11 @@
 .checkbox {
    @apply mr-2 h-5 w-5 shadow-gray border-1 border-gray-500 rounded outline-none cursor-pointer appearance-none transition duration-200 flex items-center justify-center;
 }
+.checkbox::before {
+   content: url("check.svg");
+   transform: translateY(3px) rotate(-5deg);
+   visibility: hidden;
+}
 .checkbox:hover {
    @apply bg-gray-100;
 }
@@ -306,6 +311,5 @@
    @apply bg-blue-500 border-2 border-blue-200 shadow-none animate-radio-ping-blue;
 }
 .checkbox:checked::before {
-   content: url("check.svg");
-   transform: translateY(3px) rotate(-5deg);
+   visibility: visible;
 }
