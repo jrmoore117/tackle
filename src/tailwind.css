@@ -21,7 +21,7 @@
 
 /* ---------- BASE BADGE ---------- */
 .badge {
-   @apply text-white text-xs px-2 py-1 rounded;
+   @apply text-white text-xs px-2 py-1 rounded select-none;
 }
 
 .badge.badge--small {
@@ -63,31 +63,31 @@
 
 /* ---------- SOLID BADGE ---------- */
 .badge--solid--blue {
-   @apply bg-blue-500;
+   @apply border-1 border-blue-600 bg-blue-500;
 }
 
 .badge--solid--red {
-   @apply bg-red-500;
+   @apply border-1 border-red-600 bg-red-500;
 }
 
 .badge--solid--green {
-   @apply bg-green-500;
+   @apply border-1 border-green-600 bg-green-500;
 }
 
 .badge--solid--yellow {
-   @apply text-gray-900 bg-yellow-500;
+   @apply border-1 border-yellow-600 text-gray-900 bg-yellow-500;
 }
 
 .badge--solid--purple {
-   @apply bg-purple-500;
+   @apply border-1 border-purple-600 bg-purple-500;
 }
 
 .badge--solid--indigo {
-   @apply bg-indigo-500;
+   @apply border-1 border-indigo-600 bg-indigo-500;
 }
 
 .badge--solid--gray {
-   @apply text-gray-900 bg-gray-500;
+   @apply text-gray-900 border-1 border-gray-600 bg-gray-500;
 }
 
 
@@ -226,6 +226,19 @@
    @apply bg-gray-0;
 }
 
+.button--primary--white {
+   @apply text-gray-900 bg-white;
+}
+.button--primary--white:focus {
+   @apply outline-none animate-btn-ping-gray;
+}
+.button.button--primary--white:active {
+   @apply bg-gray-100;
+}
+.button--primary--white:hover {
+   @apply bg-gray-0;
+}
+
 .button--primary--blue {
    @apply text-white bg-blue-500 border-1 border-blue-600 shadow-blue;
 }
@@ -315,6 +328,17 @@
 }
 .button--secondary--default:hover {
    @apply bg-gray-100;
+}
+
+.button--secondary--white {
+   @apply text-white;
+   background-color: transparent;
+}
+.button--secondary--white:focus {
+   @apply outline-none animate-btn-ping-gray;
+}
+.button--secondary--white:hover {
+   @apply text-gray-900 bg-gray-0;
 }
 
 .button--secondary--blue {

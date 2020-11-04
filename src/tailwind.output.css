@@ -18292,6 +18292,8 @@ video {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   border-radius: 0.25rem;
+  -webkit-user-select: none;
+          user-select: none;
 }
 
 .badge.badge--small {
@@ -18374,24 +18376,40 @@ video {
 /* ---------- SOLID BADGE ---------- */
 
 .badge--solid--blue {
+  border-width: 1px;
+  --border-opacity: 1;
+  border-color: #206fe6;
+  border-color: rgba(32, 111, 230, var(--border-opacity));
   --bg-opacity: 1;
   background-color: #247bff;
   background-color: rgba(36, 123, 255, var(--bg-opacity));
 }
 
 .badge--solid--red {
+  border-width: 1px;
+  --border-opacity: 1;
+  border-color: #dd3b49;
+  border-color: rgba(221, 59, 73, var(--border-opacity));
   --bg-opacity: 1;
   background-color: #f54251;
   background-color: rgba(245, 66, 81, var(--bg-opacity));
 }
 
 .badge--solid--green {
+  border-width: 1px;
+  --border-opacity: 1;
+  border-color: #00a765;
+  border-color: rgba(0, 167, 101, var(--border-opacity));
   --bg-opacity: 1;
   background-color: #00ba70;
   background-color: rgba(0, 186, 112, var(--bg-opacity));
 }
 
 .badge--solid--yellow {
+  border-width: 1px;
+  --border-opacity: 1;
+  border-color: #e6c665;
+  border-color: rgba(230, 198, 101, var(--border-opacity));
   --text-opacity: 1;
   color: #3b3d40;
   color: rgba(59, 61, 64, var(--text-opacity));
@@ -18401,12 +18419,20 @@ video {
 }
 
 .badge--solid--purple {
+  border-width: 1px;
+  --border-opacity: 1;
+  border-color: #7968e6;
+  border-color: rgba(121, 104, 230, var(--border-opacity));
   --bg-opacity: 1;
   background-color: #8673ff;
   background-color: rgba(134, 115, 255, var(--bg-opacity));
 }
 
 .badge--solid--indigo {
+  border-width: 1px;
+  --border-opacity: 1;
+  border-color: #314d9a;
+  border-color: rgba(49, 77, 154, var(--border-opacity));
   --bg-opacity: 1;
   background-color: #3655ab;
   background-color: rgba(54, 85, 171, var(--bg-opacity));
@@ -18416,6 +18442,10 @@ video {
   --text-opacity: 1;
   color: #3b3d40;
   color: rgba(59, 61, 64, var(--text-opacity));
+  border-width: 1px;
+  --border-opacity: 1;
+  border-color: #b0b6bf;
+  border-color: rgba(176, 182, 191, var(--border-opacity));
   --bg-opacity: 1;
   background-color: #c4cad4;
   background-color: rgba(196, 202, 212, var(--bg-opacity));
@@ -18766,6 +18796,33 @@ video {
   background-color: rgba(249, 250, 251, var(--bg-opacity));
 }
 
+.button--primary--white {
+  --text-opacity: 1;
+  color: #3b3d40;
+  color: rgba(59, 61, 64, var(--text-opacity));
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+}
+
+.button--primary--white:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  animation: ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+
+.button.button--primary--white:active {
+  --bg-opacity: 1;
+  background-color: #edeff2;
+  background-color: rgba(237, 239, 242, var(--bg-opacity));
+}
+
+.button--primary--white:hover {
+  --bg-opacity: 1;
+  background-color: #f9fafb;
+  background-color: rgba(249, 250, 251, var(--bg-opacity));
+}
+
 .button--primary--blue {
   --text-opacity: 1;
   color: #fff;
@@ -18988,6 +19045,28 @@ video {
   --bg-opacity: 1;
   background-color: #edeff2;
   background-color: rgba(237, 239, 242, var(--bg-opacity));
+}
+
+.button--secondary--white {
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  background-color: transparent;
+}
+
+.button--secondary--white:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  animation: ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+
+.button--secondary--white:hover {
+  --text-opacity: 1;
+  color: #3b3d40;
+  color: rgba(59, 61, 64, var(--text-opacity));
+  --bg-opacity: 1;
+  background-color: #f9fafb;
+  background-color: rgba(249, 250, 251, var(--bg-opacity));
 }
 
 .button--secondary--blue {
