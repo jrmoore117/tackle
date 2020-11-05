@@ -10,53 +10,62 @@ const Template = args => <Box {...args} />;
 
 export const DefaultBox = Template.bind({});
 DefaultBox.args = {
+   className: 'p-4',
    children: 'Box',
 };
 
 export const Frame = Template.bind({});
 Frame.args = {
+   className: 'p-4',
    children: 'Frame',
    variant: 'frame',
 };
 
 export const Well = Template.bind({});
 Well.args = {
+   className: 'p-4',
    children: 'Well',
    variant: 'well',
 };
 
 export const Blue = Template.bind({});
 Blue.args = {
+   className: 'p-4',
    children: 'Box',
    color: 'blue',
 };
 
 export const Red = Template.bind({});
 Red.args = {
+   className: 'p-4',
    children: 'Box',
    color: 'red',
 };
 
 export const Green = Template.bind({});
 Green.args = {
+   className: 'p-4',
    children: 'Box',
    color: 'green',
 };
 
 export const Purple = Template.bind({});
 Purple.args = {
+   className: 'p-4',
    children: 'Box',
    color: 'purple',
 };
 
 export const Indigo = Template.bind({});
 Indigo.args = {
+   className: 'p-4',
    children: 'Box',
    color: 'indigo',
 };
 
 export const BlueFrame = Template.bind({});
 BlueFrame.args = {
+   className: 'p-4',
    children: 'Frame',
    variant: 'frame',
    color: 'blue',
@@ -64,6 +73,7 @@ BlueFrame.args = {
 
 export const RedFrame = Template.bind({});
 RedFrame.args = {
+   className: 'p-4',
    children: 'Frame',
    variant: 'frame',
    color: 'red',
@@ -71,6 +81,7 @@ RedFrame.args = {
 
 export const GreenFrame = Template.bind({});
 GreenFrame.args = {
+   className: 'p-4',
    children: 'Frame',
    variant: 'frame',
    color: 'green',
@@ -78,6 +89,7 @@ GreenFrame.args = {
 
 export const YellowFrame = Template.bind({});
 YellowFrame.args = {
+   className: 'p-4',
    children: 'Frame',
    variant: 'frame',
    color: 'yellow',
@@ -85,6 +97,7 @@ YellowFrame.args = {
 
 export const PurpleFrame = Template.bind({});
 PurpleFrame.args = {
+   className: 'p-4',
    children: 'Frame',
    variant: 'frame',
    color: 'purple',
@@ -92,6 +105,7 @@ PurpleFrame.args = {
 
 export const IndigoFrame = Template.bind({});
 IndigoFrame.args = {
+   className: 'p-4',
    children: 'Frame',
    variant: 'frame',
    color: 'indigo',
@@ -99,6 +113,7 @@ IndigoFrame.args = {
 
 export const GrayFrame = Template.bind({});
 GrayFrame.args = {
+   className: 'p-4',
    children: 'Frame',
    variant: 'frame',
    color: 'gray',
@@ -106,6 +121,7 @@ GrayFrame.args = {
 
 export const BlueWell = Template.bind({});
 BlueWell.args = {
+   className: 'p-4',
    children: 'Well',
    variant: 'well',
    color: 'blue',
@@ -113,6 +129,7 @@ BlueWell.args = {
 
 export const RedWell = Template.bind({});
 RedWell.args = {
+   className: 'p-4',
    children: 'Well',
    variant: 'well',
    color: 'red',
@@ -120,6 +137,7 @@ RedWell.args = {
 
 export const GreenWell = Template.bind({});
 GreenWell.args = {
+   className: 'p-4',
    children: 'Well',
    variant: 'well',
    color: 'green',
@@ -127,6 +145,7 @@ GreenWell.args = {
 
 export const YellowWell = Template.bind({});
 YellowWell.args = {
+   className: 'p-4',
    children: 'Well',
    variant: 'well',
    color: 'yellow',
@@ -134,6 +153,7 @@ YellowWell.args = {
 
 export const PurpleWell = Template.bind({});
 PurpleWell.args = {
+   className: 'p-4',
    children: 'Well',
    variant: 'well',
    color: 'purple',
@@ -141,6 +161,7 @@ PurpleWell.args = {
 
 export const IndigoWell = Template.bind({});
 IndigoWell.args = {
+   className: 'p-4',
    children: 'Well',
    variant: 'well',
    color: 'indigo',
@@ -148,6 +169,7 @@ IndigoWell.args = {
 
 export const GrayWell = Template.bind({});
 GrayWell.args = {
+   className: 'p-4',
    children: 'Well (same as default well)',
    variant: 'well',
    color: 'gray',
