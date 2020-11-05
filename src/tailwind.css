@@ -8,10 +8,7 @@
 }
 
 .accordion-panel-header {
-   @apply p-4 border-gray-200 cursor-pointer select-none flex items-center text-gray-900 transition duration-200 ease-in-out;
-}
-.accordion-panel-header:hover {
-   @apply text-blue-500;
+   @apply p-4 font-semibold border-gray-200 cursor-pointer select-none flex items-center text-gray-900 transition duration-200 ease-in-out;
 }
 
 .accordion-panel-content {
@@ -21,11 +18,11 @@
 
 /* ---------- BASE BADGE ---------- */
 .badge {
-   @apply text-white text-xs px-2 py-1 rounded select-none;
+   @apply text-white text-sm font-semibold tracking-wide px-2 py-1 rounded select-none;
 }
 
 .badge.badge--small {
-   @apply px-1 py-0 font-light;
+   @apply px-1 py-0 font-normal;
 }
 
 .badge.badge--rounded {
@@ -93,7 +90,7 @@
 
 /* ---------- BASE BOX ---------- */
 .box {
-   @apply bg-white p-4 border-1 rounded;
+   @apply bg-white border-1 rounded;
 }
 
 /* ---------- DEFAULT BOXES ---------- */
@@ -444,6 +441,18 @@
 }
 .checkbox:checked::before {
    visibility: visible;
+}
+
+
+/* ---------- LIST ITEMS ---------- */
+.listitem {
+   @apply p-4 flex items-center justify-between transition duration-200 ease-in-out border-b-1 border-gray-200;
+}
+.listitem--last {
+   @apply p-4 flex items-center justify-between transition duration-200 ease-in-out;
+}
+.listitem:hover, .listitem--last:hover {
+   @apply bg-gray-0;
 }
 
 
