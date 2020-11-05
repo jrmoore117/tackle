@@ -61,7 +61,7 @@ export const FormExampleWithValidations = () => {
          <TextField type="password" placeholder="Password" {...set("password")} className="w-full mt-2" />
          <FormMessage {...set("password")} />
          <Checkbox {...set("savePassword")} label="Save Password?" className="mt-2 mr-2" />
-         <Button type="submit" label="Sumbit" color="blue" className="mt-2" />
+         <Button type="submit" label="Submit" color="blue" className="mt-2" />
       </form>
    );
 }
