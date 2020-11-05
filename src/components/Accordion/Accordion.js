@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { ChevronRight, ChevronDown } from 'react-feather';
+import { ChevronRight } from 'react-feather';
 import PropTypes from 'prop-types';
 
 export const Accordion = ({
+   color,
    children,
    ...props
 }) => {
@@ -12,9 +13,10 @@ export const Accordion = ({
    }
    const childrenWithProps = React.Children.map(children, (child, i) => {
       if (React.isValidElement(child)) {
-         return React.cloneElement(child, { 
-            togglePanel,
+         return React.cloneElement(child, {
+            color,
             index: i,
+            togglePanel,
             isOpen: panels[i],
             isLast: i === children.length - 1 ? true : false,
          });
@@ -28,6 +30,7 @@ export const Accordion = ({
 }
 
 Accordion.propTypes = {
+   color: PropTypes.string,
    children: PropTypes.array,
 }
 
@@ -36,6 +39,7 @@ export const Panel = ({
    children,
    togglePanel,
    icon,
+   color,
    index,
    isOpen,
    isLast,
@@ -43,7 +47,11 @@ export const Panel = ({
 }) => (
    <div>
       <div
-         className={`accordion-panel-header ${isLast && !isOpen ? '' : 'border-b-1'}`}
+         className={`
+            accordion-panel-header
+            ${isLast && !isOpen ? '' : 'border-b-1'}
+            ${color ? `hover:text-${color}-500` : 'hover:text-blue-500'}
+         `}
          onClick={() => togglePanel(index)}
       >
          {icon
@@ -64,10 +72,9 @@ export const Panel = ({
 );
 
 Panel.propTypes = {
-   label: PropTypes.string.isRequired,
-   children: PropTypes.array.isRequired,
-   togglePanel: PropTypes.func.isRequired,
-   index: PropTypes.number.isRequired,
-   isOpen: PropTypes.bool.isRequired,
-   isLast: PropTypes.bool.isRequired,
+   label: PropTypes.string,
+   togglePanel: PropTypes.func,
+   index: PropTypes.number,
+   isOpen: PropTypes.bool,
+   isLast: PropTypes.bool,
 }
