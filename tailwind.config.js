@@ -185,6 +185,7 @@ module.exports = {
       borderColor: ['responsive', 'hover', 'focus'],
       borderWidth: ['responsive', 'focus'],
       animation: ['responsive', 'focus', 'active'],
+      textColor: ['hover'],
    },
    plugins: [],
 }
