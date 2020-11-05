@@ -5,8 +5,9 @@ const Badge = ({
    label,
    color,
    variant,
-   isRounded,
    isSmall,
+   isRounded,
+   pingColor,
    className,
    ...props
 }) => (
@@ -15,6 +16,7 @@ const Badge = ({
          badge badge--${variant}--${color}
          ${isSmall && 'badge--small'}
          ${isRounded && 'badge--rounded'}
+         ${pingColor && `animate-ping-${pingColor}`}
          ${className}`}
       {...props}
    >

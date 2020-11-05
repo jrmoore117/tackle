@@ -21,14 +21,16 @@ DefaultBlue.args = {
 
 export const DefaultRed = Template.bind({});
 DefaultRed.args = {
-   label: 'Badge',
+   label: 'Live',
    color: 'red',
+   pingColor: 'red',
 };
 
 export const DefaultGreen = Template.bind({});
 DefaultGreen.args = {
    label: 'Badge',
    color: 'green',
+   pingColor: 'green',
 };
 
 export const DefaultYellow = Template.bind({});
@@ -64,9 +66,10 @@ SolidBlue.args = {
 
 export const SolidRed = Template.bind({});
 SolidRed.args = {
-   label: 'Badge',
+   label: 'Live',
    variant: 'solid',
    color: 'red',
+   pingColor: 'red'
 };
 
 export const SolidGreen = Template.bind({});
@@ -88,6 +91,7 @@ SolidPurple.args = {
    label: 'Badge',
    variant: 'solid',
    color: 'purple',
+   pingColor: 'purple',
 };
 
 export const SolidIndigo = Template.bind({});
