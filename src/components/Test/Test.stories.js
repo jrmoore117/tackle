@@ -12,7 +12,7 @@ export default {
 export const Example = () => {
    return(
       <div>
-         <Box className="inline-block text-gray-900">
+         <Box className="p-4 inline-block text-gray-900">
             <div>
                <h1 className="text-2xl font-bold mb-4 flex items-center"><ArrowUpCircle className="h-8 w-8 mr-2 text-purple-500" />Update Available</h1>
 
