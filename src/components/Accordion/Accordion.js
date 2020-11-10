@@ -11,7 +11,7 @@ export const Accordion = ({
    const togglePanel = (index) => {
       setPanels(panels.map((panel, i) => i === index ? !panel : panel));
    }
-   const childrenWithProps = React.Children.map(children, (child, i) => {
+   const childrenWithProps = children.map((child, i) => {
       if (React.isValidElement(child)) {
          return React.cloneElement(child, {
             color,
