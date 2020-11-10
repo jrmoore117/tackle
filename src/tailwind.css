@@ -468,11 +468,16 @@
 }
 
 
-/* ---------- TEXT FIELDS ---------- */
-.textfield {
-   @apply h-10 px-2 font-sans text-sm text-gray-900 border-1 border-gray-500 shadow-gray rounded flex items-center transition duration-200 ease-in-out;
+/* ---------- TEXT FIELD COMPONENTS ---------- */
+.textfield, .field {
+   @apply h-10 px-2 font-sans text-sm text-gray-900 border-1 border-gray-200 shadow-gray rounded flex items-center transition duration-200 ease-in-out;
 }
-.textfield:focus {
+
+.textfield--with-elements {
+   @apply w-full;
+}
+
+.textfield:focus, .textfield--with-elements:focus {
    @apply outline-none;
 }
 
@@ -480,10 +485,22 @@
    @apply shadow-outline-blue border-blue-500;
 }
 
-.textfield--success:focus {
+.textfield.textfield--success:focus {
    @apply shadow-outline-green border-green-500;
 }
 
-.textfield--error:focus {
+.textfield.textfield--error:focus {
    @apply shadow-outline-red border-red-500;
+}
+
+.field--focused {
+   @apply shadow-outline-blue border-blue-500;
+}
+
+.field--focused--error {
+   @apply shadow-outline-red border-red-500;
+}
+
+.fieldmessage {
+
 }

@@ -18900,9 +18900,9 @@ video {
   animation: radio-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
-/* ---------- TEXT FIELDS ---------- */
+/* ---------- TEXT FIELD COMPONENTS ---------- */
 
-.textfield {
+.textfield, .field {
   height: 2.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -18913,8 +18913,8 @@ video {
   color: rgba(59, 61, 64, var(--text-opacity));
   border-width: 1px;
   --border-opacity: 1;
-  border-color: #c4cad4;
-  border-color: rgba(196, 202, 212, var(--border-opacity));
+  border-color: #e2e5ea;
+  border-color: rgba(226, 229, 234, var(--border-opacity));
   box-shadow: 0 1px 2px 0 #e2e5ea;
   border-radius: 0.25rem;
   display: flex;
@@ -18924,7 +18924,11 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.textfield:focus {
+.textfield--with-elements {
+  width: 100%;
+}
+
+.textfield:focus, .textfield--with-elements:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
@@ -18936,18 +18940,35 @@ video {
   border-color: rgba(36, 123, 255, var(--border-opacity));
 }
 
-.textfield--success:focus {
+.textfield.textfield--success:focus {
   box-shadow: 0 0 0 3px #80ddb8;
   --border-opacity: 1;
   border-color: #00ba70;
   border-color: rgba(0, 186, 112, var(--border-opacity));
 }
 
-.textfield--error:focus {
+.textfield.textfield--error:focus {
   box-shadow: 0 0 0 3px #faa1a8;
   --border-opacity: 1;
   border-color: #f54251;
   border-color: rgba(245, 66, 81, var(--border-opacity));
+}
+
+.field--focused {
+  box-shadow: 0 0 0 3px #92bdff;
+  --border-opacity: 1;
+  border-color: #247bff;
+  border-color: rgba(36, 123, 255, var(--border-opacity));
+}
+
+.field--focused--error {
+  box-shadow: 0 0 0 3px #faa1a8;
+  --border-opacity: 1;
+  border-color: #f54251;
+  border-color: rgba(245, 66, 81, var(--border-opacity));
+}
+
+.fieldmessage {
 }
 
 @media (min-width: 640px) {
