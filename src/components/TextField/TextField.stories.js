@@ -1,7 +1,8 @@
 import React from 'react';
-import TextField from './TextField';
-import FieldMessage from './FieldMessage';
 import Field from './Field';
+import TextField from './TextField';
+import { FieldElementLeft, FieldElementRight} from './FieldElement';
+import FieldMessage from './FieldMessage';
 import Button from '../Button/Button';
 import Checkbox from "../Checkbox/Checkbox";
 import { Radio, RadioGroup } from '../Radio/Radio';
@@ -68,29 +69,34 @@ export const FormExampleWithValidations = () => {
    );
 }
 
-// export const FieldExample = () => {
-//    const { set, reset, handleSubmit, helpers } = useForm({
-//       initialValues: {
-//          firstName: '',
-//       },
-//       validators: {
-//          firstName: (value) => value.length < 5
-//             ? 'Your name must be at least 5 characters long. Sorry, Chad!'
-//             : null,
-//       },
-//    });
-//    const callback = (values) => {
-//       console.log("Callback working!", { ...values });
-//       reset();
-//    }
-//    return (
-//       <form onSubmit={(event) => handleSubmit(event, callback)} className="flex flex-col">
-//          <Field {...set("firstName")}>
-//             <Search className="h-5 w-5 stroke-2 text-gray-900 mr-2" />
-//             <TextField {...set("firstName")} />
-//             <X className="h-5 w-5 stroke-2 text-gray-900 ml-2" />
-//          </Field>
-//          <Button type="submit" label="Submit" color="blue" className="mt-2" />
-//       </form>
-//    );
-// }
+export const FieldExample = () => {
+   const { set, reset, handleSubmit } = useForm({
+      initialValues: {
+         firstName: '',
+      },
+      validators: {
+         firstName: (value) => value.length < 5
+            ? 'Your name must be at least 5 characters long. Sorry, Chad!'
+            : null,
+      },
+   });
+   const callback = (values) => {
+      console.log("Callback working!", { ...values });
+      reset();
+   }
+   return (
+      <form onSubmit={(event) => handleSubmit(event, callback)} className="flex flex-col">
+         <Field {...set("firstName")}>
+            <FieldElementLeft>
+               <Search />
+            </FieldElementLeft>
+            <TextField {...set("firstName")} placeholder="Search" />
+            <FieldElementRight>
+               <X />
+            </FieldElementRight>
+         </Field>
+         <FieldMessage {...set("firstName")} />
+         <Button type="submit" label="Submit" color="blue" className="mt-2" />
+      </form>
+   );
+}

@@ -4,19 +4,25 @@ import PropTypes from 'prop-types';
 
 const TextField = ({
   type,
-  className,
   errors,
+  className,
+  withElements,
   ...props
 }) => (
   <Input
     type={type}
     className={`
-      textfield textfield--${errors ? 'error' : 'default'}
+      ${withElements
+        ? 'textfield--with-elements'
+        : `textfield textfield--${errors ? 'error' : 'default'}`}
+      placeholder-gray-600
       ${className}
     `}
     {...props}
   />
 );
+
+TextField.id = 'TextField';
 
 TextField.propTypes = {
   className: PropTypes.string,
