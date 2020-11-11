@@ -111,7 +111,6 @@ BlueRounded.args = {
 export const BlueSolidSmall = Template.bind({});
 BlueSolidSmall.args = {
    label: 'Badge',
-   variant: 'solid',
    color: 'blue',
    isSmall: true,
 };
