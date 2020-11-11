@@ -28,7 +28,6 @@ const Field = ({
       if (React.isValidElement(child) && child.type.id === 'FieldElementLeft') {
          return React.cloneElement(child, {
             key: `field-element-left-${i}`,
-            className: '',
             ...child.props,
          });
       }
