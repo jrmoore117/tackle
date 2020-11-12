@@ -4,6 +4,8 @@ const useForm = ({ initialValues, validators } = {}) => {
    const [values, setValues] = useState(initialValues);
    const [errors, setErrors] = useState({});
    return {
+      values,
+      setValues,
       set: (name) => ({
          name: name,
          value: values[name],
