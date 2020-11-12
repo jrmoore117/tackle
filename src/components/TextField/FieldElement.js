@@ -1,13 +1,17 @@
 import React, { cloneElement } from 'react';
 
 export const FieldElementLeft = ({ children, ...props }) => (
-   cloneElement(children, { className: 'h-5 w-5 stroke-2 text-gray-900 mr-2' })
+   <div className="fieldelement--left">
+      {children}
+   </div>
 );
 
 FieldElementLeft.id = 'FieldElementLeft';
 
 export const FieldElementRight = ({ children, ...props }) => (
-   cloneElement(children, { className: 'h-5 w-5 stroke-2 text-gray-900 ml-2' })
+   <div className="fieldelement--right">
+      {children}
+   </div>
 );
 
 FieldElementRight.id = 'FieldElementRight';
