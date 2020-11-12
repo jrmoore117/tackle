@@ -1,7 +1,8 @@
 import React from 'react';
 import Field from './Field';
 import TextField from './TextField';
-import { FieldElementLeft, FieldElementRight} from './FieldElement';
+import Icon from '../Icon/Icon';
+// import { FieldElementLeft, FieldElementRight} from './FieldElement';
 import FieldMessage from './FieldMessage';
 import Button from '../Button/Button';
 import Checkbox from "../Checkbox/Checkbox";
@@ -10,6 +11,7 @@ import { useRadioState } from "reakit/Radio";
 import { Search, X } from 'react-feather';
 
 import useForm from '../../hooks/useForm';
+import FieldElementRight, { FieldElementLeft } from './FieldElement';
 
 export default {
    component: TextField,
@@ -70,33 +72,29 @@ export const FormExampleWithValidations = () => {
 }
 
 export const FieldExample = () => {
-   const { set, reset, handleSubmit } = useForm({
+   const { set, reset, handleSubmit, values, setValues } = useForm({
       initialValues: {
-         firstName: '',
-      },
-      validators: {
-         firstName: (value) => value.length < 5
-            ? 'Your name must be at least 5 characters long. Sorry, Chad!'
-            : null,
+         search: '',
       },
    });
-   const callback = (values) => {
-      console.log("Callback working!", { ...values });
+   const handleSearch = (values) => {
+      alert(`Searching...`);
       reset();
    }
    return (
-      <form onSubmit={(event) => handleSubmit(event, callback)} className="flex flex-col">
-         <Field {...set("firstName")}>
+      <div className="flex items-center">
+         <Field {...set("search")}>
             <FieldElementLeft>
-               <Search />
+               <Icon as={Search} />
             </FieldElementLeft>
-            <TextField {...set("firstName")} placeholder="Search" />
-            <FieldElementRight>
-               <X />
-            </FieldElementRight>
+            <TextField {...set("search")} placeholder="Search" />
+            {values.search && (
+               <FieldElementRight>
+                  <Icon as={X} onClick={() => setValues({ search: '' })}/>
+               </FieldElementRight>
+            )}
          </Field>
-         <FieldMessage {...set("firstName")} />
-         <Button type="submit" label="Submit" color="blue" className="mt-2" />
-      </form>
+         <Button onClick={handleSearch} label="Search" color="blue" className="ml-2" />
+      </div>
    );
 }
