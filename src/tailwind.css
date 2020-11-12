@@ -411,7 +411,7 @@
 }
 
 .button--tertiary--blue {
-   @apply text-blue-500 bg-white border-1 border-gray-500 shadow-gray;
+   @apply text-blue-500 bg-white border-1 border-gray-200 shadow-gray;
 }
 .button--tertiary--blue:focus {
    @apply outline-none animate-btn-ping-blue;
@@ -426,7 +426,7 @@
 
 /* ---------- CHECKBOXES ---------- */
 .checkbox {
-   @apply mr-2 h-5 w-5 bg-white shadow-gray border-1 border-gray-500 rounded outline-none cursor-pointer appearance-none transition duration-200 flex items-center justify-center;
+   @apply mr-2 h-5 w-5 bg-white shadow-gray border-1 border-gray-200 rounded outline-none cursor-pointer appearance-none transition duration-200 flex items-center justify-center;
 }
 .checkbox:hover {
    @apply bg-gray-100;
@@ -458,7 +458,7 @@
 
 /* ---------- RADIO BUTTONS ---------- */
 .radio {
-   @apply mr-2 h-5 w-5 bg-white shadow-gray border-1 border-gray-500 rounded-full outline-none appearance-none cursor-pointer transition duration-200 flex items-center justify-center;
+   @apply mr-2 h-5 w-5 bg-white shadow-gray border-1 border-gray-200 rounded-full outline-none appearance-none cursor-pointer transition duration-200 flex items-center justify-center;
 }
 .radio:hover {
    @apply bg-gray-100;
@@ -470,7 +470,7 @@
 
 /* ---------- TEXT FIELD COMPONENTS ---------- */
 .textfield, .field {
-   @apply h-10 px-2 font-sans text-sm text-gray-900 border-1 border-gray-200 shadow-gray rounded flex items-center transition duration-200 ease-in-out;
+   @apply h-10 px-2 font-sans text-sm text-gray-900 bg-white border-1 border-gray-200 shadow-gray rounded flex items-center transition duration-200 ease-in-out;
 }
 
 .textfield--with-elements {
@@ -499,6 +499,14 @@
 
 .field--focused--error {
    @apply shadow-outline-red border-red-500;
+}
+
+.fieldelement--left {
+   @apply mr-2 flex items-center justify-center;
+}
+
+.fieldelement--right {
+   @apply ml-2 flex items-center justify-center;
 }
 
 .fieldmessage {

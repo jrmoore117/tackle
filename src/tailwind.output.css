@@ -18744,8 +18744,8 @@ video {
   background-color: rgba(255, 255, 255, var(--bg-opacity));
   border-width: 1px;
   --border-opacity: 1;
-  border-color: #c4cad4;
-  border-color: rgba(196, 202, 212, var(--border-opacity));
+  border-color: #e2e5ea;
+  border-color: rgba(226, 229, 234, var(--border-opacity));
   box-shadow: 0 1px 2px 0 #e2e5ea;
 }
 
@@ -18780,8 +18780,8 @@ video {
   box-shadow: 0 1px 2px 0 #e2e5ea;
   border-width: 1px;
   --border-opacity: 1;
-  border-color: #c4cad4;
-  border-color: rgba(196, 202, 212, var(--border-opacity));
+  border-color: #e2e5ea;
+  border-color: rgba(226, 229, 234, var(--border-opacity));
   border-radius: 0.25rem;
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -18867,8 +18867,8 @@ video {
   box-shadow: 0 1px 2px 0 #e2e5ea;
   border-width: 1px;
   --border-opacity: 1;
-  border-color: #c4cad4;
-  border-color: rgba(196, 202, 212, var(--border-opacity));
+  border-color: #e2e5ea;
+  border-color: rgba(226, 229, 234, var(--border-opacity));
   border-radius: 9999px;
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -18911,6 +18911,9 @@ video {
   --text-opacity: 1;
   color: #3b3d40;
   color: rgba(59, 61, 64, var(--text-opacity));
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
   border-width: 1px;
   --border-opacity: 1;
   border-color: #e2e5ea;
@@ -18966,6 +18969,20 @@ video {
   --border-opacity: 1;
   border-color: #f54251;
   border-color: rgba(245, 66, 81, var(--border-opacity));
+}
+
+.fieldelement--left {
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fieldelement--right {
+  margin-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .fieldmessage {
