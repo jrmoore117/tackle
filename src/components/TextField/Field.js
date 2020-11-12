@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 const Field = ({
    errors,
    children,
+   className,
    ...props
 }) => {
 
@@ -48,6 +49,7 @@ const Field = ({
             field
             ${focused && !errors && 'field--focused'}
             ${focused && errors && 'field--focused--error'}
+            ${className}
          `}
          {...props}
       >
