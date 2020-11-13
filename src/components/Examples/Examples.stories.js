@@ -1,12 +1,19 @@
 import React from 'react';
-import Test from './Test';
-import Box from '../Box/Box';
-import Button from '../Button/Button';
-import { ArrowUpCircle, Home, Coffee, ShoppingBag, ShoppingCart, Zap } from 'react-feather';
+import Box from 'components/Box';
+import Examples from 'components/Examples';
+import Button from 'components/Button';
+import { 
+   Zap,
+   Home,
+   Coffee,
+   ShoppingBag,
+   ShoppingCart,
+   ArrowUpCircle,
+} from 'react-feather';
 
 export default {
-   component: Test,
-   title: 'Test',
+   component: Examples,
+   title: 'Examples',
 };
 
 export const ExampleOne = () => {

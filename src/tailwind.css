@@ -435,7 +435,7 @@
    @apply bg-blue-500 border-2 border-blue-200 shadow-none animate-radio-ping-blue;
 }
 .checkbox::before {
-   content: url("check.svg");
+   content: url("components/Checkbox/assets/check.svg");
    transform: translateY(3px) rotate(-5deg);
    visibility: hidden;
 }

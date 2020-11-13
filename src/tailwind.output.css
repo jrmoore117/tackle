@@ -18814,7 +18814,7 @@ video {
 }
 
 .checkbox::before {
-  content: url("check.svg");
+  content: url("components/Checkbox/assets/check.svg");
   transform: translateY(3px) rotate(-5deg);
   visibility: hidden;
 }

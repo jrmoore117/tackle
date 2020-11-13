@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './Button';
+import Button from 'components/Button';
 import { AlertCircle, Twitter, Twitch, DollarSign } from 'react-feather';
 
 export default {

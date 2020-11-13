@@ -15,5 +15,3 @@ export const FieldElementRight = ({ children, ...props }) => (
 );
 
 FieldElementRight.id = 'FieldElementRight';
-
-export default FieldElementRight;

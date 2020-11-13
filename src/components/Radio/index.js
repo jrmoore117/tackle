@@ -1,5 +1,8 @@
 import React from 'react';
-import { Radio as RadioButton, RadioGroup as RadioButtonGroup } from "reakit/Radio";
+import {
+   Radio as RadioButton,
+   RadioGroup as RadioButtonGroup
+} from "reakit/Radio";
 import PropTypes from 'prop-types';
 
 export const Radio = ({

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import List from './List';
-import Box from '../Box/Box';
-import Checkbox from '../Checkbox/Checkbox';
+import List from 'components/List';
+import Box from 'components/Box';
+import Checkbox from 'components/Checkbox';
 
 export default {
    component: List,

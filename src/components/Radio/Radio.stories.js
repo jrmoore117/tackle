@@ -1,6 +1,6 @@
 import React from 'react';
-import { Radio, RadioGroup } from './Radio';
 import { useRadioState } from "reakit/Radio";
+import { Radio, RadioGroup } from 'components/Radio';
 
 export default {
    component: Radio,

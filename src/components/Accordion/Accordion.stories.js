@@ -1,5 +1,5 @@
 import React from 'react';
-import { Accordion, Panel } from './Accordion';
+import { Accordion, Panel } from 'components/Accordion';
 import { User, Key, Bell } from 'react-feather';
 
 export default {

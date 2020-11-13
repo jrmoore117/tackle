@@ -1,6 +1,11 @@
 import React from 'react';
-import Icon from './Icon';
-import { AlertCircle, Twitter, Twitch, DollarSign } from 'react-feather';
+import Icon from 'components/Icon';
+import { 
+   Twitch,
+   Twitter,
+   DollarSign,
+   AlertCircle,
+} from 'react-feather';
 
 export default {
    component: Icon,

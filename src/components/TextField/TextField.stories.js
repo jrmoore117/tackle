@@ -1,17 +1,16 @@
 import React from 'react';
-import Field from './Field';
-import TextField from './TextField';
-import Icon from '../Icon/Icon';
-// import { FieldElementLeft, FieldElementRight} from './FieldElement';
-import FieldMessage from './FieldMessage';
-import Button from '../Button/Button';
-import Checkbox from "../Checkbox/Checkbox";
-import { Radio, RadioGroup } from '../Radio/Radio';
+import Icon from 'components/Icon';
+import Button from 'components/Button';
+import Checkbox from "components/Checkbox";
 import { useRadioState } from "reakit/Radio";
+import { Radio, RadioGroup } from 'components/Radio';
+import Field from 'components/Field';
+import TextField from 'components/TextField';
+import FieldMessage from 'components/FieldMessage';
+import { FieldElementLeft, FieldElementRight } from 'components/FieldElement';
 import { Search, X } from 'react-feather';
 
 import useForm from '../../hooks/useForm';
-import FieldElementRight, { FieldElementLeft } from './FieldElement';
 
 export default {
    component: TextField,

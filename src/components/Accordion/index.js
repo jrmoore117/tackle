@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Icon from 'components/Icon';
 import { ChevronRight } from 'react-feather';
 import PropTypes from 'prop-types';
 
@@ -36,14 +37,14 @@ Accordion.propTypes = {
 }
 
 export const Panel = ({
-   label,
-   children,
-   togglePanel,
    icon,
+   label,
    color,
    index,
    isOpen,
    isLast,
+   children,
+   togglePanel,
    ...props
 }) => (
    <div>
@@ -57,9 +58,7 @@ export const Panel = ({
       >
          {icon
             ? React.cloneElement(icon, { className: 'h-4 w-4 mr-2' })
-            : isOpen
-               ? <ChevronRight className="h-4 w-4 mr-2 transform rotate-90" />
-               : <ChevronRight className="h-4 w-4 mr-2" />}
+            : <Icon as={ChevronRight} size={4} className={`mr-2 ${isOpen && 'transform rotate-90'}`} />}
          {label}
       </div>
       <div
