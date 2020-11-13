@@ -10,7 +10,7 @@ import FieldMessage from 'components/FieldMessage';
 import { FieldElementLeft, FieldElementRight } from 'components/FieldElement';
 import { Search, X } from 'react-feather';
 
-import useForm from '../../hooks/useForm';
+import useForm from 'hooks/useForm';
 
 export default {
    component: TextField,
@@ -71,7 +71,7 @@ export const FormExampleWithValidations = () => {
 }
 
 export const FieldExample = () => {
-   const { set, reset, handleSubmit, values, setValues } = useForm({
+   const { set, reset, values, setValues } = useForm({
       initialValues: {
          search: '',
       },
