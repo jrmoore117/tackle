@@ -18,7 +18,7 @@ export default {
 };
 
 export const FormExampleWithValidations = () => {
-   const { set, reset, handleSubmit, helpers } = useForm({
+   const { set, reset, getValidatedSubmission, helpers } = useForm({
       initialValues: {
          firstName: '',
          lastName: '',
@@ -39,12 +39,20 @@ export const FormExampleWithValidations = () => {
       },
    });
    const radio = useRadioState();
-   const callback = (values) => {
-      console.log("Callback working!", { ...values, radioValue: radio.state });
-      reset();
+   const handleSubmit = (event) => {
+      event.preventDefault();
+      
+      const submission = getValidatedSubmission();
+
+      if (submission.errors) {
+         console.log("Errors: ", submission.errors);
+      } else if (submission.values) {
+         console.log("Form submitted: ", { ...submission.values, radioValue: radio.state });
+         reset();
+      }
    }
    return (
-      <form onSubmit={(event) => handleSubmit(event, callback)} className="flex flex-col">
+      <form onSubmit={handleSubmit} className="flex flex-col">
          <RadioGroup {...radio} aria-label="prefix">
             <Radio {...radio} label="Mr." value="Mr." />
             <Radio {...radio} label="Ms." value="Ms." />
