@@ -25,21 +25,20 @@ const useForm = ({ initialValues, validators } = {}) => {
                : setValues(Object.assign({}, values, { [name]: value }))
          },
       }),
-      handleSubmit: (event, callback) => {
-         event.preventDefault();
+      getValidatedSubmission: () => {
          // Prevent callback execution if errors present.
          for (const name in errors) {
             if (errors && errors[name]) {
-               return console.error('Form input values do not meet requirements.');
+               return { errors };
             }
          }
          // Prevent callback execution if empty form fields break any validation rules.
          for (const name in values) {
             if (validators && validators[name] && validators[name](values[name])) {
-               return console.error('Empty form inputs cannot be validated.');
+               return { errors: 'Please fill in all required fields.' };
             }
          }
-         callback(values);
+         return { values };
       },
       reset: () => {
          setValues(initialValues);
