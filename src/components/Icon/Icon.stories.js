@@ -1,10 +1,11 @@
 import React from 'react';
 import Icon from 'components/Icon';
 import { 
+   Check,
    Twitch,
-   Twitter,
    DollarSign,
    AlertCircle,
+   X,
 } from 'react-feather';
 
 export default {
@@ -14,28 +15,41 @@ export default {
 
 const Template = args => <Icon {...args} />;
 
-export const DefaultSize = Template.bind({});
-DefaultSize.args = {
+export const Default = Template.bind({});
+Default.args = {
    as: AlertCircle,
 };
 
-export const Large = Template.bind({});
-Large.args = {
-   as: Twitch,
-   size: '7',
-   className: 'text-purple-500',
-};
-
-export const Small = Template.bind({});
-Small.args = {
+export const SmallDefaultGreen = Template.bind({});
+SmallDefaultGreen.args = {
    as: DollarSign,
    size: '4',
-   className: 'text-green-500',
+   color: 'green',
 };
 
-export const Clickable = Template.bind({});
-Clickable.args = {
-   as: Twitter,
-   clickable: true,
-   onClick: () => alert("Tweet!"),
+export const LargeShadedPurple = Template.bind({});
+LargeShadedPurple.args = {
+   as: Twitch,
+   size: '10',
+   color: 'purple',
+   variant: 'shaded',
+};
+
+export const ShadedGreenRounded = Template.bind({});
+ShadedGreenRounded.args = {
+   as: Check,
+   size: 6,
+   rounded: true,
+   color: 'green',
+   variant: 'shaded',
+};
+
+export const ClickableRounded = Template.bind({});
+ClickableRounded.args = {
+   as: X,
+   size: 6,
+   color: 'blue',
+   rounded: true,
+   variant: 'clickable',
+   onClick: () => console.log("Deleted!"),
 };

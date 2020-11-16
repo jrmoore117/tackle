@@ -5,7 +5,10 @@ import { Clickable } from "reakit/Clickable";
 const Icon = ({
    as,
    size,
+   color,
+   variant,
    onClick,
+   rounded,
    disabled,
    focusable,
    className,
@@ -13,18 +16,22 @@ const Icon = ({
 }) => {
    const IconComponent = as;
    return (
-      onClick ? (
+      variant === 'clickable' ? (
             <Clickable
                as="div"
                onClick={onClick}
                disabled={disabled}
                focusable={focusable}
-               className="outline-none cursor-pointer inline-block"
+               className="icon--clickable"
             >
-               {cloneElement(<IconComponent />, { className: `h-${size} w-${size} ${className}` })}
+               {cloneElement(<IconComponent />, { 
+                  className: `icon--clickable--${color} h-${size} w-${size} ${rounded ? 'rounded-full' : 'rounded'} ${className}`
+               })}
             </Clickable>
          ) : (
-            cloneElement(<IconComponent />, { className: `h-${size} w-${size} ${className}` })
+            cloneElement(<IconComponent />, {
+               className: `icon--${variant}--${color} h-${size} w-${size} ${rounded ? 'rounded-full' : 'rounded'} ${className}`
+            })
          )
    );
 }
@@ -32,13 +39,16 @@ const Icon = ({
 Icon.id = 'Icon';
 
 Icon.defaultProps = {
-   size: 5,
+   size: 4,
+   color: 'gray',
+   variant: 'default',
    focusable: false,
 }
 
 Icon.propTypes = {
    as: PropTypes.object.isRequired,
    size: PropTypes.number,
+   color: PropTypes.string,
    onClick: PropTypes.func,
    className: PropTypes.string,
 }
