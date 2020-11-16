@@ -8,7 +8,7 @@ import Field from 'components/Field';
 import TextField from 'components/TextField';
 import FieldMessage from 'components/FieldMessage';
 import { FieldElementLeft, FieldElementRight } from 'components/FieldElement';
-import { Search, X } from 'react-feather';
+import { Check, Search, X } from 'react-feather';
 
 import useForm from 'hooks/useForm';
 
@@ -16,6 +16,75 @@ export default {
    component: TextField,
    title: 'Text Field',
 };
+
+export const DefaultTextField = () => (
+   <TextField placeholder="Text Field" />
+);
+
+export const TextFieldWithLeftElement = () => (
+   <Field>
+      <FieldElementLeft>
+         <Icon as={Search} />
+      </FieldElementLeft>
+      <TextField placeholder="Search" />
+   </Field>
+);
+
+export const TextFieldWithRightElement = () => (
+   <Field>
+      <TextField placeholder="Search" />
+      <FieldElementRight>
+         <Icon
+            as={Check}
+            rounded
+            size={6}
+            color="green"
+            variant="shaded"
+         />
+      </FieldElementRight>
+   </Field>
+);
+
+
+export const TextFieldWithConditionalRightElement = () => {
+   const { set, reset, values, setValues } = useForm({
+      initialValues: {
+         search: '',
+      },
+   });
+   const handleSearch = () => {
+      alert(`Searching for "${values.search}"`);
+      reset();
+   }
+   return (
+      <div className="flex items-center">
+         <Field {...set("search")}>
+            <FieldElementLeft>
+               <Icon as={Search} />
+            </FieldElementLeft>
+            <TextField {...set("search")} placeholder="Search" />
+            {values.search && (
+               <FieldElementRight>
+                  <Icon
+                     as={X}
+                     rounded
+                     size={6}
+                     color="blue"
+                     variant="clickable"
+                     onClick={() => setValues({ search: '' })}
+                  />
+               </FieldElementRight>
+            )}
+         </Field>
+         <Button
+            color="blue"
+            label="Search"
+            className="ml-2"
+            onClick={handleSearch}
+         />
+      </div>
+   );
+}
 
 export const FormExampleWithValidations = () => {
    const { set, reset, getValidatedSubmission, helpers } = useForm({
@@ -41,7 +110,7 @@ export const FormExampleWithValidations = () => {
    const radio = useRadioState();
    const handleSubmit = (event) => {
       event.preventDefault();
-      
+
       const submission = getValidatedSubmission();
 
       if (submission.errors) {
@@ -78,30 +147,3 @@ export const FormExampleWithValidations = () => {
    );
 }
 
-export const FieldExample = () => {
-   const { set, reset, values, setValues } = useForm({
-      initialValues: {
-         search: '',
-      },
-   });
-   const handleSearch = (values) => {
-      alert(`Searching...`);
-      reset();
-   }
-   return (
-      <div className="flex items-center">
-         <Field {...set("search")}>
-            <FieldElementLeft>
-               <Icon as={Search} />
-            </FieldElementLeft>
-            <TextField {...set("search")} placeholder="Search" />
-            {values.search && (
-               <FieldElementRight>
-                  <Icon as={X} onClick={() => setValues({ search: '' })}/>
-               </FieldElementRight>
-            )}
-         </Field>
-         <Button onClick={handleSearch} label="Search" color="blue" className="ml-2" />
-      </div>
-   );
-}
