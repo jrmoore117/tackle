@@ -16,6 +16,16 @@
 }
 
 
+/* ---------- ALERT ---------- */
+/* .alert {
+   @apply ;
+}
+
+.alert--red {
+   @apply ;
+} */
+
+
 /* ---------- BASE BADGE ---------- */
 .badge {
    @apply text-white text-sm font-semibold tracking-wide px-2 py-1 rounded select-none;
@@ -90,7 +100,7 @@
 
 /* ---------- BASE BOX ---------- */
 .box {
-   @apply bg-white border-1 rounded;
+   @apply bg-white border-1;
 }
 
 /* ---------- DEFAULT BOXES ---------- */
@@ -189,7 +199,6 @@
 }
 
 
-
 /* ---------- BASE BUTTON ---------- */
 .button {
    @apply h-10 px-4 font-sans text-sm rounded flex items-center justify-center transition duration-200 ease-in-out;
@@ -276,7 +285,7 @@
 }
 
 .button--primary--yellow {
-   @apply text-gray-900 bg-yellow-500 border-1 border-yellow-600 shadow-yellow;
+   @apply text-white bg-yellow-500 border-1 border-yellow-600 shadow-yellow;
 }
 .button--primary--yellow:focus {
    @apply outline-none animate-btn-ping-yellow;
@@ -425,6 +434,10 @@
 
 
 /* ---------- CHECKBOXES ---------- */
+.checkboxwrapper {
+   @apply flex items-center;
+}
+
 .checkbox {
    @apply mr-2 h-5 w-5 bg-white shadow-gray border-1 border-gray-200 rounded outline-none cursor-pointer appearance-none transition duration-200 flex items-center justify-center;
 }
@@ -441,6 +454,10 @@
 }
 .checkbox:checked::before {
    visibility: visible;
+}
+
+.checkboxlabel {
+   @apply text-gray-900 cursor-pointer select-none;
 }
 
 
@@ -594,6 +611,10 @@
 
 
 /* ---------- RADIO BUTTONS ---------- */
+.radiowrapper {
+   @apply mr-4 flex items-center;
+}
+
 .radio {
    @apply mr-2 h-5 w-5 bg-white shadow-gray border-1 border-gray-200 rounded-full outline-none appearance-none cursor-pointer transition duration-200 flex items-center justify-center;
 }
@@ -602,6 +623,10 @@
 }
 .radio:checked {
    @apply bg-blue-500 border-2 border-blue-200 shadow-none animate-radio-ping-blue;
+}
+
+.radiolabel {
+   @apply text-gray-900 cursor-pointer select-none;
 }
 
 
@@ -647,5 +672,5 @@
 }
 
 .fieldmessage {
-
+   @apply ml-1 mt-1 text-xs text-red-500;
 }
