@@ -25,13 +25,13 @@ const Badge = ({
 );
 
 Badge.defaultProps = {
-   variant: 'default',
    color: 'gray',
+   variant: 'default',
 }
 
 Badge.propTypes = {
-   variant: PropTypes.string,
    label: PropTypes.string,
+   variant: PropTypes.string,
 }
 
 export default Badge;
