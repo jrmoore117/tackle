@@ -1,5 +1,6 @@
 import React, { cloneElement } from 'react';
 import PropTypes from 'prop-types';
+import * as Icons from 'react-feather';
 import { Clickable } from "reakit/Clickable";
 
 const Icon = ({
@@ -8,13 +9,13 @@ const Icon = ({
    color,
    variant,
    onClick,
-   rounded,
+   isRounded,
    disabled,
    focusable,
    className,
    ...props
 }) => {
-   const IconComponent = as;
+   const Icon = Icons[as];
    return (
       variant === 'clickable' ? (
             <Clickable
@@ -24,13 +25,13 @@ const Icon = ({
                focusable={focusable}
                className="icon--clickable"
             >
-               {cloneElement(<IconComponent />, { 
-                  className: `icon--clickable--${color} h-${size} w-${size} ${rounded ? 'rounded-full' : 'rounded'} ${className}`
+               {cloneElement(<Icon />, { 
+                  className: `icon--clickable--${color} h-${size} w-${size} ${isRounded ? 'rounded-full' : 'rounded'} ${className}`
                })}
             </Clickable>
          ) : (
-            cloneElement(<IconComponent />, {
-               className: `icon--${variant}--${color} h-${size} w-${size} ${rounded ? 'rounded-full' : 'rounded'} ${className}`
+            cloneElement(<Icon />, {
+               className: `icon--${variant}--${color} h-${size} w-${size} ${isRounded ? 'rounded-full' : 'rounded'} ${className}`
             })
          )
    );
@@ -46,7 +47,7 @@ Icon.defaultProps = {
 }
 
 Icon.propTypes = {
-   as: PropTypes.object.isRequired,
+   as: PropTypes.string.isRequired,
    size: PropTypes.number,
    color: PropTypes.string,
    onClick: PropTypes.func,
