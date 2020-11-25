@@ -11,9 +11,9 @@ export const ExampleRadioButtons = () => {
    const radio = useRadioState();
    return(
       <RadioGroup>
-         <Radio label="One" value="one" {...radio} />
-         <Radio label="Two" value="two" {...radio} />
-         <Radio label="Three" value="three" {...radio} />
+         <Radio label="Hook" value="hook" {...radio} />
+         <Radio label="Line" value="line" {...radio} />
+         <Radio label="Sinker" value="sinker" {...radio} />
       </RadioGroup>
    );
 }

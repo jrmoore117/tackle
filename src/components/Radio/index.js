@@ -10,12 +10,12 @@ export const Radio = ({
    className,
    ...props
 }) => (
-   <label className="mr-4 flex items-center">
+   <label className="radiowrapper">
       <RadioButton
-         className={`radio radio--default`}
+         className={`radio`}
          {...props}
       />
-      <span className="cursor-pointer select-none">
+      <span className="radiolabel">
          {label}
       </span>
    </label>
