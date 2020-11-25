@@ -24,7 +24,7 @@ export const DefaultTextField = () => (
 export const TextFieldWithLeftElement = () => (
    <Field>
       <FieldElementLeft>
-         <Icon as={Search} />
+         <Icon as="Search" />
       </FieldElementLeft>
       <TextField placeholder="Search" />
    </Field>
@@ -35,8 +35,8 @@ export const TextFieldWithRightElement = () => (
       <TextField placeholder="Search" />
       <FieldElementRight>
          <Icon
-            as={Check}
-            rounded
+            as="Check"
+            isRounded
             size={6}
             color="green"
             variant="shaded"
@@ -60,14 +60,14 @@ export const TextFieldWithConditionalRightElement = () => {
       <div className="flex items-center">
          <Field {...set("search")}>
             <FieldElementLeft>
-               <Icon as={Search} />
+               <Icon as="Search" />
             </FieldElementLeft>
             <TextField {...set("search")} placeholder="Search" />
             {values.search && (
                <FieldElementRight>
                   <Icon
-                     as={X}
-                     rounded
+                     as="X"
+                     isRounded
                      size={6}
                      color="blue"
                      variant="clickable"
@@ -107,7 +107,9 @@ export const FormExampleWithValidations = () => {
             : null,
       },
    });
+
    const radio = useRadioState();
+
    const handleSubmit = (event) => {
       event.preventDefault();
 
@@ -120,6 +122,7 @@ export const FormExampleWithValidations = () => {
          reset();
       }
    }
+   
    return (
       <form onSubmit={handleSubmit} className="flex flex-col">
          <RadioGroup {...radio} aria-label="prefix">
