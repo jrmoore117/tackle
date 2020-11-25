@@ -46,30 +46,32 @@ export const Panel = ({
    children,
    togglePanel,
    ...props
-}) => (
-   <div>
-      <div
-         className={`
-            accordion-panel-header
-            ${isLast && !isOpen ? '' : 'border-b-1'}
-            ${color ? `hover:text-${color}-500` : 'hover:text-blue-500'}
-         `}
-         onClick={() => togglePanel(index)}
-      >
-         {icon
-            ? React.cloneElement(icon, { className: 'h-4 w-4 mr-2' })
-            : <Icon as={ChevronRight} size={4} className={`mr-2 ${isOpen && 'transform rotate-90'}`} />}
-         {label}
+}) => {
+   return (
+      <div>
+         <div
+            className={`
+               accordion-panel-header
+               ${isLast && !isOpen ? '' : 'border-b-1'}
+               ${color ? `hover:text-${color}-500` : 'hover:text-blue-500'}
+            `}
+            onClick={() => togglePanel(index)}
+         >
+            {icon
+               ? React.cloneElement(icon, { className: 'h-4 w-4 mr-2' })
+               : <Icon as="ChevronRight" size={4} className={`mr-2 ${isOpen && 'transform rotate-90'}`} />}
+            {label}
+         </div>
+         <div
+            className={isOpen
+               ? `accordion-panel-content ${!isLast ? 'border-b-1 border-gray-200' : ''}`
+               : 'hidden'}
+         >
+            {children}
+         </div>
       </div>
-      <div
-         className={isOpen
-            ? `accordion-panel-content ${!isLast ? 'border-b-1 border-gray-200' : ''}`
-            : 'hidden'}
-      >
-         {children}
-      </div>
-   </div>
-);
+   );
+}
 
 Panel.propTypes = {
    label: PropTypes.string,
