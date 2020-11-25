@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const FieldMessage = ({ errors, ...props }) => {
    if (!errors) return null;
    return (
-      <p className="ml-1 mt-1 text-xs text-red-500" {...props}>
+      <p className="fieldmessage" {...props}>
          {errors}
       </p>
    );
