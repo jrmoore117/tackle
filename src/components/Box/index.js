@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Box = ({
    color,
    variant,
-   padding,
+   isRounded,
    pingColor,
    className,
    children,
@@ -13,9 +13,9 @@ const Box = ({
    <div
       className={`
          box box--${variant}--${color}
-         ${pingColor && `animate-ping-${pingColor}`}
-         ${className}
-      `}
+         ${isRounded ? 'rounded-full' : 'rounded'}
+         ${pingColor ? `animate-ping-${pingColor}` : ''}
+         ${className}`}
       {...props}
    >
       {children}
@@ -23,13 +23,15 @@ const Box = ({
 );
 
 Box.defaultProps = {
-   variant: 'default',
    color: 'white',
+   variant: 'default',
 }
 
 Box.propTypes = {
+   color: PropTypes.string,
    variant: PropTypes.string,
-   label: PropTypes.string,
+   pingColor: PropTypes.string,
+   className: PropTypes.string,
 }
 
 export default Box;

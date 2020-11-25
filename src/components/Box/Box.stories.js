@@ -49,6 +49,13 @@ Green.args = {
    color: 'green',
 };
 
+export const Yellow = Template.bind({});
+Yellow.args = {
+   className: 'p-4',
+   children: 'Box',
+   color: 'yellow',
+};
+
 export const Purple = Template.bind({});
 Purple.args = {
    className: 'p-4',
