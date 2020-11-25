@@ -8,15 +8,17 @@ export default {
 };
 
 export const ExampleCheckbox = () => {
-   const { set } = useForm({
+   const { set, values } = useForm({
       initialValues: {
-         hello: '',
-         demoCheckbox: false,
+         checked: false,
       },
    });
    return(
       <form>
-         <Checkbox {...set("demoCheckbox")} />
+         <Checkbox
+            {...set("checked")}
+            label={values.checked ? 'True' : 'False'}
+         />
       </form>
    );
 }

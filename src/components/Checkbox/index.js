@@ -7,12 +7,12 @@ const Checkbox = ({
    className,
    ...props
 }) => (
-   <label className={`flex items-center ${className}`}>
+   <label className={`checkboxwrapper ${className}`}>
       <ReakitCheckbox
-         className="checkbox checkbox--default"
+         className="checkbox"
          {...props}
       />
-      <span className="cursor-pointer select-none">
+      <span className="checkboxlabel">
          {label}
       </span>
    </label>
