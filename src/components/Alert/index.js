@@ -28,17 +28,17 @@ const Alert = ({
             <Icon as={icon} size={6} color="white" />
          </Box>
       )}
-      <div className={`flex flex-col`}>
+      <div className="alertcontent">
          {heading && (
-            <span className={`font-semibold text-${color}-600 ${icon && 'ml-3'}`}>
+            <span className={`alertheading--${color} ${icon && 'ml-3'}`}>
                {heading}
             </span>
          )}
-         <span className={`text-${color}-600 text-sm ${icon && 'ml-3'}`}>
+         <span className={`alertmessage--${color} ${icon && 'ml-3'}`}>
             {message}
          </span>
       </div>
-      <div className="flex flex-grow flex-row-reverse">
+      <div className="alertaction">
          {action}
       </div>
    </Box>
