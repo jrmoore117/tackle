@@ -17777,7 +17777,7 @@ video {
 
 .accordion-panel-header {
   padding: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   --border-opacity: 1;
   border-color: #e2e5ea;
   border-color: rgba(226, 229, 234, var(--border-opacity));
@@ -17803,13 +17803,229 @@ video {
 
 /* ---------- ALERT ---------- */
 
-/* .alert {
-   @apply ;
+.alert {
 }
 
-.alert--red {
-   @apply ;
-} */
+.alertcontent {
+  display: flex;
+  flex-direction: column;
+}
+
+.alertaction {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row-reverse;
+}
+
+.alertheading--blue {
+  font-weight: 600;
+  --text-opacity: 1;
+  color: #206fe6;
+  color: rgba(32, 111, 230, var(--text-opacity));
+}
+
+.alertmessage--blue {
+  font-size: 0.875rem;
+  --text-opacity: 1;
+  color: #206fe6;
+  color: rgba(32, 111, 230, var(--text-opacity));
+}
+
+.alertheading--red {
+  font-weight: 600;
+  --text-opacity: 1;
+  color: #dd3b49;
+  color: rgba(221, 59, 73, var(--text-opacity));
+}
+
+.alertmessage--red {
+  font-size: 0.875rem;
+  --text-opacity: 1;
+  color: #dd3b49;
+  color: rgba(221, 59, 73, var(--text-opacity));
+}
+
+.alertheading--yellow {
+  font-weight: 600;
+  --text-opacity: 1;
+  color: #e2ac20;
+  color: rgba(226, 172, 32, var(--text-opacity));
+}
+
+.alertmessage--yellow {
+  font-size: 0.875rem;
+  --text-opacity: 1;
+  color: #e2ac20;
+  color: rgba(226, 172, 32, var(--text-opacity));
+}
+
+.alertheading--green {
+  font-weight: 600;
+  --text-opacity: 1;
+  color: #00a765;
+  color: rgba(0, 167, 101, var(--text-opacity));
+}
+
+.alertmessage--green {
+  font-size: 0.875rem;
+  --text-opacity: 1;
+  color: #00a765;
+  color: rgba(0, 167, 101, var(--text-opacity));
+}
+
+.alertheading--purple {
+  font-weight: 600;
+  --text-opacity: 1;
+  color: #7968e6;
+  color: rgba(121, 104, 230, var(--text-opacity));
+}
+
+.alertmessage--purple {
+  font-size: 0.875rem;
+  --text-opacity: 1;
+  color: #7968e6;
+  color: rgba(121, 104, 230, var(--text-opacity));
+}
+
+.alertheading--indigo {
+  font-weight: 600;
+  --text-opacity: 1;
+  color: #314d9a;
+  color: rgba(49, 77, 154, var(--text-opacity));
+}
+
+.alertmessage--indigo {
+  font-size: 0.875rem;
+  --text-opacity: 1;
+  color: #314d9a;
+  color: rgba(49, 77, 154, var(--text-opacity));
+}
+
+.alertheading--gray {
+  font-weight: 600;
+  --text-opacity: 1;
+  color: #b0b6bf;
+  color: rgba(176, 182, 191, var(--text-opacity));
+}
+
+.alertmessage--gray {
+  font-size: 0.875rem;
+  --text-opacity: 1;
+  color: #b0b6bf;
+  color: rgba(176, 182, 191, var(--text-opacity));
+}
+
+/* ---------- BASE AVATAR ---------- */
+
+.avatar {
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatarlabel {
+  --text-opacity: 1;
+  color: #3b3d40;
+  color: rgba(59, 61, 64, var(--text-opacity));
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+/* ---------- BASIC AVATAR ---------- */
+
+.avatar--blue {
+  background-image: linear-gradient(to top right, var(--gradient-color-stops));
+  --gradient-from-color: #92bdff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(146, 189, 255, 0));
+  --gradient-to-color: #bdd7ff;
+  border-width: 1px;
+  --border-opacity: 1;
+  border-color: #92bdff;
+  border-color: rgba(146, 189, 255, var(--border-opacity));
+  box-shadow: 0 1px 2px 0 #92bdff;
+}
+
+.avatar--red {
+  background-image: linear-gradient(to top right, var(--gradient-color-stops));
+  --gradient-from-color: #faa1a8;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(250, 161, 168, 0));
+  --gradient-to-color: #fcc6cb;
+  border-width: 1px;
+  --border-opacity: 1;
+  border-color: #faa1a8;
+  border-color: rgba(250, 161, 168, var(--border-opacity));
+  box-shadow: 0 1px 2px 0 #faa1a8;
+}
+
+.avatar--yellow {
+  background-image: linear-gradient(to top right, var(--gradient-color-stops));
+  --gradient-from-color: #fddf92;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(253, 223, 146, 0));
+  --gradient-to-color: #feecbd;
+  border-width: 1px;
+  --border-opacity: 1;
+  border-color: #fddf92;
+  border-color: rgba(253, 223, 146, var(--border-opacity));
+  box-shadow: 0 1px 2px 0 #fee9a6;
+}
+
+.avatar--green {
+  background-image: linear-gradient(to top right, var(--gradient-color-stops));
+  --gradient-from-color: #80ddb8;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(128, 221, 184, 0));
+  --gradient-to-color: #b3ead4;
+  border-width: 1px;
+  --border-opacity: 1;
+  border-color: #80ddb8;
+  border-color: rgba(128, 221, 184, var(--border-opacity));
+  box-shadow: 0 1px 2px 0 #80ddb8;
+}
+
+.avatar--purple {
+  background-image: linear-gradient(to top right, var(--gradient-color-stops));
+  --gradient-from-color: #c3b9ff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(195, 185, 255, 0));
+  --gradient-to-color: #dbd5ff;
+  border-width: 1px;
+  --border-opacity: 1;
+  border-color: #c3b9ff;
+  border-color: rgba(195, 185, 255, var(--border-opacity));
+  box-shadow: 0 1px 2px 0 #c3b9ff;
+}
+
+.avatar--indigo {
+  background-image: linear-gradient(to top right, var(--gradient-color-stops));
+  --gradient-from-color: #9baad5;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(155, 170, 213, 0));
+  --gradient-to-color: #c3cce6;
+  border-width: 1px;
+  --border-opacity: 1;
+  border-color: #9baad5;
+  border-color: rgba(155, 170, 213, var(--border-opacity));
+  box-shadow: 0 1px 2px 0 #9baad5;
+}
+
+.avatar--gray {
+  background-image: linear-gradient(to top right, var(--gradient-color-stops));
+  --gradient-from-color: #e2e5ea;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(226, 229, 234, 0));
+  --gradient-to-color: #edeff2;
+  border-width: 1px;
+  --border-opacity: 1;
+  border-color: #e2e5ea;
+  border-color: rgba(226, 229, 234, var(--border-opacity));
+  box-shadow: 0 1px 2px 0 #e2e5ea;
+}
+
+/* ---------- IMAGE AVATAR ---------- */
+
+.avatar--image {
+  height: 100%;
+  width: 100%;
+  border-radius: 9999px;
+  box-shadow: 0 1px 2px 0 #e2e5ea;
+}
 
 /* ---------- BASE BADGE ---------- */
 
@@ -17943,9 +18159,6 @@ video {
   --border-opacity: 1;
   border-color: #e2ac20;
   border-color: rgba(226, 172, 32, var(--border-opacity));
-  --text-opacity: 1;
-  color: #3b3d40;
-  color: rgba(59, 61, 64, var(--text-opacity));
   --bg-opacity: 1;
   background-color: #fbbf24;
   background-color: rgba(251, 191, 36, var(--bg-opacity));

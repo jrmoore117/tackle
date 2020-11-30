@@ -8,7 +8,7 @@
 }
 
 .accordion-panel-header {
-   @apply p-4 font-semibold border-gray-200 cursor-pointer select-none flex items-center text-gray-900 transition duration-200 ease-in-out;
+   @apply p-4 font-medium border-gray-200 cursor-pointer select-none flex items-center text-gray-900 transition duration-200 ease-in-out;
 }
 
 .accordion-panel-content {
@@ -17,13 +17,110 @@
 
 
 /* ---------- ALERT ---------- */
-/* .alert {
+.alert {
    @apply ;
 }
 
-.alert--red {
-   @apply ;
-} */
+.alertcontent {
+   @apply flex flex-col;
+}
+
+.alertaction {
+   @apply flex flex-grow flex-row-reverse;
+}
+
+.alertheading--blue {
+   @apply font-semibold text-blue-600;
+}
+.alertmessage--blue {
+   @apply text-sm text-blue-600;
+}
+
+.alertheading--red {
+   @apply font-semibold text-red-600;
+}
+.alertmessage--red {
+   @apply text-sm text-red-600;
+}
+
+.alertheading--yellow {
+   @apply font-semibold text-yellow-600;
+}
+.alertmessage--yellow {
+   @apply text-sm text-yellow-600;
+}
+
+.alertheading--green {
+   @apply font-semibold text-green-600;
+}
+.alertmessage--green {
+   @apply text-sm text-green-600;
+}
+
+.alertheading--purple {
+   @apply font-semibold text-purple-600;
+}
+.alertmessage--purple {
+   @apply text-sm text-purple-600;
+}
+
+.alertheading--indigo {
+   @apply font-semibold text-indigo-600;
+}
+.alertmessage--indigo {
+   @apply text-sm text-indigo-600;
+}
+
+.alertheading--gray {
+   @apply font-semibold text-gray-600;
+}
+.alertmessage--gray {
+   @apply text-sm text-gray-600;
+}
+
+
+/* ---------- BASE AVATAR ---------- */
+.avatar {
+   @apply rounded-full flex items-center justify-center;
+}
+
+.avatarlabel {
+   @apply text-gray-900 font-semibold text-xl;
+}
+
+/* ---------- BASIC AVATAR ---------- */
+.avatar--blue {
+   @apply bg-gradient-to-tr from-blue-200 to-blue-100 border-1 border-blue-200 shadow-blue;
+}
+
+.avatar--red {
+   @apply bg-gradient-to-tr from-red-200 to-red-100 border-1 border-red-200 shadow-red;
+}
+
+.avatar--yellow {
+   @apply bg-gradient-to-tr from-yellow-200 to-yellow-100 border-1 border-yellow-200 shadow-yellow;
+}
+
+.avatar--green {
+   @apply bg-gradient-to-tr from-green-200 to-green-100 border-1 border-green-200 shadow-green;
+}
+
+.avatar--purple {
+   @apply bg-gradient-to-tr from-purple-200 to-purple-100 border-1 border-purple-200 shadow-purple;
+}
+
+.avatar--indigo {
+   @apply bg-gradient-to-tr from-indigo-200 to-indigo-100 border-1 border-indigo-200 shadow-indigo;
+}
+
+.avatar--gray {
+   @apply bg-gradient-to-tr from-gray-200 to-gray-100 border-1 border-gray-200 shadow-gray;
+}
+
+/* ---------- IMAGE AVATAR ---------- */
+.avatar--image {
+   @apply h-full w-full rounded-full shadow-gray;
+}
 
 
 /* ---------- BASE BADGE ---------- */
@@ -82,7 +179,7 @@
 }
 
 .badge--solid--yellow {
-   @apply border-1 border-yellow-600 text-gray-900 bg-yellow-500;
+   @apply border-1 border-yellow-600 bg-yellow-500;
 }
 
 .badge--solid--purple {
