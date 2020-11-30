@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Icon from 'components/Icon';
-import { ChevronRight } from 'react-feather';
 import PropTypes from 'prop-types';
 
 export const Accordion = ({
