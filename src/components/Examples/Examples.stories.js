@@ -21,12 +21,12 @@ export const ExampleOne = () => {
       <div>
          <Box className="p-4 inline-block text-gray-900">
             <div>
-               <h1 className="text-2xl font-semibold mb-4 flex items-center">
+               <h1 className="text-2xl font-medium mb-4 flex items-center">
                   <ArrowUpCircle className="h-8 w-8 mr-2 text-blue-500" />
                   Update Available
                </h1>
             </div>
-            <p className="mb-4">A new software update is available for download.</p>
+            <p className="mb-4 font-normal">A new software update is available for download.</p>
             <div className="flex">
                <Button label="Update" color="blue" className="mr-4"/>
                <Button label="Not now" variant="secondary" color="blue" />
@@ -39,7 +39,7 @@ export const ExampleOne = () => {
 export const ExampleTwo = () => {
    return(
       <Box variant="frame" color="purple" className="p-4 inline-block">
-         <h1 className="text-2xl font-semibold">Transactions</h1>
+         <h1 className="text-2xl font-medium">Transactions</h1>
          <div className="py-4 flex border-b-1 border-gray-200">
             <Box color="purple" className="p-2 inline-block text-gray-900">
                <ShoppingCart className="w-6 h-6 text-white" />
