@@ -16,9 +16,9 @@ module.exports = {
             green: '0 1px 2px 0 #80ddb8',
             'outline-green': '0 0 0 3px #80ddb8',
             'inner-green': 'inset 0 2px 4px 0 #b3ead4',
-            yellow: '0 1px 2px 0 #fee9a6',
-            'outline-yellow': '0 0 0 3px #fee9a6',
-            'inner-yellow': 'inset 0 2px 4px 0 #fee9a6',
+            yellow: '0 1px 2px 0 #fddf92',
+            'outline-yellow': '0 0 0 3px #fddf92',
+            'inner-yellow': 'inset 0 2px 4px 0 #feecbd',
             purple: '0 1px 2px 0 #c3b9ff',
             'outline-purple': '0 0 0 3px #c3b9ff',
             'inner-purple': 'inset 0 2px 4px 0 #dbd5ff',
@@ -64,7 +64,7 @@ module.exports = {
                '100%': { boxShadow: '0 0 0 6px transparent' },
             },
             'ping-yellow': {
-               '15%': { boxShadow: '0 0 0 3px #fef2c9' },
+               '15%': { boxShadow: '0 0 0 3px #feecbd' },
                '100%': { boxShadow: '0 0 0 6px transparent' },
             },
             'ping-purple': {

@@ -85,36 +85,36 @@
 }
 
 .avatarlabel {
-   @apply text-gray-900 font-semibold text-xl;
+   @apply text-white font-semibold text-xl;
 }
 
 /* ---------- BASIC AVATAR ---------- */
 .avatar--blue {
-   @apply bg-gradient-to-tr from-blue-200 to-blue-100 border-1 border-blue-200 shadow-blue;
+   @apply bg-gradient-to-tr from-blue-400 to-blue-300 border-1 border-blue-400 shadow-blue;
 }
 
 .avatar--red {
-   @apply bg-gradient-to-tr from-red-200 to-red-100 border-1 border-red-200 shadow-red;
+   @apply bg-gradient-to-tr from-red-400 to-red-300 border-1 border-red-400 shadow-red;
 }
 
 .avatar--yellow {
-   @apply bg-gradient-to-tr from-yellow-200 to-yellow-100 border-1 border-yellow-200 shadow-yellow;
+   @apply bg-gradient-to-tr from-yellow-400 to-yellow-300 border-1 border-yellow-400 shadow-yellow;
 }
 
 .avatar--green {
-   @apply bg-gradient-to-tr from-green-200 to-green-100 border-1 border-green-200 shadow-green;
+   @apply bg-gradient-to-tr from-green-400 to-green-300 border-1 border-green-400 shadow-green;
 }
 
 .avatar--purple {
-   @apply bg-gradient-to-tr from-purple-200 to-purple-100 border-1 border-purple-200 shadow-purple;
+   @apply bg-gradient-to-tr from-purple-400 to-purple-300 border-1 border-purple-400 shadow-purple;
 }
 
 .avatar--indigo {
-   @apply bg-gradient-to-tr from-indigo-200 to-indigo-100 border-1 border-indigo-200 shadow-indigo;
+   @apply bg-gradient-to-tr from-indigo-400 to-indigo-300 border-1 border-indigo-400 shadow-indigo;
 }
 
 .avatar--gray {
-   @apply bg-gradient-to-tr from-gray-200 to-gray-100 border-1 border-gray-200 shadow-gray;
+   @apply bg-gradient-to-tr from-gray-400 to-gray-300 border-1 border-gray-400 shadow-gray;
 }
 
 /* ---------- IMAGE AVATAR ---------- */
