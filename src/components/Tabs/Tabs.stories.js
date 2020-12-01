@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Tabs, TabList, Tab, PanelList, Panel } from 'components/Tabs';
+import Icon from 'components/Icon';
 
 export default {
    component: Tabs,
@@ -9,11 +10,11 @@ export default {
 export const DefaultTabs = () => {
    const [index, setIndex] = useState(0);
    return (
-      <Tabs index={index} onClick={setIndex}>
+      <Tabs color="blue" index={index} onClick={setIndex}>
          <TabList>
-            <Tab>Tab 1</Tab>
-            <Tab>Tab 2</Tab>
-            <Tab>Tab 3</Tab>
+            <Tab label="Tab 1" />
+            <Tab label="Tab 2" />
+            <Tab label="Tab 3" />
          </TabList>
          <PanelList>
             <Panel>
