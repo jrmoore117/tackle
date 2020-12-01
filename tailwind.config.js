@@ -29,6 +29,9 @@ module.exports = {
             'outline-gray': '0 0 0 3px #e2e5ea',
             'inner-gray': 'inset 0 2px 4px 0 #e2e5ea',
          },
+         height: {
+            '0.5': '0.125rem',
+         },
          animation: {
             'ping-blue': 'ping-blue 1s cubic-bezier(0,.656,0,.58) infinite',
             'btn-ping-blue': 'ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1',
