@@ -10,11 +10,17 @@ const Template = args => <Icon {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-   as: 'AlertCircle',
+   as: 'Edit',
 };
 
-export const DefaultGreen = Template.bind({});
-DefaultGreen.args = {
+export const Red = Template.bind({});
+Red.args = {
+   as: 'Heart',
+   color: 'red',
+};
+
+export const Green = Template.bind({});
+Green.args = {
    as: 'DollarSign',
    color: 'green',
 };
@@ -36,8 +42,8 @@ ShadedGreenRounded.args = {
    variant: 'shaded',
 };
 
-export const ClickableRounded = Template.bind({});
-ClickableRounded.args = {
+export const ClickableBlueRounded = Template.bind({});
+ClickableBlueRounded.args = {
    as: 'X',
    size: 6,
    color: 'blue',
