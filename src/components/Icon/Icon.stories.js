@@ -17,12 +17,22 @@ export const Red = Template.bind({});
 Red.args = {
    as: 'Heart',
    color: 'red',
+   size: 6,
 };
 
 export const Green = Template.bind({});
 Green.args = {
    as: 'DollarSign',
    color: 'green',
+};
+
+export const Yellow = Template.bind({});
+Yellow.args = {
+   as: 'Shield',
+   size: 10,
+   color: 'yellow',
+   variant: 'clickable',
+   onClick: () => {},
 };
 
 export const LargeShadedPurple = Template.bind({});
