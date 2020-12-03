@@ -18,6 +18,7 @@ Red.args = {
    as: 'Heart',
    color: 'red',
    size: 6,
+   className: 'fill-current',
 };
 
 export const Green = Template.bind({});
@@ -33,6 +34,7 @@ Yellow.args = {
    color: 'yellow',
    variant: 'clickable',
    onClick: () => {},
+   className: 'fill-current',
 };
 
 export const LargeShadedPurple = Template.bind({});
