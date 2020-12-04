@@ -9,9 +9,10 @@ const Icon = ({
    color,
    variant,
    onClick,
+   isSolid,
+   isDisabled,
    isRounded,
-   disabled,
-   focusable,
+   isFocusable,
    className,
    ...props
 }) => {
@@ -21,17 +22,17 @@ const Icon = ({
             <Clickable
                as="div"
                onClick={onClick}
-               disabled={disabled}
-               focusable={focusable}
+               disabled={isDisabled}
+               focusable={isFocusable}
                className="icon--clickable"
             >
                {cloneElement(<Icon />, { 
-                  className: `icon--clickable--${color} h-${size} w-${size} ${isRounded ? 'rounded-full' : 'rounded'} ${className}`
+                  className: `icon--clickable--${color} h-${size} w-${size} ${isRounded ? 'rounded-full' : 'rounded'} ${isSolid ? 'fill-current' : ''} ${className}`
                })}
             </Clickable>
          ) : (
             cloneElement(<Icon />, {
-               className: `icon--${variant}--${color} h-${size} w-${size} ${isRounded ? 'rounded-full' : 'rounded'} ${className}`
+               className: `icon--${variant}--${color} h-${size} w-${size} ${isRounded ? 'rounded-full' : 'rounded'} ${isSolid ? 'fill-current' : ''} ${className}`
             })
          )
    );
@@ -43,7 +44,7 @@ Icon.defaultProps = {
    size: 4,
    color: 'gray',
    variant: 'default',
-   focusable: false,
+   isFocusable: false,
 }
 
 Icon.propTypes = {
