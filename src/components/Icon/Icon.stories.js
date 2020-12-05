@@ -13,11 +13,10 @@ Default.args = {
    as: 'Edit',
 };
 
-export const Red = Template.bind({});
-Red.args = {
+export const SolidRed = Template.bind({});
+SolidRed.args = {
    as: 'Heart',
    color: 'red',
-   size: 6,
    isSolid: true,
 };
 
@@ -27,8 +26,8 @@ Green.args = {
    color: 'green',
 };
 
-export const Yellow = Template.bind({});
-Yellow.args = {
+export const LargeSolidYellow = Template.bind({});
+LargeSolidYellow.args = {
    as: 'Shield',
    size: 10,
    color: 'yellow',
