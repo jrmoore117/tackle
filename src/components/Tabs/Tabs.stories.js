@@ -12,19 +12,19 @@ export const DefaultTabs = () => {
    return (
       <Tabs color="blue" index={index} onClick={setIndex}>
          <TabList>
-            <Tab label="Tab 1" />
-            <Tab label="Tab 2" />
-            <Tab label="Tab 3" />
+            <Tab label="Profile" />
+            <Tab label="Notifications" />
+            <Tab label="Security" />
          </TabList>
          <PanelList>
             <Panel>
-               1
+               Profile Settings
             </Panel>
             <Panel>
-               2
+               Notifications Settings
             </Panel>
             <Panel>
-               3
+               Security Settings
             </Panel>
          </PanelList>
       </Tabs>
