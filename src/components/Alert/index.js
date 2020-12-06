@@ -18,7 +18,7 @@ const Alert = ({
       color={color}
       variant="frame"
       className={`
-         alert p-4 flex items-center
+         alert
          ${pingColor && `animate-ping-${pingColor}`}
          ${className}`}
       {...props}
