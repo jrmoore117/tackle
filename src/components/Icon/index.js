@@ -42,7 +42,6 @@ Icon.id = 'Icon';
 
 Icon.defaultProps = {
    size: 4,
-   color: 'gray',
    variant: 'default',
    isFocusable: false,
 }
