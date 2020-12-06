@@ -1,4 +1,4 @@
-import React, { cloneElement } from 'react';
+import React from 'react';
 
 export const FieldElementLeft = ({ children, ...props }) => (
    <div className="fieldelement--left">
