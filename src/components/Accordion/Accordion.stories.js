@@ -1,6 +1,6 @@
 import React from 'react';
 import { Accordion, Panel } from 'components/Accordion';
-import { User, Key, Bell } from 'react-feather';
+import Icon from 'components/Icon';
 
 export default {
    component: Accordion,
@@ -21,15 +21,15 @@ export const DefaultAccordion = () => (
    </Accordion>
 );
 
-export const AccordionWithIcons = () => (
-   <Accordion color="purple">
-      <Panel icon={<User />} label="Profile">
+export const GreenAccordionWithIcons = () => (
+   <Accordion color="green">
+      <Panel icon="User" label="Profile">
          <div>Profile information</div>
       </Panel>
-      <Panel icon={<Bell />} label="Notifications">
+      <Panel icon="Bell" label="Notifications">
          <div>Notifications settings</div>
       </Panel>
-      <Panel icon={<Key />} label="Security">
+      <Panel icon="Lock" label="Security">
          <div>Security settings</div>
       </Panel>
    </Accordion>

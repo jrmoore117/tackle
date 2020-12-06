@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { cloneElement, useState } from 'react';
 import Icon from 'components/Icon';
 import PropTypes from 'prop-types';
 
@@ -57,7 +57,7 @@ export const Panel = ({
             onClick={() => togglePanel(index)}
          >
             {icon
-               ? React.cloneElement(icon, { className: 'h-4 w-4 mr-2' })
+               ? <Icon as={icon} className="mr-2" />
                : <Icon as="ChevronRight" size={4} className={`mr-2 ${isOpen && 'transform rotate-90'}`} />}
             {label}
          </div>
