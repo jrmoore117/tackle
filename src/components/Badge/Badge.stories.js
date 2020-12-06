@@ -8,11 +8,6 @@ export default {
 
 const Template = args => <Badge {...args} />;
 
-export const DefaultGray = Template.bind({});
-DefaultGray.args = {
-   label: 'Badge',
-};
-
 export const DefaultBlue = Template.bind({});
 DefaultBlue.args = {
    label: 'Badge',
@@ -49,6 +44,11 @@ export const DefaultIndigo = Template.bind({});
 DefaultIndigo.args = {
    label: 'Badge',
    color: 'indigo',
+};
+
+export const DefaultGray = Template.bind({});
+DefaultGray.args = {
+   label: 'Badge',
 };
 
 export const SolidGray = Template.bind({});
