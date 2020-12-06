@@ -4,11 +4,11 @@ import Button from 'components/Button';
 import Checkbox from "components/Checkbox";
 import { useRadioState } from "reakit/Radio";
 import { Radio, RadioGroup } from 'components/Radio';
+import { Select, Option } from 'components/Select'
 import Field from 'components/Field';
 import TextField from 'components/TextField';
 import FieldMessage from 'components/FieldMessage';
 import { FieldElementLeft, FieldElementRight } from 'components/FieldElement';
-import { Check, Search, X } from 'react-feather';
 
 import useForm from 'hooks/useForm';
 
@@ -93,6 +93,7 @@ export const FormExampleWithValidations = () => {
          lastName: '',
          username: '',
          password: '',
+         tackle: '',
          savePassword: false,
       },
       validators: {
@@ -104,6 +105,9 @@ export const FormExampleWithValidations = () => {
             : null,
          password: (value) => helpers.checkPasswordStrength(value)
             ? 'Password requires 1 lowercase letter, 1 uppercase letter, 1 number, and at least 8 characters.'
+            : null,
+         tackle: (value) => value === 'hook'
+            ? 'Ouch! Select something else.'
             : null,
       },
    });
@@ -144,6 +148,13 @@ export const FormExampleWithValidations = () => {
          <FieldMessage {...set("username")} />
          <TextField type="password" placeholder="Password" {...set("password")} className="w-full mt-2" />
          <FieldMessage {...set("password")} />
+         <Select {...set("tackle")} className="mt-2">
+            <Option defaultValue value="">Select an option</Option>
+            <Option value="hook">Hook</Option>
+            <Option value="line">Line</Option>
+            <Option value="sinker">Sinker</Option>
+         </Select>
+         <FieldMessage {...set("tackle")} />
          <Checkbox {...set("savePassword")} label="Save Password?" className="mt-2 mr-2" />
          <Button type="submit" label="Submit" color="blue" className="mt-2" />
       </form>
