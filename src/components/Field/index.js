@@ -16,12 +16,12 @@ const Field = ({
 
    const childrenWithProps = children.map((child, i) => {
 
-      if (React.isValidElement(child) && child.type.id === 'TextField') {
+      if (React.isValidElement(child) && (child.type.id === 'TextField' || child.type.id === 'Select')) {
          return React.cloneElement(child, {
-            key: `textfield-${i}`,
+            key: `${child.type.id}-${i}`,
             onBlur: toggleFocus,
             onFocus: toggleFocus,
-            // Used in TextField.js
+            // Used in TextField index.js and Select index.js
             withElements: true,
          });
       }
