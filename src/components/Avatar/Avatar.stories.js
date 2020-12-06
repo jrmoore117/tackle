@@ -8,12 +8,6 @@ export default {
 
 const Template = args => <Avatar {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
-   label: 'TK',
-   color: 'blue',
-};
-
 export const Blue = Template.bind({});
 Blue.args = {
    label: 'TK',
@@ -53,4 +47,9 @@ Indigo.args = {
 export const Image = Template.bind({});
 Image.args = {
    src: 'https://i.pravatar.cc/200',
+};
+
+export const Gray = Template.bind({});
+Gray.args = {
+   label: 'TK',
 };
