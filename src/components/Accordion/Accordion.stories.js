@@ -1,6 +1,5 @@
 import React from 'react';
 import { Accordion, Panel } from 'components/Accordion';
-import Icon from 'components/Icon';
 
 export default {
    component: Accordion,

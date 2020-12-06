@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Tabs, TabList, Tab, PanelList, Panel } from 'components/Tabs';
-import Icon from 'components/Icon';
 
 export default {
    component: Tabs,

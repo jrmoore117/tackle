@@ -1,4 +1,4 @@
-import React, { cloneElement, useState } from 'react';
+import React, { useState } from 'react';
 import Icon from 'components/Icon';
 import PropTypes from 'prop-types';
 
