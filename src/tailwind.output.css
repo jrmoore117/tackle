@@ -19657,9 +19657,10 @@ video {
   background-color: rgba(59, 61, 64, var(--bg-opacity));
 }
 
-/* ---------- TEXT FIELD COMPONENTS ---------- */
+/* ---------- TEXT FIELD & SELECT COMPONENTS ---------- */
 
-.textfield, .field {
+.textfield,
+.field {
   height: 2.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -19688,26 +19689,75 @@ video {
   width: 100%;
 }
 
-.textfield:focus, .textfield--with-elements:focus {
+.select {
+  -webkit-appearance: none;
+          appearance: none;
+  height: 2.5rem;
+  width: 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-family: Poppins, sans-serif;
+  font-size: 0.875rem;
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+  border-width: 1px;
+  --border-opacity: 1;
+  border-color: #e2e5ea;
+  border-color: rgba(226, 229, 234, var(--border-opacity));
+  box-shadow: 0 1px 2px 0 #e2e5ea;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  background: url("components/Select/assets/chevron-down.svg");
+  background-origin: content-box;
+  background-position-y: center;
+  background-position-x: right;
+  background-repeat: no-repeat;
+  background-size: 1rem;
+}
+
+.select--with-elements {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 100%;
+  background: url("components/Select/assets/chevron-down.svg");
+  background-origin: content-box;
+  background-position-y: center;
+  background-position-x: right;
+  background-repeat: no-repeat;
+  background-size: 1rem;
+}
+
+.textfield:focus,
+.textfield--with-elements:focus,
+.select:focus,
+.select--with-elements:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
 
-.textfield.textfield--default:focus {
+.textfield.textfield--default:focus,
+.select.select--default:focus {
   box-shadow: 0 0 0 3px #92bdff;
   --border-opacity: 1;
   border-color: #247bff;
   border-color: rgba(36, 123, 255, var(--border-opacity));
 }
 
-.textfield.textfield--success:focus {
+.textfield.textfield--success:focus,
+.select.select--success:focus {
   box-shadow: 0 0 0 3px #80ddb8;
   --border-opacity: 1;
   border-color: #00ba70;
   border-color: rgba(0, 186, 112, var(--border-opacity));
 }
 
-.textfield.textfield--error:focus {
+.textfield.textfield--error:focus,
+.select.select--error:focus {
   box-shadow: 0 0 0 3px #faa1a8;
   --border-opacity: 1;
   border-color: #f54251;
