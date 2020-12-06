@@ -8,7 +8,7 @@
 }
 
 .accordion-panel-header {
-   @apply p-4 font-medium border-gray-200 cursor-pointer select-none flex items-center text-gray-900 transition duration-200 ease-in-out;
+   @apply p-4 text-gray-900 font-medium border-gray-200 cursor-pointer select-none flex items-center transition duration-200 ease-in-out;
 }
 
 .accordion-panel-content {
@@ -18,7 +18,7 @@
 
 /* ---------- ALERT ---------- */
 .alert {
-   @apply ;
+   @apply p-4 flex items-center;
 }
 
 .alertcontent {
@@ -114,7 +114,7 @@
 }
 
 .avatar--gray {
-   @apply bg-gradient-to-tr from-gray-400 to-gray-300 border-1 border-gray-400 shadow-gray;
+   @apply bg-gradient-to-tr from-gray-600 to-gray-500 border-1 border-gray-400 shadow-gray;
 }
 
 /* ---------- IMAGE AVATAR ---------- */
@@ -536,7 +536,7 @@
 }
 
 .checkbox {
-   @apply mr-2 h-5 w-5 bg-white shadow-gray border-1 border-gray-200 rounded outline-none cursor-pointer appearance-none transition duration-200 flex items-center justify-center;
+   @apply mr-2 h-5 w-5 bg-white shadow-gray border-1 border-gray-200 rounded outline-none cursor-pointer appearance-none transition duration-200 ease-in-out flex items-center justify-center;
 }
 .checkbox:hover {
    @apply bg-gray-100;
@@ -624,7 +624,7 @@
 }
 
 .icon--clickable--gray {
-   @apply p-1 text-gray-900 bg-gray-100 transition duration-200;
+   @apply p-1 text-gray-900 bg-gray-100 transition duration-200 ease-in-out;
 }
 .icon--clickable--gray:hover {
    @apply bg-gray-200;
@@ -634,7 +634,7 @@
 }
 
 .icon--clickable--blue {
-   @apply p-1 text-blue-500 bg-blue-0 transition duration-200;
+   @apply p-1 text-blue-500 bg-blue-0 transition duration-200 ease-in-out;
 }
 .icon--clickable--blue:hover {
    @apply text-blue-600 bg-blue-100;
@@ -644,7 +644,7 @@
 }
 
 .icon--clickable--red {
-   @apply p-1 text-red-500 bg-red-0 transition duration-200;
+   @apply p-1 text-red-500 bg-red-0 transition duration-200 ease-in-out;
 }
 .icon--clickable--red:hover {
    @apply text-red-600 bg-red-100;
@@ -654,7 +654,7 @@
 }
 
 .icon--clickable--green {
-   @apply p-1 text-green-500 bg-green-0 transition duration-200;
+   @apply p-1 text-green-500 bg-green-0 transition duration-200 ease-in-out;
 }
 .icon--clickable--green:hover {
    @apply text-green-600 bg-green-100;
@@ -664,7 +664,7 @@
 }
 
 .icon--clickable--yellow {
-   @apply p-1 text-yellow-500 bg-yellow-0 transition duration-200;
+   @apply p-1 text-yellow-500 bg-yellow-0 transition duration-200 ease-in-out;
 }
 .icon--clickable--yellow:hover {
    @apply text-yellow-600 bg-yellow-100;
@@ -674,7 +674,7 @@
 }
 
 .icon--clickable--purple {
-   @apply p-1 text-purple-500 bg-purple-0 transition duration-200;
+   @apply p-1 text-purple-500 bg-purple-0 transition duration-200 ease-in-out;
 }
 .icon--clickable--purple:hover {
    @apply text-purple-600 bg-purple-100;
@@ -684,7 +684,7 @@
 }
 
 .icon--clickable--indigo {
-   @apply p-1 text-indigo-500 bg-indigo-0 transition duration-200;
+   @apply p-1 text-indigo-500 bg-indigo-0 transition duration-200 ease-in-out;
 }
 .icon--clickable--indigo:hover {
    @apply text-indigo-600 bg-indigo-100;
@@ -713,7 +713,7 @@
 }
 
 .radio {
-   @apply mr-2 h-5 w-5 bg-white shadow-gray border-1 border-gray-200 rounded-full outline-none appearance-none cursor-pointer transition duration-200 flex items-center justify-center;
+   @apply mr-2 h-5 w-5 bg-white shadow-gray border-1 border-gray-200 rounded-full outline-none appearance-none cursor-pointer transition duration-200 ease-in-out flex items-center justify-center;
 }
 .radio:hover {
    @apply bg-gray-100;
@@ -724,6 +724,108 @@
 
 .radiolabel {
    @apply text-gray-900 cursor-pointer select-none;
+}
+
+
+/* ---------- TABS ---------- */
+.tabswrapper {
+   @apply flex border-b-1 border-gray-200;
+}
+
+.tablabel {
+   @apply mb-1 flex items-center text-sm;
+}
+
+.tab {
+   @apply mr-6 cursor-pointer select-none transition duration-150 ease-in-out;
+}
+
+.tab--active--blue {
+   @apply  text-blue-500 ;
+}
+
+.tab--active--red {
+   @apply text-red-500;
+}
+
+.tab--active--green {
+   @apply text-green-500;
+}
+
+.tab--active--yellow {
+   @apply text-yellow-500;
+}
+
+.tab--active--purple {
+   @apply text-purple-500;
+}
+
+.tab--active--indigo {
+   @apply text-indigo-500;
+}
+
+.tab--active--gray {
+   @apply text-gray-900;
+}
+
+.tab--inactive--blue:hover {
+   @apply text-blue-500;
+}
+
+.tab--inactive--red:hover {
+   @apply text-red-500;
+}
+
+.tab--inactive--green:hover {
+   @apply text-green-500;
+}
+
+.tab--inactive--yellow:hover {
+   @apply text-yellow-500;
+}
+
+.tab--inactive--purple:hover {
+   @apply text-purple-500;
+}
+
+.tab--inactive--indigo:hover {
+   @apply text-indigo-500;
+}
+
+.tab--inactive--gray:hover {
+   @apply text-gray-900;
+}
+
+.tabmarker {
+   @apply h-0.5 rounded animate-radio-ping-blue;
+}
+
+.tabmarker--blue {
+   @apply bg-blue-500;
+}
+
+.tabmarker--red {
+   @apply bg-red-500;
+}
+
+.tabmarker--green {
+   @apply bg-green-500;
+}
+
+.tabmarker--yellow {
+   @apply bg-yellow-500;
+}
+
+.tabmarker--purple {
+   @apply bg-purple-500;
+}
+
+.tabmarker--indigo {
+   @apply bg-indigo-500;
+}
+
+.tabmarker--gray {
+   @apply bg-gray-900;
 }
 
 

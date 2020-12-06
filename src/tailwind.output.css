@@ -17781,6 +17781,9 @@ video {
 
 .accordion-panel-header {
   padding: 1rem;
+  --text-opacity: 1;
+  color: #3b3d40;
+  color: rgba(59, 61, 64, var(--text-opacity));
   font-weight: 500;
   --border-opacity: 1;
   border-color: #e2e5ea;
@@ -17790,9 +17793,6 @@ video {
           user-select: none;
   display: flex;
   align-items: center;
-  --text-opacity: 1;
-  color: #3b3d40;
-  color: rgba(59, 61, 64, var(--text-opacity));
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
   transition-duration: 200ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -17808,6 +17808,9 @@ video {
 /* ---------- ALERT ---------- */
 
 .alert {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .alertcontent {
@@ -18012,9 +18015,9 @@ video {
 
 .avatar--gray {
   background-image: linear-gradient(to top right, var(--gradient-color-stops));
-  --gradient-from-color: #cacfd8;
-  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(202, 207, 216, 0));
-  --gradient-to-color: #d6dae1;
+  --gradient-from-color: #b0b6bf;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(176, 182, 191, 0));
+  --gradient-to-color: #c4cad4;
   border-width: 1px;
   --border-opacity: 1;
   border-color: #cacfd8;
@@ -19021,6 +19024,7 @@ video {
           appearance: none;
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
   transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19200,6 +19204,7 @@ video {
   background-color: rgba(237, 239, 242, var(--bg-opacity));
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
   transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon--clickable--gray:hover {
@@ -19224,6 +19229,7 @@ video {
   background-color: rgba(233, 242, 255, var(--bg-opacity));
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
   transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon--clickable--blue:hover {
@@ -19254,6 +19260,7 @@ video {
   background-color: rgba(254, 236, 238, var(--bg-opacity));
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
   transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon--clickable--red:hover {
@@ -19284,6 +19291,7 @@ video {
   background-color: rgba(230, 248, 241, var(--bg-opacity));
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
   transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon--clickable--green:hover {
@@ -19314,6 +19322,7 @@ video {
   background-color: rgba(255, 249, 233, var(--bg-opacity));
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
   transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon--clickable--yellow:hover {
@@ -19344,6 +19353,7 @@ video {
   background-color: rgba(243, 241, 255, var(--bg-opacity));
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
   transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon--clickable--purple:hover {
@@ -19374,6 +19384,7 @@ video {
   background-color: rgba(235, 238, 247, var(--bg-opacity));
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
   transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon--clickable--indigo:hover {
@@ -19454,6 +19465,7 @@ video {
   cursor: pointer;
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
   transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19484,6 +19496,165 @@ video {
   cursor: pointer;
   -webkit-user-select: none;
           user-select: none;
+}
+
+/* ---------- TABS ---------- */
+
+.tabswrapper {
+  display: flex;
+  border-bottom-width: 1px;
+  --border-opacity: 1;
+  border-color: #e2e5ea;
+  border-color: rgba(226, 229, 234, var(--border-opacity));
+}
+
+.tablabel {
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.tab {
+  margin-right: 1.5rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+          user-select: none;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tab--active--blue {
+  --text-opacity: 1;
+  color: #247bff;
+  color: rgba(36, 123, 255, var(--text-opacity));
+}
+
+.tab--active--red {
+  --text-opacity: 1;
+  color: #f54251;
+  color: rgba(245, 66, 81, var(--text-opacity));
+}
+
+.tab--active--green {
+  --text-opacity: 1;
+  color: #00ba70;
+  color: rgba(0, 186, 112, var(--text-opacity));
+}
+
+.tab--active--yellow {
+  --text-opacity: 1;
+  color: #fbbf24;
+  color: rgba(251, 191, 36, var(--text-opacity));
+}
+
+.tab--active--purple {
+  --text-opacity: 1;
+  color: #8673ff;
+  color: rgba(134, 115, 255, var(--text-opacity));
+}
+
+.tab--active--indigo {
+  --text-opacity: 1;
+  color: #3655ab;
+  color: rgba(54, 85, 171, var(--text-opacity));
+}
+
+.tab--active--gray {
+  --text-opacity: 1;
+  color: #3b3d40;
+  color: rgba(59, 61, 64, var(--text-opacity));
+}
+
+.tab--inactive--blue:hover {
+  --text-opacity: 1;
+  color: #247bff;
+  color: rgba(36, 123, 255, var(--text-opacity));
+}
+
+.tab--inactive--red:hover {
+  --text-opacity: 1;
+  color: #f54251;
+  color: rgba(245, 66, 81, var(--text-opacity));
+}
+
+.tab--inactive--green:hover {
+  --text-opacity: 1;
+  color: #00ba70;
+  color: rgba(0, 186, 112, var(--text-opacity));
+}
+
+.tab--inactive--yellow:hover {
+  --text-opacity: 1;
+  color: #fbbf24;
+  color: rgba(251, 191, 36, var(--text-opacity));
+}
+
+.tab--inactive--purple:hover {
+  --text-opacity: 1;
+  color: #8673ff;
+  color: rgba(134, 115, 255, var(--text-opacity));
+}
+
+.tab--inactive--indigo:hover {
+  --text-opacity: 1;
+  color: #3655ab;
+  color: rgba(54, 85, 171, var(--text-opacity));
+}
+
+.tab--inactive--gray:hover {
+  --text-opacity: 1;
+  color: #3b3d40;
+  color: rgba(59, 61, 64, var(--text-opacity));
+}
+
+.tabmarker {
+  height: 0.125rem;
+  border-radius: 0.25rem;
+  animation: radio-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+
+.tabmarker--blue {
+  --bg-opacity: 1;
+  background-color: #247bff;
+  background-color: rgba(36, 123, 255, var(--bg-opacity));
+}
+
+.tabmarker--red {
+  --bg-opacity: 1;
+  background-color: #f54251;
+  background-color: rgba(245, 66, 81, var(--bg-opacity));
+}
+
+.tabmarker--green {
+  --bg-opacity: 1;
+  background-color: #00ba70;
+  background-color: rgba(0, 186, 112, var(--bg-opacity));
+}
+
+.tabmarker--yellow {
+  --bg-opacity: 1;
+  background-color: #fbbf24;
+  background-color: rgba(251, 191, 36, var(--bg-opacity));
+}
+
+.tabmarker--purple {
+  --bg-opacity: 1;
+  background-color: #8673ff;
+  background-color: rgba(134, 115, 255, var(--bg-opacity));
+}
+
+.tabmarker--indigo {
+  --bg-opacity: 1;
+  background-color: #3655ab;
+  background-color: rgba(54, 85, 171, var(--bg-opacity));
+}
+
+.tabmarker--gray {
+  --bg-opacity: 1;
+  background-color: #3b3d40;
+  background-color: rgba(59, 61, 64, var(--bg-opacity));
 }
 
 /* ---------- TEXT FIELD COMPONENTS ---------- */
