@@ -13,20 +13,20 @@ export const Tabs = ({
    const panels = children[1].props.children;
    return (
       <div {...props}>
-         <div className="flex border-b-1 border-gray-200">
+         <div className="tabswrapper">
             {tabs.map((tab, i) => (
                cloneElement(tab, {
                   color,
                   key: `tab-${i}`,
                   active: index === i,
                   onClick: () => onClick(i),
-                  className: index === i ? `pr-6 text-blue-500 cursor-pointer select-none transition-colors duration-150 text-${color}-500` : `pr-6 text-gray-900 cursor-pointer select-none transition-colors duration-150 hover:text-${color}-500`,
+                  className: index === i ? `tab tab--active--${color}` : `tab tab--inactive--${color}`,
                })
             ))}
          </div>
          <div>
             {panels.map((panel, i) => index === i
-               ? cloneElement(panel, { key: `panel-${i}`, className: 'py-4 text-gray-900 ' })
+               ? cloneElement(panel, { key: `panel-${i}`, className: 'pt-4' })
                : cloneElement(panel, { key: `panel-${i}`, className: 'hidden' })
             )}
          </div>
@@ -61,16 +61,17 @@ export const Tab = ({
 }) => {
    return (
    <div {...props}>
-      <div className="mb-1 flex items-center text-sm">
-         {icon && cloneElement(<Icon as={icon} />, { className: 'mr-2' })}
+      <div className="tablabel">
+         {icon && <Icon as={icon} className="mr-2" />}
          {label}
       </div>
-      {active && <div className={`h-0.5 bg-${color}-500 rounded animate-radio-ping-blue`}></div>}
+      {active && <div className={`tabmarker tabmarker--${color}`}></div>}
    </div>
    );
 }
 
 Tab.propTypes = {
+   icon: PropTypes.string,
    color: PropTypes.string,
    label: PropTypes.string.isRequired,
    active: PropTypes.bool.isRequired,
@@ -91,8 +92,4 @@ export const Panel = ({
          {children}
       </div>
    );
-}
-
-Panel.propTypes = {
-
 }
