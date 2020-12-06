@@ -829,8 +829,9 @@
 }
 
 
-/* ---------- TEXT FIELD COMPONENTS ---------- */
-.textfield, .field {
+/* ---------- TEXT FIELD & SELECT COMPONENTS ---------- */
+.textfield,
+.field {
    @apply h-10 px-2 font-sans text-sm text-gray-900 bg-white border-1 border-gray-200 shadow-gray rounded flex items-center transition duration-200 ease-in-out;
 }
 
@@ -838,19 +839,45 @@
    @apply w-full;
 }
 
-.textfield:focus, .textfield--with-elements:focus {
+.select {
+   @apply appearance-none h-10 w-full px-2 font-sans text-sm bg-white border-1 border-gray-200 shadow-gray rounded flex items-center transition duration-200 ease-in-out;
+   background: url("components/Select/assets/chevron-down.svg");
+   background-origin: content-box;
+   background-position-y: center;
+   background-position-x: right;
+   background-repeat: no-repeat;
+   background-size: 1rem;
+}
+
+.select--with-elements {
+   @apply appearance-none w-full;
+   background: url("components/Select/assets/chevron-down.svg");
+   background-origin: content-box;
+   background-position-y: center;
+   background-position-x: right;
+   background-repeat: no-repeat;
+   background-size: 1rem;
+}
+
+.textfield:focus,
+.textfield--with-elements:focus,
+.select:focus,
+.select--with-elements:focus {
    @apply outline-none;
 }
 
-.textfield.textfield--default:focus {
+.textfield.textfield--default:focus,
+.select.select--default:focus {
    @apply shadow-outline-blue border-blue-500;
 }
 
-.textfield.textfield--success:focus {
+.textfield.textfield--success:focus,
+.select.select--success:focus {
    @apply shadow-outline-green border-green-500;
 }
 
-.textfield.textfield--error:focus {
+.textfield.textfield--error:focus,
+.select.select--error:focus {
    @apply shadow-outline-red border-red-500;
 }
 
