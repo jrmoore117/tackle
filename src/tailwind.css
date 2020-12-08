@@ -727,6 +727,24 @@
 }
 
 
+/* ---------- SWITCH ---------- */
+.switch {
+   @apply w-10 h-5 mr-2 bg-gray-100 border-1 border-gray-200 shadow-gray rounded-full flex items-center cursor-pointer;
+}
+
+.switchbutton {
+   @apply h-5 w-5 transition duration-150 ease-in-out rounded-full;
+}
+
+.switchlabel {
+   @apply text-gray-900 select-none;
+}
+
+.-translate-x-px {
+   transform: translateX(-1px);
+}
+
+
 /* ---------- TABS ---------- */
 .tabswrapper {
    @apply flex border-b-1 border-gray-200;
