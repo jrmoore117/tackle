@@ -859,7 +859,7 @@
 
 .select {
    @apply appearance-none h-10 w-full px-2 font-sans text-sm bg-white border-1 border-gray-200 shadow-gray rounded flex items-center transition duration-200 ease-in-out;
-   background: url("components/Select/assets/chevron-down.svg");
+   background-image: url("components/Select/assets/chevron-down.svg");
    background-origin: content-box;
    background-position-y: center;
    background-position-x: right;
@@ -869,7 +869,7 @@
 
 .select--with-elements {
    @apply appearance-none w-full;
-   background: url("components/Select/assets/chevron-down.svg");
+   background-image: url("components/Select/assets/chevron-down.svg");
    background-origin: content-box;
    background-position-y: center;
    background-position-x: right;

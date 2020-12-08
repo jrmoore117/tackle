@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const Select = ({
-   type,
    value,
    errors,
    children,
@@ -11,7 +10,6 @@ export const Select = ({
    ...props
 }) => (
    <select
-      type={type}
       className={`
          ${withElements
             ? 'select--with-elements'

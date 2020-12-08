@@ -19753,7 +19753,7 @@ video {
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
   transition-duration: 200ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  background: url("components/Select/assets/chevron-down.svg");
+  background-image: url("components/Select/assets/chevron-down.svg");
   background-origin: content-box;
   background-position-y: center;
   background-position-x: right;
@@ -19765,7 +19765,7 @@ video {
   -webkit-appearance: none;
           appearance: none;
   width: 100%;
-  background: url("components/Select/assets/chevron-down.svg");
+  background-image: url("components/Select/assets/chevron-down.svg");
   background-origin: content-box;
   background-position-y: center;
   background-position-x: right;
