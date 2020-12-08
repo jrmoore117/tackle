@@ -12,7 +12,10 @@ const useForm = ({ initialValues, validators } = {}) => {
          errors: errors[name],
          checked: values[name],
          onChange: (event) => {
-            const { name, value, type } = event.target;
+            // const { name, value, type, dataset } = event.target;
+            const name = event.target.getAttribute('name');
+            const value = event.target.getAttribute('value');
+            const type = event.target.getAttribute('type') || event.target.dataset.type;
             // Validate input value.
             if (validators && validators[name] && value === '') {
                setErrors(Object.assign({}, errors, { [name]: null }));
@@ -20,7 +23,7 @@ const useForm = ({ initialValues, validators } = {}) => {
                setErrors(Object.assign({}, errors, { [name]: validators[name](value) }));
             }
             // Set new value to state.
-            type === 'checkbox'
+            type === 'checkbox' || type === 'switch'
                ? setValues(Object.assign({}, values, { [name]: !values[name] }))
                : setValues(Object.assign({}, values, { [name]: value }))
          },
