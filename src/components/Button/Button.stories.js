@@ -58,10 +58,10 @@ PrimaryIndigo.args = {
 
 export const PrimaryWithLeftIcon = Template.bind({});
 PrimaryWithLeftIcon.args = {
-   label: 'Alert',
+   label: 'Disconnect?',
    variant: 'primary',
-   color: 'yellow',
-   leftIcon: <AlertCircle />,
+   color: 'red',
+   leftIcon: "Zap",
 };
 
 export const PrimaryIconOnly = Template.bind({});
@@ -77,7 +77,7 @@ PrimarySmallWithRightIcon.args = {
    variant: 'primary',
    color: 'green',
    isSmall: true,
-   rightIcon: <DollarSign />,
+   rightIcon: "DollarSign",
 };
 
 export const PrimarySmall = Template.bind({});
@@ -154,7 +154,7 @@ SecondaryWithLeftIcon.args = {
    label: 'Tweet',
    variant: 'secondary',
    color: 'blue',
-   leftIcon: <Twitter />,
+   leftIcon: "Twitter",
 };
 
 export const SecondaryIconOnly = Template.bind({});
@@ -170,7 +170,7 @@ SecondarySmallWithRightIcon.args = {
    variant: 'secondary',
    color: 'green',
    isSmall: true,
-   rightIcon: <DollarSign />,
+   rightIcon: "DollarSign",
 };
 
 export const SecondarySmall = Template.bind({});

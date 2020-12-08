@@ -1,6 +1,6 @@
-import React, { cloneElement } from 'react';
+import React from 'react';
+import Icon from 'components/Icon';
 import { Button as Btn } from 'reakit/Button';
-import { Loader } from 'react-feather';
 import PropTypes from 'prop-types';
 
 const Button = ({
@@ -29,12 +29,12 @@ const Button = ({
       {...props}
    >
       {leftIcon && !isLoading && 
-         cloneElement(leftIcon, { className: "h-4 w-4 mr-2" })}
+         <Icon as={leftIcon} className="h-4 w-4 mr-2" />}
       {isLoading
-         ? <Loader className="mx-2 text-gray-700 animate-spin" />
+         ? <Icon as="Loader" size={6} className="mx-2 text-gray-700 animate-spin" />
          : label}
       {rightIcon && !isLoading && 
-         cloneElement(rightIcon, { className: "h-4 w-4 ml-2" })}
+         <Icon as={rightIcon} className="h-4 w-4 ml-2" />}
    </Btn>
 );
 
