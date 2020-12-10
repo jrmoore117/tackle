@@ -542,7 +542,7 @@
    @apply bg-gray-100;
 }
 .checkbox:checked {
-   @apply bg-blue-500 border-2 border-blue-200 shadow-none animate-radio-ping-blue;
+   @apply bg-blue-500 border-2 border-blue-200 shadow-none animate-small-ping-blue;
 }
 .checkbox::before {
    content: url("components/Checkbox/assets/check.svg");
@@ -719,7 +719,7 @@
    @apply bg-gray-100;
 }
 .radio:checked {
-   @apply bg-blue-500 border-2 border-blue-200 shadow-none animate-radio-ping-blue;
+   @apply bg-blue-500 border-2 border-blue-200 shadow-none animate-small-ping-blue;
 }
 
 .radiolabel {
@@ -736,13 +736,38 @@
    @apply h-5 w-5 transition duration-150 ease-in-out rounded-full;
 }
 
+.switchbutton--inactive {
+   @apply -translate-x-px border-1 border-gray-200 bg-gray-500;
+}
+
+.switchbutton--active--blue {
+   @apply translate-x-full border-2 border-blue-200 bg-blue-500 animate-small-ping-blue;
+}
+
+.switchbutton--active--red {
+   @apply translate-x-full border-2 border-red-200 bg-red-500 animate-small-ping-red;
+}
+
+.switchbutton--active--green {
+   @apply translate-x-full border-2 border-green-200 bg-green-500 animate-small-ping-green;
+}
+
+.switchbutton--active--yellow {
+   @apply translate-x-full border-2 border-yellow-200 bg-yellow-500 animate-small-ping-yellow;
+}
+
+.switchbutton--active--purple {
+   @apply translate-x-full border-2 border-purple-200 bg-purple-500 animate-small-ping-purple;
+}
+
+.switchbutton--active--indigo {
+   @apply translate-x-full border-2 border-indigo-200 bg-indigo-500 animate-small-ping-indigo;
+}
+
 .switchlabel {
    @apply text-gray-900 select-none;
 }
 
-.-translate-x-px {
-   transform: translateX(-1px);
-}
 
 
 /* ---------- TABS ---------- */
@@ -815,35 +840,35 @@
 }
 
 .tabmarker {
-   @apply h-0.5 rounded animate-radio-ping-blue;
+   @apply h-0.5 rounded;
 }
 
 .tabmarker--blue {
-   @apply bg-blue-500;
+   @apply bg-blue-500 animate-small-ping-blue;
 }
 
 .tabmarker--red {
-   @apply bg-red-500;
+   @apply bg-red-500 animate-small-ping-red;
 }
 
 .tabmarker--green {
-   @apply bg-green-500;
+   @apply bg-green-500 animate-small-ping-green;
 }
 
 .tabmarker--yellow {
-   @apply bg-yellow-500;
+   @apply bg-yellow-500 animate-small-ping-yellow;
 }
 
 .tabmarker--purple {
-   @apply bg-purple-500;
+   @apply bg-purple-500 animate-small-ping-purple;
 }
 
 .tabmarker--indigo {
-   @apply bg-indigo-500;
+   @apply bg-indigo-500 animate-small-ping-indigo;
 }
 
 .tabmarker--gray {
-   @apply bg-gray-900;
+   @apply bg-gray-900 animate-small-ping-gray;
 }
 
 

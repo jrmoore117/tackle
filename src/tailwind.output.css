@@ -17454,7 +17454,7 @@ video {
   }
 }
 
-@keyframes radio-ping-blue {
+@keyframes small-ping-blue {
   20% {
     box-shadow: 0 0 0 2px #bdd7ff;
   }
@@ -17474,6 +17474,16 @@ video {
   }
 }
 
+@keyframes small-ping-red {
+  20% {
+    box-shadow: 0 0 0 2px #fcc6cb;
+  }
+
+  100% {
+    box-shadow: 0 0 0 4px transparent;
+  }
+}
+
 @keyframes ping-green {
   15% {
     box-shadow: 0 0 0 3px #b3ead4;
@@ -17481,6 +17491,16 @@ video {
 
   100% {
     box-shadow: 0 0 0 6px transparent;
+  }
+}
+
+@keyframes small-ping-green {
+  20% {
+    box-shadow: 0 0 0 2px #b3ead4;
+  }
+
+  100% {
+    box-shadow: 0 0 0 4px transparent;
   }
 }
 
@@ -17494,6 +17514,16 @@ video {
   }
 }
 
+@keyframes small-ping-yellow {
+  20% {
+    box-shadow: 0 0 0 2px #feecbd;
+  }
+
+  100% {
+    box-shadow: 0 0 0 4px transparent;
+  }
+}
+
 @keyframes ping-purple {
   15% {
     box-shadow: 0 0 0 3px #dbd5ff;
@@ -17501,6 +17531,16 @@ video {
 
   100% {
     box-shadow: 0 0 0 6px transparent;
+  }
+}
+
+@keyframes small-ping-purple {
+  20% {
+    box-shadow: 0 0 0 2px #dbd5ff;
+  }
+
+  100% {
+    box-shadow: 0 0 0 4px transparent;
   }
 }
 
@@ -17514,6 +17554,16 @@ video {
   }
 }
 
+@keyframes small-ping-indigo {
+  20% {
+    box-shadow: 0 0 0 2px #c3cce6;
+  }
+
+  100% {
+    box-shadow: 0 0 0 4px transparent;
+  }
+}
+
 @keyframes ping-gray {
   15% {
     box-shadow: 0 0 0 3px #e2e5ea;
@@ -17521,6 +17571,16 @@ video {
 
   100% {
     box-shadow: 0 0 0 6px transparent;
+  }
+}
+
+@keyframes small-ping-gray {
+  20% {
+    box-shadow: 0 0 0 2px #e2e5ea;
+  }
+
+  100% {
+    box-shadow: 0 0 0 4px transparent;
   }
 }
 
@@ -17552,8 +17612,8 @@ video {
   animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
-.animate-radio-ping-blue {
-  animation: radio-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+.animate-small-ping-blue {
+  animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
 .animate-ping-red {
@@ -17564,12 +17624,20 @@ video {
   animation: ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
+.animate-small-ping-red {
+  animation: small-ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+
 .animate-ping-green {
   animation: ping-green 1s cubic-bezier(0,.656,0,.58) infinite;
 }
 
 .animate-btn-ping-green {
   animation: ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+
+.animate-small-ping-green {
+  animation: small-ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
 .animate-ping-yellow {
@@ -17580,12 +17648,20 @@ video {
   animation: ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
+.animate-small-ping-yellow {
+  animation: small-ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+
 .animate-ping-purple {
   animation: ping-purple 1s cubic-bezier(0,.656,0,.58) infinite;
 }
 
 .animate-btn-ping-purple {
   animation: ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+
+.animate-small-ping-purple {
+  animation: small-ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
 .animate-ping-indigo {
@@ -17596,12 +17672,20 @@ video {
   animation: ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
+.animate-small-ping-indigo {
+  animation: small-ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+
 .animate-ping-gray {
   animation: ping-gray 1s cubic-bezier(0,.656,0,.58) infinite;
 }
 
 .animate-btn-ping-gray {
   animation: ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+
+.animate-small-ping-gray {
+  animation: small-ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
 .focus\:animate-none:focus {
@@ -17632,8 +17716,8 @@ video {
   animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
-.focus\:animate-radio-ping-blue:focus {
-  animation: radio-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+.focus\:animate-small-ping-blue:focus {
+  animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
 .focus\:animate-ping-red:focus {
@@ -17644,12 +17728,20 @@ video {
   animation: ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
+.focus\:animate-small-ping-red:focus {
+  animation: small-ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+
 .focus\:animate-ping-green:focus {
   animation: ping-green 1s cubic-bezier(0,.656,0,.58) infinite;
 }
 
 .focus\:animate-btn-ping-green:focus {
   animation: ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+
+.focus\:animate-small-ping-green:focus {
+  animation: small-ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
 .focus\:animate-ping-yellow:focus {
@@ -17660,12 +17752,20 @@ video {
   animation: ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
+.focus\:animate-small-ping-yellow:focus {
+  animation: small-ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+
 .focus\:animate-ping-purple:focus {
   animation: ping-purple 1s cubic-bezier(0,.656,0,.58) infinite;
 }
 
 .focus\:animate-btn-ping-purple:focus {
   animation: ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+
+.focus\:animate-small-ping-purple:focus {
+  animation: small-ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
 .focus\:animate-ping-indigo:focus {
@@ -17676,12 +17776,20 @@ video {
   animation: ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
+.focus\:animate-small-ping-indigo:focus {
+  animation: small-ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+
 .focus\:animate-ping-gray:focus {
   animation: ping-gray 1s cubic-bezier(0,.656,0,.58) infinite;
 }
 
 .focus\:animate-btn-ping-gray:focus {
   animation: ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+
+.focus\:animate-small-ping-gray:focus {
+  animation: small-ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
 .active\:animate-none:active {
@@ -17712,8 +17820,8 @@ video {
   animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
-.active\:animate-radio-ping-blue:active {
-  animation: radio-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+.active\:animate-small-ping-blue:active {
+  animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
 .active\:animate-ping-red:active {
@@ -17724,12 +17832,20 @@ video {
   animation: ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
+.active\:animate-small-ping-red:active {
+  animation: small-ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+
 .active\:animate-ping-green:active {
   animation: ping-green 1s cubic-bezier(0,.656,0,.58) infinite;
 }
 
 .active\:animate-btn-ping-green:active {
   animation: ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+
+.active\:animate-small-ping-green:active {
+  animation: small-ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
 .active\:animate-ping-yellow:active {
@@ -17740,12 +17856,20 @@ video {
   animation: ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
+.active\:animate-small-ping-yellow:active {
+  animation: small-ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+
 .active\:animate-ping-purple:active {
   animation: ping-purple 1s cubic-bezier(0,.656,0,.58) infinite;
 }
 
 .active\:animate-btn-ping-purple:active {
   animation: ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+
+.active\:animate-small-ping-purple:active {
+  animation: small-ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
 .active\:animate-ping-indigo:active {
@@ -17756,12 +17880,20 @@ video {
   animation: ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
+.active\:animate-small-ping-indigo:active {
+  animation: small-ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+
 .active\:animate-ping-gray:active {
   animation: ping-gray 1s cubic-bezier(0,.656,0,.58) infinite;
 }
 
 .active\:animate-btn-ping-gray:active {
   animation: ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+
+.active\:animate-small-ping-gray:active {
+  animation: small-ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
 /* ---------- ACCORDION ---------- */
@@ -19045,7 +19177,7 @@ video {
   border-color: #92bdff;
   border-color: rgba(146, 189, 255, var(--border-opacity));
   box-shadow: none;
-  animation: radio-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+  animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
 .checkbox::before {
@@ -19486,7 +19618,7 @@ video {
   border-color: #92bdff;
   border-color: rgba(146, 189, 255, var(--border-opacity));
   box-shadow: none;
-  animation: radio-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+  animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
 .radiolabel {
@@ -19527,16 +19659,95 @@ video {
   border-radius: 9999px;
 }
 
+.switchbutton--inactive {
+  --transform-translate-x: -1px;
+  border-width: 1px;
+  --border-opacity: 1;
+  border-color: #e2e5ea;
+  border-color: rgba(226, 229, 234, var(--border-opacity));
+  --bg-opacity: 1;
+  background-color: #c4cad4;
+  background-color: rgba(196, 202, 212, var(--bg-opacity));
+}
+
+.switchbutton--active--blue {
+  --transform-translate-x: 100%;
+  border-width: 2px;
+  --border-opacity: 1;
+  border-color: #92bdff;
+  border-color: rgba(146, 189, 255, var(--border-opacity));
+  --bg-opacity: 1;
+  background-color: #247bff;
+  background-color: rgba(36, 123, 255, var(--bg-opacity));
+  animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+
+.switchbutton--active--red {
+  --transform-translate-x: 100%;
+  border-width: 2px;
+  --border-opacity: 1;
+  border-color: #faa1a8;
+  border-color: rgba(250, 161, 168, var(--border-opacity));
+  --bg-opacity: 1;
+  background-color: #f54251;
+  background-color: rgba(245, 66, 81, var(--bg-opacity));
+  animation: small-ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+
+.switchbutton--active--green {
+  --transform-translate-x: 100%;
+  border-width: 2px;
+  --border-opacity: 1;
+  border-color: #80ddb8;
+  border-color: rgba(128, 221, 184, var(--border-opacity));
+  --bg-opacity: 1;
+  background-color: #00ba70;
+  background-color: rgba(0, 186, 112, var(--bg-opacity));
+  animation: small-ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+
+.switchbutton--active--yellow {
+  --transform-translate-x: 100%;
+  border-width: 2px;
+  --border-opacity: 1;
+  border-color: #fddf92;
+  border-color: rgba(253, 223, 146, var(--border-opacity));
+  --bg-opacity: 1;
+  background-color: #fbbf24;
+  background-color: rgba(251, 191, 36, var(--bg-opacity));
+  animation: small-ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+
+.switchbutton--active--purple {
+  --transform-translate-x: 100%;
+  border-width: 2px;
+  --border-opacity: 1;
+  border-color: #c3b9ff;
+  border-color: rgba(195, 185, 255, var(--border-opacity));
+  --bg-opacity: 1;
+  background-color: #8673ff;
+  background-color: rgba(134, 115, 255, var(--bg-opacity));
+  animation: small-ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+
+.switchbutton--active--indigo {
+  --transform-translate-x: 100%;
+  border-width: 2px;
+  --border-opacity: 1;
+  border-color: #9baad5;
+  border-color: rgba(155, 170, 213, var(--border-opacity));
+  --bg-opacity: 1;
+  background-color: #3655ab;
+  background-color: rgba(54, 85, 171, var(--bg-opacity));
+  animation: small-ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+
 .switchlabel {
   --text-opacity: 1;
   color: #3b3d40;
   color: rgba(59, 61, 64, var(--text-opacity));
   -webkit-user-select: none;
           user-select: none;
-}
-
-.-translate-x-px {
-  transform: translateX(-1px);
 }
 
 /* ---------- TABS ---------- */
@@ -19653,49 +19864,55 @@ video {
 .tabmarker {
   height: 0.125rem;
   border-radius: 0.25rem;
-  animation: radio-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
 .tabmarker--blue {
   --bg-opacity: 1;
   background-color: #247bff;
   background-color: rgba(36, 123, 255, var(--bg-opacity));
+  animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
 .tabmarker--red {
   --bg-opacity: 1;
   background-color: #f54251;
   background-color: rgba(245, 66, 81, var(--bg-opacity));
+  animation: small-ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
 .tabmarker--green {
   --bg-opacity: 1;
   background-color: #00ba70;
   background-color: rgba(0, 186, 112, var(--bg-opacity));
+  animation: small-ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
 .tabmarker--yellow {
   --bg-opacity: 1;
   background-color: #fbbf24;
   background-color: rgba(251, 191, 36, var(--bg-opacity));
+  animation: small-ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
 .tabmarker--purple {
   --bg-opacity: 1;
   background-color: #8673ff;
   background-color: rgba(134, 115, 255, var(--bg-opacity));
+  animation: small-ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
 .tabmarker--indigo {
   --bg-opacity: 1;
   background-color: #3655ab;
   background-color: rgba(54, 85, 171, var(--bg-opacity));
+  animation: small-ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
 .tabmarker--gray {
   --bg-opacity: 1;
   background-color: #3b3d40;
   background-color: rgba(59, 61, 64, var(--bg-opacity));
+  animation: small-ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
 /* ---------- TEXT FIELD & SELECT COMPONENTS ---------- */
@@ -34337,8 +34554,8 @@ video {
     animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
-  .sm\:animate-radio-ping-blue {
-    animation: radio-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+  .sm\:animate-small-ping-blue {
+    animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .sm\:animate-ping-red {
@@ -34349,12 +34566,20 @@ video {
     animation: ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .sm\:animate-small-ping-red {
+    animation: small-ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .sm\:animate-ping-green {
     animation: ping-green 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .sm\:animate-btn-ping-green {
     animation: ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .sm\:animate-small-ping-green {
+    animation: small-ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .sm\:animate-ping-yellow {
@@ -34365,12 +34590,20 @@ video {
     animation: ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .sm\:animate-small-ping-yellow {
+    animation: small-ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .sm\:animate-ping-purple {
     animation: ping-purple 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .sm\:animate-btn-ping-purple {
     animation: ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .sm\:animate-small-ping-purple {
+    animation: small-ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .sm\:animate-ping-indigo {
@@ -34381,12 +34614,20 @@ video {
     animation: ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .sm\:animate-small-ping-indigo {
+    animation: small-ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .sm\:animate-ping-gray {
     animation: ping-gray 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .sm\:animate-btn-ping-gray {
     animation: ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .sm\:animate-small-ping-gray {
+    animation: small-ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .sm\:focus\:animate-none:focus {
@@ -34417,8 +34658,8 @@ video {
     animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
-  .sm\:focus\:animate-radio-ping-blue:focus {
-    animation: radio-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+  .sm\:focus\:animate-small-ping-blue:focus {
+    animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .sm\:focus\:animate-ping-red:focus {
@@ -34429,12 +34670,20 @@ video {
     animation: ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .sm\:focus\:animate-small-ping-red:focus {
+    animation: small-ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .sm\:focus\:animate-ping-green:focus {
     animation: ping-green 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .sm\:focus\:animate-btn-ping-green:focus {
     animation: ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .sm\:focus\:animate-small-ping-green:focus {
+    animation: small-ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .sm\:focus\:animate-ping-yellow:focus {
@@ -34445,12 +34694,20 @@ video {
     animation: ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .sm\:focus\:animate-small-ping-yellow:focus {
+    animation: small-ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .sm\:focus\:animate-ping-purple:focus {
     animation: ping-purple 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .sm\:focus\:animate-btn-ping-purple:focus {
     animation: ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .sm\:focus\:animate-small-ping-purple:focus {
+    animation: small-ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .sm\:focus\:animate-ping-indigo:focus {
@@ -34461,12 +34718,20 @@ video {
     animation: ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .sm\:focus\:animate-small-ping-indigo:focus {
+    animation: small-ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .sm\:focus\:animate-ping-gray:focus {
     animation: ping-gray 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .sm\:focus\:animate-btn-ping-gray:focus {
     animation: ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .sm\:focus\:animate-small-ping-gray:focus {
+    animation: small-ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .sm\:active\:animate-none:active {
@@ -34497,8 +34762,8 @@ video {
     animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
-  .sm\:active\:animate-radio-ping-blue:active {
-    animation: radio-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+  .sm\:active\:animate-small-ping-blue:active {
+    animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .sm\:active\:animate-ping-red:active {
@@ -34509,12 +34774,20 @@ video {
     animation: ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .sm\:active\:animate-small-ping-red:active {
+    animation: small-ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .sm\:active\:animate-ping-green:active {
     animation: ping-green 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .sm\:active\:animate-btn-ping-green:active {
     animation: ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .sm\:active\:animate-small-ping-green:active {
+    animation: small-ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .sm\:active\:animate-ping-yellow:active {
@@ -34525,12 +34798,20 @@ video {
     animation: ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .sm\:active\:animate-small-ping-yellow:active {
+    animation: small-ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .sm\:active\:animate-ping-purple:active {
     animation: ping-purple 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .sm\:active\:animate-btn-ping-purple:active {
     animation: ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .sm\:active\:animate-small-ping-purple:active {
+    animation: small-ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .sm\:active\:animate-ping-indigo:active {
@@ -34541,12 +34822,20 @@ video {
     animation: ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .sm\:active\:animate-small-ping-indigo:active {
+    animation: small-ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .sm\:active\:animate-ping-gray:active {
     animation: ping-gray 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .sm\:active\:animate-btn-ping-gray:active {
     animation: ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .sm\:active\:animate-small-ping-gray:active {
+    animation: small-ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 }
 
@@ -49045,8 +49334,8 @@ video {
     animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
-  .md\:animate-radio-ping-blue {
-    animation: radio-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+  .md\:animate-small-ping-blue {
+    animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .md\:animate-ping-red {
@@ -49057,12 +49346,20 @@ video {
     animation: ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .md\:animate-small-ping-red {
+    animation: small-ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .md\:animate-ping-green {
     animation: ping-green 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .md\:animate-btn-ping-green {
     animation: ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .md\:animate-small-ping-green {
+    animation: small-ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .md\:animate-ping-yellow {
@@ -49073,12 +49370,20 @@ video {
     animation: ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .md\:animate-small-ping-yellow {
+    animation: small-ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .md\:animate-ping-purple {
     animation: ping-purple 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .md\:animate-btn-ping-purple {
     animation: ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .md\:animate-small-ping-purple {
+    animation: small-ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .md\:animate-ping-indigo {
@@ -49089,12 +49394,20 @@ video {
     animation: ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .md\:animate-small-ping-indigo {
+    animation: small-ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .md\:animate-ping-gray {
     animation: ping-gray 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .md\:animate-btn-ping-gray {
     animation: ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .md\:animate-small-ping-gray {
+    animation: small-ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .md\:focus\:animate-none:focus {
@@ -49125,8 +49438,8 @@ video {
     animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
-  .md\:focus\:animate-radio-ping-blue:focus {
-    animation: radio-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+  .md\:focus\:animate-small-ping-blue:focus {
+    animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .md\:focus\:animate-ping-red:focus {
@@ -49137,12 +49450,20 @@ video {
     animation: ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .md\:focus\:animate-small-ping-red:focus {
+    animation: small-ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .md\:focus\:animate-ping-green:focus {
     animation: ping-green 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .md\:focus\:animate-btn-ping-green:focus {
     animation: ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .md\:focus\:animate-small-ping-green:focus {
+    animation: small-ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .md\:focus\:animate-ping-yellow:focus {
@@ -49153,12 +49474,20 @@ video {
     animation: ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .md\:focus\:animate-small-ping-yellow:focus {
+    animation: small-ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .md\:focus\:animate-ping-purple:focus {
     animation: ping-purple 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .md\:focus\:animate-btn-ping-purple:focus {
     animation: ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .md\:focus\:animate-small-ping-purple:focus {
+    animation: small-ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .md\:focus\:animate-ping-indigo:focus {
@@ -49169,12 +49498,20 @@ video {
     animation: ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .md\:focus\:animate-small-ping-indigo:focus {
+    animation: small-ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .md\:focus\:animate-ping-gray:focus {
     animation: ping-gray 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .md\:focus\:animate-btn-ping-gray:focus {
     animation: ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .md\:focus\:animate-small-ping-gray:focus {
+    animation: small-ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .md\:active\:animate-none:active {
@@ -49205,8 +49542,8 @@ video {
     animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
-  .md\:active\:animate-radio-ping-blue:active {
-    animation: radio-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+  .md\:active\:animate-small-ping-blue:active {
+    animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .md\:active\:animate-ping-red:active {
@@ -49217,12 +49554,20 @@ video {
     animation: ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .md\:active\:animate-small-ping-red:active {
+    animation: small-ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .md\:active\:animate-ping-green:active {
     animation: ping-green 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .md\:active\:animate-btn-ping-green:active {
     animation: ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .md\:active\:animate-small-ping-green:active {
+    animation: small-ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .md\:active\:animate-ping-yellow:active {
@@ -49233,12 +49578,20 @@ video {
     animation: ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .md\:active\:animate-small-ping-yellow:active {
+    animation: small-ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .md\:active\:animate-ping-purple:active {
     animation: ping-purple 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .md\:active\:animate-btn-ping-purple:active {
     animation: ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .md\:active\:animate-small-ping-purple:active {
+    animation: small-ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .md\:active\:animate-ping-indigo:active {
@@ -49249,12 +49602,20 @@ video {
     animation: ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .md\:active\:animate-small-ping-indigo:active {
+    animation: small-ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .md\:active\:animate-ping-gray:active {
     animation: ping-gray 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .md\:active\:animate-btn-ping-gray:active {
     animation: ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .md\:active\:animate-small-ping-gray:active {
+    animation: small-ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 }
 
@@ -63753,8 +64114,8 @@ video {
     animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
-  .lg\:animate-radio-ping-blue {
-    animation: radio-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+  .lg\:animate-small-ping-blue {
+    animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .lg\:animate-ping-red {
@@ -63765,12 +64126,20 @@ video {
     animation: ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .lg\:animate-small-ping-red {
+    animation: small-ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .lg\:animate-ping-green {
     animation: ping-green 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .lg\:animate-btn-ping-green {
     animation: ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .lg\:animate-small-ping-green {
+    animation: small-ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .lg\:animate-ping-yellow {
@@ -63781,12 +64150,20 @@ video {
     animation: ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .lg\:animate-small-ping-yellow {
+    animation: small-ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .lg\:animate-ping-purple {
     animation: ping-purple 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .lg\:animate-btn-ping-purple {
     animation: ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .lg\:animate-small-ping-purple {
+    animation: small-ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .lg\:animate-ping-indigo {
@@ -63797,12 +64174,20 @@ video {
     animation: ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .lg\:animate-small-ping-indigo {
+    animation: small-ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .lg\:animate-ping-gray {
     animation: ping-gray 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .lg\:animate-btn-ping-gray {
     animation: ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .lg\:animate-small-ping-gray {
+    animation: small-ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .lg\:focus\:animate-none:focus {
@@ -63833,8 +64218,8 @@ video {
     animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
-  .lg\:focus\:animate-radio-ping-blue:focus {
-    animation: radio-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+  .lg\:focus\:animate-small-ping-blue:focus {
+    animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .lg\:focus\:animate-ping-red:focus {
@@ -63845,12 +64230,20 @@ video {
     animation: ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .lg\:focus\:animate-small-ping-red:focus {
+    animation: small-ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .lg\:focus\:animate-ping-green:focus {
     animation: ping-green 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .lg\:focus\:animate-btn-ping-green:focus {
     animation: ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .lg\:focus\:animate-small-ping-green:focus {
+    animation: small-ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .lg\:focus\:animate-ping-yellow:focus {
@@ -63861,12 +64254,20 @@ video {
     animation: ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .lg\:focus\:animate-small-ping-yellow:focus {
+    animation: small-ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .lg\:focus\:animate-ping-purple:focus {
     animation: ping-purple 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .lg\:focus\:animate-btn-ping-purple:focus {
     animation: ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .lg\:focus\:animate-small-ping-purple:focus {
+    animation: small-ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .lg\:focus\:animate-ping-indigo:focus {
@@ -63877,12 +64278,20 @@ video {
     animation: ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .lg\:focus\:animate-small-ping-indigo:focus {
+    animation: small-ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .lg\:focus\:animate-ping-gray:focus {
     animation: ping-gray 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .lg\:focus\:animate-btn-ping-gray:focus {
     animation: ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .lg\:focus\:animate-small-ping-gray:focus {
+    animation: small-ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .lg\:active\:animate-none:active {
@@ -63913,8 +64322,8 @@ video {
     animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
-  .lg\:active\:animate-radio-ping-blue:active {
-    animation: radio-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+  .lg\:active\:animate-small-ping-blue:active {
+    animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .lg\:active\:animate-ping-red:active {
@@ -63925,12 +64334,20 @@ video {
     animation: ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .lg\:active\:animate-small-ping-red:active {
+    animation: small-ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .lg\:active\:animate-ping-green:active {
     animation: ping-green 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .lg\:active\:animate-btn-ping-green:active {
     animation: ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .lg\:active\:animate-small-ping-green:active {
+    animation: small-ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .lg\:active\:animate-ping-yellow:active {
@@ -63941,12 +64358,20 @@ video {
     animation: ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .lg\:active\:animate-small-ping-yellow:active {
+    animation: small-ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .lg\:active\:animate-ping-purple:active {
     animation: ping-purple 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .lg\:active\:animate-btn-ping-purple:active {
     animation: ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .lg\:active\:animate-small-ping-purple:active {
+    animation: small-ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .lg\:active\:animate-ping-indigo:active {
@@ -63957,12 +64382,20 @@ video {
     animation: ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .lg\:active\:animate-small-ping-indigo:active {
+    animation: small-ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .lg\:active\:animate-ping-gray:active {
     animation: ping-gray 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .lg\:active\:animate-btn-ping-gray:active {
     animation: ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .lg\:active\:animate-small-ping-gray:active {
+    animation: small-ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 }
 
@@ -78461,8 +78894,8 @@ video {
     animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
-  .xl\:animate-radio-ping-blue {
-    animation: radio-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+  .xl\:animate-small-ping-blue {
+    animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .xl\:animate-ping-red {
@@ -78473,12 +78906,20 @@ video {
     animation: ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .xl\:animate-small-ping-red {
+    animation: small-ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .xl\:animate-ping-green {
     animation: ping-green 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .xl\:animate-btn-ping-green {
     animation: ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .xl\:animate-small-ping-green {
+    animation: small-ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .xl\:animate-ping-yellow {
@@ -78489,12 +78930,20 @@ video {
     animation: ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .xl\:animate-small-ping-yellow {
+    animation: small-ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .xl\:animate-ping-purple {
     animation: ping-purple 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .xl\:animate-btn-ping-purple {
     animation: ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .xl\:animate-small-ping-purple {
+    animation: small-ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .xl\:animate-ping-indigo {
@@ -78505,12 +78954,20 @@ video {
     animation: ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .xl\:animate-small-ping-indigo {
+    animation: small-ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .xl\:animate-ping-gray {
     animation: ping-gray 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .xl\:animate-btn-ping-gray {
     animation: ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .xl\:animate-small-ping-gray {
+    animation: small-ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .xl\:focus\:animate-none:focus {
@@ -78541,8 +78998,8 @@ video {
     animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
-  .xl\:focus\:animate-radio-ping-blue:focus {
-    animation: radio-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+  .xl\:focus\:animate-small-ping-blue:focus {
+    animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .xl\:focus\:animate-ping-red:focus {
@@ -78553,12 +79010,20 @@ video {
     animation: ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .xl\:focus\:animate-small-ping-red:focus {
+    animation: small-ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .xl\:focus\:animate-ping-green:focus {
     animation: ping-green 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .xl\:focus\:animate-btn-ping-green:focus {
     animation: ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .xl\:focus\:animate-small-ping-green:focus {
+    animation: small-ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .xl\:focus\:animate-ping-yellow:focus {
@@ -78569,12 +79034,20 @@ video {
     animation: ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .xl\:focus\:animate-small-ping-yellow:focus {
+    animation: small-ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .xl\:focus\:animate-ping-purple:focus {
     animation: ping-purple 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .xl\:focus\:animate-btn-ping-purple:focus {
     animation: ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .xl\:focus\:animate-small-ping-purple:focus {
+    animation: small-ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .xl\:focus\:animate-ping-indigo:focus {
@@ -78585,12 +79058,20 @@ video {
     animation: ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .xl\:focus\:animate-small-ping-indigo:focus {
+    animation: small-ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .xl\:focus\:animate-ping-gray:focus {
     animation: ping-gray 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .xl\:focus\:animate-btn-ping-gray:focus {
     animation: ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .xl\:focus\:animate-small-ping-gray:focus {
+    animation: small-ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .xl\:active\:animate-none:active {
@@ -78621,8 +79102,8 @@ video {
     animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
-  .xl\:active\:animate-radio-ping-blue:active {
-    animation: radio-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+  .xl\:active\:animate-small-ping-blue:active {
+    animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .xl\:active\:animate-ping-red:active {
@@ -78633,12 +79114,20 @@ video {
     animation: ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .xl\:active\:animate-small-ping-red:active {
+    animation: small-ping-red 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .xl\:active\:animate-ping-green:active {
     animation: ping-green 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .xl\:active\:animate-btn-ping-green:active {
     animation: ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .xl\:active\:animate-small-ping-green:active {
+    animation: small-ping-green 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .xl\:active\:animate-ping-yellow:active {
@@ -78649,12 +79138,20 @@ video {
     animation: ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .xl\:active\:animate-small-ping-yellow:active {
+    animation: small-ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .xl\:active\:animate-ping-purple:active {
     animation: ping-purple 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .xl\:active\:animate-btn-ping-purple:active {
     animation: ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .xl\:active\:animate-small-ping-purple:active {
+    animation: small-ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .xl\:active\:animate-ping-indigo:active {
@@ -78665,11 +79162,19 @@ video {
     animation: ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .xl\:active\:animate-small-ping-indigo:active {
+    animation: small-ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .xl\:active\:animate-ping-gray:active {
     animation: ping-gray 1s cubic-bezier(0,.656,0,.58) infinite;
   }
 
   .xl\:active\:animate-btn-ping-gray:active {
     animation: ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .xl\:active\:animate-small-ping-gray:active {
+    animation: small-ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 }
