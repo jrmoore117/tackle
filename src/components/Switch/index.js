@@ -5,6 +5,7 @@ const Switch = ({
    name,
    value,
    label,
+   color,
    checked,
    onChange,
    className,
@@ -25,7 +26,7 @@ const Switch = ({
             data-type="switch"
             onClick={onChange}
             data-type="switch"
-            className={`switchbutton transform ${checked ? 'bg-blue-500 border-2 border-blue-200 translate-x-full animate-radio-ping-blue' : 'border-1 border-gray-200 bg-gray-500 -translate-x-px'}`}
+            className={`switchbutton transform ${checked ? `switchbutton--active--${color}` : 'switchbutton--inactive'}`}
          />
       </div>
       <span className="switchlabel">
@@ -34,7 +35,12 @@ const Switch = ({
    </label>
 );
 
+Switch.defaultProps = {
+   color: 'blue',
+}
+
 Switch.propTypes = {
+   color: PropTypes.string,
    className: PropTypes.string,
 }
 
