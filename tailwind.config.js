@@ -35,26 +35,32 @@ module.exports = {
          animation: {
             'ping-blue': 'ping-blue 1s cubic-bezier(0,.656,0,.58) infinite',
             'btn-ping-blue': 'ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1',
-            'radio-ping-blue': 'radio-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1',
+            'small-ping-blue': 'small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1',
             'ping-red': 'ping-red 1s cubic-bezier(0,.656,0,.58) infinite',
             'btn-ping-red': 'ping-red 0.65s cubic-bezier(0,.656,0,.58) 1',
+            'small-ping-red': 'small-ping-red 0.65s cubic-bezier(0,.656,0,.58) 1',
             'ping-green': 'ping-green 1s cubic-bezier(0,.656,0,.58) infinite',
             'btn-ping-green': 'ping-green 0.65s cubic-bezier(0,.656,0,.58) 1',
+            'small-ping-green': 'small-ping-green 0.65s cubic-bezier(0,.656,0,.58) 1',
             'ping-yellow': 'ping-yellow 1s cubic-bezier(0,.656,0,.58) infinite',
             'btn-ping-yellow': 'ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1',
+            'small-ping-yellow': 'small-ping-yellow 0.65s cubic-bezier(0,.656,0,.58) 1',
             'ping-purple': 'ping-purple 1s cubic-bezier(0,.656,0,.58) infinite',
             'btn-ping-purple': 'ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1',
+            'small-ping-purple': 'small-ping-purple 0.65s cubic-bezier(0,.656,0,.58) 1',
             'ping-indigo': 'ping-indigo 1s cubic-bezier(0,.656,0,.58) infinite',
             'btn-ping-indigo': 'ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1',
+            'small-ping-indigo': 'small-ping-indigo 0.65s cubic-bezier(0,.656,0,.58) 1',
             'ping-gray': 'ping-gray 1s cubic-bezier(0,.656,0,.58) infinite',
             'btn-ping-gray': 'ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1',
+            'small-ping-gray': 'small-ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1',
          },
          keyframes: {
             'ping-blue': {
                '15%': { boxShadow: '0 0 0 3px #bdd7ff' },
                '100%': { boxShadow: '0 0 0 6px transparent' },
             },
-            'radio-ping-blue': {
+            'small-ping-blue': {
                '20%': { boxShadow: '0 0 0 2px #bdd7ff' },
                '100%': { boxShadow: '0 0 0 4px transparent' },
             },
@@ -62,25 +68,49 @@ module.exports = {
                '15%': { boxShadow: '0 0 0 3px #fcc6cb' },
                '100%': { boxShadow: '0 0 0 6px transparent' },
             },
+            'small-ping-red': {
+               '20%': { boxShadow: '0 0 0 2px #fcc6cb' },
+               '100%': { boxShadow: '0 0 0 4px transparent' },
+            },
             'ping-green': {
                '15%': { boxShadow: '0 0 0 3px #b3ead4' },
                '100%': { boxShadow: '0 0 0 6px transparent' },
+            },
+            'small-ping-green': {
+               '20%': { boxShadow: '0 0 0 2px #b3ead4' },
+               '100%': { boxShadow: '0 0 0 4px transparent' },
             },
             'ping-yellow': {
                '15%': { boxShadow: '0 0 0 3px #feecbd' },
                '100%': { boxShadow: '0 0 0 6px transparent' },
             },
+            'small-ping-yellow': {
+               '20%': { boxShadow: '0 0 0 2px #feecbd' },
+               '100%': { boxShadow: '0 0 0 4px transparent' },
+            },
             'ping-purple': {
                '15%': { boxShadow: '0 0 0 3px #dbd5ff' },
                '100%': { boxShadow: '0 0 0 6px transparent' },
+            },
+            'small-ping-purple': {
+               '20%': { boxShadow: '0 0 0 2px #dbd5ff' },
+               '100%': { boxShadow: '0 0 0 4px transparent' },
             },
             'ping-indigo': {
                '15%': { boxShadow: '0 0 0 3px #c3cce6' },
                '100%': { boxShadow: '0 0 0 6px transparent' },
             },
+            'small-ping-indigo': {
+               '20%': { boxShadow: '0 0 0 2px #c3cce6' },
+               '100%': { boxShadow: '0 0 0 4px transparent' },
+            },
             'ping-gray': {
                '15%': { boxShadow: '0 0 0 3px #e2e5ea' },
                '100%': { boxShadow: '0 0 0 6px transparent' },
+            },
+            'small-ping-gray': {
+               '20%': { boxShadow: '0 0 0 2px #e2e5ea' },
+               '100%': { boxShadow: '0 0 0 4px transparent' },
             },
          },
       },
