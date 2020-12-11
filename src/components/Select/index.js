@@ -10,13 +10,7 @@ export const Select = ({
    ...props
 }) => (
    <select
-      className={`
-         ${withElements
-            ? 'select--with-elements'
-            : `select select--${errors ? 'error' : 'default'}`}
-         ${value ? 'text-gray-900' : 'text-gray-600'}
-         ${className}
-      `}
+      className={`${withElements ? 'select--with-elements' : `select select--${errors ? 'error' : 'default'}`} ${value ? 'text-gray-900' : 'text-gray-600'} ${className || ''}`}
       value={value}
       {...props}
    >

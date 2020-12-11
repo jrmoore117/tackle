@@ -11,13 +11,7 @@ const TextField = ({
 }) => (
   <Input
     type={type}
-    className={`
-      ${withElements
-        ? 'textfield--with-elements'
-        : `textfield textfield--${errors ? 'error' : 'default'}`}
-      placeholder-gray-600
-      ${className}
-    `}
+    className={`${withElements ? 'textfield--with-elements' : `textfield textfield--${errors ? 'error' : 'default'}`} placeholder-gray-600 ${className || ''}`}
     {...props}
   />
 );
@@ -26,7 +20,7 @@ TextField.id = 'TextField';
 
 TextField.propTypes = {
   className: PropTypes.string,
-  type: PropTypes.oneOf(['text', 'password']), // add other types later.
+  type: PropTypes.oneOf(['text', 'password']),
 }
 
 export default TextField;

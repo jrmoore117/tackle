@@ -10,9 +10,9 @@ export const Radio = ({
    className,
    ...props
 }) => (
-   <label className="radiowrapper">
+   <label className={`radiowrapper ${className || ''}`}>
       <RadioButton
-         className={`radio`}
+         className="radio"
          {...props}
       />
       <span className="radiolabel">

@@ -27,12 +27,12 @@ const Icon = ({
                className="icon--clickable"
             >
                {cloneElement(<Icon />, { 
-                  className: `icon--clickable--${color} h-${size} w-${size} ${isRounded ? 'rounded-full' : 'rounded'} ${isSolid ? 'fill-current' : ''} ${className}`
+                  className: `icon--clickable--${color} h-${size} w-${size} ${isRounded ? 'rounded-full' : 'rounded'} ${isSolid ? 'fill-current' : ''} ${className || ''}`
                })}
             </Clickable>
          ) : (
             cloneElement(<Icon />, {
-               className: `icon--${variant}--${color} h-${size} w-${size} ${isRounded ? 'rounded-full' : 'rounded'} ${isSolid ? 'fill-current' : ''} ${className}`
+               className: `icon--${variant}--${color} h-${size} w-${size} ${isRounded ? 'rounded-full' : 'rounded'} ${isSolid ? 'fill-current' : ''} ${className || ''}`
             })
          )
    );

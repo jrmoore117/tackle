@@ -118,7 +118,7 @@
 }
 
 /* ---------- IMAGE AVATAR ---------- */
-.avatar--image {
+.avatarimage {
    @apply h-full w-full rounded-full shadow-gray;
 }
 

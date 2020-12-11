@@ -18,12 +18,7 @@ const Button = ({
 }) => (
    <Btn
       as={as}
-      className={`
-         button button--${variant}--${color}
-         ${isDisabled && `button--${variant}--disabled`}
-         ${isSmall && 'button--small'}
-         ${className || null}
-      `}
+      className={`button button--${variant}--${color} ${isDisabled ? `button--${variant}--disabled` : ''} ${isSmall ? 'button--small' : ''} ${className || ''}`}
       onAnimationEnd={(e) => e.target.blur()}
       disabled={isDisabled || isLoading}
       {...props}

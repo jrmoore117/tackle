@@ -14,14 +14,9 @@ const List = ({
    >
       {items.map((item, i) => (
          <li
-            className={`
-               ${i !== items.length - 1
-                  ? 'listitem'
-                  : 'listitem--last'}
-               ${color && `hover:text-${color}-500`}
-            `}
+            className={`${i !== items.length - 1 ? 'listitem' : 'listitem--last'} ${color ? `hover:text-${color}-500` : ''}`}
             onClick={() => onClick(item, i)}
-            key={`item-${i}`} // todo: generate better unique keys
+            key={`item-${i}`}
          >
             {item.label}
          </li>

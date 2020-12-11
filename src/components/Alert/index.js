@@ -17,10 +17,7 @@ const Alert = ({
    <Box
       color={color}
       variant="frame"
-      className={`
-         alert
-         ${pingColor && `animate-ping-${pingColor}`}
-         ${className}`}
+      className={`alert ${pingColor ? `animate-ping-${pingColor}` : ''} ${className || ''}`}
       {...props}
    >
       {icon && (
@@ -30,11 +27,11 @@ const Alert = ({
       )}
       <div className="alertcontent">
          {heading && (
-            <span className={`alertheading--${color} ${icon && 'ml-3'}`}>
+            <span className={`alertheading--${color} ${icon ? 'ml-3' : ''}`}>
                {heading}
             </span>
          )}
-         <span className={`alertmessage--${color} ${icon && 'ml-3'}`}>
+         <span className={`alertmessage--${color} ${icon ? 'ml-3' : ''}`}>
             {message}
          </span>
       </div>

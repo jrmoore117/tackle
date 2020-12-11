@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 export const Accordion = ({
    color,
    children,
+   className,
    ...props
 }) => {
    const [panels, setPanels] = useState(children.map(c => false));
@@ -24,10 +25,14 @@ export const Accordion = ({
       }
    });
    return (
-      <div className="accordion">
+      <div className={`accordion ${className || ''}`}>
          {childrenWithProps}
       </div>
    );
+}
+
+Accordion.defaultProps = {
+   color: 'blue',
 }
 
 Accordion.propTypes = {
@@ -49,16 +54,12 @@ export const Panel = ({
    return (
       <div>
          <div
-            className={`
-               accordion-panel-header
-               ${isLast && !isOpen ? '' : 'border-b-1'}
-               ${color ? `hover:text-${color}-500` : 'hover:text-blue-500'}
-            `}
+            className={`accordion-panel-header hover:text-${color}-500 ${isLast && !isOpen ? '' : 'border-b-1'}`}
             onClick={() => togglePanel(index)}
          >
             {icon
                ? <Icon as={icon} className="mr-2" />
-               : <Icon as="ChevronRight" size={4} className={`mr-2 ${isOpen && 'transform rotate-90'}`} />}
+               : <Icon as="ChevronRight" className={`mr-2 ${isOpen ? 'transform rotate-90' : ''}`} />}
             {label}
          </div>
          <div

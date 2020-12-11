@@ -45,12 +45,7 @@ const Field = ({
    });
    return (
       <div
-         className={`
-            field
-            ${focused && !errors && 'field--focused'}
-            ${focused && errors && 'field--focused--error'}
-            ${className}
-         `}
+         className={`field ${focused && !errors ? 'field--focused' : ''} ${focused && errors ? 'field--focused--error' : ''} ${className || ''}`}
          {...props}
       >
          {childrenWithProps}
