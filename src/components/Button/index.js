@@ -56,8 +56,8 @@ Button.propTypes = {
    isSmall: PropTypes.bool,
    isLoading: PropTypes.bool,
    className: PropTypes.string,
-   leftIcon: PropTypes.object,
-   rightIcon: PropTypes.object,
+   leftIcon: PropTypes.string,
+   rightIcon: PropTypes.string,
 }
 
 export default Button;

@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from 'components/Button';
-import { AlertCircle, Twitter, Twitch, DollarSign } from 'react-feather';
-
+import Icon from 'components/Icon';
 export default {
    component: Button,
    title: 'Button',
@@ -66,7 +65,7 @@ PrimaryWithLeftIcon.args = {
 
 export const PrimaryIconOnly = Template.bind({});
 PrimaryIconOnly.args = {
-   label: <Twitch />,
+   label: <Icon as="Twitch" size={6} />,
    variant: 'primary',
    color: 'purple',
 };
@@ -159,7 +158,7 @@ SecondaryWithLeftIcon.args = {
 
 export const SecondaryIconOnly = Template.bind({});
 SecondaryIconOnly.args = {
-   label: <Twitch />,
+   label: <Icon as="Twitch" size={6} />,
    variant: 'secondary',
    color: 'purple',
 };

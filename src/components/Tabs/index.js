@@ -71,10 +71,10 @@ export const Tab = ({
 }
 
 Tab.propTypes = {
+   active: PropTypes.bool,
    icon: PropTypes.string,
    color: PropTypes.string,
    label: PropTypes.string.isRequired,
-   active: PropTypes.bool.isRequired,
 }
 
 export const PanelList = ({ children }) => {

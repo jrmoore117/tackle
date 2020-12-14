@@ -6,8 +6,6 @@ export default {
    title: 'Divider',
 };
 
-const Template = args => <Divider {...args} />;
-
 export const DefaultDivider = () => (
    <Divider />
 );
