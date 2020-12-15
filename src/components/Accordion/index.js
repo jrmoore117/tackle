@@ -23,6 +23,7 @@ export const Accordion = ({
             isLast: i === children.length - 1 ? true : false,
          });
       }
+      return null;
    });
    return (
       <div className={`accordion ${className || ''}`}>
