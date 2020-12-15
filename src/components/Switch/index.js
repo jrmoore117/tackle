@@ -25,7 +25,6 @@ const Switch = ({
             value={value}
             data-type="switch"
             onClick={onChange}
-            data-type="switch"
             className={`switchbutton transform ${checked ? `switchbutton--active--${color}` : 'switchbutton--inactive'}`}
          />
       </div>
