@@ -1,20 +1,35 @@
-import React, { cloneElement } from 'react';
+import React, { useState, cloneElement } from 'react';
 import Icon from 'components/Icon';
 import PropTypes from 'prop-types';
 
 export const Tabs = ({
    index,
    color,
+   newTab,
    onClick,
    children,
    ...props
 }) => {
-   const tabs = children[0].props.children;
-   const panels = children[1].props.children;
+   
+   const [tabs, setTabs] = useState({
+      tabs: children[0].props.children,
+      panels: children[1].props.children,
+   });
+   
+   const defaultNewTab = tabs.tabs[newTab];
+   const defaultNewPanel = tabs.panels[newTab];
+   
+   const addNewTab = () => {
+      setTabs({
+         tabs: [...tabs.tabs, defaultNewTab],
+         panels: [...tabs.panels, defaultNewPanel]  
+      });
+   }
+   
    return (
       <div {...props}>
          <div className="tabswrapper">
-            {tabs.map((tab, i) => (
+            {tabs.tabs.map((tab, i) => (
                cloneElement(tab, {
                   color,
                   key: `tab-${i}`,
@@ -23,9 +38,20 @@ export const Tabs = ({
                   className: index === i ? `tab tab--active--${color}` : `tab tab--inactive--${color}`,
                })
             ))}
+            {newTab !== undefined ? (
+               <Icon
+                  as="Plus"
+                  size={5}
+                  isRounded
+                  color="blue"
+                  variant="clickable"
+                  className="newTabButton"
+                  onClick={addNewTab}
+               />
+            ) : null}
          </div>
          <div>
-            {panels.map((panel, i) => index === i
+            {tabs.panels.map((panel, i) => index === i
                ? cloneElement(panel, { key: `panel-${i}`, className: 'pt-4' })
                : cloneElement(panel, { key: `panel-${i}`, className: 'hidden' })
             )}
@@ -40,6 +66,7 @@ Tabs.defaultProps = {
 
 Tabs.propTypes = {
    color: PropTypes.string,
+   newTab: PropTypes.number,
    index: PropTypes.number.isRequired,
    onClick: PropTypes.func.isRequired,
 }
@@ -60,13 +87,13 @@ export const Tab = ({
    ...props
 }) => {
    return (
-   <div {...props}>
-      <div className="tablabel">
-         {icon && <Icon as={icon} className="mr-2" />}
-         {label}
+      <div {...props}>
+         <div className="tablabel">
+            {icon && <Icon as={icon} className="mr-2" />}
+            {label}
+         </div>
+         {active && <div className={`tabmarker tabmarker--${color}`}></div>}
       </div>
-      {active && <div className={`tabmarker tabmarker--${color}`}></div>}
-   </div>
    );
 }
 

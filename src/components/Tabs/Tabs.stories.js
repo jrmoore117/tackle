@@ -77,3 +77,23 @@ export const GreenIconTabs = () => {
       </Tabs>
    );
 }
+
+export const TabsWithAddNewTab = () => {
+   const [index, setIndex] = useState(0);
+   return (
+      <Tabs index={index} onClick={setIndex} newTab={1}>
+         <TabList>
+            <Tab label="Tab 1" />
+            <Tab label="New Tab" />
+         </TabList>
+         <PanelList>
+            <Panel>
+               Tab 1
+            </Panel>
+            <Panel>
+               This is a new tab.
+            </Panel>
+         </PanelList>
+      </Tabs>
+   );
+}
