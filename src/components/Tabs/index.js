@@ -120,3 +120,74 @@ export const Panel = ({
       </div>
    );
 }
+
+/*
+   ----- New design for component -----
+
+   const [index, setIndex] = useState(0);
+   
+   <Tabs index={index} onClick={setIndex}>
+      <Tab tabTitle="Profile" icon="User">
+         Profile Settings
+      </Tab>
+      <Tab tabTitle="Notifications" icon="Bell">
+         Notifications Settings
+      </Tab>
+      <Tab tabTitle="Security" icon="Shield">
+         Security Settings
+      </Tab>
+   </Tabs>
+
+   ----- Tabs Logic -----
+
+   const tabs = children.map(child => {
+      title: child.props.tabTitle,
+      icon: child.props.icon,
+   });
+
+   return (
+      <div {...props}>
+         <div className="tabswrapper">
+            {tabs.map((tab, i) => (
+               <div
+                  key: `tab-${i}`
+                  onClick={() => onClick(i)}
+                  className={index === i ? `tab tab--active--${color}` : `tab tab--inactive--${color}`}
+               >
+                  <div className="tablabel">
+                     {tab.icon && <Icon as={tab.icon} className="mr-2" />}
+                     {label}
+                  </div>
+                  {index === i && <div className={`tabmarker tabmarker--${color}`}></div>}
+               </div>
+            ))}
+            {newTab !== undefined ? (
+               <Icon
+                  as="Plus"
+                  size={5}
+                  isRounded
+                  color="blue"
+                  variant="clickable"
+                  className="newTabButton"
+                  onClick={addNewTab}
+               />
+            ) : null}
+         </div>
+         <div>
+            {children.map((panel, i) => index === i
+               ? cloneElement(panel, { key: `panel-${i}`, className: 'pt-4' })
+               : cloneElement(panel, { key: `panel-${i}`, className: 'hidden' })
+            )}
+         </div>
+      </div>
+   );
+
+   ----- Panels Logic -----
+
+   return (
+      <div {...props}> // will accept key and className props
+         {children} // panel contents here
+      </div>
+   );
+
+*/
