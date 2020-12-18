@@ -10,40 +10,41 @@ export const Tabs = ({
    children,
    ...props
 }) => {
-   
-   const [tabs, setTabs] = useState({
-      tabs: children[0].props.children,
-      panels: children[1].props.children,
-   });
-   
-   const defaultNewTab = tabs.tabs[newTab];
-   const defaultNewPanel = tabs.panels[newTab];
-   
+
+   const defaultChildrenCopyState = children.length > 1 ? [...children] : [children];
+   const [childrenCopy, setChildrenCopy] = useState(defaultChildrenCopyState);
+
+   const tabs = childrenCopy.map(child => ({
+      title: child.props.tabTitle,
+      icon: child.props.icon,
+   }));
+
    const addNewTab = () => {
-      setTabs({
-         tabs: [...tabs.tabs, defaultNewTab],
-         panels: [...tabs.panels, defaultNewPanel]  
-      });
+      setChildrenCopy([...childrenCopy, newTab]);
    }
-   
+
    return (
       <div {...props}>
          <div className="tabswrapper">
-            {tabs.tabs.map((tab, i) => (
-               cloneElement(tab, {
-                  color,
-                  key: `tab-${i}`,
-                  active: index === i,
-                  onClick: () => onClick(i),
-                  className: index === i ? `tab tab--active--${color}` : `tab tab--inactive--${color}`,
-               })
+            {tabs.map((tab, i) => (
+               <div
+                  key={`tab-${i}`}
+                  onClick={() => onClick(i)}
+                  className={index === i ? `tab tab--active--${color}` : `tab tab--inactive--${color}`}
+               >
+                  <div className="tablabel">
+                     {tab.icon && <Icon as={tab.icon} className="mr-2" />}
+                     {tab.title}
+                  </div>
+                  {index === i && <div className={`tabmarker tabmarker--${color}`}></div>}
+               </div>
             ))}
             {newTab !== undefined ? (
                <Icon
                   as="Plus"
                   size={5}
                   isRounded
-                  color="blue"
+                  color={color}
                   variant="clickable"
                   className="newTabButton"
                   onClick={addNewTab}
@@ -51,7 +52,7 @@ export const Tabs = ({
             ) : null}
          </div>
          <div>
-            {tabs.panels.map((panel, i) => index === i
+            {childrenCopy.map((panel, i) => index === i
                ? cloneElement(panel, { key: `panel-${i}`, className: 'pt-4' })
                : cloneElement(panel, { key: `panel-${i}`, className: 'hidden' })
             )}
@@ -66,128 +67,24 @@ Tabs.defaultProps = {
 
 Tabs.propTypes = {
    color: PropTypes.string,
-   newTab: PropTypes.number,
    index: PropTypes.number.isRequired,
    onClick: PropTypes.func.isRequired,
 }
 
-export const TabList = ({ children }) => {
-   return (
-      <div>
-         {children}
-      </div>
-   );
-}
-
 export const Tab = ({
    icon,
-   color,
-   label,
-   active,
+   tabTitle,
+   children,
    ...props
 }) => {
    return (
-      <div {...props}>
-         <div className="tablabel">
-            {icon && <Icon as={icon} className="mr-2" />}
-            {label}
-         </div>
-         {active && <div className={`tabmarker tabmarker--${color}`}></div>}
+      <div tabTitle={tabTitle} icon={icon} {...props}>
+         {children}
       </div>
    );
 }
 
 Tab.propTypes = {
-   active: PropTypes.bool,
    icon: PropTypes.string,
-   color: PropTypes.string,
-   label: PropTypes.string.isRequired,
+   tabTitle: PropTypes.string.isRequired,
 }
-
-export const PanelList = ({ children }) => {
-   return (
-      <div></div>
-   );
-}
-
-export const Panel = ({
-   children,
-   ...props
-}) => {
-   return (
-      <div {...props}>
-         {children}
-      </div>
-   );
-}
-
-/*
-   ----- New design for component -----
-
-   const [index, setIndex] = useState(0);
-   
-   <Tabs index={index} onClick={setIndex}>
-      <Tab tabTitle="Profile" icon="User">
-         Profile Settings
-      </Tab>
-      <Tab tabTitle="Notifications" icon="Bell">
-         Notifications Settings
-      </Tab>
-      <Tab tabTitle="Security" icon="Shield">
-         Security Settings
-      </Tab>
-   </Tabs>
-
-   ----- Tabs Logic -----
-
-   const tabs = children.map(child => {
-      title: child.props.tabTitle,
-      icon: child.props.icon,
-   });
-
-   return (
-      <div {...props}>
-         <div className="tabswrapper">
-            {tabs.map((tab, i) => (
-               <div
-                  key: `tab-${i}`
-                  onClick={() => onClick(i)}
-                  className={index === i ? `tab tab--active--${color}` : `tab tab--inactive--${color}`}
-               >
-                  <div className="tablabel">
-                     {tab.icon && <Icon as={tab.icon} className="mr-2" />}
-                     {label}
-                  </div>
-                  {index === i && <div className={`tabmarker tabmarker--${color}`}></div>}
-               </div>
-            ))}
-            {newTab !== undefined ? (
-               <Icon
-                  as="Plus"
-                  size={5}
-                  isRounded
-                  color="blue"
-                  variant="clickable"
-                  className="newTabButton"
-                  onClick={addNewTab}
-               />
-            ) : null}
-         </div>
-         <div>
-            {children.map((panel, i) => index === i
-               ? cloneElement(panel, { key: `panel-${i}`, className: 'pt-4' })
-               : cloneElement(panel, { key: `panel-${i}`, className: 'hidden' })
-            )}
-         </div>
-      </div>
-   );
-
-   ----- Panels Logic -----
-
-   return (
-      <div {...props}> // will accept key and className props
-         {children} // panel contents here
-      </div>
-   );
-
-*/
