@@ -1,79 +1,46 @@
 import React, { useState } from 'react';
-import { Tabs, TabList, Tab, PanelList, Panel } from 'components/Tabs';
+import { Tabs, Tab } from 'components/Tabs';
 
 export default {
    component: Tabs,
    title: 'Tabs',
 };
 
+/*
+   Todo:
+      - Add delete tab buttons (Will need to work out how to provide better key props so maintain order of tabs)
+*/
+
 export const DefaultTabs = () => {
    const [index, setIndex] = useState(0);
    return (
       <Tabs index={index} onClick={setIndex}>
-         <TabList>
-            <Tab label="Profile" />
-            <Tab label="Notifications" />
-            <Tab label="Security" />
-         </TabList>
-         <PanelList>
-            <Panel>
-               Profile Settings
-            </Panel>
-            <Panel>
-               Notifications Settings
-            </Panel>
-            <Panel>
-               Security Settings
-            </Panel>
-         </PanelList>
+         <Tab tabTitle="Profile">
+            Profile Settings
+         </Tab>
+         <Tab tabTitle="Notifications">
+            Notifications Settings
+         </Tab>
+         <Tab tabTitle="Security">
+            Security Settings
+         </Tab>
       </Tabs>
    );
 }
 
-export const IconTabs = () => {
+export const PurpleTabsWithIcons = () => {
    const [index, setIndex] = useState(0);
    return (
-      <Tabs index={index} onClick={setIndex}>
-         <TabList>
-            <Tab icon="User" label="Profile" />
-            <Tab icon="Bell" label="Notifications" />
-            <Tab icon="Lock" label="Security" />
-         </TabList>
-         <PanelList>
-            <Panel>
-               Profile Settings
-            </Panel>
-            <Panel>
-               Notifications Settings
-            </Panel>
-            <Panel>
-               Security Settings
-            </Panel>
-         </PanelList>
-      </Tabs>
-   );
-}
-
-export const GreenIconTabs = () => {
-   const [index, setIndex] = useState(0);
-   return (
-      <Tabs color="green" index={index} onClick={setIndex}>
-         <TabList>
-            <Tab icon="User" label="Profile" />
-            <Tab icon="Bell" label="Notifications" />
-            <Tab icon="Lock" label="Security" />
-         </TabList>
-         <PanelList>
-            <Panel>
-               Profile Settings
-            </Panel>
-            <Panel>
-               Notifications Settings
-            </Panel>
-            <Panel>
-               Security Settings
-            </Panel>
-         </PanelList>
+      <Tabs color="purple" index={index} onClick={setIndex}>
+         <Tab tabTitle="Profile" icon="User">
+            Profile Settings
+         </Tab>
+         <Tab tabTitle="Notifications" icon="Bell">
+            Notifications Settings
+         </Tab>
+         <Tab tabTitle="Security" icon="Shield">
+            Security Settings
+         </Tab>
       </Tabs>
    );
 }
@@ -81,19 +48,18 @@ export const GreenIconTabs = () => {
 export const TabsWithAddNewTab = () => {
    const [index, setIndex] = useState(0);
    return (
-      <Tabs index={index} onClick={setIndex} newTab={1}>
-         <TabList>
-            <Tab label="Tab 1" />
-            <Tab label="New Tab" />
-         </TabList>
-         <PanelList>
-            <Panel>
-               Tab 1
-            </Panel>
-            <Panel>
+      <Tabs
+         index={index}
+         onClick={setIndex}
+         newTab={
+            <Tab tabTitle="New Tab">
                This is a new tab.
-            </Panel>
-         </PanelList>
+            </Tab>
+         }
+      >
+         <Tab tabTitle="Tab 1">
+            Tab 1
+         </Tab>
       </Tabs>
    );
 }
