@@ -39,7 +39,7 @@ export const Tabs = ({
                   {index === i && <div className={`tabmarker tabmarker--${color}`}></div>}
                </div>
             ))}
-            {newTab !== undefined ? (
+            {newTab && (
                <Icon
                   as="Plus"
                   size={5}
@@ -49,7 +49,7 @@ export const Tabs = ({
                   className="newTabButton"
                   onClick={addNewTab}
                />
-            ) : null}
+            )}
          </div>
          <div>
             {childrenCopy.map((panel, i) => index === i
