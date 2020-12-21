@@ -6,11 +6,6 @@ export default {
    title: 'Tabs',
 };
 
-/*
-   Todo:
-      - Add delete tab buttons (Will need to work out how to provide better key props so maintain order of tabs)
-*/
-
 export const DefaultTabs = () => {
    const [index, setIndex] = useState(0);
    return (
