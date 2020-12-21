@@ -28404,6 +28404,8 @@ video {
   border-color: rgba(226, 229, 234, var(--tw-border-opacity));
   border-bottom-width: 1px;
   display: flex;
+  align-items: flex-end;
+  height: 2.5rem;
 }
 
 .tablabel {
@@ -28416,6 +28418,9 @@ video {
 
 .tab {
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-right: 1.5rem;
   -webkit-user-select: none;
           user-select: none;
@@ -28499,6 +28504,7 @@ video {
 .tabmarker {
   border-radius: 0.25rem;
   height: 0.125rem;
+  width: 100%;
 }
 
 .tabmarker--blue {

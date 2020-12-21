@@ -772,7 +772,7 @@
 
 /* ---------- TABS ---------- */
 .tabswrapper {
-   @apply flex border-b-1 border-gray-200;
+   @apply h-10 flex items-end border-b-1 border-gray-200;
 }
 
 .tablabel {
@@ -780,7 +780,7 @@
 }
 
 .tab {
-   @apply mr-6 cursor-pointer select-none transition duration-150 ease-in-out;
+   @apply mr-6 flex flex-col items-center cursor-pointer select-none transition duration-150 ease-in-out;
 }
 
 .tab--active--blue {
@@ -840,7 +840,7 @@
 }
 
 .tabmarker {
-   @apply h-0.5 rounded;
+   @apply h-0.5 w-full rounded;
 }
 
 .tabmarker--blue {
