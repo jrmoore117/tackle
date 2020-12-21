@@ -2,6 +2,49 @@ import React, { useState, cloneElement } from 'react';
 import Icon from 'components/Icon';
 import PropTypes from 'prop-types';
 
+/*
+   Todo: Add logic for removing a tab - make sure unique keys enable Tabs component to maintain proper tab order after one is deleted.
+*/
+
+const TabLabel = ({
+   icon,
+   index,
+   color,
+   title,
+   active,
+   newTab,
+   removeTab,
+   changeTab,
+   multipleTabs,
+}) => {
+   const [hover, setHover] = useState(false);
+   return (
+      <div
+         key={`tab-${index}`}
+         onClick={() => changeTab(index)}
+         onMouseEnter={() => setHover(true)}
+         onMouseLeave={() => setHover(false)}
+         className={active ? `tab tab--active--${color}` : `tab tab--inactive--${color}`}
+      >
+         {newTab && (
+            <Icon
+               as="X"
+               isRounded
+               color={color}
+               variant="clickable"
+               className={hover && multipleTabs ? 'mb-1' : 'hidden'}
+               onClick={removeTab}
+            />
+         )}
+         <div className="tablabel">
+            {icon && <Icon as={icon} className="mr-2" />}
+            {title}
+         </div>
+         {<div className={`tabmarker ${active ? `tabmarker--${color}` : ''}`} />}
+      </div>
+   );
+}
+
 export const Tabs = ({
    index,
    color,
@@ -27,17 +70,17 @@ export const Tabs = ({
       <div {...props}>
          <div className="tabswrapper">
             {tabs.map((tab, i) => (
-               <div
-                  key={`tab-${i}`}
-                  onClick={() => onClick(i)}
-                  className={index === i ? `tab tab--active--${color}` : `tab tab--inactive--${color}`}
-               >
-                  <div className="tablabel">
-                     {tab.icon && <Icon as={tab.icon} className="mr-2" />}
-                     {tab.title}
-                  </div>
-                  {index === i && <div className={`tabmarker tabmarker--${color}`}></div>}
-               </div>
+               <TabLabel
+                  index={i}
+                  color={color}
+                  newTab={newTab}
+                  icon={tab.icon}
+                  title={tab.title}
+                  changeTab={onClick}
+                  active={index === i}
+                  multipleTabs={tabs.length > 1}
+                  removeTab={() => console.log('removed!')}
+               />
             ))}
             {newTab && (
                <Icon
@@ -46,7 +89,7 @@ export const Tabs = ({
                   isRounded
                   color={color}
                   variant="clickable"
-                  className="newTabButton"
+                  className="mb-2"
                   onClick={addNewTab}
                />
             )}
