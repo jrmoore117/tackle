@@ -20,7 +20,6 @@ const TabLabel = ({
    const [hover, setHover] = useState(false);
    return (
       <div
-         key={`tab-${index}`}
          onClick={() => changeTab(index)}
          onMouseEnter={() => setHover(true)}
          onMouseLeave={() => setHover(false)}
@@ -71,6 +70,7 @@ export const Tabs = ({
          <div className="tabswrapper">
             {tabs.map((tab, i) => (
                <TabLabel
+                  key={`tab-${i}`}
                   index={i}
                   color={color}
                   newTab={newTab}
@@ -121,7 +121,7 @@ export const Tab = ({
    ...props
 }) => {
    return (
-      <div tabTitle={tabTitle} icon={icon} {...props}>
+      <div {...props}>
          {children}
       </div>
    );
