@@ -32,7 +32,7 @@ const TabLabel = ({
                color={color}
                variant="clickable"
                className={hover && multipleTabs ? 'mb-1' : 'hidden'}
-               onClick={removeTab}
+               onClick={() => removeTab(index)}
             />
          )}
          <div className="tablabel">
@@ -61,8 +61,12 @@ export const Tabs = ({
       icon: child.props.icon,
    }));
 
-   const addNewTab = () => {
+   const addTab = () => {
       setChildrenCopy([...childrenCopy, newTab]);
+   }
+
+   const removeTab = (index) => {
+      setChildrenCopy(childrenCopy.filter((tab, i) => i !== index));
    }
 
    return (
@@ -73,13 +77,13 @@ export const Tabs = ({
                   key={`tab-${i}`}
                   index={i}
                   color={color}
-                  newTab={newTab}
                   icon={tab.icon}
+                  newTab={newTab}
                   title={tab.title}
                   changeTab={onClick}
+                  removeTab={removeTab}
                   active={index === i}
                   multipleTabs={tabs.length > 1}
-                  removeTab={() => console.log('removed!')}
                />
             ))}
             {newTab && (
@@ -90,7 +94,7 @@ export const Tabs = ({
                   color={color}
                   variant="clickable"
                   className="mb-2"
-                  onClick={addNewTab}
+                  onClick={addTab}
                />
             )}
          </div>
