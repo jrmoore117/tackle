@@ -14,13 +14,13 @@ const TabLabel = ({
    active,
    newTab,
    removeTab,
-   changeTab,
+   setActiveTab,
    multipleTabs,
 }) => {
    const [hover, setHover] = useState(false);
    return (
       <div
-         onClick={() => changeTab(index)}
+         onClick={() => setActiveTab(index)}
          onMouseEnter={() => setHover(true)}
          onMouseLeave={() => setHover(false)}
          className={active ? `tab tab--active--${color}` : `tab tab--inactive--${color}`}
@@ -32,14 +32,14 @@ const TabLabel = ({
                color={color}
                variant="clickable"
                className={hover && multipleTabs ? 'mb-1' : 'hidden'}
-               onClick={() => removeTab(index)}
+               onClick={(e) => removeTab(e, index)}
             />
          )}
          <div className="tablabel">
             {icon && <Icon as={icon} className="mr-2" />}
             {title}
          </div>
-         {<div className={`tabmarker ${active ? `tabmarker--${color}` : ''}`} />}
+         <div className={`tabmarker ${active ? `tabmarker--${color}` : ''}`} />
       </div>
    );
 }
@@ -61,12 +61,28 @@ export const Tabs = ({
       icon: child.props.icon,
    }));
 
+   const setActiveTab = onClick;
+
    const addTab = () => {
       setChildrenCopy([...childrenCopy, newTab]);
    }
 
-   const removeTab = (index) => {
-      setChildrenCopy(childrenCopy.filter((tab, i) => i !== index));
+   const removeTab = (event, tabIndex) => {
+      event.stopPropagation();
+      // delete active tab at index 0
+      if (index === tabIndex && index - 1 === -1) {
+         console.log('Active tab deleted - was first tab');
+         setActiveTab(0);
+      }
+      // delete active tab at index > 0 || delete inactive tab at lower index than active
+      else if (index === tabIndex || tabIndex < index) {
+         setActiveTab(index - 1);
+      }
+      // // else tab higher than active tab was deleted - delete tab and reset current index
+      // else {
+      //    setActiveTab(index);
+      // }
+      setChildrenCopy(childrenCopy.filter((tab, i) => i !== tabIndex));
    }
 
    return (
@@ -80,7 +96,7 @@ export const Tabs = ({
                   icon={tab.icon}
                   newTab={newTab}
                   title={tab.title}
-                  changeTab={onClick}
+                  setActiveTab={setActiveTab}
                   removeTab={removeTab}
                   active={index === i}
                   multipleTabs={tabs.length > 1}
