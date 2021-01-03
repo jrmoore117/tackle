@@ -780,7 +780,7 @@
 }
 
 .tab {
-   @apply mr-6 flex flex-col items-center cursor-pointer select-none transition duration-150 ease-in-out;
+   @apply h-10 mr-6 flex flex-col items-center justify-end cursor-pointer select-none transition duration-150 ease-in-out;
 }
 
 .tab--active--blue {
@@ -840,7 +840,7 @@
 }
 
 .tabmarker {
-   @apply h-0.5 w-full rounded;
+   @apply h-0.5 w-full flex-shrink-0 rounded;
 }
 
 .tabmarker--blue {
