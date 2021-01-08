@@ -28620,6 +28620,7 @@ video {
 .select--with-elements {
   -webkit-appearance: none;
           appearance: none;
+  height: 100%;
   width: 100%;
   background-image: url("components/Select/assets/chevron-down.svg");
   background-origin: content-box;

@@ -893,7 +893,7 @@
 }
 
 .select--with-elements {
-   @apply appearance-none w-full;
+   @apply appearance-none w-full h-full;
    background-image: url("components/Select/assets/chevron-down.svg");
    background-origin: content-box;
    background-position-y: center;
