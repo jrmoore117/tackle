@@ -871,6 +871,14 @@
    @apply bg-gray-900 animate-small-ping-gray;
 }
 
+.tabdelete-default {
+   @apply opacity-0 transition-all transform translate-y-1 duration-75 ease-in-out;
+}
+
+.tabdelete-hover {
+   @apply mb-1 transition-all transform translate-y-0 duration-75 ease-in-out;
+}
+
 
 /* ---------- TEXT FIELD & SELECT COMPONENTS ---------- */
 .textfield,
@@ -879,7 +887,7 @@
 }
 
 .textfield--with-elements {
-   @apply w-full;
+   @apply w-full h-full;
 }
 
 .select {
