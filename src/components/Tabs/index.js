@@ -2,10 +2,6 @@ import React, { useState, cloneElement } from 'react';
 import Icon from 'components/Icon';
 import PropTypes from 'prop-types';
 
-/*
-   Todo: Add logic for removing a tab - make sure unique keys enable Tabs component to maintain proper tab order after one is deleted.
-*/
-
 const TabLabel = ({
    icon,
    index,
@@ -31,7 +27,7 @@ const TabLabel = ({
                isRounded
                color={color}
                variant="clickable"
-               className={hover && multipleTabs ? 'mb-1' : 'hidden'}
+               className={hover && multipleTabs ? 'tabdelete-hover' : 'tabdelete-default'}
                onClick={(e) => removeTab(e, index)}
             />
          )}
@@ -39,7 +35,7 @@ const TabLabel = ({
             {icon && <Icon as={icon} className="mr-2" />}
             {title}
          </div>
-         <div className={`tabmarker ${active ? `tabmarker--${color}` : ''}`} />
+         <div className={active ? `tabmarker tabmarker--${color}` : 'tabmarker'} />
       </div>
    );
 }
@@ -78,10 +74,6 @@ export const Tabs = ({
       else if (index === tabIndex || tabIndex < index) {
          setActiveTab(index - 1);
       }
-      // // else tab higher than active tab was deleted - delete tab and reset current index
-      // else {
-      //    setActiveTab(index);
-      // }
       setChildrenCopy(childrenCopy.filter((tab, i) => i !== tabIndex));
    }
 
