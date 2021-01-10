@@ -68,7 +68,7 @@ export const TextFieldWithConditionalRightElement = () => {
                   <Icon
                      as="X"
                      isRounded
-                     size={6}
+                     size={5}
                      color="blue"
                      variant="clickable"
                      onClick={() => setValues({ search: '' })}
