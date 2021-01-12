@@ -24,12 +24,12 @@ const Button = ({
       {...props}
    >
       {leftIcon && !isLoading && 
-         <Icon as={leftIcon} className="h-4 w-4 mr-2" />}
+         <Icon as={leftIcon} className="h-4 w-4 mr-2 -ml-1" />}
       {isLoading
          ? <Icon as="Loader" size={6} className="mx-2 text-gray-700 animate-spin" />
          : label}
       {rightIcon && !isLoading && 
-         <Icon as={rightIcon} className="h-4 w-4 ml-2" />}
+         <Icon as={rightIcon} className="h-4 w-4 ml-2 -mr-1" />}
    </Btn>
 );
 
