@@ -21,12 +21,12 @@ export const ExampleOne = () => {
       <div>
          <Box className="p-4 inline-block text-gray-900">
             <div>
-               <h1 className="text-2xl font-medium mb-4 flex items-center">
-                  <ArrowUpCircle className="h-8 w-8 mr-2 text-blue-500" />
+               <h1 className="text-xl font-medium mb-1 flex items-center">
+                  <ArrowUpCircle className="h-6 w-6 mr-2 text-blue-500" />
                   Update Available
                </h1>
             </div>
-            <p className="mb-4 font-normal">A new software update is available for download.</p>
+            <p className="mb-4 text-sm">A new software update is available for download.</p>
             <div className="flex">
                <Button label="Update" color="blue" className="mr-4"/>
                <Button label="Not now" variant="secondary" color="blue" />
