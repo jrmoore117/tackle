@@ -1,6 +1,7 @@
 import React from 'react';
-import Modal, { ModalHeader, ModalBody, ModalFooter } from 'components/Modal';
+import { Modal, ModalHeader, ModalBody, ModalFooter } from 'components/Modal';
 import Button from 'components/Button';
+import Icon from 'components/Icon';
 
 export default {
    component: Modal,
@@ -13,15 +14,16 @@ export const DefaultBlue = () => {
       <div>
          <Button onClick={() => setVisible(true)} color="blue" label="Open Modal" />
          <Modal visible={visible} hide={() => setVisible(false)}>
-            <ModalHeader>
-               Delete Account
+            <ModalHeader className="flex items-center">
+               <Icon as="ArrowUpCircle" size={6} color="blue" className="mr-2" />
+               Update Available
             </ModalHeader>
             <ModalBody>
-               Are you sure you want to delete you account? This cannot be undone.
+               A new software update is available for download.
             </ModalBody>
             <ModalFooter className="flex">
-               <Button color="red" label="Delete" leftIcon="Trash" onClick={() => setVisible(false)} className="mr-2" />
-               <Button color="red" variant="secondary" label="Nevermind" onClick={() => setVisible(false)} />
+               <Button color="blue" label="Update" className="mr-2" />
+               <Button color="blue" variant="secondary" label="Not now" onClick={() => setVisible(false)} />
             </ModalFooter>
          </Modal>
       </div>
