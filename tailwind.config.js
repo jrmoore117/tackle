@@ -28,11 +28,18 @@ module.exports = {
             gray: '0 1px 2px 0 #e2e5ea',
             'outline-gray': '0 0 0 3px #e2e5ea',
             'inner-gray': 'inset 0 2px 4px 0 #e2e5ea',
+            'dark-gray': '0 10px 25px -3px #d6dae1',
+            'dark-gray-left': '-10px 0 25px -3px #d6dae1',
          },
          height: {
             '0.5': '0.125rem',
          },
+         minWidth: {
+            '120': '40rem',
+         },
          animation: {
+            'fade-in': 'fade-in 0.15s ease-in 1',
+            'slide-in': 'slide-in 0.15s ease-in-out 1',
             'ping-blue': 'ping-blue 1s cubic-bezier(0,.656,0,.58) infinite',
             'btn-ping-blue': 'ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1',
             'small-ping-blue': 'small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1',
@@ -56,6 +63,26 @@ module.exports = {
             'small-ping-gray': 'small-ping-gray 0.65s cubic-bezier(0,.656,0,.58) 1',
          },
          keyframes: {
+            'fade-in': {
+               '0%': { 
+                  opacity: 0,
+                  transform: 'scale(0.9)',
+               },
+               '100%': {
+                  opacity: 1,
+                  transform: 'scale(1)',
+               },
+            },
+            'slide-in': {
+               '0%': { 
+                  opacity: 0,
+                  transform: 'translateX(100%)',
+               },
+               '100%': {
+                  opacity: 1,
+                  transform: 'translateX(0)',
+               },
+            },
             'ping-blue': {
                '15%': { boxShadow: '0 0 0 3px #bdd7ff' },
                '100%': { boxShadow: '0 0 0 6px transparent' },
