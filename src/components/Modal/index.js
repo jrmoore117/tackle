@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Box from 'components/Box';
 
-const Modal = ({
+export const Modal = ({
    hide,
    visible,
    children,
@@ -11,12 +11,12 @@ const Modal = ({
 }) => (
    <div
       onClick={hide}
-      className={visible ? "bg-opacity-50 bg-gray-0 fixed top-0 left-0 flex justify-center items-center h-screen w-screen" : "hidden"}
+      className={visible ? 'modal-background' : 'hidden'}
    >
       <Box
          onClick={(e) => e.stopPropagation()}
          variant="frame"
-         className="w-96 p-4"
+         className={`modal ${visible ? 'animate-fade-in' : ''}`}
          {...props}
       >
          {children}
@@ -33,15 +33,13 @@ Modal.propTypes = {
    className: PropTypes.string,
 }
 
-export default Modal;
-
 export const ModalHeader = ({
    className,
    children,
    ...props
 }) => (
    <div
-      className={`text-xl font-medium ${className}`}
+      className={`modal-header ${className}`}
       {...props}
    >
       {children}
@@ -54,7 +52,7 @@ export const ModalBody = ({
    ...props
 }) => (
    <div
-      className={`mt-1 text-sm ${className}`}
+      className={`modal-body ${className}`}
       {...props}
    >
       {children}
@@ -67,7 +65,7 @@ export const ModalFooter = ({
    ...props
 }) => (
    <div
-      className={`mt-4 ${className}`}
+      className={`modal-footer ${className}`}
       {...props}
    >
       {children}
