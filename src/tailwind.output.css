@@ -27239,7 +27239,7 @@ video {
   border-width: 1px;
 }
 
-/* ---------- DEFAULT BOXES ---------- */
+/* ---------- DEFAULT BOX ---------- */
 
 .box--default--white {
   --tw-border-opacity: 1;
@@ -27337,7 +27337,7 @@ video {
   color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
-/* ---------- FRAMES ---------- */
+/* ---------- FRAME ---------- */
 
 .box--frame--white {
   --tw-border-opacity: 1;
@@ -27393,7 +27393,7 @@ video {
   border-color: rgba(226, 229, 234, var(--tw-border-opacity));
 }
 
-/* ---------- WELLS ---------- */
+/* ---------- WELL ---------- */
 
 .box--well--white, .box--well--gray {
   --tw-bg-opacity: 1;
@@ -27484,7 +27484,7 @@ video {
   height: 2rem;
 }
 
-/* ---------- DISABLED BUTTONS ---------- */
+/* ---------- DISABLED BUTTON ---------- */
 
 .button.button--primary--disabled {
   --tw-bg-opacity: 1;
@@ -27507,7 +27507,7 @@ video {
           user-select: none;
 }
 
-/* ---------- PRIMARY BUTTONS ---------- */
+/* ---------- PRIMARY BUTTON ---------- */
 
 .button--primary--default {
   --tw-bg-opacity: 1;
@@ -27742,7 +27742,7 @@ video {
   background-color: rgba(74, 102, 179, var(--tw-bg-opacity));
 }
 
-/* ---------- SECONDARY BUTTONS ---------- */
+/* ---------- SECONDARY BUTTON ---------- */
 
 .button--secondary--default {
   border-width: 1px;
@@ -27940,7 +27940,7 @@ video {
   background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
 }
 
-/* ---------- CHECKBOXES ---------- */
+/* ---------- CHECKBOX ---------- */
 
 .checkboxwrapper {
   display: flex;
@@ -28008,7 +28008,81 @@ video {
           user-select: none;
 }
 
-/* ---------- LIST ITEMS ---------- */
+/* ---------- DRAWER ---------- */
+
+.drawer {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-width: 40rem;
+  --tw-shadow: -10px 0 25px -3px #d6dae1;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.drawerbackground {
+  --tw-bg-opacity: 1;
+  background-color: rgba(226, 229, 234, var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.5;
+  display: flex;
+  justify-content: flex-end;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  z-index: 10;
+}
+
+.drawerheader {
+  --tw-border-opacity: 1;
+  border-color: rgba(226, 229, 234, var(--tw-border-opacity));
+  border-bottom-width: 1px;
+  border-left-width: 2px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  font-weight: 600;
+  height: 5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  padding: 2.5rem;
+  position: relative;
+}
+
+.drawerheaderbutton {
+  position: absolute;
+  top: 1.25rem;
+  left: -1.25rem;
+  --tw-shadow: 0 1px 2px 0 #92bdff;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.drawerbody {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  --tw-border-opacity: 1;
+  border-color: rgba(226, 229, 234, var(--tw-border-opacity));
+  border-bottom-width: 1px;
+  border-left-width: 2px;
+  flex-grow: 1;
+  overflow-y: scroll;
+  padding: 1rem;
+}
+
+.drawerfooter {
+  --tw-border-opacity: 1;
+  border-color: rgba(226, 229, 234, var(--tw-border-opacity));
+  border-left-width: 2px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: 5rem;
+  padding: 1rem;
+}
+
+/* ---------- ICON ---------- */
 
 .icon--default--white {
   --tw-text-opacity: 1;
@@ -28332,7 +28406,7 @@ video {
   background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
 }
 
-/* ---------- RADIO BUTTONS ---------- */
+/* ---------- MODAL ---------- */
 
 .modal {
   padding: 1rem;
@@ -28341,7 +28415,7 @@ video {
   width: 24rem;
 }
 
-.modal-background {
+.modalbackground {
   --tw-bg-opacity: 1;
   background-color: rgba(226, 229, 234, var(--tw-bg-opacity));
   --tw-bg-opacity: 0.5;
@@ -28355,19 +28429,19 @@ video {
   width: 100vw;
 }
 
-.modal-header {
+.modalheader {
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
-.modal-body {
+.modalbody {
   font-size: 0.875rem;
   line-height: 1.25rem;
   margin-top: 0.25rem;
 }
 
-.modal-footer {
+.modalfooter {
   margin-top: 1rem;
 }
 
@@ -28727,7 +28801,7 @@ video {
   transition-duration: 75ms;
 }
 
-/* ---------- TEXT FIELD & SELECT COMPONENTS ---------- */
+/* ---------- TEXT FIELD & SELECT ---------- */
 
 .textfield, .field {
   --tw-bg-opacity: 1;
