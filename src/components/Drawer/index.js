@@ -11,15 +11,15 @@ const Drawer = ({
 }) => (
    <div
       onClick={hide}
-      className={visible ? "bg-opacity-50 bg-gray-200 fixed top-0 left-0 flex justify-end h-screen w-screen z-10" : "hidden"}
+      className={visible ? 'drawerbackground' : 'hidden'}
    >
       <div
          onClick={(e) => e.stopPropagation()}
          variant="frame"
-         className={`bg-white h-screen min-w-120 shadow-dark-gray-left flex flex-col ${visible ? "animate-slide-in" : ""}`}
+         className={`drawer ${visible ? 'animate-slide-in' : ''}`}
          {...props}
       >
-         {children.map(child => cloneElement(child, { hide: hide }))}
+         {children.map((child, i) => cloneElement(child, { key: `drawerchild-${i}`, hide: hide }))}
       </div>
    </div>
 );
@@ -42,36 +42,53 @@ export const DrawerHeader = ({
    ...props
 }) => (
    <div
-      className={`h-20 p-10 text-xl font-semibold border-l-2 border-b-1 border-gray-200 relative flex-shrink-0 flex items-center ${className}`}
+      className={`drawerheader ${className}`}
       {...props}
    >
-      <Icon as="X" variant="clickable" color="blue" size={10} isRounded onClick={hide} className="absolute -left-5 top-5 shadow-blue" />
+      <Icon as="X" variant="clickable" color="blue" size={10} isRounded onClick={hide} className="drawerheaderbutton" />
       {children}
    </div>
 );
+
+DrawerHeader.propTypes = {
+   hide: PropTypes.func,
+   className: PropTypes.string,
+}
 
 export const DrawerBody = ({
+   hide,
    className,
    children,
    ...props
 }) => (
    <div
-      className={`bg-white flex-grow p-4 border-l-2 border-b-1 border-gray-200 overflow-y-scroll ${className}`}
+      className={`drawerbody ${className}`}
       {...props}
    >
       {children}
    </div>
 );
 
+DrawerBody.propTypes = {
+   hide: PropTypes.func,
+   className: PropTypes.string,
+}
+
 export const DrawerFooter = ({
+   hide,
    className,
    children,
    ...props
 }) => (
    <div
-      className={`h-20 p-4 border-l-2 border-gray-200 flex-shrink-0 flex items-center ${className}`}
+      className={`drawerfooter ${className}`}
       {...props}
    >
       {children}
    </div>
 );
+
+DrawerFooter.propTypes = {
+   hide: PropTypes.func,
+   className: PropTypes.string,
+}
