@@ -11,7 +11,7 @@ export const Modal = ({
 }) => (
    <div
       onClick={hide}
-      className={visible ? 'modal-background' : 'hidden'}
+      className={visible ? 'modalbackground' : 'hidden'}
    >
       <Box
          onClick={(e) => e.stopPropagation()}
@@ -29,6 +29,7 @@ Modal.defaultProps = {
 }
 
 Modal.propTypes = {
+   hide: PropTypes.func.isRequired,
    visible: PropTypes.bool.isRequired,
    className: PropTypes.string,
 }
@@ -39,12 +40,16 @@ export const ModalHeader = ({
    ...props
 }) => (
    <div
-      className={`modal-header ${className}`}
+      className={`modalheader ${className}`}
       {...props}
    >
       {children}
    </div>
 );
+
+ModalHeader.propTypes = {
+   className: PropTypes.string,
+}
 
 export const ModalBody = ({
    className,
@@ -52,12 +57,16 @@ export const ModalBody = ({
    ...props
 }) => (
    <div
-      className={`modal-body ${className}`}
+      className={`modalbody ${className}`}
       {...props}
    >
       {children}
    </div>
 );
+
+ModalBody.propTypes = {
+   className: PropTypes.string,
+}
 
 export const ModalFooter = ({
    className,
@@ -65,9 +74,13 @@ export const ModalFooter = ({
    ...props
 }) => (
    <div
-      className={`modal-footer ${className}`}
+      className={`modalfooter ${className}`}
       {...props}
    >
       {children}
    </div>
 );
+
+ModalFooter.propTypes = {
+   className: PropTypes.string,
+}
