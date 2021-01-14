@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Drawer, { DrawerHeader, DrawerBody, DrawerFooter } from 'components/Drawer';
 import Button from 'components/Button';
 
@@ -8,7 +8,7 @@ export default {
 };
 
 export const DefaultBlue = () => {
-   const [visible, setVisible] = React.useState(false);
+   const [visible, setVisible] = useState(false);
    return (
       <div>
          <Button onClick={() => setVisible(true)} color="blue" label="Open Drawer" />
