@@ -200,7 +200,7 @@
    @apply bg-white border-1;
 }
 
-/* ---------- DEFAULT BOXES ---------- */
+/* ---------- DEFAULT BOX ---------- */
 .box--default--white {
    @apply border-gray-200 shadow-gray;
 }
@@ -233,7 +233,7 @@
    @apply text-white bg-gradient-to-b from-gray-400 to-gray-500 shadow-gray;
 }
 
-/* ---------- FRAMES ---------- */
+/* ---------- FRAME ---------- */
 .box--frame--white {
    @apply border-gray-200;
 }
@@ -266,7 +266,7 @@
    @apply bg-gray-0 border-gray-200;
 }
 
-/* ---------- WELLS ---------- */
+/* ---------- WELL ---------- */
 .box--well--white, .box--well--gray {
    @apply border-gray-200 bg-gray-0 shadow-inner-gray;
 }
@@ -306,7 +306,7 @@
    @apply h-8;
 }
 
-/* ---------- DISABLED BUTTONS ---------- */
+/* ---------- DISABLED BUTTON ---------- */
 .button.button--primary--disabled {
    @apply select-none text-gray-500 bg-gray-0 border-1 border-gray-200;
 }
@@ -315,7 +315,7 @@
    @apply select-none text-gray-500 bg-gray-0;
 }
 
-/* ---------- PRIMARY BUTTONS ---------- */
+/* ---------- PRIMARY BUTTON ---------- */
 .button--primary--default {
    @apply text-gray-900 bg-white border-1 border-gray-200 shadow-gray;
 }
@@ -420,7 +420,7 @@
    @apply bg-indigo-400;
 }
 
-/* ---------- SECONDARY BUTTONS ---------- */
+/* ---------- SECONDARY BUTTON ---------- */
 .button--secondary--default {
    @apply text-gray-900 border-1;
    background-color: transparent;
@@ -530,7 +530,7 @@
 }
 
 
-/* ---------- CHECKBOXES ---------- */
+/* ---------- CHECKBOX ---------- */
 .checkboxwrapper {
    @apply flex items-center;
 }
@@ -558,7 +558,33 @@
 }
 
 
-/* ---------- LIST ITEMS ---------- */
+/* ---------- DRAWER ---------- */
+.drawer {
+   @apply bg-white h-screen min-w-120 shadow-dark-gray-left flex flex-col;
+}
+
+.drawerbackground {
+   @apply bg-opacity-50 bg-gray-200 fixed top-0 left-0 flex justify-end h-screen w-screen z-10;
+}
+
+.drawerheader {
+   @apply h-20 p-10 text-xl font-semibold border-l-2 border-b-1 border-gray-200 relative flex-shrink-0 flex items-center;
+}
+
+.drawerheaderbutton {
+   @apply absolute -left-5 top-5 shadow-blue;
+}
+
+.drawerbody {
+   @apply bg-white flex-grow p-4 border-l-2 border-b-1 border-gray-200 overflow-y-scroll;
+}
+
+.drawerfooter {
+   @apply h-20 p-4 border-l-2 border-gray-200 flex-shrink-0 flex items-center;
+}
+
+
+/* ---------- ICON ---------- */
 .icon--default--white {
    @apply text-white;
 }
@@ -694,7 +720,6 @@
 }
 
 
-
 /* ---------- LIST ITEMS ---------- */
 .listitem {
    @apply p-4 flex items-center justify-between transition duration-200 ease-in-out border-b-1 border-gray-200;
@@ -707,26 +732,27 @@
 }
 
 
-/* ---------- RADIO BUTTONS ---------- */
+/* ---------- MODAL ---------- */
 .modal {
    @apply w-96 p-4 shadow-dark-gray;
 }
 
-.modal-background {
+.modalbackground {
    @apply bg-opacity-50 bg-gray-200 fixed top-0 left-0 flex justify-center items-center h-screen w-screen;
 }
 
-.modal-header {
+.modalheader {
    @apply text-xl font-semibold;
 }
 
-.modal-body {
+.modalbody {
    @apply mt-1 text-sm;
 }
 
-.modal-footer {
+.modalfooter {
    @apply mt-4;
 }
+
 
 /* ---------- RADIO BUTTONS ---------- */
 .radiowrapper {
@@ -901,7 +927,7 @@
 }
 
 
-/* ---------- TEXT FIELD & SELECT COMPONENTS ---------- */
+/* ---------- TEXT FIELD & SELECT ---------- */
 .textfield,
 .field {
    @apply h-10 px-2 font-sans text-sm text-gray-900 bg-white border-1 border-gray-200 shadow-gray rounded flex items-center transition duration-200 ease-in-out;
