@@ -733,8 +733,12 @@
 
 
 /* ---------- MODAL ---------- */
-.modal {
+.modal--small {
    @apply w-96 p-4 shadow-dark-gray;
+}
+
+.modal--large {
+   @apply w-120 p-4 shadow-dark-gray;
 }
 
 .modalbackground {
