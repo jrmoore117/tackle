@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Box from 'components/Box';
 
 export const Modal = ({
+   size,
    hide,
    visible,
    children,
@@ -16,7 +17,7 @@ export const Modal = ({
       <Box
          onClick={(e) => e.stopPropagation()}
          variant="frame"
-         className={`modal ${visible ? 'animate-fade-in' : ''}`}
+         className={`modal--${size} ${visible ? 'animate-fade-in' : ''}`}
          {...props}
       >
          {children}
@@ -25,6 +26,7 @@ export const Modal = ({
 );
 
 Modal.defaultProps = {
+   size: "small",
    visible: false,
 }
 
