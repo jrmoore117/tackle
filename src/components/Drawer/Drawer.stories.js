@@ -8,11 +8,11 @@ export default {
 };
 
 export const DefaultBlue = () => {
-   const [visible, setVisible] = useState(false);
+   const [isOpen, setIsOpen] = useState(false);
    return (
       <div>
-         <Button onClick={() => setVisible(true)} color="blue" label="Open Drawer" />
-         <Drawer visible={visible} hide={() => setVisible(false)}>
+         <Button onClick={() => setIsOpen(true)} color="blue" label="Open Drawer" />
+         <Drawer isOpen={isOpen} hide={() => setIsOpen(false)}>
             <DrawerHeader>
                List Item
             </DrawerHeader>
@@ -20,8 +20,8 @@ export const DefaultBlue = () => {
                <div style={{ height: 5000 }}>Scrollale list item details</div>
             </DrawerBody>
             <DrawerFooter className="flex justify-end">
-               <Button color="blue" variant="secondary" label="Previous" className="mr-2" />
-               <Button color="blue" label="Next" />
+               <Button color="green" variant="secondary" label="Previous" className="mr-2" />
+               <Button color="green" label="Next" />
             </DrawerFooter>
          </Drawer>
       </div>
