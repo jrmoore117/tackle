@@ -138,60 +138,60 @@
 
 /* ---------- DEFAULT BADGE ---------- */
 .badge--default--blue {
-   @apply text-blue-900 bg-blue-200;
+   @apply text-blue-900 bg-gradient-to-b from-blue-100 to-blue-200;
 }
 
 .badge--default--red {
-   @apply text-red-900 bg-red-200;
+   @apply text-red-900 bg-gradient-to-b from-red-100 to-red-200;
 }
 
 .badge--default--green {
-   @apply text-green-900 bg-green-200;
+   @apply text-green-900 bg-gradient-to-b from-green-100 to-green-200;
 }
 
 .badge--default--yellow {
-   @apply text-yellow-900 bg-yellow-200;
+   @apply text-yellow-900 bg-gradient-to-b from-yellow-100 to-yellow-200;
 }
 
 .badge--default--purple {
-   @apply text-purple-900 bg-purple-200;
+   @apply text-purple-900 bg-gradient-to-b from-purple-100 to-purple-200;
 }
 
 .badge--default--indigo {
-   @apply text-indigo-900 bg-indigo-200;
+   @apply text-indigo-900 bg-gradient-to-b from-indigo-100 to-indigo-200;
 }
 
 .badge--default--gray {
-   @apply text-gray-900 bg-gray-200;
+   @apply text-gray-900 bg-gradient-to-b from-gray-100 to-gray-200;
 }
 
 /* ---------- SOLID BADGE ---------- */
 .badge--solid--blue {
-   @apply border-1 border-blue-600 bg-blue-500;
+   @apply border-1 border-blue-600 bg-gradient-to-b from-blue-300 to-blue-400;
 }
 
 .badge--solid--red {
-   @apply border-1 border-red-600 bg-red-500;
+   @apply border-1 border-red-600 bg-gradient-to-b from-red-300 to-red-400;
 }
 
 .badge--solid--green {
-   @apply border-1 border-green-600 bg-green-500;
+   @apply border-1 border-green-600 bg-gradient-to-b from-green-300 to-green-400;
 }
 
 .badge--solid--yellow {
-   @apply border-1 border-yellow-600 bg-yellow-500;
+   @apply text-gray-900 border-1 border-yellow-600 bg-gradient-to-b from-yellow-300 to-yellow-400;
 }
 
 .badge--solid--purple {
-   @apply border-1 border-purple-600 bg-purple-500;
+   @apply border-1 border-purple-600 bg-gradient-to-b from-purple-300 to-purple-400;
 }
 
 .badge--solid--indigo {
-   @apply border-1 border-indigo-600 bg-indigo-500;
+   @apply border-1 border-indigo-600 bg-gradient-to-b from-indigo-300 to-indigo-400;
 }
 
 .badge--solid--gray {
-   @apply text-gray-900 border-1 border-gray-600 bg-gray-500;
+   @apply text-gray-900 border-1 border-gray-600 bg-gradient-to-b from-gray-300 to-gray-400;
 }
 
 
@@ -317,23 +317,23 @@
 
 /* ---------- PRIMARY BUTTON ---------- */
 .button--primary--default {
-   @apply text-gray-900 bg-white border-1 border-gray-200 shadow-gray;
+   @apply text-gray-900 bg-gradient-to-b from-white to-gray-0 border-1 border-gray-200 shadow-gray;
 }
 .button--primary--default:focus {
    @apply outline-none animate-btn-ping-blue;
 }
 .button.button--primary--default:active {
-   @apply bg-gray-100 shadow-none;
+   @apply bg-gradient-to-b from-gray-0 to-gray-100 shadow-none;
 }
 .button--primary--default:hover {
-   @apply bg-gray-0;
+   @apply bg-gradient-to-b from-gray-0 to-gray-0;
 }
 
 .button--primary--white {
    @apply text-gray-900 bg-white;
 }
 .button--primary--white:focus {
-   @apply outline-none animate-btn-ping-gray;
+   @apply outline-none animate-btn-ping-blue;
 }
 .button.button--primary--white:active {
    @apply bg-gray-100;
@@ -343,81 +343,81 @@
 }
 
 .button--primary--blue {
-   @apply text-white bg-blue-500 border-1 border-blue-600 shadow-blue;
+   @apply text-white bg-gradient-to-b from-blue-400 to-blue-500 border-1 border-blue-600 shadow-blue;
 }
 .button--primary--blue:focus {
    @apply outline-none animate-btn-ping-blue;
 }
 .button.button--primary--blue:active {
-   @apply bg-blue-600 shadow-none;
+   @apply bg-gradient-to-b from-blue-500 to-blue-600 shadow-none;
 }
 .button--primary--blue:hover {
-   @apply bg-blue-400;
+   @apply bg-gradient-to-b from-blue-300 to-blue-400;
 }
 
 .button--primary--red {
-   @apply text-white bg-red-500 border-1 border-red-600 shadow-red;
+   @apply text-white bg-gradient-to-b from-red-400 to-red-500 border-1 border-red-600 shadow-red;
 }
 .button--primary--red:focus {
    @apply outline-none animate-btn-ping-red;
 }
 .button.button--primary--red:active {
-   @apply bg-red-600 shadow-none;
+   @apply bg-gradient-to-b from-red-500 to-red-600 shadow-none;
 }
 .button--primary--red:hover {
-   @apply bg-red-400;
+   @apply bg-gradient-to-b from-red-300 to-red-400;
 }
 
 .button--primary--green {
-   @apply text-white bg-green-500 border-1 border-green-600 shadow-green;
+   @apply text-white bg-gradient-to-b from-green-400 to-green-500 border-1 border-green-600 shadow-green;
 }
 .button--primary--green:focus {
    @apply outline-none animate-btn-ping-green;
 }
 .button.button--primary--green:active {
-   @apply bg-green-600 shadow-none;
+   @apply bg-gradient-to-b from-green-500 to-green-600 shadow-none;
 }
 .button--primary--green:hover {
-   @apply bg-green-400;
+   @apply bg-gradient-to-b from-green-300 to-green-400;
 }
 
 .button--primary--yellow {
-   @apply text-white bg-yellow-500 border-1 border-yellow-600 shadow-yellow;
+   @apply text-white bg-gradient-to-b from-yellow-400 to-yellow-500 border-1 border-yellow-600 shadow-yellow;
 }
 .button--primary--yellow:focus {
    @apply outline-none animate-btn-ping-yellow;
 }
 .button.button--primary--yellow:active {
-   @apply bg-yellow-600 shadow-none;
+   @apply bg-gradient-to-b from-yellow-500 to-yellow-600 shadow-none;
 }
 .button--primary--yellow:hover {
-   @apply bg-yellow-400;
+   @apply bg-gradient-to-b from-yellow-300 to-yellow-400;
 }
 
 .button--primary--purple {
-   @apply text-white bg-purple-500 border-1 border-purple-600 shadow-purple;
+   @apply text-white bg-gradient-to-b from-purple-400 to-purple-500 border-1 border-purple-600 shadow-purple;
 }
 .button--primary--purple:focus {
    @apply outline-none animate-btn-ping-purple;
 }
 .button.button--primary--purple:active {
-   @apply bg-purple-600 shadow-none;
+   @apply bg-gradient-to-b from-purple-500 to-purple-600 shadow-none;
 }
 .button--primary--purple:hover {
-   @apply bg-purple-400;
+   @apply bg-gradient-to-b from-purple-300 to-purple-400;
 }
 
 .button--primary--indigo {
-   @apply text-white bg-indigo-500 border-1 border-indigo-600 shadow-indigo;
+   @apply text-white bg-gradient-to-b from-indigo-400 to-indigo-500 border-1 border-indigo-600 shadow-indigo;
 }
 .button--primary--indigo:focus {
    @apply outline-none animate-btn-ping-indigo;
 }
 .button.button--primary--indigo:active {
-   @apply bg-indigo-600 shadow-none;
+   @apply bg-gradient-to-b from-indigo-500 to-indigo-600 shadow-none;
 }
 .button--primary--indigo:hover {
-   @apply bg-indigo-400;
+   @apply bg-gradient-to-b from-indigo-300 to-indigo-400;
 }
 
 /* ---------- SECONDARY BUTTON ---------- */
@@ -427,7 +427,7 @@
    border-color: transparent;
 }
 .button--secondary--default:focus {
-   @apply border-gray-300 outline-none animate-btn-ping-gray;
+   @apply border-gray-300 outline-none animate-btn-ping-blue;
 }
 .button--secondary--default:hover {
    @apply bg-gray-100;
@@ -517,15 +517,26 @@
 }
 
 .button--tertiary--blue {
-   @apply text-blue-500 bg-white border-1 border-gray-200 shadow-gray;
+   @apply text-blue-500 border-1 bg-blue-0;
+   border-color: transparent;
 }
 .button--tertiary--blue:focus {
    @apply outline-none animate-btn-ping-blue;
 }
-.button.button--tertiary--blue:active {
+.button--tertiary--blue:hover {
+   @apply bg-blue-100;
+}
+
+.button--other--blue {
+   @apply text-blue-500 bg-white border-1 border-gray-200 shadow-gray;
+}
+.button--other--blue:focus {
+   @apply outline-none animate-btn-ping-blue;
+}
+.button.button--other--blue:active {
    @apply bg-blue-0 shadow-none;
 }
-.button--tertiary--blue:hover {
+.button--other--blue:hover {
    @apply bg-gray-0;
 }
 
