@@ -4,19 +4,19 @@ import Icon from 'components/Icon';
 
 const Drawer = ({
    hide,
-   visible,
+   isOpen,
    children,
    className,
    ...props
 }) => (
    <div
       onClick={hide}
-      className={visible ? 'drawerbackground' : 'hidden'}
+      className={isOpen ? 'drawerbackground' : 'hidden'}
    >
       <div
          onClick={(e) => e.stopPropagation()}
          variant="frame"
-         className={`drawer ${visible ? 'animate-slide-in' : ''}`}
+         className={`drawer ${isOpen ? 'animate-slide-in' : ''}`}
          {...props}
       >
          {children.map((child, i) => cloneElement(child, { key: `drawerchild-${i}`, hide: hide }))}
@@ -25,11 +25,11 @@ const Drawer = ({
 );
 
 Drawer.defaultProps = {
-   visible: false,
+   isOpen: false,
 }
 
 Drawer.propTypes = {
-   visible: PropTypes.bool.isRequired,
+   isOpen: PropTypes.bool.isRequired,
    className: PropTypes.string,
 }
 
