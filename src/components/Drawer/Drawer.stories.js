@@ -20,8 +20,8 @@ export const DefaultBlue = () => {
                <div style={{ height: 5000 }}>Scrollale list item details</div>
             </DrawerBody>
             <DrawerFooter className="flex justify-end">
-               <Button color="green" variant="secondary" label="Previous" className="mr-2" />
-               <Button color="green" label="Next" />
+               <Button color="blue" variant="secondary" label="Previous" className="mr-2" />
+               <Button color="blue" label="Next" />
             </DrawerFooter>
          </Drawer>
       </div>
