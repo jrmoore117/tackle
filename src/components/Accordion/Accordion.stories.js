@@ -37,15 +37,15 @@ export const DefaultAccordion = () => {
    );
 }
 
-export const GreenAccordionWithIcons = () => (
-   <Accordion color="green">
+export const PurpleAccordionWithIcons = () => (
+   <Accordion color="purple">
       <Panel icon="User" label="Profile">
          <div>Profile information</div>
       </Panel>
       <Panel icon="Bell" label="Notifications">
          <div>Notifications settings</div>
       </Panel>
-      <Panel icon="Lock" label="Security">
+      <Panel icon="Shield" label="Security">
          <div>Security settings</div>
       </Panel>
    </Accordion>

@@ -59,7 +59,7 @@ export const Panel = ({
             onClick={() => togglePanel(index)}
          >
             {icon
-               ? <Icon as={icon} className="mr-2" />
+               ? <Icon as={icon} color={color} variant="shaded" size={6} className="mr-2" />
                : <Icon as="ChevronRight" className={`mr-2 ${isOpen ? 'transform rotate-90' : ''}`} />}
             {label}
          </div>
