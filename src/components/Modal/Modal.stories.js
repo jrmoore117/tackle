@@ -14,7 +14,7 @@ export const SmallModal = () => {
       <div>
          <Button onClick={() => setVisible(true)} color="blue" label="Open Modal" />
          <Modal visible={visible} hide={() => setVisible(false)}>
-            <ModalHeader className="flex items-center">
+            <ModalHeader className="flex items-center mb-2">
                <Icon as="ArrowUpCircle" size={6} color="blue" className="mr-2" />
                Update Available
             </ModalHeader>
@@ -36,7 +36,7 @@ export const LargeModal = () => {
       <div>
          <Button onClick={() => setVisible(true)} color="blue" label="Open Modal" />
          <Modal size="large" visible={visible} hide={() => setVisible(false)}>
-            <ModalHeader className="flex items-center">
+            <ModalHeader className="flex items-center mb-2">
                <Icon as="ArrowUpCircle" size={6} color="blue" className="mr-2" />
                Update Available
             </ModalHeader>
