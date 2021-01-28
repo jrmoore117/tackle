@@ -67,7 +67,6 @@ export const Tabs = ({
       event.stopPropagation();
       // delete active tab at index 0
       if (index === tabIndex && index - 1 === -1) {
-         console.log('Active tab deleted - was first tab');
          setActiveTab(0);
       }
       // delete active tab at index > 0 || delete inactive tab at lower index than active
