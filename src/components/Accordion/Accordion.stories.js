@@ -19,7 +19,7 @@ export const DefaultAccordion = () => {
    })
    return (
       <div>
-         <p className="mb-10 flex items-center">If you default to dark theme, click <Icon as="Image" className="mx-2" /> above to select light theme.</p>
+         <p className="flex items-center text-white">If you default to dark theme, click <Icon as="Image" className="mx-2" /> above to select light theme.</p>
          <Accordion>
             <Panel label="Profile">
                <Box variant="frame" className="p-4">
