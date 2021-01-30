@@ -174,3 +174,80 @@ GrayWell.args = {
    variant: 'well',
    color: 'gray',
 };
+
+export const Gradient = () => (
+   <div className="flex flex-wrap max-w-3xl">
+      <Box
+         variant="frame"
+         className="h-56 w-56 mr-8 mb-8"
+      >
+         <div className="bg-gradient-to-br from-purple-400 to-indigo-400 h-full rounded"></div>
+      </Box>
+      <Box
+         variant="frame"
+         className="h-56 w-56 mr-8 mb-8"
+      >
+         <div className="bg-gradient-to-br from-red-300 to-purple-500 h-full rounded"></div>
+      </Box>
+      <Box
+         variant="frame"
+         className="h-56 w-56 mr-8 mb-8"
+      >
+         <div className="bg-gradient-to-br from-blue-300 to-purple-400 h-full rounded"></div>
+      </Box>
+      <Box
+         variant="frame"
+         className="h-56 w-56 mr-8 mb-8"
+      >
+         <div className="bg-gradient-to-br from-yellow-200 to-red-200 h-full rounded"></div>
+      </Box>
+      <Box
+         variant="frame"
+         className="h-56 w-56 mr-8 mb-8"
+      >
+         <div className="bg-gradient-to-br from-green-300 to-indigo-500 h-full rounded"></div>
+      </Box>
+      <Box
+         variant="frame"
+         className="h-56 w-56 mr-8 mb-8"
+      >
+         <div className="bg-gradient-to-br from-red-200 to-indigo-500 h-full rounded"></div>
+      </Box>
+      <Box
+         variant="frame"
+         className="h-56 w-56 mr-8 mb-8"
+      >
+         <div className="bg-gradient-to-br from-green-300 to-blue-400 h-full rounded"></div>
+      </Box>
+      <Box
+         variant="frame"
+         className="h-56 w-56 mr-8 mb-8"
+      >
+         <div className="bg-gradient-to-br from-red-300 to-blue-300 h-full rounded"></div>
+      </Box>
+      <Box
+         variant="frame"
+         className="h-56 w-56 mr-8 mb-8"
+      >
+         <div className="bg-gradient-to-br from-green-200 to-green-400 h-full rounded"></div>
+      </Box>
+      <Box
+         variant="frame"
+         className="h-56 w-56 mr-8 mb-8"
+      >
+         <div className="bg-gradient-to-br from-purple-200 to-green-300 h-full rounded"></div>
+      </Box>
+      <Box
+         variant="frame"
+         className="h-56 w-56 mr-8 mb-8"
+      >
+         <div className="bg-gradient-to-br from-blue-200 to-blue-400 h-full rounded"></div>
+      </Box>
+      <Box
+         variant="frame"
+         className="h-56 w-56 mr-8 mb-8"
+      >
+         <div className="bg-gradient-to-tl from-red-200 to-purple-300 h-full rounded"></div>
+      </Box>
+   </div>
+);
