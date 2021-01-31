@@ -26465,6 +26465,30 @@ video {
   }
 }
 
+@keyframes fade-in-to-t {
+  0% {
+    opacity: 0;
+    transform: translateY(5%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-to-b {
+  0% {
+    opacity: 0;
+    transform: translateY(-5%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes slide-in {
   0% {
     opacity: 0;
@@ -26641,6 +26665,14 @@ video {
   animation: fade-in 0.15s ease-in 1;
 }
 
+.animate-fade-in-to-t {
+  animation: fade-in-to-t 0.15s ease-in 1;
+}
+
+.animate-fade-in-to-b {
+  animation: fade-in-to-b 0.15s ease-in 1;
+}
+
 .animate-slide-in {
   animation: slide-in 0.15s ease-in-out 1;
 }
@@ -26753,6 +26785,14 @@ video {
   animation: fade-in 0.15s ease-in 1;
 }
 
+.focus\:animate-fade-in-to-t:focus {
+  animation: fade-in-to-t 0.15s ease-in 1;
+}
+
+.focus\:animate-fade-in-to-b:focus {
+  animation: fade-in-to-b 0.15s ease-in 1;
+}
+
 .focus\:animate-slide-in:focus {
   animation: slide-in 0.15s ease-in-out 1;
 }
@@ -26863,6 +26903,14 @@ video {
 
 .active\:animate-fade-in:active {
   animation: fade-in 0.15s ease-in 1;
+}
+
+.active\:animate-fade-in-to-t:active {
+  animation: fade-in-to-t 0.15s ease-in 1;
+}
+
+.active\:animate-fade-in-to-b:active {
+  animation: fade-in-to-b 0.15s ease-in 1;
 }
 
 .active\:animate-slide-in:active {
@@ -28642,6 +28690,87 @@ video {
 .listitem:hover, .listitem--last:hover {
   --tw-bg-opacity: 1;
   background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+}
+
+/* ---------- MODAL ---------- */
+
+.menu {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  --tw-border-opacity: 1;
+  border-color: rgba(237, 239, 242, var(--tw-border-opacity));
+  border-radius: 0.25rem;
+  border-width: 1px;
+  display: inline-block;
+  font-family: Poppins, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-text-opacity: 1;
+  color: rgba(59, 61, 64, var(--tw-text-opacity));
+  z-index: 10;
+}
+
+.menu-to-bl {
+  margin-top: 0.5rem;
+  position: absolute;
+  left: 0px;
+  top: 100%;
+  animation: fade-in-to-b 0.15s ease-in 1;
+}
+
+.menu-to-br {
+  margin-top: 0.5rem;
+  position: absolute;
+  right: 0px;
+  top: 100%;
+  animation: fade-in-to-b 0.15s ease-in 1;
+}
+
+.menu-to-tl {
+  margin-bottom: 0.5rem;
+  position: absolute;
+  left: 0px;
+  bottom: 100%;
+  animation: fade-in-to-t 0.15s ease-in 1;
+}
+
+.menu-to-tr {
+  margin-bottom: 0.5rem;
+  position: absolute;
+  right: 0px;
+  bottom: 100%;
+  animation: fade-in-to-t 0.15s ease-in 1;
+}
+
+.menuwrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.menuitem {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  -webkit-user-select: none;
+          user-select: none;
+  white-space: nowrap;
+}
+
+.menuitem:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+}
+
+.menuicon {
+  margin-right: 0.5rem;
+  margin-left: -0.125rem;
 }
 
 /* ---------- MODAL ---------- */
@@ -53105,6 +53234,14 @@ video {
     animation: fade-in 0.15s ease-in 1;
   }
 
+  .sm\:animate-fade-in-to-t {
+    animation: fade-in-to-t 0.15s ease-in 1;
+  }
+
+  .sm\:animate-fade-in-to-b {
+    animation: fade-in-to-b 0.15s ease-in 1;
+  }
+
   .sm\:animate-slide-in {
     animation: slide-in 0.15s ease-in-out 1;
   }
@@ -53217,6 +53354,14 @@ video {
     animation: fade-in 0.15s ease-in 1;
   }
 
+  .sm\:focus\:animate-fade-in-to-t:focus {
+    animation: fade-in-to-t 0.15s ease-in 1;
+  }
+
+  .sm\:focus\:animate-fade-in-to-b:focus {
+    animation: fade-in-to-b 0.15s ease-in 1;
+  }
+
   .sm\:focus\:animate-slide-in:focus {
     animation: slide-in 0.15s ease-in-out 1;
   }
@@ -53327,6 +53472,14 @@ video {
 
   .sm\:active\:animate-fade-in:active {
     animation: fade-in 0.15s ease-in 1;
+  }
+
+  .sm\:active\:animate-fade-in-to-t:active {
+    animation: fade-in-to-t 0.15s ease-in 1;
+  }
+
+  .sm\:active\:animate-fade-in-to-b:active {
+    animation: fade-in-to-b 0.15s ease-in 1;
   }
 
   .sm\:active\:animate-slide-in:active {
@@ -77316,6 +77469,14 @@ video {
     animation: fade-in 0.15s ease-in 1;
   }
 
+  .md\:animate-fade-in-to-t {
+    animation: fade-in-to-t 0.15s ease-in 1;
+  }
+
+  .md\:animate-fade-in-to-b {
+    animation: fade-in-to-b 0.15s ease-in 1;
+  }
+
   .md\:animate-slide-in {
     animation: slide-in 0.15s ease-in-out 1;
   }
@@ -77428,6 +77589,14 @@ video {
     animation: fade-in 0.15s ease-in 1;
   }
 
+  .md\:focus\:animate-fade-in-to-t:focus {
+    animation: fade-in-to-t 0.15s ease-in 1;
+  }
+
+  .md\:focus\:animate-fade-in-to-b:focus {
+    animation: fade-in-to-b 0.15s ease-in 1;
+  }
+
   .md\:focus\:animate-slide-in:focus {
     animation: slide-in 0.15s ease-in-out 1;
   }
@@ -77538,6 +77707,14 @@ video {
 
   .md\:active\:animate-fade-in:active {
     animation: fade-in 0.15s ease-in 1;
+  }
+
+  .md\:active\:animate-fade-in-to-t:active {
+    animation: fade-in-to-t 0.15s ease-in 1;
+  }
+
+  .md\:active\:animate-fade-in-to-b:active {
+    animation: fade-in-to-b 0.15s ease-in 1;
   }
 
   .md\:active\:animate-slide-in:active {
@@ -101527,6 +101704,14 @@ video {
     animation: fade-in 0.15s ease-in 1;
   }
 
+  .lg\:animate-fade-in-to-t {
+    animation: fade-in-to-t 0.15s ease-in 1;
+  }
+
+  .lg\:animate-fade-in-to-b {
+    animation: fade-in-to-b 0.15s ease-in 1;
+  }
+
   .lg\:animate-slide-in {
     animation: slide-in 0.15s ease-in-out 1;
   }
@@ -101639,6 +101824,14 @@ video {
     animation: fade-in 0.15s ease-in 1;
   }
 
+  .lg\:focus\:animate-fade-in-to-t:focus {
+    animation: fade-in-to-t 0.15s ease-in 1;
+  }
+
+  .lg\:focus\:animate-fade-in-to-b:focus {
+    animation: fade-in-to-b 0.15s ease-in 1;
+  }
+
   .lg\:focus\:animate-slide-in:focus {
     animation: slide-in 0.15s ease-in-out 1;
   }
@@ -101749,6 +101942,14 @@ video {
 
   .lg\:active\:animate-fade-in:active {
     animation: fade-in 0.15s ease-in 1;
+  }
+
+  .lg\:active\:animate-fade-in-to-t:active {
+    animation: fade-in-to-t 0.15s ease-in 1;
+  }
+
+  .lg\:active\:animate-fade-in-to-b:active {
+    animation: fade-in-to-b 0.15s ease-in 1;
   }
 
   .lg\:active\:animate-slide-in:active {
@@ -125738,6 +125939,14 @@ video {
     animation: fade-in 0.15s ease-in 1;
   }
 
+  .xl\:animate-fade-in-to-t {
+    animation: fade-in-to-t 0.15s ease-in 1;
+  }
+
+  .xl\:animate-fade-in-to-b {
+    animation: fade-in-to-b 0.15s ease-in 1;
+  }
+
   .xl\:animate-slide-in {
     animation: slide-in 0.15s ease-in-out 1;
   }
@@ -125850,6 +126059,14 @@ video {
     animation: fade-in 0.15s ease-in 1;
   }
 
+  .xl\:focus\:animate-fade-in-to-t:focus {
+    animation: fade-in-to-t 0.15s ease-in 1;
+  }
+
+  .xl\:focus\:animate-fade-in-to-b:focus {
+    animation: fade-in-to-b 0.15s ease-in 1;
+  }
+
   .xl\:focus\:animate-slide-in:focus {
     animation: slide-in 0.15s ease-in-out 1;
   }
@@ -125960,6 +126177,14 @@ video {
 
   .xl\:active\:animate-fade-in:active {
     animation: fade-in 0.15s ease-in 1;
+  }
+
+  .xl\:active\:animate-fade-in-to-t:active {
+    animation: fade-in-to-t 0.15s ease-in 1;
+  }
+
+  .xl\:active\:animate-fade-in-to-b:active {
+    animation: fade-in-to-b 0.15s ease-in 1;
   }
 
   .xl\:active\:animate-slide-in:active {
@@ -149949,6 +150174,14 @@ video {
     animation: fade-in 0.15s ease-in 1;
   }
 
+  .\32xl\:animate-fade-in-to-t {
+    animation: fade-in-to-t 0.15s ease-in 1;
+  }
+
+  .\32xl\:animate-fade-in-to-b {
+    animation: fade-in-to-b 0.15s ease-in 1;
+  }
+
   .\32xl\:animate-slide-in {
     animation: slide-in 0.15s ease-in-out 1;
   }
@@ -150061,6 +150294,14 @@ video {
     animation: fade-in 0.15s ease-in 1;
   }
 
+  .\32xl\:focus\:animate-fade-in-to-t:focus {
+    animation: fade-in-to-t 0.15s ease-in 1;
+  }
+
+  .\32xl\:focus\:animate-fade-in-to-b:focus {
+    animation: fade-in-to-b 0.15s ease-in 1;
+  }
+
   .\32xl\:focus\:animate-slide-in:focus {
     animation: slide-in 0.15s ease-in-out 1;
   }
@@ -150171,6 +150412,14 @@ video {
 
   .\32xl\:active\:animate-fade-in:active {
     animation: fade-in 0.15s ease-in 1;
+  }
+
+  .\32xl\:active\:animate-fade-in-to-t:active {
+    animation: fade-in-to-t 0.15s ease-in 1;
+  }
+
+  .\32xl\:active\:animate-fade-in-to-b:active {
+    animation: fade-in-to-b 0.15s ease-in 1;
   }
 
   .\32xl\:active\:animate-slide-in:active {
