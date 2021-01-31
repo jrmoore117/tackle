@@ -744,6 +744,42 @@
 
 
 /* ---------- MODAL ---------- */
+.menu {
+   @apply py-2 font-sans text-sm text-gray-900 bg-white border-1 border-gray-100 shadow-md rounded inline-block z-10;
+}
+
+.menu-to-bl {
+   @apply mt-2 absolute left-0 top-full animate-fade-in-to-b;
+}
+
+.menu-to-br {
+   @apply mt-2 absolute right-0 top-full animate-fade-in-to-b;
+}
+
+.menu-to-tl {
+   @apply mb-2 absolute left-0 bottom-full animate-fade-in-to-t;
+}
+
+.menu-to-tr {
+   @apply mb-2 absolute right-0 bottom-full animate-fade-in-to-t;
+}
+
+.menuwrapper {
+   @apply relative inline-block;
+}
+
+.menuitem {
+   @apply h-8 px-2 flex items-center cursor-pointer select-none whitespace-nowrap;
+}
+.menuitem:hover {
+   @apply bg-gray-0;
+}
+
+.menuicon {
+   @apply -ml-0.5 mr-2;
+}
+
+/* ---------- MODAL ---------- */
 .modal--small {
    @apply w-96 p-4 shadow-dark-gray;
 }
