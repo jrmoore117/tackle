@@ -10,6 +10,7 @@ export const Menu = ({
    toggle,
    isOpen,
    variant,
+   position,
    children,
    className,
    ...props
@@ -17,23 +18,23 @@ export const Menu = ({
 
    const menuRef = useRef();
 
-   const handleClickOut = (e) => {
+   const handleClickAway = (e) => {
       if (menuRef.current.contains(e.target)) return;
       toggle(false);
    }
 
    useEffect(() => {
-      document.addEventListener("mousedown", handleClickOut);
+      document.addEventListener("mousedown", handleClickAway);
       return () => {
-         document.removeEventListener("mousedown", handleClickOut);
+         document.removeEventListener("mousedown", handleClickAway);
       };
-   }, []);
+   }, [handleClickAway]);
 
    return (
       <div
          ref={menuRef}
          onClick={() => toggle(!isOpen)}
-         className={`relative inline-block ${className}`}
+         className={`menuwrapper ${className || ''}`}
       >
          <Button
             color={color}
@@ -43,7 +44,7 @@ export const Menu = ({
                : label}
             {...props}
          />
-         <div className={isOpen ? "mt-2 py-2 font-sans text-sm text-gray-900 bg-white border-1 border-gray-100 shadow-md rounded inline-block absolute left-0 top-full z-10" : "hidden"}>
+         <div className={isOpen ? `menu menu-to-${position}` : 'hidden'}>
             {children}
          </div>
       </div>
@@ -52,6 +53,7 @@ export const Menu = ({
 
 Menu.defaultProps = {
    isOpen: false,
+   position: "bl",
 }
 
 Menu.propTypes = {
@@ -61,6 +63,7 @@ Menu.propTypes = {
 }
 
 export const MenuItem = ({
+   icon,
    label,
    onClick,
    className,
@@ -68,9 +71,10 @@ export const MenuItem = ({
 }) => (
    <div
       onClick={onClick}
-      className={`h-8 px-2 flex items-center cursor-pointer select-none hover:bg-gray-0 ${className}`}
+      className={`menuitem ${className}`}
       {...props}
    >
+      {icon && <Icon as={icon}  className="menuicon" />}
       {label}
    </div>
 );
