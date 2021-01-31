@@ -7,13 +7,30 @@ export default {
    title: 'Menu',
 };
 
-export const MenuWithIcon = () => {
+export const MenuWithLabelAndIcons = () => {
    const [isOpen, setIsOpen] = React.useState(false);
    return (
       <Menu
          isOpen={isOpen}
          toggle={setIsOpen}
          icon="MoreHorizontal"
+         className="mb-32"
+      >
+         <MenuItem icon="Share" label="Share" />
+         <MenuItem icon="Clipboard" label="Copy link" />
+         <MenuItem icon="Flag" label="Report" />
+      </Menu>
+   );
+}
+
+export const BlueMenuWithLabel = () => {
+   const [isOpen, setIsOpen] = React.useState(false);
+   return (
+      <Menu
+         isOpen={isOpen}
+         toggle={setIsOpen}
+         color="blue"
+         label="Tackle"
          className="mb-52"
       >
          <MenuItem label="Hook" />
@@ -22,23 +39,6 @@ export const MenuWithIcon = () => {
          <Divider className="my-2" />
          <MenuItem label="Bobber" />
          <MenuItem label="Lure" />
-      </Menu>
-   );
-}
-
-export const BlueMenuWithLabelAndIcons = () => {
-   const [isOpen, setIsOpen] = React.useState(false);
-   return (
-      <Menu
-         isOpen={isOpen}
-         toggle={setIsOpen}
-         color="blue"
-         label="Tackle"
-         className="mb-32"
-      >
-         <MenuItem icon="Share" label="Share" />
-         <MenuItem icon="Clipboard" label="Copy link" />
-         <MenuItem icon="Flag" label="Report" />
       </Menu>
    );
 }
