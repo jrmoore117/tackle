@@ -298,7 +298,7 @@
 
 /* ---------- BASE BUTTON ---------- */
 .button {
-   @apply h-10 px-4 font-sans text-sm rounded flex items-center justify-center transition-shadow duration-200 ease-in-out;
+   @apply h-10 px-4 font-sans text-sm rounded flex items-center justify-center;
 }
 
 /* ---------- SMALL BUTTON ---------- */
@@ -547,7 +547,7 @@
 }
 
 .checkbox {
-   @apply mr-2 h-5 w-5 bg-white shadow-gray border-1 border-gray-200 rounded outline-none cursor-pointer appearance-none transition duration-200 ease-in-out flex items-center justify-center;
+   @apply mr-2 h-5 w-5 bg-white shadow-gray border-1 border-gray-200 rounded outline-none cursor-pointer appearance-none flex items-center justify-center;
 }
 .checkbox:hover {
    @apply bg-gradient-to-b from-gray-0 to-gray-100;
@@ -811,7 +811,7 @@
 }
 
 .radio {
-   @apply mr-2 h-5 w-5 bg-white shadow-gray border-1 border-gray-200 rounded-full outline-none appearance-none cursor-pointer transition duration-200 ease-in-out flex items-center justify-center;
+   @apply mr-2 h-5 w-5 bg-white shadow-gray border-1 border-gray-200 rounded-full outline-none appearance-none cursor-pointer flex items-center justify-center;
 }
 .radio:hover {
    @apply bg-gradient-to-b from-gray-0 to-gray-100;
