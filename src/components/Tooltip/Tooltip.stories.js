@@ -10,7 +10,7 @@ export default {
 export const TooltipWithLabelAndIcons = () => {
    const [isOpen, setIsOpen] = React.useState(false);
    return (
-      <div className="mt-20">
+      <div className="my-20">
          <Tooltip
             content={
                <div>
