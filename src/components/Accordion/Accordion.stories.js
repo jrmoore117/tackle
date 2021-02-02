@@ -21,20 +21,14 @@ export const DefaultAccordion = () => {
       <div>
          <p className="flex items-center text-offwhite">If you default to dark theme, click <Icon as="Image" className="mx-2" /> above to select light theme.</p>
          <Accordion>
-            <Panel label="Profile">
-               <Box variant="frame" className="p-4">
-                  Profile Info
-               </Box>
+            <Panel  label="Profile">
+               <div>Profile information</div>
             </Panel>
-            <Panel label="Notifications">
-               <Box variant="frame" className="p-4">
-                  <Switch {...set("notifications")} label={`Notifications ${notifications ? 'on' : 'off'}`} />
-               </Box>
+            <Panel  label="Notifications">
+               <div>Notifications settings</div>
             </Panel>
             <Panel label="Security">
-               <Box variant="frame" className="p-4">
-                  <Switch {...set("security")} label={`2FA ${security ? 'enabled' : 'disabled'}`} />
-               </Box>
+               <div>Security settings</div>
             </Panel>
          </Accordion>
       </div>
