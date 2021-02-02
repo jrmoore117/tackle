@@ -10,6 +10,7 @@ module.exports = {
             blue: '0 1px 2px 0 #92bdff',
             'outline-blue': '0 0 0 3px #92bdff',
             'inner-blue': 'inset 0 2px 4px 0 #bdd7ff',
+            'md-blue': '0 4px 6px -1px #bdd7ff',
             red: '0 1px 2px 0 #faa1a8',
             'outline-red': '0 0 0 3px #faa1a8',
             'inner-red': 'inset 0 2px 4px 0 #fcc6cb',
@@ -43,6 +44,7 @@ module.exports = {
          animation: {
             'fade-in': 'fade-in 0.15s ease-in 1',
             'fade-in-to-t': 'fade-in-to-t 0.15s ease-in 1',
+            'fade-in-to-r': 'fade-in-to-r 0.15s ease-in 1',
             'fade-in-to-b': 'fade-in-to-b 0.15s ease-in 1',
             'slide-in': 'slide-in 0.15s ease-in-out 1',
             'ping-blue': 'ping-blue 1s cubic-bezier(0,.656,0,.58) infinite',
@@ -81,17 +83,27 @@ module.exports = {
             'fade-in-to-t': {
                '0%': { 
                   opacity: 0,
-                  transform: 'translateY(5%)',
+                  transform: 'translateY(0.5rem)',
                },
                '100%': {
                   opacity: 1,
                   transform: 'translateY(0)',
                },
             },
+            'fade-in-to-r': {
+               '0%': { 
+                  opacity: 0,
+                  transform: 'translateX(-0.5rem)',
+               },
+               '100%': {
+                  opacity: 1,
+                  transform: 'translateX(0)',
+               },
+            },
             'fade-in-to-b': {
                '0%': { 
                   opacity: 0,
-                  transform: 'translateY(-5%)',
+                  transform: 'translateY(-0.5rem)',
                },
                '100%': {
                   opacity: 1,
