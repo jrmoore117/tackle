@@ -5,6 +5,7 @@ import Box from 'components/Box';
 const Tooltip = ({
    color,
    content,
+   position,
    children,
    className
 }) => {
@@ -12,9 +13,13 @@ const Tooltip = ({
    const [visible, setVisible] = useState(false);
 
    return (
-      <div className={`tooltipwrapper relative inline-block ${className || ''}`} onMouseEnter={() => setVisible(true)} onMouseLeave={() => setVisible(false)}>
-         <div className={visible ? 'ml-2 absolute left-full top-1/2 transform -translate-y-1/2 text-sm w-80' : 'hidden'}>
-            <Box color={color} variant="frame" className={`inline-block p-4 shadow-md-${color} animate-fade-in-to-r`}>
+      <div
+         onMouseEnter={() => setVisible(true)}
+         onMouseLeave={() => setVisible(false)}
+         className={`tooltipwrapper ${className || ''}`}
+      >
+         <div className={visible ? `tooltipwrapper--${position}` : 'hidden'}>
+            <Box color={color} variant="frame" className={`tooltip tooltip--${color} animate-fade-in-to-${position}`}>
                {content}
             </Box>
          </div>
@@ -25,10 +30,12 @@ const Tooltip = ({
 
 Tooltip.defaultProps = {
    color: 'blue',
+   position: 'r',
 }
 
 Tooltip.propTypes = {
    color: PropTypes.string,
+   position: PropTypes.string,
    className: PropTypes.string,
 }
 

@@ -21,15 +21,70 @@ export const TooltipWithContent = () => (
             </div>
          }
       >
-         <Icon as="Info" color="blue" variant="shaded" isRounded size={8} />
+         <Icon
+            as="Info"
+            color="blue"
+            variant="shaded"
+            isRounded
+            size={8}
+         />
       </Tooltip>
    </div>
 )
 
-export const TooltipWithText = () => (
+export const TooltipWithTextToLeft = () => (
    <div className="my-10">
-      <Tooltip content="Now you know." color="indigo">
-         <Icon as="Info" color="indigo" variant="shaded" isRounded size={8} />
+      <Tooltip
+         color="indigo"
+         content="Now you know."
+         position="l"
+         className="ml-36"
+      >
+         <Icon
+            as="Info"
+            color="indigo"
+            variant="shaded"
+            isRounded
+            size={8}
+         />
+      </Tooltip>
+   </div>
+);
+
+export const TooltipWithTextToTop = () => (
+   <div className="my-10">
+      <Tooltip
+         color="green"
+         content="Now you know."
+         position="t"
+         className="mt-4 ml-16"
+      >
+         <Icon
+            as="Info"
+            color="green"
+            variant="shaded"
+            isRounded
+            size={8}
+         />
+      </Tooltip>
+   </div>
+);
+
+export const TooltipWithTextToBottom = () => (
+   <div className="my-10">
+      <Tooltip
+         color="purple"
+         content="Now you know."
+         position="b"
+         className="mb-4 ml-16"
+      >
+         <Icon
+            as="Info"
+            color="purple"
+            variant="shaded"
+            isRounded
+            size={8}
+         />
       </Tooltip>
    </div>
 );
