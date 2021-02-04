@@ -52,6 +52,7 @@ module.exports = {
             'fade-in-to-t': 'fade-in-to-t 0.15s ease-in 1',
             'fade-in-to-r': 'fade-in-to-r 0.15s ease-in 1',
             'fade-in-to-b': 'fade-in-to-b 0.15s ease-in 1',
+            'fade-in-to-l': 'fade-in-to-l 0.15s ease-in 1',
             'slide-in': 'slide-in 0.15s ease-in-out 1',
             'ping-blue': 'ping-blue 1s cubic-bezier(0,.656,0,.58) infinite',
             'btn-ping-blue': 'ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1',
@@ -114,6 +115,16 @@ module.exports = {
                '100%': {
                   opacity: 1,
                   transform: 'translateY(0)',
+               },
+            },
+            'fade-in-to-l': {
+               '0%': { 
+                  opacity: 0,
+                  transform: 'translateX(0.5rem)',
+               },
+               '100%': {
+                  opacity: 1,
+                  transform: 'translateX(0)',
                },
             },
             'slide-in': {
