@@ -1049,3 +1049,57 @@
 .fieldmessage {
    @apply ml-1 mt-1 text-xs text-red-500;
 }
+
+
+/* ---------- TOOLTIP ---------- */
+.tooltipwrapper {
+   @apply relative inline-block;
+}
+
+.tooltipwrapper--t {
+   @apply mb-2 w-80 absolute bottom-full left-1/2 transform -translate-x-1/2 flex justify-center;
+}
+
+.tooltipwrapper--r {
+   @apply ml-2 w-80 absolute left-full top-1/2 transform -translate-y-1/2;
+}
+
+.tooltipwrapper--b {
+   @apply mt-2 w-80 absolute top-full left-1/2 transform -translate-x-1/2 flex justify-center;
+}
+
+.tooltipwrapper--l {
+   @apply mr-2 w-80 absolute right-full top-1/2 transform -translate-y-1/2 flex justify-end;
+}
+
+.tooltip {
+   @apply p-4 text-sm inline-block;
+}
+
+.tooltip--blue {
+   @apply shadow-md-blue;
+}
+
+.tooltip--red {
+   @apply shadow-md-red;
+}
+
+.tooltip--green {
+   @apply shadow-md-green;
+}
+
+.tooltip--yellow {
+   @apply shadow-md-yellow;
+}
+
+.tooltip--purple {
+   @apply shadow-md-purple;
+}
+
+.tooltip--indigo {
+   @apply shadow-md-indigo;
+}
+
+.tooltip--gray {
+   @apply shadow-md-gray;
+}
