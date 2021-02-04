@@ -26676,6 +26676,18 @@ video {
   }
 }
 
+@keyframes fade-in-to-l {
+  0% {
+    opacity: 0;
+    transform: translateX(0.5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @keyframes slide-in {
   0% {
     opacity: 0;
@@ -26864,6 +26876,10 @@ video {
   animation: fade-in-to-b 0.15s ease-in 1;
 }
 
+.animate-fade-in-to-l {
+  animation: fade-in-to-l 0.15s ease-in 1;
+}
+
 .animate-slide-in {
   animation: slide-in 0.15s ease-in-out 1;
 }
@@ -26988,6 +27004,10 @@ video {
   animation: fade-in-to-b 0.15s ease-in 1;
 }
 
+.focus\:animate-fade-in-to-l:focus {
+  animation: fade-in-to-l 0.15s ease-in 1;
+}
+
 .focus\:animate-slide-in:focus {
   animation: slide-in 0.15s ease-in-out 1;
 }
@@ -27110,6 +27130,10 @@ video {
 
 .active\:animate-fade-in-to-b:active {
   animation: fade-in-to-b 0.15s ease-in 1;
+}
+
+.active\:animate-fade-in-to-l:active {
+  animation: fade-in-to-l 0.15s ease-in 1;
 }
 
 .active\:animate-slide-in:active {
@@ -29518,6 +29542,129 @@ video {
   margin-left: 0.25rem;
   --tw-text-opacity: 1;
   color: rgba(245, 66, 81, var(--tw-text-opacity));
+}
+
+/* ---------- TOOLTIP ---------- */
+
+.tooltipwrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.tooltipwrapper--t {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  width: 20rem;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-translate-x: -50%;
+}
+
+.tooltipwrapper--r {
+  margin-left: 0.5rem;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 20rem;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-translate-y: -50%;
+}
+
+.tooltipwrapper--b {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 20rem;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-translate-x: -50%;
+}
+
+.tooltipwrapper--l {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 0.5rem;
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  width: 20rem;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-translate-y: -50%;
+}
+
+.tooltip {
+  display: inline-block;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding: 1rem;
+}
+
+.tooltip--blue {
+  --tw-shadow: 0 4px 6px -1px #bdd7ff;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.tooltip--red {
+  --tw-shadow: 0 4px 6px -1px #fcc6cb;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.tooltip--green {
+  --tw-shadow: 0 4px 6px -1px #b3ead4;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.tooltip--yellow {
+  --tw-shadow: 0 4px 6px -1px #feecbd;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.tooltip--purple {
+  --tw-shadow: 0 4px 6px -1px #dbd5ff;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.tooltip--indigo {
+  --tw-shadow: 0 4px 6px -1px #c3cce6;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.tooltip--gray {
+  --tw-shadow: 0 4px 6px -1px #e2e5ea;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 @media (min-width: 640px) {
@@ -53605,6 +53752,10 @@ video {
     animation: fade-in-to-b 0.15s ease-in 1;
   }
 
+  .sm\:animate-fade-in-to-l {
+    animation: fade-in-to-l 0.15s ease-in 1;
+  }
+
   .sm\:animate-slide-in {
     animation: slide-in 0.15s ease-in-out 1;
   }
@@ -53729,6 +53880,10 @@ video {
     animation: fade-in-to-b 0.15s ease-in 1;
   }
 
+  .sm\:focus\:animate-fade-in-to-l:focus {
+    animation: fade-in-to-l 0.15s ease-in 1;
+  }
+
   .sm\:focus\:animate-slide-in:focus {
     animation: slide-in 0.15s ease-in-out 1;
   }
@@ -53851,6 +54006,10 @@ video {
 
   .sm\:active\:animate-fade-in-to-b:active {
     animation: fade-in-to-b 0.15s ease-in 1;
+  }
+
+  .sm\:active\:animate-fade-in-to-l:active {
+    animation: fade-in-to-l 0.15s ease-in 1;
   }
 
   .sm\:active\:animate-slide-in:active {
@@ -78027,6 +78186,10 @@ video {
     animation: fade-in-to-b 0.15s ease-in 1;
   }
 
+  .md\:animate-fade-in-to-l {
+    animation: fade-in-to-l 0.15s ease-in 1;
+  }
+
   .md\:animate-slide-in {
     animation: slide-in 0.15s ease-in-out 1;
   }
@@ -78151,6 +78314,10 @@ video {
     animation: fade-in-to-b 0.15s ease-in 1;
   }
 
+  .md\:focus\:animate-fade-in-to-l:focus {
+    animation: fade-in-to-l 0.15s ease-in 1;
+  }
+
   .md\:focus\:animate-slide-in:focus {
     animation: slide-in 0.15s ease-in-out 1;
   }
@@ -78273,6 +78440,10 @@ video {
 
   .md\:active\:animate-fade-in-to-b:active {
     animation: fade-in-to-b 0.15s ease-in 1;
+  }
+
+  .md\:active\:animate-fade-in-to-l:active {
+    animation: fade-in-to-l 0.15s ease-in 1;
   }
 
   .md\:active\:animate-slide-in:active {
@@ -102449,6 +102620,10 @@ video {
     animation: fade-in-to-b 0.15s ease-in 1;
   }
 
+  .lg\:animate-fade-in-to-l {
+    animation: fade-in-to-l 0.15s ease-in 1;
+  }
+
   .lg\:animate-slide-in {
     animation: slide-in 0.15s ease-in-out 1;
   }
@@ -102573,6 +102748,10 @@ video {
     animation: fade-in-to-b 0.15s ease-in 1;
   }
 
+  .lg\:focus\:animate-fade-in-to-l:focus {
+    animation: fade-in-to-l 0.15s ease-in 1;
+  }
+
   .lg\:focus\:animate-slide-in:focus {
     animation: slide-in 0.15s ease-in-out 1;
   }
@@ -102695,6 +102874,10 @@ video {
 
   .lg\:active\:animate-fade-in-to-b:active {
     animation: fade-in-to-b 0.15s ease-in 1;
+  }
+
+  .lg\:active\:animate-fade-in-to-l:active {
+    animation: fade-in-to-l 0.15s ease-in 1;
   }
 
   .lg\:active\:animate-slide-in:active {
@@ -126871,6 +127054,10 @@ video {
     animation: fade-in-to-b 0.15s ease-in 1;
   }
 
+  .xl\:animate-fade-in-to-l {
+    animation: fade-in-to-l 0.15s ease-in 1;
+  }
+
   .xl\:animate-slide-in {
     animation: slide-in 0.15s ease-in-out 1;
   }
@@ -126995,6 +127182,10 @@ video {
     animation: fade-in-to-b 0.15s ease-in 1;
   }
 
+  .xl\:focus\:animate-fade-in-to-l:focus {
+    animation: fade-in-to-l 0.15s ease-in 1;
+  }
+
   .xl\:focus\:animate-slide-in:focus {
     animation: slide-in 0.15s ease-in-out 1;
   }
@@ -127117,6 +127308,10 @@ video {
 
   .xl\:active\:animate-fade-in-to-b:active {
     animation: fade-in-to-b 0.15s ease-in 1;
+  }
+
+  .xl\:active\:animate-fade-in-to-l:active {
+    animation: fade-in-to-l 0.15s ease-in 1;
   }
 
   .xl\:active\:animate-slide-in:active {
@@ -151293,6 +151488,10 @@ video {
     animation: fade-in-to-b 0.15s ease-in 1;
   }
 
+  .\32xl\:animate-fade-in-to-l {
+    animation: fade-in-to-l 0.15s ease-in 1;
+  }
+
   .\32xl\:animate-slide-in {
     animation: slide-in 0.15s ease-in-out 1;
   }
@@ -151417,6 +151616,10 @@ video {
     animation: fade-in-to-b 0.15s ease-in 1;
   }
 
+  .\32xl\:focus\:animate-fade-in-to-l:focus {
+    animation: fade-in-to-l 0.15s ease-in 1;
+  }
+
   .\32xl\:focus\:animate-slide-in:focus {
     animation: slide-in 0.15s ease-in-out 1;
   }
@@ -151539,6 +151742,10 @@ video {
 
   .\32xl\:active\:animate-fade-in-to-b:active {
     animation: fade-in-to-b 0.15s ease-in 1;
+  }
+
+  .\32xl\:active\:animate-fade-in-to-l:active {
+    animation: fade-in-to-l 0.15s ease-in 1;
   }
 
   .\32xl\:active\:animate-slide-in:active {
