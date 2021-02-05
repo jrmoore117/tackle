@@ -18,17 +18,20 @@ export const Menu = ({
 
    const menuRef = useRef();
 
-   const handleClickAway = (e) => {
-      if (menuRef.current.contains(e.target)) return;
-      toggle(false);
-   }
-
    useEffect(() => {
+
+      const handleClickAway = (e) => {
+         if (menuRef.current.contains(e.target)) return;
+         toggle(false);
+      }
+
       document.addEventListener("mousedown", handleClickAway);
+      
       return () => {
          document.removeEventListener("mousedown", handleClickAway);
       };
-   }, [handleClickAway]);
+
+   }, [toggle]);
 
    return (
       <div
@@ -57,9 +60,14 @@ Menu.defaultProps = {
 }
 
 Menu.propTypes = {
-   open: PropTypes.bool.isRequired,
-   toggle: PropTypes.func.isRequired,
+   icon: PropTypes.string,
+   label: PropTypes.string,
+   color: PropTypes.string,
+   variant: PropTypes.string,
+   position: PropTypes.string,
    className: PropTypes.string,
+   isOpen: PropTypes.bool.isRequired,
+   toggle: PropTypes.func.isRequired,
 }
 
 export const MenuItem = ({
@@ -80,6 +88,8 @@ export const MenuItem = ({
 );
 
 MenuItem.propTypes = {
-   label: PropTypes.string.isRequired,
+   icon: PropTypes.string,
+   onClick: PropTypes.func,
    className: PropTypes.string,
+   label: PropTypes.string.isRequired,
 }
