@@ -661,7 +661,7 @@
 }
 
 .icon--clickable--gray {
-   @apply p-1 text-gray-900 bg-gray-100 transition duration-200 ease-in-out;
+   @apply p-1 text-gray-900 bg-gray-100 transition duration-100 ease-in-out;
 }
 .icon--clickable--gray:hover {
    @apply bg-gray-200;
@@ -671,7 +671,7 @@
 }
 
 .icon--clickable--blue {
-   @apply p-1 text-blue-500 bg-blue-0 transition duration-200 ease-in-out;
+   @apply p-1 text-blue-500 bg-blue-0 transition duration-100 ease-in-out;
 }
 .icon--clickable--blue:hover {
    @apply text-blue-600 bg-blue-100;
@@ -681,7 +681,7 @@
 }
 
 .icon--clickable--red {
-   @apply p-1 text-red-500 bg-red-0 transition duration-200 ease-in-out;
+   @apply p-1 text-red-500 bg-red-0 transition duration-100 ease-in-out;
 }
 .icon--clickable--red:hover {
    @apply text-red-600 bg-red-100;
@@ -691,7 +691,7 @@
 }
 
 .icon--clickable--green {
-   @apply p-1 text-green-500 bg-green-0 transition duration-200 ease-in-out;
+   @apply p-1 text-green-500 bg-green-0 transition duration-100 ease-in-out;
 }
 .icon--clickable--green:hover {
    @apply text-green-600 bg-green-100;
@@ -701,7 +701,7 @@
 }
 
 .icon--clickable--yellow {
-   @apply p-1 text-yellow-500 bg-yellow-0 transition duration-200 ease-in-out;
+   @apply p-1 text-yellow-500 bg-yellow-0 transition duration-100 ease-in-out;
 }
 .icon--clickable--yellow:hover {
    @apply text-yellow-600 bg-yellow-100;
@@ -711,7 +711,7 @@
 }
 
 .icon--clickable--purple {
-   @apply p-1 text-purple-500 bg-purple-0 transition duration-200 ease-in-out;
+   @apply p-1 text-purple-500 bg-purple-0 transition duration-100 ease-in-out;
 }
 .icon--clickable--purple:hover {
    @apply text-purple-600 bg-purple-100;
@@ -721,7 +721,7 @@
 }
 
 .icon--clickable--indigo {
-   @apply p-1 text-indigo-500 bg-indigo-0 transition duration-200 ease-in-out;
+   @apply p-1 text-indigo-500 bg-indigo-0 transition duration-100 ease-in-out;
 }
 .icon--clickable--indigo:hover {
    @apply text-indigo-600 bg-indigo-100;
