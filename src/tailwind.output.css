@@ -26710,6 +26710,16 @@ video {
   }
 }
 
+@keyframes ping-light-blue {
+  15% {
+    box-shadow: 0 0 0 3px #e9f2ff;
+  }
+
+  100% {
+    box-shadow: 0 0 0 6px transparent;
+  }
+}
+
 @keyframes small-ping-blue {
   20% {
     box-shadow: 0 0 0 2px #bdd7ff;
@@ -26892,6 +26902,10 @@ video {
   animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
+.animate-btn-ping-light-blue {
+  animation: ping-light-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+
 .animate-small-ping-blue {
   animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
@@ -27020,6 +27034,10 @@ video {
   animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
+.focus\:animate-btn-ping-light-blue:focus {
+  animation: ping-light-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+
 .focus\:animate-small-ping-blue:focus {
   animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
@@ -27146,6 +27164,10 @@ video {
 
 .active\:animate-btn-ping-blue:active {
   animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+
+.active\:animate-btn-ping-light-blue:active {
+  animation: ping-light-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
 .active\:animate-small-ping-blue:active {
@@ -27913,6 +27935,8 @@ video {
   --tw-border-opacity: 1;
   border-color: rgba(226, 229, 234, var(--tw-border-opacity));
   border-width: 1px;
+  --tw-shadow: 0 1px 2px 0 #e2e5ea;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   --tw-text-opacity: 1;
   color: rgba(196, 202, 212, var(--tw-text-opacity));
   -webkit-user-select: none;
@@ -27942,12 +27966,16 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   --tw-text-opacity: 1;
   color: rgba(59, 61, 64, var(--tw-text-opacity));
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 200ms;
 }
 
 .button--primary--default:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
-  animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+  animation: ping-light-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
 }
 
 .button.button--primary--default:active {
@@ -27961,7 +27989,7 @@ video {
 
 .button--primary--default:hover {
   --tw-border-opacity: 1;
-  border-color: rgba(237, 239, 242, var(--tw-border-opacity));
+  border-color: rgba(214, 218, 225, var(--tw-border-opacity));
   border-width: 1px;
 }
 
@@ -28505,6 +28533,71 @@ video {
   color: rgba(59, 61, 64, var(--tw-text-opacity));
   -webkit-user-select: none;
           user-select: none;
+}
+
+/* ---------- CHIP ---------- */
+
+.chip {
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding-left: 0.375rem;
+  letter-spacing: 0.025em;
+  -webkit-user-select: none;
+          user-select: none;
+}
+
+.chip--blue {
+  --tw-bg-opacity: 1;
+  background-color: rgba(233, 242, 255, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(36, 123, 255, var(--tw-text-opacity));
+}
+
+.chip--red {
+  --tw-bg-opacity: 1;
+  background-color: rgba(254, 236, 238, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(245, 66, 81, var(--tw-text-opacity));
+}
+
+.chip--green {
+  --tw-bg-opacity: 1;
+  background-color: rgba(230, 248, 241, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(0, 186, 112, var(--tw-text-opacity));
+}
+
+.chip--yellow {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 249, 235, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(251, 197, 58, var(--tw-text-opacity));
+}
+
+.chip--purple {
+  --tw-bg-opacity: 1;
+  background-color: rgba(243, 241, 255, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(134, 115, 255, var(--tw-text-opacity));
+}
+
+.chip--indigo {
+  --tw-bg-opacity: 1;
+  background-color: rgba(235, 238, 247, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(54, 85, 171, var(--tw-text-opacity));
+}
+
+.chip--gray {
+  --tw-bg-opacity: 1;
+  background-color: rgba(237, 239, 242, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(59, 61, 64, var(--tw-text-opacity));
 }
 
 /* ---------- DRAWER ---------- */
@@ -29405,6 +29498,8 @@ video {
 /* ---------- TEXT FIELD & SELECT ---------- */
 
 .textfield, .field {
+  -webkit-appearance: none;
+          appearance: none;
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
   --tw-border-opacity: 1;
@@ -29419,6 +29514,14 @@ video {
   line-height: 1.25rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+
+.textfield::placeholder, .field::placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgba(176, 182, 191, var(--tw-placeholder-opacity));
+}
+
+.textfield, .field {
   --tw-shadow: 0 1px 2px 0 #e2e5ea;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   --tw-text-opacity: 1;
@@ -29430,8 +29533,31 @@ video {
   transition-duration: 200ms;
 }
 
+.textfield.textfield--small, .field.field--small, .select.select--small {
+  height: 2rem;
+}
+
+.textfield:disabled, .field.field--disabled, .select:disabled {
+  --tw-bg-opacity: 1;
+  background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+  --tw-shadow: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-text-opacity: 1;
+  color: rgba(176, 182, 191, var(--tw-text-opacity));
+  -webkit-user-select: none;
+          user-select: none;
+}
+
 .textfield--with-elements {
   height: 100%;
+}
+
+.textfield--with-elements::placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgba(176, 182, 191, var(--tw-placeholder-opacity));
+}
+
+.textfield--with-elements {
   width: 100%;
 }
 
@@ -53768,6 +53894,10 @@ video {
     animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .sm\:animate-btn-ping-light-blue {
+    animation: ping-light-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .sm\:animate-small-ping-blue {
     animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
@@ -53896,6 +54026,10 @@ video {
     animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .sm\:focus\:animate-btn-ping-light-blue:focus {
+    animation: ping-light-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .sm\:focus\:animate-small-ping-blue:focus {
     animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
@@ -54022,6 +54156,10 @@ video {
 
   .sm\:active\:animate-btn-ping-blue:active {
     animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .sm\:active\:animate-btn-ping-light-blue:active {
+    animation: ping-light-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .sm\:active\:animate-small-ping-blue:active {
@@ -78202,6 +78340,10 @@ video {
     animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .md\:animate-btn-ping-light-blue {
+    animation: ping-light-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .md\:animate-small-ping-blue {
     animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
@@ -78330,6 +78472,10 @@ video {
     animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .md\:focus\:animate-btn-ping-light-blue:focus {
+    animation: ping-light-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .md\:focus\:animate-small-ping-blue:focus {
     animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
@@ -78456,6 +78602,10 @@ video {
 
   .md\:active\:animate-btn-ping-blue:active {
     animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .md\:active\:animate-btn-ping-light-blue:active {
+    animation: ping-light-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .md\:active\:animate-small-ping-blue:active {
@@ -102636,6 +102786,10 @@ video {
     animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .lg\:animate-btn-ping-light-blue {
+    animation: ping-light-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .lg\:animate-small-ping-blue {
     animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
@@ -102764,6 +102918,10 @@ video {
     animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .lg\:focus\:animate-btn-ping-light-blue:focus {
+    animation: ping-light-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .lg\:focus\:animate-small-ping-blue:focus {
     animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
@@ -102890,6 +103048,10 @@ video {
 
   .lg\:active\:animate-btn-ping-blue:active {
     animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .lg\:active\:animate-btn-ping-light-blue:active {
+    animation: ping-light-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .lg\:active\:animate-small-ping-blue:active {
@@ -127070,6 +127232,10 @@ video {
     animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .xl\:animate-btn-ping-light-blue {
+    animation: ping-light-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .xl\:animate-small-ping-blue {
     animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
@@ -127198,6 +127364,10 @@ video {
     animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .xl\:focus\:animate-btn-ping-light-blue:focus {
+    animation: ping-light-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .xl\:focus\:animate-small-ping-blue:focus {
     animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
@@ -127324,6 +127494,10 @@ video {
 
   .xl\:active\:animate-btn-ping-blue:active {
     animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .xl\:active\:animate-btn-ping-light-blue:active {
+    animation: ping-light-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .xl\:active\:animate-small-ping-blue:active {
@@ -151504,6 +151678,10 @@ video {
     animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .\32xl\:animate-btn-ping-light-blue {
+    animation: ping-light-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .\32xl\:animate-small-ping-blue {
     animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
@@ -151632,6 +151810,10 @@ video {
     animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
+  .\32xl\:focus\:animate-btn-ping-light-blue:focus {
+    animation: ping-light-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
   .\32xl\:focus\:animate-small-ping-blue:focus {
     animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
@@ -151758,6 +151940,10 @@ video {
 
   .\32xl\:active\:animate-btn-ping-blue:active {
     animation: ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+  }
+
+  .\32xl\:active\:animate-btn-ping-light-blue:active {
+    animation: ping-light-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
   }
 
   .\32xl\:active\:animate-small-ping-blue:active {
