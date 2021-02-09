@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 
 const Field = ({
    errors,
-   children,
+   isSmall,
+   isDisabled,
    className,
+   children,
    ...props
 }) => {
 
@@ -23,6 +25,7 @@ const Field = ({
             onFocus: toggleFocus,
             // Used in TextField index.js and Select index.js
             withElements: true,
+            isDisabled,
          });
       }
 
@@ -45,7 +48,7 @@ const Field = ({
    });
    return (
       <div
-         className={`field ${focused && !errors ? 'field--focused' : ''} ${focused && errors ? 'field--focused--error' : ''} ${className || ''}`}
+         className={`field ${isDisabled ? 'field--disabled' : `${focused && !errors ? 'field--focused' : ''} ${focused && errors ? 'field--focused--error' : ''}`} ${isSmall ? 'field--small' : ''} ${className || ''}`}
          {...props}
       >
          {childrenWithProps}
