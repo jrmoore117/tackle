@@ -19,6 +19,39 @@ export const DefaultSelect = () => {
    });
    return (
       <Select {...set("tackle")}>
+         <Option defaultValue value="">Select an option</Option>
+         <Option value="hook">Hook</Option>
+         <Option value="line">Line</Option>
+         <Option value="sinker">Sinker</Option>
+      </Select>
+   );
+}
+
+export const SmallSelect = () => {
+   const { set } = useForm({
+      initialValues: {
+         tackle: '',
+      }
+   });
+   return (
+      <Select isSmall {...set("tackle")}>
+         <Option defaultValue value="">Select an option</Option>
+         <Option value="hook">Hook</Option>
+         <Option value="line">Line</Option>
+         <Option value="sinker">Sinker</Option>
+      </Select>
+   );
+}
+
+export const DisabledSelect = () => {
+   const { set } = useForm({
+      initialValues: {
+         tackle: '',
+      }
+   });
+   return (
+      <Select isDisabled {...set("tackle")}>
+         <Option defaultValue value="">Select an option</Option>
          <Option value="hook">Hook</Option>
          <Option value="line">Line</Option>
          <Option value="sinker">Sinker</Option>

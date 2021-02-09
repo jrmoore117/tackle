@@ -4,14 +4,17 @@ import PropTypes from 'prop-types';
 export const Select = ({
    value,
    errors,
-   children,
-   className,
+   isSmall,
+   isDisabled,
    withElements,
+   className,
+   children,
    ...props
 }) => (
    <select
-      className={`${withElements ? 'select--with-elements' : `select select--${errors ? 'error' : 'default'}`} ${value ? 'text-gray-900' : 'text-gray-600'} ${className || ''}`}
       value={value}
+      className={`${withElements ? 'select--with-elements' : `select select--${errors ? 'error' : 'default'}`} ${isSmall ? 'select--small' : ''} ${value ? 'text-gray-900' : 'text-gray-600'} ${className || ''}`}
+      disabled={isDisabled}
       {...props}
    >
       {children}
@@ -21,8 +24,10 @@ export const Select = ({
 Select.id = 'Select';
 
 Select.propTypes = {
+   isSmall: PropTypes.bool,
+   isDisabled: PropTypes.bool,
+   withElements: PropTypes.bool,
    className: PropTypes.string,
-   type: PropTypes.oneOf(['text', 'password']), // add other types later.
 }
 
 export const Option = ({
@@ -42,4 +47,5 @@ Option.id = 'Option';
 
 Option.propTypes = {
    value: PropTypes.string,
+   isDisabled: PropTypes.bool,
 }
