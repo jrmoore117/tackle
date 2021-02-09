@@ -7,7 +7,8 @@ const Tooltip = ({
    content,
    position,
    children,
-   className
+   className,
+   ...props
 }) => {
    
    const [visible, setVisible] = useState(false);
@@ -17,6 +18,7 @@ const Tooltip = ({
          onMouseEnter={() => setVisible(true)}
          onMouseLeave={() => setVisible(false)}
          className={`tooltipwrapper ${className || ''}`}
+         {...props}
       >
          <div className={visible ? `tooltipwrapper--${position}` : 'hidden'}>
             <Box color={color} variant="frame" className={`tooltip tooltip--${color} animate-fade-in-to-${position}`}>
