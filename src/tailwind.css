@@ -308,7 +308,7 @@
 
 /* ---------- DISABLED BUTTON ---------- */
 .button.button--primary--disabled {
-   @apply select-none text-gray-500 bg-gray-0 border-1 border-gray-200;
+   @apply select-none text-gray-500 bg-gray-0 border-1 border-gray-200 shadow-gray;
 }
 
 .button.button--secondary--disabled {
@@ -317,16 +317,16 @@
 
 /* ---------- PRIMARY BUTTON ---------- */
 .button--primary--default {
-   @apply text-gray-900 bg-gradient-to-b from-white to-gray-0 border-1 border-gray-200 shadow-gray;
+   @apply text-gray-900 bg-gradient-to-b from-white to-gray-0 border-1 border-gray-200 shadow-gray transition-colors duration-200;
 }
 .button--primary--default:focus {
-   @apply outline-none animate-btn-ping-blue;
+   @apply outline-none animate-btn-ping-light-blue;
 }
 .button.button--primary--default:active {
    @apply bg-gradient-to-b from-gray-0 to-gray-100 shadow-none;
 }
 .button--primary--default:hover {
-   @apply border-1 border-gray-100;
+   @apply border-1 border-gray-300;
 }
 
 .button--primary--white {
@@ -566,6 +566,40 @@
 
 .checkboxlabel {
    @apply text-gray-900 cursor-pointer select-none;
+}
+
+
+/* ---------- CHIP ---------- */
+.chip {
+   @apply pl-1.5 text-sm font-semibold tracking-wide select-none rounded-full inline-flex items-center justify-between;
+}
+
+.chip--blue {
+   @apply text-blue-500 bg-blue-0;
+}
+
+.chip--red {
+   @apply text-red-500 bg-red-0;
+}
+
+.chip--green {
+   @apply text-green-500 bg-green-0;
+}
+
+.chip--yellow {
+   @apply text-yellow-500 bg-yellow-0;
+}
+
+.chip--purple {
+   @apply text-purple-500 bg-purple-0;
+}
+
+.chip--indigo {
+   @apply text-indigo-500 bg-indigo-0;
+}
+
+.chip--gray {
+   @apply text-gray-900 bg-gray-100;
 }
 
 
@@ -981,11 +1015,23 @@
 /* ---------- TEXT FIELD & SELECT ---------- */
 .textfield,
 .field {
-   @apply h-10 px-2 font-sans text-sm text-gray-900 bg-white border-1 border-gray-200 shadow-gray rounded flex items-center transition duration-200 ease-in-out;
+   @apply appearance-none h-10 px-2 font-sans text-sm text-gray-900 placeholder-gray-600 bg-white border-1 border-gray-200 shadow-gray rounded flex items-center transition duration-200 ease-in-out;
+}
+
+.textfield.textfield--small,
+.field.field--small,
+.select.select--small {
+   @apply h-8;
+}
+
+.textfield:disabled,
+.field.field--disabled,
+.select:disabled {
+   @apply text-gray-600 select-none bg-gray-0 shadow-none;
 }
 
 .textfield--with-elements {
-   @apply w-full h-full;
+   @apply w-full h-full placeholder-gray-600;
 }
 
 .select {
