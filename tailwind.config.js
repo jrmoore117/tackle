@@ -56,6 +56,7 @@ module.exports = {
             'slide-in': 'slide-in 0.15s ease-in-out 1',
             'ping-blue': 'ping-blue 1s cubic-bezier(0,.656,0,.58) infinite',
             'btn-ping-blue': 'ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1',
+            'btn-ping-light-blue': 'ping-light-blue 0.65s cubic-bezier(0,.656,0,.58) 1',
             'small-ping-blue': 'small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1',
             'ping-red': 'ping-red 1s cubic-bezier(0,.656,0,.58) infinite',
             'btn-ping-red': 'ping-red 0.65s cubic-bezier(0,.656,0,.58) 1',
@@ -139,6 +140,10 @@ module.exports = {
             },
             'ping-blue': {
                '15%': { boxShadow: '0 0 0 3px #bdd7ff' },
+               '100%': { boxShadow: '0 0 0 6px transparent' },
+            },
+            'ping-light-blue': {
+               '15%': { boxShadow: '0 0 0 3px #e9f2ff' },
                '100%': { boxShadow: '0 0 0 6px transparent' },
             },
             'small-ping-blue': {
