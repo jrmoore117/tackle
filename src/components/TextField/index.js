@@ -5,13 +5,16 @@ import PropTypes from 'prop-types';
 const TextField = ({
   type,
   errors,
-  className,
+  isSmall,
+  isDisabled,
   withElements,
+  className,
   ...props
 }) => (
   <Input
     type={type}
-    className={`${withElements ? 'textfield--with-elements' : `textfield textfield--${errors ? 'error' : 'default'}`} placeholder-gray-600 ${className || ''}`}
+    className={`${withElements ? 'textfield--with-elements' : `textfield textfield--${errors ? 'error' : 'default'}`} ${isSmall ? 'textfield--small' : ''} ${className || ''}`}
+    disabled={isDisabled}
     {...props}
   />
 );
@@ -19,6 +22,9 @@ const TextField = ({
 TextField.id = 'TextField';
 
 TextField.propTypes = {
+  isSmall: PropTypes.bool,
+  isDisabled: PropTypes.bool,
+  withElements: PropTypes.bool,
   className: PropTypes.string,
   type: PropTypes.oneOf(['text', 'password']),
 }

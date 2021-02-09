@@ -21,8 +21,16 @@ export const DefaultTextField = () => (
    <TextField placeholder="Text Field" />
 );
 
-export const TextFieldWithLeftElement = () => (
-   <Field>
+export const SmallTextField = () => (
+   <TextField placeholder="Text Field" isSmall />
+);
+
+export const DisabledTextField = () => (
+   <TextField placeholder="Text Field" isDisabled />
+);
+
+export const SmallTextFieldWithLeftElement = () => (
+   <Field isSmall>
       <FieldElementLeft>
          <Icon as="Search" />
       </FieldElementLeft>
@@ -57,7 +65,7 @@ export const TextFieldWithConditionalRightElement = () => {
       reset();
    }
    return (
-      <div className="flex items-center">
+      <div className="flex">
          <Field {...set("search")}>
             <FieldElementLeft>
                <Icon as="Search" />
