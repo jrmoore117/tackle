@@ -8,8 +8,37 @@ export default {
 
 const Template = args => <Chip {...args} />;
 
-export const DefaultBlue = Template.bind({});
-DefaultBlue.args = {
+export const DefaultChip = Template.bind({});
+DefaultChip.args = {
    label: 'Chip',
-   color: 'blue',
+};
+
+export const RedChip = Template.bind({});
+RedChip.args = {
+   label: 'Chip',
+   color: 'red',
+};
+
+export const GreenChip = Template.bind({});
+GreenChip.args = {
+   label: 'Chip',
+   color: 'green',
+};
+
+export const PurpleChip = Template.bind({});
+PurpleChip.args = {
+   label: 'Chip',
+   color: 'purple',
+};
+
+export const IndigoChip = Template.bind({});
+IndigoChip.args = {
+   label: 'Chip',
+   color: 'indigo',
+};
+
+export const GrayChip = Template.bind({});
+GrayChip.args = {
+   label: 'Chip',
+   color: 'gray',
 };
