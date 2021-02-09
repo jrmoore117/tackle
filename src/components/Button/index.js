@@ -1,6 +1,5 @@
 import React from 'react';
 import Icon from 'components/Icon';
-import { Button as Btn } from 'reakit/Button';
 import PropTypes from 'prop-types';
 
 const Button = ({
@@ -16,9 +15,9 @@ const Button = ({
    rightIcon,
    ...props
 }) => (
-   <Btn
+   <button
       as={as}
-      className={`button button--${variant}--${color} ${isDisabled ? `button--${variant}--disabled` : ''} ${isSmall ? 'button--small' : ''} ${className || ''}`}
+      className={`button ${isDisabled ? `button--${variant}--disabled` : `button--${variant}--${color}`} ${isSmall ? 'button--small' : ''} ${className || ''}`}
       onAnimationEnd={(e) => e.target.blur()}
       disabled={isDisabled || isLoading}
       {...props}
@@ -30,7 +29,7 @@ const Button = ({
          : label}
       {rightIcon && !isLoading && 
          <Icon as={rightIcon} className="h-4 w-4 ml-2 -mr-1" />}
-   </Btn>
+   </button>
 );
 
 Button.defaultProps = {
