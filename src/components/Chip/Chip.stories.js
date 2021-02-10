@@ -25,6 +25,12 @@ GreenChip.args = {
    color: 'green',
 };
 
+// export const YellowChip = Template.bind({});
+// YellowChip.args = {
+//    label: 'Chip',
+//    color: 'yellow',
+// };
+
 export const PurpleChip = Template.bind({});
 PurpleChip.args = {
    label: 'Chip',
