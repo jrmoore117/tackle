@@ -28471,8 +28471,9 @@ video {
 /* ---------- CHECKBOX ---------- */
 
 .checkboxwrapper {
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  flex-grow: 0;
 }
 
 .checkbox {
@@ -28510,7 +28511,7 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(58, 136, 255, 0));
   --tw-gradient-to: #247bff;
   --tw-border-opacity: 1;
-  border-color: rgba(146, 189, 255, var(--tw-border-opacity));
+  border-color: rgba(189, 215, 255, var(--tw-border-opacity));
   border-width: 2px;
   --tw-shadow: 0 0 #0000;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -28545,7 +28546,7 @@ video {
   font-weight: 600;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  padding-left: 0.375rem;
+  padding-left: 0.25rem;
   letter-spacing: 0.025em;
   -webkit-user-select: none;
           user-select: none;
@@ -28719,7 +28720,6 @@ video {
 .icon--shaded--gray {
   --tw-bg-opacity: 1;
   background-color: rgba(237, 239, 242, var(--tw-bg-opacity));
-  padding: 0.25rem;
   --tw-text-opacity: 1;
   color: rgba(59, 61, 64, var(--tw-text-opacity));
 }
@@ -28727,7 +28727,6 @@ video {
 .icon--shaded--blue {
   --tw-bg-opacity: 1;
   background-color: rgba(233, 242, 255, var(--tw-bg-opacity));
-  padding: 0.25rem;
   --tw-text-opacity: 1;
   color: rgba(36, 123, 255, var(--tw-text-opacity));
 }
@@ -28735,7 +28734,6 @@ video {
 .icon--shaded--red {
   --tw-bg-opacity: 1;
   background-color: rgba(254, 236, 238, var(--tw-bg-opacity));
-  padding: 0.25rem;
   --tw-text-opacity: 1;
   color: rgba(245, 66, 81, var(--tw-text-opacity));
 }
@@ -28743,7 +28741,6 @@ video {
 .icon--shaded--green {
   --tw-bg-opacity: 1;
   background-color: rgba(230, 248, 241, var(--tw-bg-opacity));
-  padding: 0.25rem;
   --tw-text-opacity: 1;
   color: rgba(0, 186, 112, var(--tw-text-opacity));
 }
@@ -28751,7 +28748,6 @@ video {
 .icon--shaded--yellow {
   --tw-bg-opacity: 1;
   background-color: rgba(255, 249, 235, var(--tw-bg-opacity));
-  padding: 0.25rem;
   --tw-text-opacity: 1;
   color: rgba(251, 197, 58, var(--tw-text-opacity));
 }
@@ -28759,7 +28755,6 @@ video {
 .icon--shaded--purple {
   --tw-bg-opacity: 1;
   background-color: rgba(243, 241, 255, var(--tw-bg-opacity));
-  padding: 0.25rem;
   --tw-text-opacity: 1;
   color: rgba(134, 115, 255, var(--tw-text-opacity));
 }
@@ -28767,7 +28762,6 @@ video {
 .icon--shaded--indigo {
   --tw-bg-opacity: 1;
   background-color: rgba(235, 238, 247, var(--tw-bg-opacity));
-  padding: 0.25rem;
   --tw-text-opacity: 1;
   color: rgba(54, 85, 171, var(--tw-text-opacity));
 }
@@ -28782,7 +28776,6 @@ video {
 .icon--clickable--gray {
   --tw-bg-opacity: 1;
   background-color: rgba(237, 239, 242, var(--tw-bg-opacity));
-  padding: 0.25rem;
   --tw-text-opacity: 1;
   color: rgba(59, 61, 64, var(--tw-text-opacity));
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
@@ -28805,7 +28798,6 @@ video {
 .icon--clickable--blue {
   --tw-bg-opacity: 1;
   background-color: rgba(233, 242, 255, var(--tw-bg-opacity));
-  padding: 0.25rem;
   --tw-text-opacity: 1;
   color: rgba(36, 123, 255, var(--tw-text-opacity));
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
@@ -28832,7 +28824,6 @@ video {
 .icon--clickable--red {
   --tw-bg-opacity: 1;
   background-color: rgba(254, 236, 238, var(--tw-bg-opacity));
-  padding: 0.25rem;
   --tw-text-opacity: 1;
   color: rgba(245, 66, 81, var(--tw-text-opacity));
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
@@ -28859,7 +28850,6 @@ video {
 .icon--clickable--green {
   --tw-bg-opacity: 1;
   background-color: rgba(230, 248, 241, var(--tw-bg-opacity));
-  padding: 0.25rem;
   --tw-text-opacity: 1;
   color: rgba(0, 186, 112, var(--tw-text-opacity));
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
@@ -28886,7 +28876,6 @@ video {
 .icon--clickable--yellow {
   --tw-bg-opacity: 1;
   background-color: rgba(255, 249, 235, var(--tw-bg-opacity));
-  padding: 0.25rem;
   --tw-text-opacity: 1;
   color: rgba(251, 197, 58, var(--tw-text-opacity));
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
@@ -28913,7 +28902,6 @@ video {
 .icon--clickable--purple {
   --tw-bg-opacity: 1;
   background-color: rgba(243, 241, 255, var(--tw-bg-opacity));
-  padding: 0.25rem;
   --tw-text-opacity: 1;
   color: rgba(134, 115, 255, var(--tw-text-opacity));
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
@@ -28940,7 +28928,6 @@ video {
 .icon--clickable--indigo {
   --tw-bg-opacity: 1;
   background-color: rgba(235, 238, 247, var(--tw-bg-opacity));
-  padding: 0.25rem;
   --tw-text-opacity: 1;
   color: rgba(54, 85, 171, var(--tw-text-opacity));
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
@@ -29169,7 +29156,7 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(58, 136, 255, 0));
   --tw-gradient-to: #247bff;
   --tw-border-opacity: 1;
-  border-color: rgba(146, 189, 255, var(--tw-border-opacity));
+  border-color: rgba(189, 215, 255, var(--tw-border-opacity));
   border-width: 2px;
   --tw-shadow: 0 0 #0000;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -29411,7 +29398,8 @@ video {
 }
 
 .tabmarker {
-  border-radius: 0.25rem;
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
   flex-shrink: 0;
   height: 0.125rem;
   width: 100%;
@@ -29756,6 +29744,12 @@ video {
   font-size: 0.875rem;
   line-height: 1.25rem;
   padding: 1rem;
+}
+
+.tooltip.tooltip--small {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding: 0.5rem;
 }
 
 .tooltip--blue {
