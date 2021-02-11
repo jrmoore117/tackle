@@ -27,16 +27,18 @@ export const TooltipWithContent = () => (
             variant="shaded"
             isRounded
             size={8}
+            padding={1}
          />
       </Tooltip>
    </div>
 )
 
-export const TooltipWithTextToLeft = () => (
+export const SmallTooltipWithTextToLeft = () => (
    <div className="my-10">
       <Tooltip
          color="indigo"
          content="Now you know."
+         isSmall
          position="l"
          className="ml-36"
       >
@@ -46,16 +48,18 @@ export const TooltipWithTextToLeft = () => (
             variant="shaded"
             isRounded
             size={8}
+            padding={1}
          />
       </Tooltip>
    </div>
 );
 
-export const TooltipWithTextToTop = () => (
+export const SmallTooltipWithTextToTop = () => (
    <div className="my-10">
       <Tooltip
          color="green"
          content="Now you know."
+         isSmall
          position="t"
          className="mt-4 ml-16"
       >
@@ -65,16 +69,18 @@ export const TooltipWithTextToTop = () => (
             variant="shaded"
             isRounded
             size={8}
+            padding={1}
          />
       </Tooltip>
    </div>
 );
 
-export const TooltipWithTextToBottom = () => (
+export const SmallTooltipWithTextToBottom = () => (
    <div className="my-10">
       <Tooltip
          color="purple"
          content="Now you know."
+         isSmall
          position="b"
          className="mb-4 ml-16"
       >
@@ -84,6 +90,7 @@ export const TooltipWithTextToBottom = () => (
             variant="shaded"
             isRounded
             size={8}
+            padding={1}
          />
       </Tooltip>
    </div>

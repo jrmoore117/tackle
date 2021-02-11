@@ -5,6 +5,7 @@ import Box from 'components/Box';
 const Tooltip = ({
    color,
    content,
+   isSmall,
    position,
    children,
    className,
@@ -21,7 +22,7 @@ const Tooltip = ({
          {...props}
       >
          <div className={visible ? `tooltipwrapper--${position}` : 'hidden'}>
-            <Box color={color} variant="frame" className={`tooltip tooltip--${color} animate-fade-in-to-${position}`}>
+            <Box color={color} variant="frame" className={`tooltip tooltip--${color} ${isSmall ? 'tooltip--small' : ''} animate-fade-in-to-${position}`}>
                {content}
             </Box>
          </div>
@@ -37,6 +38,7 @@ Tooltip.defaultProps = {
 
 Tooltip.propTypes = {
    color: PropTypes.string,
+   isSmall: PropTypes.bool,
    position: PropTypes.string,
    className: PropTypes.string,
 }
