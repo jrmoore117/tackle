@@ -14,11 +14,9 @@ export const ExampleCheckbox = () => {
       },
    });
    return(
-      <form>
-         <Checkbox
-            {...set("checked")}
-            label={values.checked ? 'True' : 'False'}
-         />
-      </form>
+      <Checkbox
+         {...set("checked")}
+         label={values.checked ? 'True' : 'False'}
+      />
    );
 }
