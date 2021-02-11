@@ -543,7 +543,7 @@
 
 /* ---------- CHECKBOX ---------- */
 .checkboxwrapper {
-   @apply flex items-center;
+   @apply inline-flex items-center;
 }
 
 .checkbox {
@@ -553,7 +553,7 @@
    @apply bg-gradient-to-b from-gray-0 to-gray-100;
 }
 .checkbox:checked {
-   @apply bg-gradient-to-b from-blue-400 to-blue-500 border-2 border-blue-200 shadow-none animate-small-ping-blue;
+   @apply bg-gradient-to-b from-blue-400 to-blue-500 border-2 border-blue-100 shadow-none animate-small-ping-blue;
 }
 .checkbox::before {
    content: url("components/Checkbox/assets/check.svg");
@@ -571,7 +571,7 @@
 
 /* ---------- CHIP ---------- */
 .chip {
-   @apply pl-1.5 text-sm font-semibold tracking-wide select-none rounded-full inline-flex items-center justify-between;
+   @apply pl-1 text-sm font-semibold tracking-wide select-none rounded-full inline-flex items-center justify-between;
 }
 
 .chip--blue {
@@ -851,7 +851,7 @@
    @apply bg-gradient-to-b from-gray-0 to-gray-100;
 }
 .radio:checked {
-   @apply bg-gradient-to-b from-blue-400 to-blue-500 border-2 border-blue-200 shadow-none animate-small-ping-blue;
+   @apply bg-gradient-to-b from-blue-400 to-blue-500 border-2 border-blue-100 shadow-none animate-small-ping-blue;
 }
 
 .radiolabel {
@@ -1120,6 +1120,10 @@
 
 .tooltip {
    @apply p-4 text-sm inline-block;
+}
+
+.tooltip.tooltip--small {
+   @apply p-2 text-xs;
 }
 
 .tooltip--blue {
