@@ -8,10 +8,11 @@ export default {
 
 const Template = args => <Icon {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
-   as: 'Edit',
-};
+export const FeatherIcons = () => (
+   <div className="flex items-center font-medium">
+      Tackle uses Feather <Icon as="Feather" size={5} className="mx-1" /> icons.
+   </div>
+);
 
 export const SolidRed = Template.bind({});
 SolidRed.args = {
@@ -26,20 +27,31 @@ Green.args = {
    color: 'green',
 };
 
-export const LargeSolidYellow = Template.bind({});
-LargeSolidYellow.args = {
-   as: 'Shield',
+export const LargeShadedBlue = Template.bind({});
+LargeShadedBlue.args = {
+   as: 'Calendar',
    size: 10,
-   color: 'yellow',
-   variant: 'clickable',
+   padding: 2,
+   color: 'blue',
+   variant: 'shaded',
    onClick: () => {},
-   isSolid: true,
+};
+
+export const LargeShadedGray = Template.bind({});
+LargeShadedGray.args = {
+   as: 'MapPin',
+   size: 10,
+   padding: 2,
+   color: 'gray',
+   variant: 'shaded',
+   onClick: () => {},
 };
 
 export const LargeShadedPurple = Template.bind({});
 LargeShadedPurple.args = {
    as: 'Twitch',
    size: 10,
+   padding: 2,
    color: 'purple',
    variant: 'shaded',
 };
@@ -48,6 +60,7 @@ export const ShadedGreenRounded = Template.bind({});
 ShadedGreenRounded.args = {
    as: 'Check',
    size: 6,
+   padding: 1,
    isRounded: true,
    color: 'green',
    variant: 'shaded',
@@ -57,6 +70,7 @@ export const ClickableBlueRounded = Template.bind({});
 ClickableBlueRounded.args = {
    as: 'X',
    size: 6,
+   padding: 1,
    color: 'blue',
    isRounded: true,
    variant: 'clickable',

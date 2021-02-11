@@ -45,7 +45,7 @@ export const DrawerHeader = ({
       className={`drawerheader ${className}`}
       {...props}
    >
-      <Icon as="X" variant="clickable" color="blue" size={10} isRounded onClick={hide} className="drawerheaderbutton" />
+      <Icon as="X" variant="clickable" color="blue" size={10} padding={2} isRounded onClick={hide} className="drawerheaderbutton" />
       {children}
    </div>
 );

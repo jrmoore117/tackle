@@ -13,7 +13,7 @@ const Chip = ({
       {...props}
    >
       {label}
-      <Icon as="X" color={color} variant="clickable" isRounded size={5} className="ml-0.5" />
+      <Icon as="X" color={color} variant="clickable" isRounded size={5} padding={0.5} className="ml-0.5" />
    </span>
 );
 
