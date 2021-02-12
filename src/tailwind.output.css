@@ -28020,9 +28020,10 @@ video {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
   --tw-gradient-from: #3a88ff;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(58, 136, 255, 0));
-  --tw-gradient-to: #247bff;
+  --tw-gradient-stops: var(--tw-gradient-from), #247bff, var(--tw-gradient-to, rgba(36, 123, 255, 0));
+  --tw-gradient-to: #206fe6;
   --tw-border-opacity: 1;
-  border-color: rgba(36, 123, 255, var(--tw-border-opacity));
+  border-color: rgba(32, 111, 230, var(--tw-border-opacity));
   border-width: 1px;
   --tw-shadow: 0 1px 2px 0 #92bdff;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -28473,7 +28474,6 @@ video {
 .checkboxwrapper {
   display: inline-flex;
   align-items: center;
-  flex-grow: 0;
 }
 
 .checkbox {

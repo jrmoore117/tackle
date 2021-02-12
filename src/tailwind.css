@@ -343,7 +343,7 @@
 }
 
 .button--primary--blue {
-   @apply text-white bg-gradient-to-b from-blue-400 to-blue-500 border-1 border-blue-500 shadow-blue;
+   @apply text-white bg-gradient-to-b from-blue-400 via-blue-500 to-blue-600 border-1 border-blue-600 shadow-blue;
 }
 .button--primary--blue:focus {
    @apply outline-none animate-btn-ping-blue;
