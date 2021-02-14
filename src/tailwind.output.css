@@ -29073,6 +29073,87 @@ video {
 
 /* ---------- MODAL ---------- */
 
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.menucategory {
+  border-radius: 0.25rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-right: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgba(137, 141, 148, var(--tw-text-opacity));
+}
+
+.menuitem {
+  border-radius: 0.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-bottom: 0.25rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.menuitem--inactive:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+}
+
+.menuitem--active--blue {
+  --tw-bg-opacity: 1;
+  background-color: rgba(233, 242, 255, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(36, 123, 255, var(--tw-text-opacity));
+}
+
+.menuitem--active--red {
+  --tw-bg-opacity: 1;
+  background-color: rgba(254, 236, 238, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(245, 66, 81, var(--tw-text-opacity));
+}
+
+.menuitem--active--green {
+  --tw-bg-opacity: 1;
+  background-color: rgba(230, 248, 241, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(0, 186, 112, var(--tw-text-opacity));
+}
+
+.menuitem--active--yellow {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 249, 235, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(251, 197, 58, var(--tw-text-opacity));
+}
+
+.menuitem--active--purple {
+  --tw-bg-opacity: 1;
+  background-color: rgba(243, 241, 255, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(134, 115, 255, var(--tw-text-opacity));
+}
+
+.menuitem--active--indigo {
+  --tw-bg-opacity: 1;
+  background-color: rgba(235, 238, 247, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(54, 85, 171, var(--tw-text-opacity));
+}
+
+/* ---------- MODAL ---------- */
+
 .modal--small {
   padding: 1rem;
   --tw-shadow: 0 10px 25px -3px #d6dae1;
