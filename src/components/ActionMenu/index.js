@@ -79,7 +79,7 @@ export const ActionMenuItem = ({
 }) => (
    <div
       onClick={onClick}
-      className={`actionmenuitem ${className}`}
+      className={`actionmenuitem ${className || ''}`}
       {...props}
    >
       {icon && <Icon as={icon}  className="actionmenuicon" />}
