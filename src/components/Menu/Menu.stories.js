@@ -21,12 +21,17 @@ export const BlueMenu = () => {
    );
 }
 
-export const BlueMenuWithIcons = () => {
+export const GreenMenu = () => {
    return (
-      <Menu>
-         <MenuItem icon="User" label="Profile" />
-         <MenuItem icon="Bell" label="Notifications" isActive />
+      <Menu color="green">
+         <MenuCategory label="Tackle" />
+         <MenuItem label="Hook" />
+         <MenuItem label="Line" isActive />
          <MenuItem label="Sinker" />
+         <MenuCategory label="Numbers" />
+         <MenuItem label="One" />
+         <MenuItem label="Two" />
+         <MenuItem label="Three" />
       </Menu>
    );
 }
