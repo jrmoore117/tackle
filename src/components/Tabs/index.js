@@ -25,6 +25,7 @@ const TabLabel = ({
             <Icon
                as="X"
                isRounded
+               padding={1}
                color={color}
                variant="clickable"
                className={hover && multipleTabs ? 'tabdelete-hover' : 'tabdelete-default'}
@@ -98,6 +99,7 @@ export const Tabs = ({
                   as="Plus"
                   size={5}
                   isRounded
+                  padding={1}
                   color={color}
                   variant="clickable"
                   className="mb-2"
