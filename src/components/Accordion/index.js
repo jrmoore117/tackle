@@ -26,7 +26,10 @@ export const Accordion = ({
       return null;
    });
    return (
-      <div className={`accordion ${className || ''}`}>
+      <div
+         className={`accordion ${className || ''}`}
+         {...props}
+      >
          {childrenWithProps}
       </div>
    );
