@@ -814,6 +814,49 @@
 }
 
 
+/* ---------- MENU ---------- */
+.menu {
+   @apply flex flex-col;
+}
+
+
+.menucategory {
+   @apply pr-2 py-1 text-sm text-gray-700 font-medium rounded;
+}
+
+.menuitem {
+   @apply px-2 py-1 mb-1 text-sm font-medium rounded flex items-center cursor-pointer;
+}
+
+.menuitem--inactive:hover {
+   @apply bg-gray-0;
+}
+
+.menuitem--active--blue {
+   @apply bg-blue-0 text-blue-500;
+}
+
+.menuitem--active--red {
+   @apply bg-red-0 text-red-500;
+}
+
+.menuitem--active--green {
+   @apply bg-green-0 text-green-500;
+}
+
+.menuitem--active--yellow {
+   @apply bg-yellow-0 text-yellow-500;
+}
+
+.menuitem--active--purple {
+   @apply bg-purple-0 text-purple-500;
+}
+
+.menuitem--active--indigo {
+   @apply bg-indigo-0 text-indigo-500;
+}
+
+
 /* ---------- MODAL ---------- */
 .modal--small {
    @apply w-96 p-4 shadow-dark-gray;
