@@ -21,9 +21,9 @@ export const BlueMenu = () => {
    );
 }
 
-export const GreenMenuWithReachRouterLinks = () => {
+export const GreenMenu = () => {
    return (
-      <Menu color="green" withLinks>
+      <Menu color="green">
          <MenuCategory label="Tackle" />
          <MenuItem label="Hook" />
          <MenuItem label="Line" isActive />
