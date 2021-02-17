@@ -24,7 +24,7 @@ AlertRed.args = {
    color: 'red',
    icon: 'AlertCircle',
    message: 'An error has occurred!',
-   action: <Icon as="X" color="red" variant="clickable" size={6} />,
+   action: <Icon as="X" color="red" variant="clickable" size={6} padding={1} />,
 };
 
 export const AlertYellow = Template.bind({});
@@ -32,7 +32,7 @@ AlertYellow.args = {
    color: 'yellow',
    icon: 'AlertCircle',
    message: 'Warning! This cannot be undone.',
-   action: <Icon as="X" color="yellow" variant="clickable" size={6} />,
+   action: <Icon as="X" color="yellow" variant="clickable" size={6} padding={1} />,
 };
 
 export const AlertGreen = Template.bind({});
@@ -40,7 +40,7 @@ AlertGreen.args = {
    color: 'green',
    icon: 'CheckCircle',
    message: 'Your transaction has been approved!',
-   action: <Icon as="X" color="green" variant="clickable" size={6} />,
+   action: <Icon as="X" color="green" variant="clickable" size={6} padding={1} />,
 };
 
 export const AlertPurple = Template.bind({});
@@ -48,7 +48,7 @@ AlertPurple.args = {
    color: 'purple',
    icon: 'Info',
    message: "A new version of Tackle will be available when it's available.",
-   action: <Icon as="X" color="purple" variant="clickable" size={6} />,
+   action: <Icon as="X" color="purple" variant="clickable" size={6} padding={1} />,
 };
 
 export const AlertIndigo = Template.bind({});
@@ -57,5 +57,5 @@ AlertIndigo.args = {
    icon: 'Clock',
    heading: 'Update Scheduled',
    message: "Your update has been scheduled for tomorrow.",
-   action: <Icon as="X" color="indigo" variant="clickable" size={6} />,
+   action: <Icon as="X" color="indigo" variant="clickable" size={6} padding={1} />,
 };
