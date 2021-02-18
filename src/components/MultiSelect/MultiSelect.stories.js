@@ -10,6 +10,7 @@ export const MultiSelectWithLabelAndIcons = () => {
    return (
       <MultiSelect
          className="mb-32"
+         placeholder="Select your tackle"
          items={[
             { label: 'Hook', value: 'hook' },
             { label: 'Line', value: 'line' },

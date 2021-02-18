@@ -1,11 +1,9 @@
 import React, { useRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Field from 'components/Field';
-import { FieldElementLeft } from 'components/FieldElement';
 import TextField from 'components/TextField';
 import Chip from 'components/Chip';
 import Checkbox from 'components/Checkbox';
-import Icon from 'components/Icon';
 
 const MultiSelect = ({
    icon,
@@ -16,6 +14,7 @@ const MultiSelect = ({
    position,
    children,
    className,
+   placeholder,
    ...props
 }) => {
 
@@ -55,7 +54,7 @@ const MultiSelect = ({
    }
 
    return (
-      <div ref={multiSelectRef} className="relative" {...props}>
+      <div ref={multiSelectRef} className={`relative ${className || ''}`} {...props}>
          <Field className="w-full">
             <span className="inline-flex items-center">
                {selected.map((item, i) => (
@@ -71,6 +70,7 @@ const MultiSelect = ({
             <TextField
                value={searchString}
                onChange={handleOnChange}
+               placeholder={placeholder}
                onClick={() => setIsOpen(true)}
             />
          </Field>
