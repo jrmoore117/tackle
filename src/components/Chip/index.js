@@ -5,15 +5,26 @@ import Icon from 'components/Icon';
 const Chip = ({
    label,
    color,
+   isSmall,
+   onClick,
    className,
    ...props
 }) => (
    <span
-      className={`chip chip--${color} ${className || ''}`}
+      className={`chip chip--${color} ${isSmall ? 'chip--small' : ''} ${className || ''}`}
       {...props}
    >
       {label}
-      <Icon as="X" color={color} variant="clickable" isRounded size={5} padding={0.5} className="ml-0.5" />
+      <Icon
+         as="X"
+         color={color}
+         variant="clickable"
+         isRounded
+         size={5}
+         padding={1}
+         className="ml-0.5"
+         onClick={onClick}
+      />
    </span>
 );
 
