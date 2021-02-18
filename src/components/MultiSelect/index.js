@@ -11,6 +11,7 @@ const MultiSelect = ({
    color,
    items,
    variant,
+   isSmall,
    position,
    children,
    className,
@@ -55,7 +56,7 @@ const MultiSelect = ({
 
    return (
       <div ref={multiSelectRef} className={`relative ${className || ''}`} {...props}>
-         <Field className="w-full">
+         <Field className="w-full" isSmall={isSmall}>
             <span className="inline-flex items-center">
                {selected.map((item, i) => (
                   <Chip
