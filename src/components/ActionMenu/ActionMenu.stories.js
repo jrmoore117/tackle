@@ -11,6 +11,7 @@ export const ActionMenuWithLabelAndIcons = () => {
    const [isOpen, setIsOpen] = React.useState(false);
    return (
       <ActionMenu
+         color="blue"
          isOpen={isOpen}
          toggle={setIsOpen}
          icon="MoreHorizontal"
