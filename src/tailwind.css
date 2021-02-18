@@ -608,7 +608,11 @@
 
 /* ---------- CHIP ---------- */
 .chip {
-   @apply pl-1 text-sm font-semibold tracking-wide select-none rounded-full inline-flex items-center justify-between;
+   @apply pl-1.5 text-sm font-semibold tracking-wide select-none rounded-full inline-flex items-center justify-between;
+}
+
+.chip.chip--small {
+   @apply text-xs font-medium tracking-normal;
 }
 
 .chip--blue {
