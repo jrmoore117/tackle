@@ -54,6 +54,21 @@ const MultiSelect = ({
       setSearchString(value);
    }
 
+   const handleOnKeyUp = (e) => {
+      if (e.key === 'Enter') {
+         const searchStringMatch = options.find(item => item.label.toLowerCase() === searchString.toLocaleLowerCase());
+         const matchAlreadySelected = searchStringMatch
+            ? selected.find(item => item.label === searchStringMatch.label)
+            : null;
+         
+         if (searchStringMatch && !matchAlreadySelected) {
+            setSearchString('');
+            setOptions(uniqueItems);
+            setSelected([...selected, searchStringMatch]);
+         }
+      }
+   }
+
    return (
       <div ref={multiSelectRef} className={`relative ${className || ''}`} {...props}>
          <Field className="w-full" isSmall={isSmall}>
@@ -70,8 +85,9 @@ const MultiSelect = ({
             </span>
             <TextField
                value={searchString}
-               onChange={handleOnChange}
                placeholder={placeholder}
+               onKeyUp={handleOnKeyUp}
+               onChange={handleOnChange}
                onClick={() => setIsOpen(true)}
             />
          </Field>
