@@ -29206,6 +29206,69 @@ video {
   margin-top: 1rem;
 }
 
+/* ---------- MULTISELECT ---------- */
+
+.multiselect-wrapper {
+  position: relative;
+}
+
+.item-list {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  --tw-border-opacity: 1;
+  border-color: rgba(237, 239, 242, var(--tw-border-opacity));
+  border-radius: 0.25rem;
+  border-width: 1px;
+  display: inline-block;
+  font-family: Poppins, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  position: absolute;
+  right: 0px;
+  left: 0px;
+  top: 100%;
+  --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-text-opacity: 1;
+  color: rgba(59, 61, 64, var(--tw-text-opacity));
+  z-index: 10;
+  animation: fade-in-to-b 0.15s ease-in 1;
+}
+
+.selected-items {
+  display: inline-flex;
+  align-items: center;
+}
+
+.multiselect-item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  -webkit-user-select: none;
+          user-select: none;
+  white-space: nowrap;
+}
+
+.multiselect-item:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+}
+
+.multiselect-no-results {
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgba(176, 182, 191, var(--tw-text-opacity));
+}
+
 /* ---------- RADIO BUTTONS ---------- */
 
 .radiowrapper {
