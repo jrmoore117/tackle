@@ -1,9 +1,9 @@
 import React, { useRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import Field from 'components/Field';
-import TextField from 'components/TextField';
 import Chip from 'components/Chip';
+import Field from 'components/Field';
 import Checkbox from 'components/Checkbox';
+import TextField from 'components/TextField';
 
 const MultiSelect = ({
    icon,
@@ -28,9 +28,9 @@ const MultiSelect = ({
          if (multiSelectRef.current.contains(e.target)) return;
          setIsOpen(false);
       }
-      document.addEventListener("mousedown", handleClickAway);
+      document.addEventListener('mousedown', handleClickAway);
       return () => {
-         document.removeEventListener("mousedown", handleClickAway);
+         document.removeEventListener('mousedown', handleClickAway);
       };
    }, [setIsOpen]);
 
@@ -45,7 +45,7 @@ const MultiSelect = ({
    const [selected, setSelected] = useState([]);
 
    // search string and option filter
-   const [searchString, setSearchString] = useState("");
+   const [searchString, setSearchString] = useState('');
    const handleOnChange = (e) => {
       const { value } = e.target;
       value
@@ -70,9 +70,9 @@ const MultiSelect = ({
    }
 
    return (
-      <div ref={multiSelectRef} className={`relative ${className || ''}`} {...props}>
+      <div ref={multiSelectRef} className={`multiselect-wrapper ${className || ''}`} {...props}>
          <Field className="w-full" isSmall={isSmall}>
-            <span className="inline-flex items-center">
+            <span className="selected-items">
                {selected.map((item, i) => (
                   <Chip
                      isSmall
@@ -91,7 +91,7 @@ const MultiSelect = ({
                onClick={() => setIsOpen(true)}
             />
          </Field>
-         <ul className={isOpen ? `py-2 font-sans text-sm text-gray-900 bg-white border-1 border-gray-100 shadow-md rounded inline-block z-10 mt-2 absolute left-0 right-0 top-full animate-fade-in-to-b` : 'hidden'}>
+         <ul className={isOpen ? 'item-list' : 'hidden'}>
             {options.map((item, i) => (
                <MultiSelectItem
                   isSelected={selected.includes(item)}
@@ -102,7 +102,7 @@ const MultiSelect = ({
                />
             ))}
             {options.length === 0 && (
-               <div className="flex items-center text-gray-600 px-2">
+               <div className="multiselect-no-results">
                   No results for "{searchString}"
                </div>
             )}
@@ -138,7 +138,7 @@ export const MultiSelectItem = ({
 }) => (
    <li
       onClick={isSelected ? removeItem : addItem}
-      className={`h-8 px-2 flex items-center cursor-pointer select-none whitespace-nowrap hover:bg-gray-0 ${className || ''}`}
+      className={`multiselect-item ${className || ''}`}
       {...props}
    >
       <Checkbox checked={isSelected} />
