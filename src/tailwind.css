@@ -887,6 +887,31 @@
 }
 
 
+/* ---------- MULTISELECT ---------- */
+.multiselect-wrapper {
+   @apply relative;
+}
+
+.item-list {
+   @apply mt-2 py-2 font-sans text-sm text-gray-900 bg-white border-1 border-gray-100 shadow-md rounded inline-block z-10 absolute left-0 right-0 top-full animate-fade-in-to-b;
+}
+
+.selected-items {
+   @apply inline-flex items-center;
+}
+
+.multiselect-item {
+   @apply h-8 px-2 flex items-center cursor-pointer select-none whitespace-nowrap;
+}
+.multiselect-item:hover {
+   @apply bg-gray-0;
+}
+
+.multiselect-no-results {
+   @apply flex items-center text-gray-600 px-2;
+}
+
+
 /* ---------- RADIO BUTTONS ---------- */
 .radiowrapper {
    @apply mr-4 flex items-center;
