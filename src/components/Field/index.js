@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 const Field = ({
    errors,
    isSmall,
+   isFocused,
    isDisabled,
    className,
    children,
@@ -15,6 +16,9 @@ const Field = ({
          ? setFocused(true)
          : setFocused(false)
    }
+
+   // if isFocused prop has value, assign its value to fieldFocus to control classes; otherwise, built-in state controls classes.
+   const fieldFocus = typeof isFocused !== 'undefined' ? isFocused : focused;
 
    const childrenWithProps = children.map((child, i) => {
 
@@ -48,7 +52,7 @@ const Field = ({
    });
    return (
       <div
-         className={`field ${isDisabled ? 'field--disabled' : `${focused && !errors ? 'field--focused' : ''} ${focused && errors ? 'field--focused--error' : ''}`} ${isSmall ? 'field--small' : ''} ${className || ''}`}
+         className={`field ${isDisabled ? 'field--disabled' : `${fieldFocus && !errors ? 'field--focused' : ''} ${fieldFocus && errors ? 'field--focused--error' : ''}`} ${isSmall ? 'field--small' : ''} ${className || ''}`}
          {...props}
       >
          {childrenWithProps}
