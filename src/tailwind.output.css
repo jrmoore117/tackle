@@ -29224,6 +29224,8 @@ video {
   font-size: 0.875rem;
   line-height: 1.25rem;
   margin-top: 0.5rem;
+  max-height: 15rem;
+  overflow-y: scroll;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   position: absolute;
