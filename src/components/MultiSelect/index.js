@@ -6,20 +6,15 @@ import Checkbox from 'components/Checkbox';
 import TextField from 'components/TextField';
 
 const MultiSelect = ({
-   icon,
-   label,
-   color,
    items,
-   variant,
    isSmall,
-   position,
-   children,
+   position, // currently unused
    className,
    placeholder,
    ...props
 }) => {
 
-   // handle click away from absolute position options list
+   // handle click away from position:absolute options list
    const multiSelectRef = useRef();
    const [isOpen, setIsOpen] = useState(false);
 
@@ -44,7 +39,7 @@ const MultiSelect = ({
    const [options, setOptions] = useState(uniqueItems);
    const [selected, setSelected] = useState([]);
 
-   // search string and option filter
+   // filter - compare search string to options
    const [searchString, setSearchString] = useState('');
    const handleOnChange = (e) => {
       const { value } = e.target;
@@ -54,6 +49,7 @@ const MultiSelect = ({
       setSearchString(value);
    }
 
+   // select matching item when Enter is pressed
    const handleOnKeyUp = (e) => {
       if (e.key === 'Enter') {
          const searchStringMatch = options.find(item => item.label.toLowerCase() === searchString.toLocaleLowerCase());
@@ -70,13 +66,21 @@ const MultiSelect = ({
    }
 
    return (
-      <div ref={multiSelectRef} className={`multiselect-wrapper ${className || ''}`} {...props}>
-         <Field className="w-full" isSmall={isSmall}>
+      <div
+         ref={multiSelectRef}
+         className={`multiselect-wrapper ${className}`}
+         {...props}
+      >
+         <Field
+            isSmall={isSmall}
+            isFocused={isOpen}
+            className="w-full"
+         >
             <span className="selected-items">
                {selected.map((item, i) => (
                   <Chip
-                     isSmall
                      key={`selecteditem-${i}`}
+                     isSmall
                      label={item.label}
                      onClick={() => setSelected(selected.filter(i => i.label !== item.label))}
                      className={i === selected.length - 1 ? 'mr-2' : 'mr-1'}
@@ -85,18 +89,18 @@ const MultiSelect = ({
             </span>
             <TextField
                value={searchString}
-               placeholder={placeholder}
                onKeyUp={handleOnKeyUp}
                onChange={handleOnChange}
+               placeholder={placeholder}
                onClick={() => setIsOpen(true)}
             />
          </Field>
          <ul className={isOpen ? 'item-list' : 'hidden'}>
             {options.map((item, i) => (
                <MultiSelectItem
-                  isSelected={selected.includes(item)}
                   key={`multiselectitem-${i}`}
                   label={item.label}
+                  isSelected={selected.includes(item)}
                   addItem={() => setSelected([...selected, item])}
                   removeItem={() => setSelected(selected.filter(i => i.label !== item.label))}
                />
@@ -111,34 +115,32 @@ const MultiSelect = ({
    );
 }
 
-MultiSelect.id = 'MultiSelect';
-
 MultiSelect.defaultProps = {
+   position: '',
+   className: '',
+   isSmall: false,
+   placeholder: '',
 }
 
 MultiSelect.propTypes = {
-   icon: PropTypes.string,
-   label: PropTypes.string,
-   color: PropTypes.string,
-   variant: PropTypes.string,
    position: PropTypes.string,
    className: PropTypes.string,
+   items: PropTypes.array.isRequired
 }
 
 export default MultiSelect;
 
+
 export const MultiSelectItem = ({
-   icon,
    label,
    addItem,
    removeItem,
-   className,
    isSelected,
    ...props
 }) => (
    <li
+      className="multiselect-item"
       onClick={isSelected ? removeItem : addItem}
-      className={`multiselect-item ${className || ''}`}
       {...props}
    >
       <Checkbox checked={isSelected} />
@@ -147,8 +149,8 @@ export const MultiSelectItem = ({
 );
 
 MultiSelectItem.propTypes = {
-   icon: PropTypes.string,
-   onClick: PropTypes.func,
-   className: PropTypes.string,
    label: PropTypes.string.isRequired,
+   addItem: PropTypes.func.isRequired,
+   removeItem: PropTypes.func.isRequired,
+   isSelected: PropTypes.bool.isRequired,
 }
