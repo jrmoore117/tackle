@@ -6,9 +6,12 @@ import Checkbox from 'components/Checkbox';
 import TextField from 'components/TextField';
 
 const MultiSelect = ({
+   name,
+   errors,   
    items,
    isSmall,
    position, // currently unused
+   onChange,
    className,
    placeholder,
    ...props
@@ -65,6 +68,21 @@ const MultiSelect = ({
       }
    }
 
+   const handleSetSelected = (selectedItems) => {
+      // onChange handled in useForm hook
+      if (onChange) {
+         onChange({ 
+            target: { 
+               name: name,
+               value: selectedItems,
+               type: 'multiselect',
+               dataset: {}
+            }
+         });
+      }
+      setSelected(selectedItems);
+   }
+   
    return (
       <div
          ref={multiSelectRef}
@@ -72,6 +90,7 @@ const MultiSelect = ({
          {...props}
       >
          <Field
+            errors={errors}
             isSmall={isSmall}
             isFocused={isOpen}
             className="w-full"
@@ -82,10 +101,11 @@ const MultiSelect = ({
                      key={`selecteditem-${i}`}
                      isSmall
                      label={item.label}
-                     onClick={() => setSelected(selected.filter(i => i.label !== item.label))}
+                     onClick={() => handleSetSelected(selected.filter(i => i.label !== item.label))}
                      className={i === selected.length - 1 ? 'mr-2' : 'mr-1'}
                   />
                ))}
+               {errors && <div className="multiselect-error">{errors}</div>}
             </span>
             <TextField
                value={searchString}
@@ -101,8 +121,8 @@ const MultiSelect = ({
                   key={`multiselectitem-${i}`}
                   label={item.label}
                   isSelected={selected.includes(item)}
-                  addItem={() => setSelected([...selected, item])}
-                  removeItem={() => setSelected(selected.filter(i => i.label !== item.label))}
+                  addItem={() => handleSetSelected([...selected, item])}
+                  removeItem={() => handleSetSelected(selected.filter(i => i.label !== item.label))}
                />
             ))}
             {options.length === 0 && (
