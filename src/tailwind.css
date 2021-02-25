@@ -912,7 +912,7 @@
 }
 
 .multiselect-error {
-   @apply -ml-1 mr-2 px-1.5 h-5 bg-red-0 text-red-500 text-xs font-medium rounded-full flex items-center select-none whitespace-nowrap;
+   @apply mr-2 px-1.5 h-5 bg-red-0 text-red-500 text-xs font-medium rounded-full flex items-center select-none whitespace-nowrap;
 }
 
 
