@@ -159,7 +159,7 @@ export const MultiSelectItem = ({
    ...props
 }) => (
    <li
-      className="multiselect-item"
+      className={`multiselect-item ${isSelected ? 'font-medium' : 'font-normal'}`}
       onClick={isSelected ? removeItem : addItem}
       {...props}
    >

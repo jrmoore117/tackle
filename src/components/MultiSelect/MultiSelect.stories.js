@@ -15,7 +15,7 @@ export const DefaultMultiSelect = () => {
          <Button color="blue" label="Print values to console" onClick={() => console.log(values)} className="mb-4" />
          <MultiSelect
             {...set("multiselect")}
-            className="mb-32"
+            className="mb-48"
             placeholder="Select your tackle"
             items={[
                { label: 'Hook', value: 'hook' },
