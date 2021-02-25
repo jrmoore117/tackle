@@ -42,10 +42,31 @@
 }
 
 .actionmenuitem {
-   @apply h-8 px-2 flex items-center cursor-pointer select-none whitespace-nowrap;
+   @apply mx-2 h-8 px-2 rounded flex items-center cursor-pointer select-none whitespace-nowrap;
 }
-.actionmenuitem:hover {
-   @apply bg-gray-0;
+
+.actionmenuitem--blue:hover {
+   @apply text-blue-500 bg-blue-0;
+}
+
+.actionmenuitem--red:hover {
+   @apply text-red-500 bg-red-0;
+}
+
+.actionmenuitem--green:hover {
+   @apply text-green-500 bg-green-0;
+}
+
+.actionmenuitem--yellow:hover {
+   @apply text-yellow-500 bg-yellow-0;
+}
+
+.actionmenuitem--purple:hover {
+   @apply text-purple-500 bg-purple-0;
+}
+
+.actionmenuitem--indigo:hover {
+   @apply text-indigo-500 bg-indigo-0;
 }
 
 .actionmenuicon {
