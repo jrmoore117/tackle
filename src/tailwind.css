@@ -959,39 +959,39 @@
 
 /* ---------- SWITCH ---------- */
 .switch {
-   @apply w-10 h-5 mr-2 bg-gray-100 border-1 border-gray-200 shadow-gray rounded-full flex items-center cursor-pointer;
+   @apply w-10 h-5 mr-2 px-0.5 bg-gray-100 border-1 border-gray-200 shadow-gray rounded-full flex items-center cursor-pointer;
 }
 
 .switchbutton {
-   @apply h-5 w-5 transition duration-150 ease-in-out rounded-full;
+   @apply h-4 w-4 transition duration-150 ease-in-out rounded-full;
 }
 
 .switchbutton--inactive {
-   @apply -translate-x-px bg-gradient-to-b from-gray-400 to-gray-500 border-1 border-gray-200;
+   @apply -translate-x-px bg-white border-1 border-gray-200;
 }
 
 .switchbutton--active--blue {
-   @apply translate-x-full bg-gradient-to-b from-blue-400 to-blue-500 border-2 border-blue-200 animate-small-ping-blue;
+   @apply translate-x-4.5 bg-gradient-to-b from-blue-400 to-blue-500 border-2 border-blue-200 animate-small-ping-blue;
 }
 
 .switchbutton--active--red {
-   @apply translate-x-full bg-gradient-to-b from-red-400 to-red-500 border-2 border-red-200 animate-small-ping-red;
+   @apply translate-x-4.5 bg-gradient-to-b from-red-400 to-red-500 border-2 border-red-200 animate-small-ping-red;
 }
 
 .switchbutton--active--green {
-   @apply translate-x-full bg-gradient-to-b from-green-400 to-green-500 border-2 border-green-200 animate-small-ping-green;
+   @apply translate-x-4.5 bg-gradient-to-b from-green-400 to-green-500 border-2 border-green-200 animate-small-ping-green;
 }
 
 .switchbutton--active--yellow {
-   @apply translate-x-full bg-gradient-to-b from-yellow-400 to-yellow-500 border-2 border-yellow-200 animate-small-ping-yellow;
+   @apply translate-x-4.5 bg-gradient-to-b from-yellow-400 to-yellow-500 border-2 border-yellow-200 animate-small-ping-yellow;
 }
 
 .switchbutton--active--purple {
-   @apply translate-x-full bg-gradient-to-b from-purple-400 to-purple-500 border-2 border-purple-200 animate-small-ping-purple;
+   @apply translate-x-4.5 bg-gradient-to-b from-purple-400 to-purple-500 border-2 border-purple-200 animate-small-ping-purple;
 }
 
 .switchbutton--active--indigo {
-   @apply translate-x-full bg-gradient-to-b from-indigo-400 to-indigo-500 border-2 border-indigo-200 animate-small-ping-indigo;
+   @apply translate-x-4.5 bg-gradient-to-b from-indigo-400 to-indigo-500 border-2 border-indigo-200 animate-small-ping-indigo;
 }
 
 .switchlabel {
