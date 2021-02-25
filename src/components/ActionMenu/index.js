@@ -33,6 +33,16 @@ export const ActionMenu = ({
 
    }, [toggle]);
 
+   const childrenWithProps = children.map((child, i) => {
+      if (React.isValidElement(child)) {
+         return React.cloneElement(child, {
+            key: `actionmenuitem-${i}`,
+            color,
+         });
+      }
+      return null;
+   });
+
    return (
       <div
          ref={actionMenuRef}
@@ -48,7 +58,7 @@ export const ActionMenu = ({
                : label}
          />
          <div className={isOpen ? `actionmenu actionmenu-to-${position}` : 'hidden'}>
-            {children}
+            {childrenWithProps}
          </div>
       </div>
    );
@@ -73,19 +83,24 @@ ActionMenu.propTypes = {
 export const ActionMenuItem = ({
    icon,
    label,
+   color,
    onClick,
    className,
    ...props
 }) => (
    <div
       onClick={onClick}
-      className={`actionmenuitem ${className || ''}`}
+      className={`actionmenuitem actionmenuitem--${color} ${className || ''}`}
       {...props}
    >
       {icon && <Icon as={icon}  className="actionmenuicon" />}
       {label}
    </div>
 );
+
+ActionMenuItem.defaultProps = {
+   color: 'blue',
+}
 
 ActionMenuItem.propTypes = {
    icon: PropTypes.string,
