@@ -47,6 +47,9 @@ module.exports = {
          minWidth: {
             '120': '40rem',
          },
+         translate: {
+            '4.5': '1.125rem'
+         },
          animation: {
             'fade-in': 'fade-in 0.15s ease-in 1',
             'fade-in-to-t': 'fade-in-to-t 0.15s ease-in 1',
