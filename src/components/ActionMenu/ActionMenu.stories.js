@@ -52,7 +52,7 @@ export const BottomRightActionMenu = () => {
          toggle={setIsOpen}
          icon="MoreHorizontal"
          position="br"
-         className="mb-52"
+         className="mb-52 ml-10"
       >
          <ActionMenuItem label="Hook" />
          <ActionMenuItem label="Line" />
@@ -71,7 +71,7 @@ export const TopRightActionMenu = () => {
          isOpen={isOpen}
          toggle={setIsOpen}
          position="tr"
-         className="mt-52"
+         className="mt-52 ml-10"
          icon="MoreHorizontal"
       >
          <ActionMenuItem label="Hook" />
@@ -84,13 +84,14 @@ export const TopRightActionMenu = () => {
    );
 }
 
-export const TopLeftActionMenu = () => {
+export const PurpleTopLeftActionMenu = () => {
    const [isOpen, setIsOpen] = React.useState(false);
    return (
       <ActionMenu
+         color="purple"
+         position="tl"
          isOpen={isOpen}
          toggle={setIsOpen}
-         position="tl"
          className="mt-52"
          icon="MoreHorizontal"
       >
