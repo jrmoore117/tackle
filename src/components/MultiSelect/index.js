@@ -44,7 +44,7 @@ const MultiSelect = ({
 
    // filter - compare search string to options
    const [searchString, setSearchString] = useState('');
-   const handleOnChange = (e) => {
+   const handleSearchString = (e) => {
       const { value } = e.target;
       value
          ? setOptions(uniqueItems.filter(item => item.label.toLowerCase().includes(value.toLowerCase())))
@@ -110,7 +110,7 @@ const MultiSelect = ({
             <TextField
                value={searchString}
                onKeyUp={handleOnKeyUp}
-               onChange={handleOnChange}
+               onChange={handleSearchString}
                placeholder={placeholder}
                onClick={() => setIsOpen(true)}
             />
@@ -120,7 +120,7 @@ const MultiSelect = ({
                <MultiSelectItem
                   key={`multiselectitem-${i}`}
                   label={item.label}
-                  isSelected={selected.includes(item)}
+                  isSelected={selected.find(i => i.label === item.label)}
                   addItem={() => handleSetSelected([...selected, item])}
                   removeItem={() => handleSetSelected(selected.filter(i => i.label !== item.label))}
                />
