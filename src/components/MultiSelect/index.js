@@ -120,7 +120,7 @@ const MultiSelect = ({
                <MultiSelectItem
                   key={`multiselectitem-${i}`}
                   label={item.label}
-                  isSelected={selected.find(i => i.label === item.label)}
+                  isSelected={selected.find(i => i.label === item.label) === undefined ? false : true}
                   addItem={() => handleSetSelected([...selected, item])}
                   removeItem={() => handleSetSelected(selected.filter(i => i.label !== item.label))}
                />
