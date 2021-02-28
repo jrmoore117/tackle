@@ -27,7 +27,7 @@ export const Accordion = ({
    });
    return (
       <div
-         className={`accordion ${className || ''}`}
+         className={`accordion ${className}`}
          {...props}
       >
          {childrenWithProps}
@@ -37,11 +37,13 @@ export const Accordion = ({
 
 Accordion.defaultProps = {
    color: 'blue',
+   className: '',
 }
 
 Accordion.propTypes = {
    color: PropTypes.string,
-   children: PropTypes.array,
+   className: PropTypes.string,
+   children: PropTypes.node.isRequired,
 }
 
 export const Panel = ({
@@ -58,8 +60,9 @@ export const Panel = ({
    return (
       <div>
          <div
-            className={`accordion-panel-header hover:text-${color}-500 ${isLast && !isOpen ? '' : 'border-b-1'}`}
             onClick={() => togglePanel(index)}
+            className={`accordion-panel-header hover:text-${color}-500 ${isLast && !isOpen ? '' : 'border-b-1'}`}
+            {...props}
          >
             {icon
                ? <Icon as={icon} color={color} variant="shaded" size={6} padding={1} className="mr-2" />
@@ -77,10 +80,17 @@ export const Panel = ({
    );
 }
 
+Panel.defaultProps = {
+   icon: '',
+}
+
 Panel.propTypes = {
-   label: PropTypes.string,
-   togglePanel: PropTypes.func,
-   index: PropTypes.number,
-   isOpen: PropTypes.bool,
-   isLast: PropTypes.bool,
+   icon: PropTypes.string,
+   children: PropTypes.node,
+   isOpen: PropTypes.bool.isRequired,
+   isLast: PropTypes.bool.isRequired,
+   index: PropTypes.number.isRequired,
+   color: PropTypes.string.isRequired,
+   label: PropTypes.string.isRequired,
+   togglePanel: PropTypes.func.isRequired,
 }
