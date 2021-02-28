@@ -82,15 +82,16 @@ export const Panel = ({
 
 Panel.defaultProps = {
    icon: '',
+   color: 'blue',
 }
 
 Panel.propTypes = {
    icon: PropTypes.string,
+   isOpen: PropTypes.bool,
+   isLast: PropTypes.bool,
+   index: PropTypes.number,
+   color: PropTypes.string,
    children: PropTypes.node,
-   isOpen: PropTypes.bool.isRequired,
-   isLast: PropTypes.bool.isRequired,
-   index: PropTypes.number.isRequired,
-   color: PropTypes.string.isRequired,
+   togglePanel: PropTypes.func,
    label: PropTypes.string.isRequired,
-   togglePanel: PropTypes.func.isRequired,
 }
