@@ -165,7 +165,7 @@ export const FormExampleWithValidations = () => {
             <Option value="sinker">Sinker</Option>
          </Select>
          <FieldMessage {...set("tackle")} />
-         <Checkbox {...set("savePassword")} label="Save Password?" className="mt-2 mr-2" />
+         <Checkbox {...set("savePassword")} label="Save Password?" className="mt-2" />
          <Button type="submit" label="Submit" color="blue" className="mt-2" />
       </form>
    );
