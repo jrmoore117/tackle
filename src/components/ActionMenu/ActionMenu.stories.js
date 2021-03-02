@@ -37,7 +37,7 @@ export const BlueActionMenuWithLabel = () => {
          <ActionMenuItem label="Hook" />
          <ActionMenuItem label="Line" />
          <ActionMenuItem label="Sinker" />
-         <Divider className="my-2" />
+         <Divider className="my-1" />
          <ActionMenuItem label="Bobber" />
          <ActionMenuItem label="Lure" />
       </ActionMenu>
@@ -57,7 +57,7 @@ export const BottomRightActionMenu = () => {
          <ActionMenuItem label="Hook" />
          <ActionMenuItem label="Line" />
          <ActionMenuItem label="Sinker" />
-         <Divider className="my-2" />
+         <Divider className="my-1" />
          <ActionMenuItem label="Bobber" />
          <ActionMenuItem label="Lure" />
       </ActionMenu>
@@ -77,7 +77,7 @@ export const TopRightActionMenu = () => {
          <ActionMenuItem label="Hook" />
          <ActionMenuItem label="Line" />
          <ActionMenuItem label="Sinker" />
-         <Divider className="my-2" />
+         <Divider className="my-1" />
          <ActionMenuItem label="Bobber" />
          <ActionMenuItem label="Lure" />
       </ActionMenu>
@@ -98,7 +98,7 @@ export const PurpleTopLeftActionMenu = () => {
          <ActionMenuItem label="Hook" />
          <ActionMenuItem label="Line" />
          <ActionMenuItem label="Sinker" />
-         <Divider className="my-2" />
+         <Divider className="my-1" />
          <ActionMenuItem label="Bobber" />
          <ActionMenuItem label="Lure" />
       </ActionMenu>
