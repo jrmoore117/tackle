@@ -34,12 +34,12 @@ PrimaryGreen.args = {
    color: 'green',
 };
 
-export const PrimaryYellow = Template.bind({});
-PrimaryYellow.args = {
-   label: 'Primary',
-   variant: 'primary',
-   color: 'yellow',
-};
+// export const PrimaryYellow = Template.bind({});
+// PrimaryYellow.args = {
+//    label: 'Primary',
+//    variant: 'primary',
+//    color: 'yellow',
+// };
 
 export const PrimaryPurple = Template.bind({});
 PrimaryPurple.args = {
@@ -127,12 +127,12 @@ SecondaryGreen.args = {
    color: 'green',
 };
 
-export const SecondaryYellow = Template.bind({});
-SecondaryYellow.args = {
-   label: 'Secondary',
-   variant: 'secondary',
-   color: 'yellow',
-};
+// export const SecondaryYellow = Template.bind({});
+// SecondaryYellow.args = {
+//    label: 'Secondary',
+//    variant: 'secondary',
+//    color: 'yellow',
+// };
 
 export const SecondaryPurple = Template.bind({});
 SecondaryPurple.args = {
