@@ -100,11 +100,11 @@ PrimaryLoading.args = {
    isLoading: true,
 };
 
-export const SecondaryDefault = Template.bind({});
-SecondaryDefault.args = {
-   label: 'Secondary',
-   variant: 'secondary',
-};
+// export const SecondaryDefault = Template.bind({});
+// SecondaryDefault.args = {
+//    label: 'Secondary',
+//    variant: 'secondary',
+// };
 
 export const SecondaryBlue = Template.bind({});
 SecondaryBlue.args = {
