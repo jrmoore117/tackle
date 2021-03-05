@@ -90,7 +90,7 @@ export const ActionMenuItem = ({
 }) => (
    <div
       onClick={onClick}
-      className={`actionmenuitem actionmenuitem--${color} ${className || ''}`}
+      className={`actionmenuitem actionmenuitem--${color} ${className}`}
       {...props}
    >
       {icon && <Icon as={icon}  className="actionmenuicon" />}
@@ -100,6 +100,7 @@ export const ActionMenuItem = ({
 
 ActionMenuItem.defaultProps = {
    color: 'blue',
+   className: '',
 }
 
 ActionMenuItem.propTypes = {
