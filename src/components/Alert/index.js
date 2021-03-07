@@ -17,7 +17,7 @@ const Alert = ({
    <Box
       color={color}
       variant="frame"
-      className={`alert ${pingColor ? `animate-ping-${pingColor}` : ''} ${className || ''}`}
+      className={`alert ${pingColor ? `animate-ping-${pingColor}` : ''} ${className}`}
       {...props}
    >
       {icon && (
@@ -43,6 +43,7 @@ const Alert = ({
 
 Alert.defaultProps = {
    color: 'gray',
+   className: '',
 }
 
 Alert.propTypes = {
