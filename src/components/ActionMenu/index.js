@@ -47,7 +47,7 @@ export const ActionMenu = ({
       <div
          ref={actionMenuRef}
          onClick={() => toggle(!isOpen)}
-         className={`actionmenuwrapper ${className || ''}`}
+         className={`actionmenuwrapper ${className}`}
          {...props}
       >
          <Button
@@ -66,6 +66,7 @@ export const ActionMenu = ({
 
 ActionMenu.defaultProps = {
    isOpen: false,
+   className: '',
    position: "bl",
 }
 
