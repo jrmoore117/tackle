@@ -21,13 +21,13 @@
     "tailwindcss": "^2.0.2"
   },
   "scripts": {
-    "prestart": "npm run build:tailwind",
-    "prebuild": "npm run build:tailwind",
+    "prestart": "npm run build:tackle",
+    "prebuild": "npm run build:tackle",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:tailwind": "postcss build src/tailwind.css -o src/tailwind.output.css",
+    "build:tackle": "postcss build src/tackle.css -o src/tackle.output.css",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
   },
