@@ -10,6 +10,7 @@
     "autoprefixer": "^10.1.0",
     "postcss": "^8.2.1",
     "postcss-cli": "^8.1.0",
+    "postcss-import": "^14.0.0",
     "postcss-nested": "^5.0.4",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
@@ -27,7 +28,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:tackle": "postcss build src/tackle.css -o src/tackle.output.css",
+    "build:tackle": "postcss build src/css/tackle.css -o src/css/tackle.output.css",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
   },
