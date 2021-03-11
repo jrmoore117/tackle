@@ -1,0 +1,18 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "./helpers/_accordion.css";
+@import "./helpers/_action-menu.css";
+@import "./helpers/_alert.css";
+@import "./helpers/_avatar.css";
+@import "./helpers/_badge.css";
+@import "./helpers/_box.css";
+@import "./helpers/_button.css";
+
+html,
+body,
+input,
+button {
+   @apply font-sans;
+}

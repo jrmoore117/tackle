@@ -1,0 +1,238 @@
+.button {
+   @apply h-10 px-4 font-sans text-sm rounded flex items-center justify-center;
+   
+   &--small {
+      @apply h-8;
+   }
+
+   &--primary--disabled {
+      @apply select-none text-gray-500 bg-gray-0 border-1 border-gray-200 shadow-gray;
+   }
+   
+   &--secondary--disabled {
+      @apply select-none text-gray-500 bg-gray-0;
+   }
+
+   &--primary--default {
+      @apply text-gray-900 bg-gradient-to-b from-white to-gray-0 border-1 border-gray-200 shadow-gray transition-colors duration-200;
+   }
+   &--primary--default:focus {
+      @apply outline-none animate-btn-ping-light-blue;
+   }
+   &--primary--default:active {
+      @apply bg-gradient-to-b from-gray-0 to-gray-100 shadow-none;
+   }
+   &--primary--default:hover {
+      @apply border-1 border-gray-300;
+   }
+   
+   &--primary--white {
+      @apply text-gray-900 bg-white;
+   }
+   &--primary--white:focus {
+      @apply outline-none animate-btn-ping-blue;
+   }
+   &--primary--white:active {
+      @apply bg-gray-100;
+   }
+   &--primary--white:hover {
+      @apply bg-gray-0;
+   }
+   
+   &--primary--blue {
+      @apply text-white bg-gradient-to-b from-blue-400 via-blue-500 to-blue-600 border-1 border-blue-600 shadow-blue;
+   }
+   &--primary--blue:focus {
+      @apply outline-none animate-btn-ping-blue;
+   }
+   &--primary--blue:active {
+      @apply bg-gradient-to-b from-blue-500 to-blue-600 shadow-none;
+   }
+   &--primary--blue:hover {
+      @apply bg-gradient-to-b from-blue-300 to-blue-400 border-1 border-blue-300;
+   }
+   
+   &--primary--red {
+      @apply text-white bg-gradient-to-b from-red-400 via-red-500 to-red-600 border-1 border-red-600 shadow-red;
+   }
+   &--primary--red:focus {
+      @apply outline-none animate-btn-ping-red;
+   }
+   &--primary--red:active {
+      @apply bg-gradient-to-b from-red-500 to-red-600 shadow-none;
+   }
+   &--primary--red:hover {
+      @apply bg-gradient-to-b from-red-300 to-red-400 border-1 border-red-300;
+   }
+   
+   &--primary--green {
+      @apply text-white bg-gradient-to-b from-green-400 via-green-500 to-green-600 border-1 border-green-600 shadow-green;
+   }
+   &--primary--green:focus {
+      @apply outline-none animate-btn-ping-green;
+   }
+   &--primary--green:active {
+      @apply bg-gradient-to-b from-green-500 to-green-600 shadow-none;
+   }
+   &--primary--green:hover {
+      @apply bg-gradient-to-b from-green-300 to-green-400 border-1 border-green-300;
+   }
+   
+   &--primary--yellow {
+      @apply text-white bg-gradient-to-b from-yellow-400 via-yellow-500 to-yellow-600 border-1 border-yellow-600 shadow-yellow;
+   }
+   &--primary--yellow:focus {
+      @apply outline-none animate-btn-ping-yellow;
+   }
+   &--primary--yellow:active {
+      @apply bg-gradient-to-b from-yellow-500 to-yellow-600 shadow-none;
+   }
+   &--primary--yellow:hover {
+      @apply bg-gradient-to-b from-yellow-300 to-yellow-400 border-1 border-yellow-300;
+   }
+   
+   &--primary--purple {
+      @apply text-white bg-gradient-to-b from-purple-400 via-purple-500 to-purple-600 border-1 border-purple-600 shadow-purple;
+   }
+   &--primary--purple:focus {
+      @apply outline-none animate-btn-ping-purple;
+   }
+   &--primary--purple:active {
+      @apply bg-gradient-to-b from-purple-500 to-purple-600 shadow-none;
+   }
+   &--primary--purple:hover {
+      @apply bg-gradient-to-b from-purple-300 to-purple-400 border-1 border-purple-300;
+   }
+   
+   &--primary--indigo {
+      @apply text-white bg-gradient-to-b from-indigo-400 via-indigo-500 to-indigo-600 border-1 border-indigo-600 shadow-indigo;
+   }
+   &--primary--indigo:focus {
+      @apply outline-none animate-btn-ping-indigo;
+   }
+   &--primary--indigo:active {
+      @apply bg-gradient-to-b from-indigo-500 to-indigo-600 shadow-none;
+   }
+   &--primary--indigo:hover {
+      @apply bg-gradient-to-b from-indigo-300 to-indigo-400 border-1 border-indigo-300;
+   }
+   
+   &--secondary--default {
+      @apply text-gray-900 border-1;
+      background-color: transparent;
+      border-color: transparent;
+   }
+   &--secondary--default:focus {
+      @apply border-gray-300 outline-none animate-btn-ping-blue;
+   }
+   &--secondary--default:hover {
+      @apply bg-gray-100;
+   }
+   
+   &--secondary--white {
+      @apply text-white;
+      background-color: transparent;
+   }
+   &--secondary--white:focus {
+      @apply outline-none animate-btn-ping-gray;
+   }
+   &--secondary--white:hover {
+      @apply text-gray-900 bg-gray-0;
+   }
+   
+   &--secondary--blue {
+      @apply text-blue-500 border-1;
+      background-color: transparent;
+      border-color: transparent;
+   }
+   &--secondary--blue:focus {
+      @apply border-blue-100 outline-none animate-btn-ping-blue;
+   }
+   &--secondary--blue:hover {
+      @apply bg-blue-0;
+   }
+   
+   &--secondary--red {
+      @apply text-red-500 border-1;
+      background-color: transparent;
+      border-color: transparent;
+   }
+   &--secondary--red:focus {
+      @apply border-red-100 outline-none animate-btn-ping-red;
+   }
+   &--secondary--red:hover {
+      @apply bg-red-0;
+   }
+   
+   &--secondary--green {
+      @apply text-green-500 border-1;
+      background-color: transparent;
+      border-color: transparent;
+   }
+   &--secondary--green:focus {
+      @apply border-green-100 outline-none animate-btn-ping-green;
+   }
+   &--secondary--green:hover {
+      @apply bg-green-0;
+   }
+   
+   &--secondary--yellow {
+      @apply text-gray-900 border-1;
+      background-color: transparent;
+      border-color: transparent;
+   }
+   &--secondary--yellow:focus {
+      @apply border-yellow-200 outline-none animate-btn-ping-yellow;
+   }
+   &--secondary--yellow:hover {
+      @apply bg-yellow-100;
+   }
+   
+   &--secondary--purple {
+      @apply text-purple-500 border-1;
+      background-color: transparent;
+      border-color: transparent;
+   }
+   &--secondary--purple:focus {
+      @apply border-purple-100 outline-none animate-btn-ping-purple;
+   }
+   &--secondary--purple:hover {
+      @apply bg-purple-0;
+   }
+   
+   &--secondary--indigo {
+      @apply text-indigo-500 border-1;
+      background-color: transparent;
+      border-color: transparent;
+   }
+   &--secondary--indigo:focus {
+      @apply border-indigo-100 outline-none animate-btn-ping-indigo;
+   }
+   &--secondary--indigo:hover {
+      @apply bg-indigo-0;
+   }
+   
+   &--tertiary--blue {
+      @apply text-blue-500 border-1 bg-blue-0;
+      border-color: transparent;
+   }
+   &--tertiary--blue:focus {
+      @apply outline-none animate-btn-ping-blue;
+   }
+   &--tertiary--blue:hover {
+      @apply bg-blue-100;
+   }
+   
+   &--other--blue {
+      @apply text-blue-500 bg-white border-1 border-gray-200 shadow-gray;
+   }
+   &--other--blue:focus {
+      @apply outline-none animate-btn-ping-blue;
+   }
+   &--other--blue:active {
+      @apply bg-blue-0 shadow-none;
+   }
+   &--other--blue:hover {
+      @apply bg-gray-0;
+   }
+}
