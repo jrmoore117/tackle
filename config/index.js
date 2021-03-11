@@ -9,7 +9,6 @@ const translate = require('./translate');
 const animation = require('./animation');
 const keyframes = require('./keyframes');
 
-
 module.exports = {
    theme: {
       extend: {
