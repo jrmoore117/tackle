@@ -28,11 +28,11 @@ DefaultGreen.args = {
    pingColor: 'green',
 };
 
-export const DefaultYellow = Template.bind({});
-DefaultYellow.args = {
-   label: 'Badge',
-   color: 'yellow',
-};
+// export const DefaultYellow = Template.bind({});
+// DefaultYellow.args = {
+//    label: 'Badge',
+//    color: 'yellow',
+// };
 
 export const DefaultPurple = Template.bind({});
 DefaultPurple.args = {
@@ -89,18 +89,18 @@ SolidIndigo.args = {
    color: 'indigo',
 };
 
-export const SolidYellow = Template.bind({});
-SolidYellow.args = {
-   label: 'Badge',
-   variant: 'solid',
-   color: 'yellow',
-};
+// export const SolidYellow = Template.bind({});
+// SolidYellow.args = {
+//    label: 'Badge',
+//    variant: 'solid',
+//    color: 'yellow',
+// };
 
-export const SolidGray = Template.bind({});
-SolidGray.args = {
-   variant: 'solid',
-   label: 'Badge',
-};
+// export const SolidGray = Template.bind({});
+// SolidGray.args = {
+//    variant: 'solid',
+//    label: 'Badge',
+// };
 
 export const RoundedBlue = Template.bind({});
 RoundedBlue.args = {
@@ -109,9 +109,9 @@ RoundedBlue.args = {
    isRounded: true,
 };
 
-export const SmallBlue = Template.bind({});
-SmallBlue.args = {
-   label: 'Badge',
-   color: 'blue',
-   isSmall: true,
-};
+// export const SmallBlue = Template.bind({});
+// SmallBlue.args = {
+//    label: 'Badge',
+//    color: 'blue',
+//    isSmall: true,
+// };

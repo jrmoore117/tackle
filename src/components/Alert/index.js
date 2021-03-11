@@ -25,17 +25,17 @@ const Alert = ({
             <Icon as={icon} size={6} color="white" />
          </Box>
       )}
-      <div className="alertcontent">
+      <div className="alert-content">
          {heading && (
-            <span className={`alertheading--${color} ${icon ? 'ml-3' : ''}`}>
+            <span className={`alert-heading alert-heading--${color} ${icon ? 'ml-3' : ''}`}>
                {heading}
             </span>
          )}
-         <span className={`alertmessage--${color} ${icon ? 'ml-3' : ''}`}>
+         <span className={`alert-message alert-message--${color} ${icon ? 'ml-3' : ''}`}>
             {message}
          </span>
       </div>
-      <div className="alertaction">
+      <div className="alert-action">
          {action}
       </div>
    </Box>

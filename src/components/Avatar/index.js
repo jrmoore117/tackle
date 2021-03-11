@@ -12,9 +12,9 @@ const Avatar = ({
    <div className={`avatar ${src ? '' : `avatar--${color}`} h-${size} w-${size}`}>
       {src
          ? (
-            <img src={src} alt="user-avatar" className="avatarimage" />
+            <img src={src} alt="user-avatar" />
          ) : (
-            <span className="avatarlabel">
+            <span className="avatar-label">
                {label}
             </span>
          )
