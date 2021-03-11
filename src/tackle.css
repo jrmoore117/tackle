@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ---------- ACCORDION ---------- */
+/* ---------- ACCORDION ----------
 .accordion {
    @apply bg-white border-1 border-gray-200 shadow-gray rounded overflow-hidden;
 }
@@ -13,10 +13,10 @@
 
 .accordion-panel-content {
    @apply p-4 bg-gray-0;
-}
+} */
 
 
-/* ---------- ACTION MENU ---------- */
+/* ---------- ACTION MENU ----------
 .actionmenu {
    @apply py-1 font-sans text-sm text-gray-900 bg-white border-1 border-gray-100 shadow-md rounded inline-block z-10;
 }
@@ -71,10 +71,10 @@
 
 .actionmenuicon {
    @apply -ml-0.5 mr-2;
-}
+} */
 
 
-/* ---------- ALERT ---------- */
+/* ---------- ALERT ----------
 .alert {
    @apply p-4 flex items-center;
 }
@@ -134,19 +134,19 @@
 }
 .alertmessage--gray {
    @apply text-sm text-gray-600;
-}
+} */
 
 
-/* ---------- BASE AVATAR ---------- */
+/* ---------- BASE AVATAR ----------
 .avatar {
    @apply rounded-full flex items-center justify-center;
 }
 
 .avatarlabel {
    @apply text-white font-semibold text-xl;
-}
+} */
 
-/* ---------- BASIC AVATAR ---------- */
+/* ---------- BASIC AVATAR ----------
 .avatar--blue {
    @apply bg-gradient-to-tr from-blue-400 to-blue-300 border-1 border-blue-400 shadow-blue;
 }
@@ -173,15 +173,15 @@
 
 .avatar--gray {
    @apply bg-gradient-to-tr from-gray-600 to-gray-500 border-1 border-gray-400 shadow-gray;
-}
+} */
 
-/* ---------- IMAGE AVATAR ---------- */
+/* ---------- IMAGE AVATAR ----------
 .avatarimage {
    @apply h-full w-full rounded-full shadow-gray;
-}
+} */
 
 
-/* ---------- BASE BADGE ---------- */
+/* ---------- BASE BADGE ----------
 .badge {
    @apply text-white text-sm font-semibold tracking-wide px-2 py-1 rounded select-none;
 }
@@ -192,9 +192,9 @@
 
 .badge.badge--rounded {
    @apply rounded-full;
-}
+} */
 
-/* ---------- DEFAULT BADGE ---------- */
+/* ---------- DEFAULT BADGE ----------
 .badge--default--blue {
    @apply text-blue-900 bg-gradient-to-b from-blue-100 to-blue-200;
 }
@@ -221,9 +221,9 @@
 
 .badge--default--gray {
    @apply text-gray-900 bg-gradient-to-b from-gray-100 to-gray-200;
-}
+} */
 
-/* ---------- SOLID BADGE ---------- */
+/* ---------- SOLID BADGE ----------
 .badge--solid--blue {
    @apply border-1 border-blue-400 bg-gradient-to-b from-blue-300 to-blue-400;
 }
@@ -250,15 +250,15 @@
 
 .badge--solid--gray {
    @apply text-gray-900 border-1 border-gray-400 bg-gradient-to-b from-gray-300 to-gray-400;
-}
+} */
 
 
-/* ---------- BASE BOX ---------- */
+/* ---------- BASE BOX ----------
 .box {
    @apply bg-white border-1;
-}
+} */
 
-/* ---------- DEFAULT BOX ---------- */
+/* ---------- DEFAULT BOX ----------
 .box--default--white {
    @apply border-gray-200 shadow-gray;
 }
@@ -289,9 +289,9 @@
 
 .box--default--gray {
    @apply text-white bg-gradient-to-b from-gray-400 to-gray-500 shadow-gray;
-}
+} */
 
-/* ---------- FRAME ---------- */
+/* ---------- FRAME ----------
 .box--frame--white {
    @apply border-gray-200;
 }
@@ -322,9 +322,9 @@
 
 .box--frame--gray {
    @apply bg-gray-0 border-gray-200;
-}
+} */
 
-/* ---------- WELL ---------- */
+/* ---------- WELL ----------
 .box--well--white, .box--well--gray {
    @apply border-gray-200 bg-gray-0 shadow-inner-gray;
 }
@@ -351,29 +351,29 @@
 
 .box--well--indigo {
    @apply border-indigo-200 bg-indigo-0 shadow-inner-indigo;
-}
+} */
 
 
-/* ---------- BASE BUTTON ---------- */
+/* ---------- BASE BUTTON ----------
 .button {
    @apply h-10 px-4 font-sans text-sm rounded flex items-center justify-center;
-}
+} */
 
-/* ---------- SMALL BUTTON ---------- */
+/* ---------- SMALL BUTTON ----------
 .button.button--small {
    @apply h-8;
-}
+} */
 
-/* ---------- DISABLED BUTTON ---------- */
+/* ---------- DISABLED BUTTON ----------
 .button.button--primary--disabled {
    @apply select-none text-gray-500 bg-gray-0 border-1 border-gray-200 shadow-gray;
 }
 
 .button.button--secondary--disabled {
    @apply select-none text-gray-500 bg-gray-0;
-}
+} */
 
-/* ---------- PRIMARY BUTTON ---------- */
+/* ---------- PRIMARY BUTTON ----------
 .button--primary--default {
    @apply text-gray-900 bg-gradient-to-b from-white to-gray-0 border-1 border-gray-200 shadow-gray transition-colors duration-200;
 }
@@ -476,9 +476,9 @@
 }
 .button--primary--indigo:hover {
    @apply bg-gradient-to-b from-indigo-300 to-indigo-400 border-1 border-indigo-300;
-}
+} */
 
-/* ---------- SECONDARY BUTTON ---------- */
+/* ---------- SECONDARY BUTTON ----------
 .button--secondary--default {
    @apply text-gray-900 border-1;
    background-color: transparent;
@@ -596,7 +596,7 @@
 }
 .button--other--blue:hover {
    @apply bg-gray-0;
-}
+} */
 
 
 /* ---------- CHECKBOX ---------- */
