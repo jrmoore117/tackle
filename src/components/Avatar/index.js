@@ -14,7 +14,7 @@ const Avatar = ({
          ? (
             <img src={src} alt="user-avatar" />
          ) : (
-            <span className="avatar-label">
+            <span className="avatar--label">
                {label}
             </span>
          )

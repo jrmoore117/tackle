@@ -16,40 +16,40 @@
    &--to-tr {
       @apply mb-2 absolute right-0 bottom-full animate-fade-in-to-t;
    }
-}
 
-.action-menu-wrapper {
-   @apply relative inline-block;
-}
+   &--item {
+      @apply mx-1 h-8 px-2 rounded flex items-center cursor-pointer select-none whitespace-nowrap;
 
-.action-menu-item {
-   @apply mx-1 h-8 px-2 rounded flex items-center cursor-pointer select-none whitespace-nowrap;
-
-   &--blue:hover {
-      @apply text-blue-500 bg-blue-0;
+      &--blue:hover {
+         @apply text-blue-500 bg-blue-0;
+      }
+   
+      &--red:hover {
+         @apply text-red-500 bg-red-0;
+      }
+   
+      &--green:hover {
+         @apply text-green-500 bg-green-0;
+      }
+   
+      &--yellow:hover {
+         @apply text-yellow-500 bg-yellow-0;
+      }
+   
+      &--purple:hover {
+         @apply text-purple-500 bg-purple-0;
+      }
+   
+      &--indigo:hover {
+         @apply text-indigo-500 bg-indigo-0;
+      }
    }
 
-   &--red:hover {
-      @apply text-red-500 bg-red-0;
+   &--wrapper {
+      @apply relative inline-block;
    }
 
-   &--green:hover {
-      @apply text-green-500 bg-green-0;
+   &--icon {
+      @apply -ml-0.5 mr-2;
    }
-
-   &--yellow:hover {
-      @apply text-yellow-500 bg-yellow-0;
-   }
-
-   &--purple:hover {
-      @apply text-purple-500 bg-purple-0;
-   }
-
-   &--indigo:hover {
-      @apply text-indigo-500 bg-indigo-0;
-   }
-}
-
-.action-menu-icon {
-   @apply -ml-0.5 mr-2;
 }

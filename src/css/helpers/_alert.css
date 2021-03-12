@@ -1,75 +1,75 @@
 .alert {
    @apply p-4 flex items-center;
-}
 
-.alert-content {
-   @apply flex flex-col;
-}
-
-.alert-action {
-   @apply flex flex-grow flex-row-reverse;
-}
-
-.alert-heading {
-   @apply font-semibold;
-
-   &--blue {
-      @apply text-blue-600;
+   &--content {
+      @apply flex flex-col;
    }
+
+   &--action {
+      @apply flex flex-grow flex-row-reverse;
+   }
+
+   &--heading {
+      @apply font-semibold;
    
-   &--red {
-      @apply text-red-600;
+      &--blue {
+         @apply text-blue-600;
+      }
+      
+      &--red {
+         @apply text-red-600;
+      }
+   
+      &--yellow {
+         @apply text-yellow-600;
+      }
+   
+      &--green {
+         @apply text-green-600;
+      }
+      
+      &--purple {
+         @apply text-purple-600;
+      }
+      
+      &--indigo {
+         @apply text-indigo-600;
+      }
+      
+      &--gray {
+         @apply text-gray-600;
+      }
    }
 
-   &--yellow {
-      @apply text-yellow-600;
-   }
-
-   &--green {
-      @apply text-green-600;
-   }
+   &--message {
+      @apply text-sm;
    
-   &--purple {
-      @apply text-purple-600;
-   }
+      &--blue {
+         @apply text-blue-600;
+      }
    
-   &--indigo {
-      @apply text-indigo-600;
-   }
+      &--red {
+         @apply text-red-600;
+      }
    
-   &--gray {
-      @apply text-gray-600;
-   }
-}
-
-.alert-message {
-   @apply text-sm;
-
-   &--blue {
-      @apply text-blue-600;
-   }
-
-   &--red {
-      @apply text-red-600;
-   }
-
-   &--yellow {
-      @apply text-yellow-600;
-   }
-   
-   &--green {
-      @apply text-green-600;
-   }
-   
-   &--purple {
-      @apply text-purple-600;
-   }
-   
-   &--indigo {
-      @apply text-indigo-600;
-   }
-   
-   &--gray {
-      @apply text-gray-600;
+      &--yellow {
+         @apply text-yellow-600;
+      }
+      
+      &--green {
+         @apply text-green-600;
+      }
+      
+      &--purple {
+         @apply text-purple-600;
+      }
+      
+      &--indigo {
+         @apply text-indigo-600;
+      }
+      
+      &--gray {
+         @apply text-gray-600;
+      }
    }
 }

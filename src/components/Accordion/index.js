@@ -67,7 +67,7 @@ export const Panel = ({
    <div>
       <div
          onClick={() => togglePanel(index)}
-         className={`accordion-panel-header hover:text-${color}-500 ${isLast && !isOpen ? '' : 'border-b-1'}`}
+         className={`accordion--panel-header hover:text-${color}-500 ${isLast && !isOpen ? '' : 'border-b-1'}`}
          {...props}
       >
          {icon
@@ -77,7 +77,7 @@ export const Panel = ({
       </div>
       <div
          className={isOpen
-            ? `accordion-panel-content ${!isLast ? 'border-b-1 border-gray-200' : ''}`
+            ? `accordion--panel-content ${!isLast ? 'border-b-1 border-gray-200' : ''}`
             : 'hidden'}
       >
          {children}

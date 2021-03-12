@@ -28,12 +28,12 @@
    &--gray {
       @apply from-gray-600 to-gray-500 border-gray-400 shadow-gray;
    }
-
+   
+   &--label {
+      @apply text-white font-semibold text-xl;
+   }
+   
    img {
       @apply h-full w-full rounded-full shadow-gray;
    }
-}
-
-.avatar-label {
-   @apply text-white font-semibold text-xl;
 }

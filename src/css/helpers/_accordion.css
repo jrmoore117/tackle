@@ -1,11 +1,11 @@
 .accordion {
    @apply bg-white border-1 border-gray-200 shadow-gray rounded overflow-hidden;
-}
 
-.accordion-panel-header {
-   @apply p-4 text-gray-900 font-medium border-gray-200 cursor-pointer select-none flex items-center transition duration-200 ease-in-out;
-}
+   &--panel-header {
+      @apply p-4 text-gray-900 font-medium border-gray-200 cursor-pointer select-none flex items-center transition duration-200 ease-in-out;
+   }
 
-.accordion-panel-content {
-   @apply p-4 bg-gray-0;
+   &--panel-content {
+      @apply p-4 bg-gray-0;
+   }
 }

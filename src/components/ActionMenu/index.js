@@ -47,7 +47,7 @@ export const ActionMenu = ({
       <div
          ref={actionMenuRef}
          onClick={() => toggle(!isOpen)}
-         className={`action-menu-wrapper ${className}`}
+         className={`action-menu--wrapper ${className}`}
          {...props}
       >
          <Button
@@ -91,10 +91,10 @@ export const ActionMenuItem = ({
 }) => (
    <div
       onClick={onClick}
-      className={`action-menu-item action-menu-item--${color} ${className}`}
+      className={`action-menu--item action-menu--item--${color} ${className}`}
       {...props}
    >
-      {icon && <Icon as={icon}  className="action-menu-icon" />}
+      {icon && <Icon as={icon}  className="action-menu--icon" />}
       {label}
    </div>
 );
