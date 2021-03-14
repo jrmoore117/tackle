@@ -12,7 +12,7 @@ const Badge = ({
    ...props
 }) => (
    <span
-      className={`badge badge--${variant}--${color} ${isSmall ? 'badge--small' : ''} ${isRounded ? 'badge--rounded' : ''} ${pingColor ? `animate-ping-${pingColor}` : ''} ${className || ''}`}
+      className={`badge badge--${variant}--${color} ${isSmall ? 'badge--small' : ''} ${isRounded ? 'badge--rounded' : ''} ${pingColor ? `animate-ping-${pingColor}` : ''} ${className}`}
       {...props}
    >
       {label}
@@ -22,6 +22,7 @@ const Badge = ({
 Badge.defaultProps = {
    color: 'gray',
    variant: 'default',
+   className: '',
 }
 
 Badge.propTypes = {
