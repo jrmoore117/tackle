@@ -34,12 +34,12 @@ PrimaryGreen.args = {
    color: 'green',
 };
 
-// export const PrimaryYellow = Template.bind({});
-// PrimaryYellow.args = {
-//    label: 'Primary',
-//    variant: 'primary',
-//    color: 'yellow',
-// };
+export const PrimaryYellow = Template.bind({});
+PrimaryYellow.args = {
+   label: 'Primary',
+   variant: 'primary',
+   color: 'yellow',
+};
 
 export const PrimaryPurple = Template.bind({});
 PrimaryPurple.args = {
