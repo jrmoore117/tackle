@@ -11,7 +11,7 @@ const Box = ({
    ...props
 }) => (
    <div
-      className={`box box--${variant}--${color} ${isRounded ? 'rounded-full' : 'rounded'} ${pingColor ? `animate-ping-${pingColor}` : ''} ${className ? className : ''}`}
+      className={`box box--${variant}--${color} ${isRounded ? 'rounded-full' : 'rounded'} ${pingColor ? `animate-ping-${pingColor}` : ''} ${className}`}
       {...props}
    >
       {children}
@@ -21,6 +21,7 @@ const Box = ({
 Box.defaultProps = {
    color: 'white',
    variant: 'default',
+   className: '',
 }
 
 Box.propTypes = {
