@@ -12,10 +12,7 @@
 }
 
 .accordion-panel-content {
-   @apply p-4 bg-gray-0;
-} */
-
-
+   @apply p-4 bg-/* ---------- 
 /* ---------- ACTION MENU ----------
 .actionmenu {
    @apply py-1 font-sans text-sm text-gray-900 bg-white border-1 border-gray-100 shadow-md rounded inline-block z-10;
@@ -1192,6 +1189,414 @@
 }
 
 .fieldelement--left {
+   @apply mr-2 flex items-center justify-center;
+}
+
+.fieldelement--right {
+   @apply ml-2 flex items-center justify-center;
+}
+
+.fieldmessage {
+   @apply ml-1 mt-1 text-xs text-red-500;
+}
+
+
+/* ---------- TOOLTIP ---------- */
+.tooltipwrapper {
+   @apply relative inline-block;
+}
+
+.tooltipwrapper--t {
+   @apply mb-2 w-80 absolute bottom-full left-1/2 transform -translate-x-1/2 flex justify-center;
+}
+
+.tooltipwrapper--r {
+   @apply ml-2 w-80 absolute left-full top-1/2 transform -translate-y-1/2;
+}
+
+.tooltipwrapper--b {
+   @apply mt-2 w-80 absolute top-full left-1/2 transform -translate-x-1/2 flex justify-center;
+}
+
+.tooltipwrapper--l {
+   @apply mr-2 w-80 absolute right-full top-1/2 transform -translate-y-1/2 flex justify-end;
+}
+
+.tooltip {
+   @apply p-4 text-sm inline-block;
+}
+
+.tooltip.tooltip--small {
+   @apply p-2 text-xs;
+}
+
+.tooltip--blue {
+   @apply shadow-md-blue;
+}
+
+.tooltip--red {
+   @apply shadow-md-red;
+}
+
+.tooltip--green {
+   @apply shadow-md-green;
+}
+
+.tooltip--yellow {
+   @apply shadow-md-yellow;
+}
+
+.tooltip--purple {
+   @apply shadow-md-purple;
+}
+
+.tooltip--indigo {
+   @apply shadow-md-indigo;
+}
+
+.tooltip--gray {
+   @apply shadow-md-gray;
+left {
+   @apply mr-2 flex items-center justify-center;
+}
+
+.fieldelement--right {
+   @apply ml-2 flex items-center justify-center;
+}
+
+.fieldmessage {
+   @apply ml-1 mt-1 text-xs text-red-500;
+}
+
+
+/* ---------- TOOLTIP ---------- */
+.tooltipwrapper {
+   @apply relative inline-block;
+}
+
+.tooltipwrapper--t {
+   @apply mb-2 w-80 absolute bottom-full left-1/2 transform -translate-x-1/2 flex justify-center;
+}
+
+.tooltipwrapper--r {
+   @apply ml-2 w-80 absolute left-full top-1/2 transform -translate-y-1/2;
+}
+
+.tooltipwrapper--b {
+   @apply mt-2 w-80 absolute top-full left-1/2 transform -translate-x-1/2 flex justify-center;
+}
+
+.tooltipwrapper--l {
+   @apply mr-2 w-80 absolute right-full top-1/2 transform -translate-y-1/2 flex justify-end;
+}
+
+.tooltip {
+   @apply p-4 text-sm inline-block;
+}
+
+.tooltip.tooltip--small {
+   @apply p-2 text-xs;
+}
+
+.tooltip--blue {
+   @apply shadow-md-blue;
+}
+
+.tooltip--red {
+   @apply shadow-md-red;
+}
+
+.tooltip--green {
+   @apply shadow-md-green;
+}
+
+.tooltip--yellow {
+   @apply shadow-md-yellow;
+}
+
+.tooltip--purple {
+   @apply shadow-md-purple;
+}
+
+.tooltip--indigo {
+   @apply shadow-md-indigo;
+}
+
+.tooltip--gray {
+   @apply shadow-md-gray;
+left {
+   @apply mr-2 flex items-center justify-center;
+}
+
+.fieldelement--right {
+   @apply ml-2 flex items-center justify-center;
+}
+
+.fieldmessage {
+   @apply ml-1 mt-1 text-xs text-red-500;
+}
+
+
+/* ---------- TOOLTIP ---------- */
+.tooltipwrapper {
+   @apply relative inline-block;
+}
+
+.tooltipwrapper--t {
+   @apply mb-2 w-80 absolute bottom-full left-1/2 transform -translate-x-1/2 flex justify-center;
+}
+
+.tooltipwrapper--r {
+   @apply ml-2 w-80 absolute left-full top-1/2 transform -translate-y-1/2;
+}
+
+.tooltipwrapper--b {
+   @apply mt-2 w-80 absolute top-full left-1/2 transform -translate-x-1/2 flex justify-center;
+}
+
+.tooltipwrapper--l {
+   @apply mr-2 w-80 absolute right-full top-1/2 transform -translate-y-1/2 flex justify-end;
+}
+
+.tooltip {
+   @apply p-4 text-sm inline-block;
+}
+
+.tooltip.tooltip--small {
+   @apply p-2 text-xs;
+}
+
+.tooltip--blue {
+   @apply shadow-md-blue;
+}
+
+.tooltip--red {
+   @apply shadow-md-red;
+}
+
+.tooltip--green {
+   @apply shadow-md-green;
+}
+
+.tooltip--yellow {
+   @apply shadow-md-yellow;
+}
+
+.tooltip--purple {
+   @apply shadow-md-purple;
+}
+
+.tooltip--indigo {
+   @apply shadow-md-indigo;
+}
+
+.tooltip--gray {
+   @apply shadow-md-gray;
+left {
+   @apply mr-2 flex items-center justify-center;
+}
+
+.fieldelement--right {
+   @apply ml-2 flex items-center justify-center;
+}
+
+.fieldmessage {
+   @apply ml-1 mt-1 text-xs text-red-500;
+}
+
+
+/* ---------- TOOLTIP ---------- */
+.tooltipwrapper {
+   @apply relative inline-block;
+}
+
+.tooltipwrapper--t {
+   @apply mb-2 w-80 absolute bottom-full left-1/2 transform -translate-x-1/2 flex justify-center;
+}
+
+.tooltipwrapper--r {
+   @apply ml-2 w-80 absolute left-full top-1/2 transform -translate-y-1/2;
+}
+
+.tooltipwrapper--b {
+   @apply mt-2 w-80 absolute top-full left-1/2 transform -translate-x-1/2 flex justify-center;
+}
+
+.tooltipwrapper--l {
+   @apply mr-2 w-80 absolute right-full top-1/2 transform -translate-y-1/2 flex justify-end;
+}
+
+.tooltip {
+   @apply p-4 text-sm inline-block;
+}
+
+.tooltip.tooltip--small {
+   @apply p-2 text-xs;
+}
+
+.tooltip--blue {
+   @apply shadow-md-blue;
+}
+
+.tooltip--red {
+   @apply shadow-md-red;
+}
+
+.tooltip--green {
+   @apply shadow-md-green;
+}
+
+.tooltip--yellow {
+   @apply shadow-md-yellow;
+}
+
+.tooltip--purple {
+   @apply shadow-md-purple;
+}
+
+.tooltip--indigo {
+   @apply shadow-md-indigo;
+}
+
+.tooltip--gray {
+   @apply shadow-md-gray;
+left {
+   @apply mr-2 flex items-center justify-center;
+}
+
+.fieldelement--right {
+   @apply ml-2 flex items-center justify-center;
+}
+
+.fieldmessage {
+   @apply ml-1 mt-1 text-xs text-red-500;
+}
+
+
+/* ---------- TOOLTIP ---------- */
+.tooltipwrapper {
+   @apply relative inline-block;
+}
+
+.tooltipwrapper--t {
+   @apply mb-2 w-80 absolute bottom-full left-1/2 transform -translate-x-1/2 flex justify-center;
+}
+
+.tooltipwrapper--r {
+   @apply ml-2 w-80 absolute left-full top-1/2 transform -translate-y-1/2;
+}
+
+.tooltipwrapper--b {
+   @apply mt-2 w-80 absolute top-full left-1/2 transform -translate-x-1/2 flex justify-center;
+}
+
+.tooltipwrapper--l {
+   @apply mr-2 w-80 absolute right-full top-1/2 transform -translate-y-1/2 flex justify-end;
+}
+
+.tooltip {
+   @apply p-4 text-sm inline-block;
+}
+
+.tooltip.tooltip--small {
+   @apply p-2 text-xs;
+}
+
+.tooltip--blue {
+   @apply shadow-md-blue;
+}
+
+.tooltip--red {
+   @apply shadow-md-red;
+}
+
+.tooltip--green {
+   @apply shadow-md-green;
+}
+
+.tooltip--yellow {
+   @apply shadow-md-yellow;
+}
+
+.tooltip--purple {
+   @apply shadow-md-purple;
+}
+
+.tooltip--indigo {
+   @apply shadow-md-indigo;
+}
+
+.tooltip--gray {
+   @apply shadow-md-gray;
+left {
+   @apply mr-2 flex items-center justify-center;
+}
+
+.fieldelement--right {
+   @apply ml-2 flex items-center justify-center;
+}
+
+.fieldmessage {
+   @apply ml-1 mt-1 text-xs text-red-500;
+}
+
+
+/* ---------- TOOLTIP ---------- */
+.tooltipwrapper {
+   @apply relative inline-block;
+}
+
+.tooltipwrapper--t {
+   @apply mb-2 w-80 absolute bottom-full left-1/2 transform -translate-x-1/2 flex justify-center;
+}
+
+.tooltipwrapper--r {
+   @apply ml-2 w-80 absolute left-full top-1/2 transform -translate-y-1/2;
+}
+
+.tooltipwrapper--b {
+   @apply mt-2 w-80 absolute top-full left-1/2 transform -translate-x-1/2 flex justify-center;
+}
+
+.tooltipwrapper--l {
+   @apply mr-2 w-80 absolute right-full top-1/2 transform -translate-y-1/2 flex justify-end;
+}
+
+.tooltip {
+   @apply p-4 text-sm inline-block;
+}
+
+.tooltip.tooltip--small {
+   @apply p-2 text-xs;
+}
+
+.tooltip--blue {
+   @apply shadow-md-blue;
+}
+
+.tooltip--red {
+   @apply shadow-md-red;
+}
+
+.tooltip--green {
+   @apply shadow-md-green;
+}
+
+.tooltip--yellow {
+   @apply shadow-md-yellow;
+}
+
+.tooltip--purple {
+   @apply shadow-md-purple;
+}
+
+.tooltip--indigo {
+   @apply shadow-md-indigo;
+}
+
+.tooltip--gray {
+   @apply shadow-md-gray;
+--left {
    @apply mr-2 flex items-center justify-center;
 }
 

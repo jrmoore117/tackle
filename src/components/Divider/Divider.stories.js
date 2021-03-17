@@ -1,11 +1,9 @@
-import React from 'react';
-import Divider from 'components/Divider';
+import React from "react";
+import Divider from "components/Divider";
 
 export default {
-   component: Divider,
-   title: 'Divider',
+  component: Divider,
+  title: "Divider",
 };
 
-export const DefaultDivider = () => (
-   <Divider />
-);
+export const DefaultDivider = () => <Divider />;

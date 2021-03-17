@@ -1,3 +1,3 @@
 module.exports = {
-   '1': '1px',
-}
+  1: "1px",
+};

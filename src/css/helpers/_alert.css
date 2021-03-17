@@ -1,75 +1,75 @@
 .alert {
-   @apply p-4 flex items-center;
+  @apply p-4 flex items-center;
 
-   &--content {
-      @apply flex flex-col;
-   }
+  &--content {
+    @apply flex flex-col;
+  }
 
-   &--action {
-      @apply flex flex-grow flex-row-reverse;
-   }
+  &--action {
+    @apply flex flex-grow flex-row-reverse;
+  }
 
-   &--heading {
-      @apply font-semibold;
-   
-      &--blue {
-         @apply text-blue-600;
-      }
-      
-      &--red {
-         @apply text-red-600;
-      }
-   
-      &--yellow {
-         @apply text-yellow-600;
-      }
-   
-      &--green {
-         @apply text-green-600;
-      }
-      
-      &--purple {
-         @apply text-purple-600;
-      }
-      
-      &--indigo {
-         @apply text-indigo-600;
-      }
-      
-      &--gray {
-         @apply text-gray-600;
-      }
-   }
+  &--heading {
+    @apply font-semibold;
 
-   &--message {
-      @apply text-sm;
-   
-      &--blue {
-         @apply text-blue-600;
-      }
-   
-      &--red {
-         @apply text-red-600;
-      }
-   
-      &--yellow {
-         @apply text-yellow-600;
-      }
-      
-      &--green {
-         @apply text-green-600;
-      }
-      
-      &--purple {
-         @apply text-purple-600;
-      }
-      
-      &--indigo {
-         @apply text-indigo-600;
-      }
-      
-      &--gray {
-         @apply text-gray-600;
-      }
-   }
+    &--blue {
+      @apply text-blue-600;
+    }
+
+    &--red {
+      @apply text-red-600;
+    }
+
+    &--yellow {
+      @apply text-yellow-600;
+    }
+
+    &--green {
+      @apply text-green-600;
+    }
+
+    &--purple {
+      @apply text-purple-600;
+    }
+
+    &--indigo {
+      @apply text-indigo-600;
+    }
+
+    &--gray {
+      @apply text-gray-600;
+    }
+  }
+
+  &--message {
+    @apply text-sm;
+
+    &--blue {
+      @apply text-blue-600;
+    }
+
+    &--red {
+      @apply text-red-600;
+    }
+
+    &--yellow {
+      @apply text-yellow-600;
+    }
+
+    &--green {
+      @apply text-green-600;
+    }
+
+    &--purple {
+      @apply text-purple-600;
+    }
+
+    &--indigo {
+      @apply text-indigo-600;
+    }
+
+    &--gray {
+      @apply text-gray-600;
+    }
+  }
 }
