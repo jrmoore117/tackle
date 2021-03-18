@@ -1,7 +1,11 @@
 {
-  "compilerOptions": {
-    "baseUrl": "./src",
-    "jsx": "react"
-  },
-  "include": ["src/**/*", "cypress/**/*.js", "./node_modules/cypress"]
+   "compilerOptions": {
+      "baseUrl": "./src",
+      "jsx": "react"
+   },
+   "include": [
+      "src/**/*",
+      "cypress/**/*.js",
+      "./node_modules/cypress"
+   ]
 }

@@ -14,5 +14,5 @@ html,
 body,
 input,
 button {
-  @apply font-sans;
+   @apply font-sans;
 }
