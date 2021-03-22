@@ -7,12 +7,12 @@ const Checkbox = ({
    className,
    ...props
 }) => (
-   <label className={`checkboxwrapper ${className}`}>
+   <label className={`checkbox--wrapper ${className}`}>
       <ReakitCheckbox
          className="checkbox"
          {...props}
       />
-      <span className="checkboxlabel">
+      <span className="checkbox--label">
          {label}
       </span>
    </label>

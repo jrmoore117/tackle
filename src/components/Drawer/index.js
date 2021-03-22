@@ -11,7 +11,7 @@ const Drawer = ({
 }) => (
    <div
       onClick={hide}
-      className={isOpen ? 'drawerbackground' : 'hidden'}
+      className={isOpen ? 'drawer--background' : 'hidden'}
    >
       <div
          onClick={(e) => e.stopPropagation()}
@@ -42,10 +42,10 @@ export const DrawerHeader = ({
    ...props
 }) => (
    <div
-      className={`drawerheader ${className}`}
+      className={`drawer--header ${className}`}
       {...props}
    >
-      <Icon as="X" variant="clickable" color="blue" size={10} padding={2} isRounded onClick={hide} className="drawerheaderbutton" />
+      <Icon as="X" variant="clickable" color="blue" size={10} padding={2} isRounded onClick={hide} className="drawer--header-button" />
       {children}
    </div>
 );
@@ -62,7 +62,7 @@ export const DrawerBody = ({
    ...props
 }) => (
    <div
-      className={`drawerbody ${className}`}
+      className={`drawer--body ${className}`}
       {...props}
    >
       {children}
@@ -81,7 +81,7 @@ export const DrawerFooter = ({
    ...props
 }) => (
    <div
-      className={`drawerfooter ${className}`}
+      className={`drawer--footer ${className}`}
       {...props}
    >
       {children}

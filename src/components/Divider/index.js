@@ -4,7 +4,7 @@ const Divider = ({
    className,
    ...props
 }) => (
-   <hr className={`border-gray-200 ${className || ''}`} />
+   <hr className={`divider ${className || ''}`} />
 );
 
 export default Divider;

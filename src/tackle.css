@@ -599,7 +599,7 @@
 } */
 
 
-/* ---------- CHECKBOX ---------- */
+/* ---------- CHECKBOX ----------
 .checkboxwrapper {
    @apply inline-flex items-center;
 }
@@ -624,10 +624,10 @@
 
 .checkboxlabel {
    @apply text-gray-900 cursor-pointer select-none;
-}
+} */
 
 
-/* ---------- CHIP ---------- */
+/* ---------- CHIP ----------
 .chip {
    @apply pl-1.5 text-sm font-semibold tracking-wide select-none rounded-full inline-flex items-center justify-between;
 }
@@ -662,10 +662,10 @@
 
 .chip--gray {
    @apply text-gray-900 bg-gray-100;
-}
+} */
 
 
-/* ---------- DRAWER ---------- */
+/* ---------- DRAWER ----------
 .drawer {
    @apply bg-white h-screen min-w-120 shadow-dark-gray-left flex flex-col;
 }
@@ -688,7 +688,7 @@
 
 .drawerfooter {
    @apply h-20 p-4 border-l-2 border-gray-200 flex-shrink-0 flex items-center;
-}
+} */
 
 
 /* ---------- ICON ---------- */
