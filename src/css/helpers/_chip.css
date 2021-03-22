@@ -1,0 +1,35 @@
+.chip {
+   @apply pl-1.5 text-sm font-semibold tracking-wide select-none rounded-full inline-flex items-center justify-between;
+ 
+   &--small {
+      @apply text-xs font-medium tracking-normal;
+   }
+   
+   &--blue {
+      @apply text-blue-500 bg-blue-0;
+   }
+   
+   &--red {
+      @apply text-red-500 bg-red-0;
+   }
+   
+   &--green {
+      @apply text-green-500 bg-green-0;
+   }
+   
+   &--yellow {
+      @apply text-yellow-500 bg-yellow-0;
+   }
+   
+   &--purple {
+      @apply text-purple-500 bg-purple-0;
+   }
+   
+   &--indigo {
+      @apply text-indigo-500 bg-indigo-0;
+   }
+   
+   &--gray {
+      @apply text-gray-900 bg-gray-100;
+   }
+}
