@@ -1,0 +1,141 @@
+.icon {
+   
+   &--default {
+      &--white {
+         @apply text-white;
+      }
+      
+      &--gray {
+         @apply text-gray-900;
+      }
+      
+      &--blue {
+         @apply text-blue-500;
+      }
+      
+      &--red {
+         @apply text-red-500;
+      }
+      
+      &--green {
+         @apply text-green-500;
+      }
+      
+      &--yellow {
+         @apply text-yellow-500;
+      }
+      
+      &--purple {
+         @apply text-purple-500;
+      }
+      
+      &--indigo {
+         @apply text-indigo-500;
+      }
+   }
+   
+   &--shaded {
+      &--gray {
+         @apply text-gray-900 bg-gray-100;
+      }
+      
+      &--blue {
+         @apply text-blue-500 bg-blue-0;
+      }
+      
+      &--red {
+         @apply text-red-500 bg-red-0;
+      }
+      
+      &--green {
+         @apply text-green-500 bg-green-0;
+      }
+      
+      &--yellow {
+         @apply text-yellow-500 bg-yellow-0;
+      }
+      
+      &--purple {
+         @apply text-purple-500 bg-purple-0;
+      }
+      
+      &--indigo {
+         @apply text-indigo-500 bg-indigo-0;
+      }
+   }
+   
+   &--clickable {
+      @apply outline-none cursor-pointer inline-block;
+
+      &--gray {
+         @apply text-gray-900 bg-gray-100 transition duration-100 ease-in-out;
+      }
+      &--gray:hover {
+         @apply bg-gray-200;
+      }
+      &--gray:active {
+         @apply bg-gray-300;
+      }
+      
+      &--blue {
+         @apply text-blue-500 bg-blue-0 transition duration-100 ease-in-out;
+      }
+      &--blue:hover {
+         @apply text-blue-600 bg-blue-100;
+      }
+      &--blue:active {
+         @apply text-blue-700 bg-blue-200;
+      }
+      
+      &--red {
+         @apply text-red-500 bg-red-0 transition duration-100 ease-in-out;
+      }
+      &--red:hover {
+         @apply text-red-600 bg-red-100;
+      }
+      &--red:active {
+         @apply text-red-700 bg-red-200;
+      }
+      
+      &--green {
+         @apply text-green-500 bg-green-0 transition duration-100 ease-in-out;
+      }
+      &--green:hover {
+         @apply text-green-600 bg-green-100;
+      }
+      &--green:active {
+         @apply text-green-700 bg-green-200;
+      }
+      
+      &--yellow {
+         @apply text-yellow-500 bg-yellow-0 transition duration-100 ease-in-out;
+      }
+      &--yellow:hover {
+         @apply text-yellow-600 bg-yellow-100;
+      }
+      &--yellow:active {
+         @apply text-yellow-700 bg-yellow-200;
+      }
+      
+      &--purple {
+         @apply text-purple-500 bg-purple-0 transition duration-100 ease-in-out;
+      }
+      &--purple:hover {
+         @apply text-purple-600 bg-purple-100;
+      }
+      &--purple:active {
+         @apply text-purple-700 bg-purple-200;
+      }
+      
+      &--indigo {
+         @apply text-indigo-500 bg-indigo-0 transition duration-100 ease-in-out;
+      }
+      &--indigo:hover {
+         @apply text-indigo-600 bg-indigo-100;
+      }
+      &--indigo:active {
+         @apply text-indigo-700 bg-indigo-200;
+      }
+   }
+}
+
