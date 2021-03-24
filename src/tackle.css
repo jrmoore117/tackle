@@ -827,7 +827,7 @@
 } */
 
 
-/* ---------- LIST ITEMS ---------- */
+/* ---------- LIST ITEMS ----------
 .listitem {
    @apply p-4 flex items-center justify-between transition duration-100 ease-in-out border-b-1 border-gray-200;
 }
@@ -836,10 +836,10 @@
 }
 .listitem:hover, .listitem--last:hover {
    @apply bg-gray-0;
-}
+} */
 
 
-/* ---------- MENU ---------- */
+/* ---------- MENU ----------
 .menu {
    @apply flex flex-col;
 }
@@ -879,10 +879,10 @@
 
 .menuitem--active--indigo {
    @apply bg-indigo-0 text-indigo-500;
-}
+} */
 
 
-/* ---------- MODAL ---------- */
+/* ---------- MODAL ----------
 .modal--small {
    @apply w-96 p-4 shadow-dark-gray;
 }
@@ -905,10 +905,10 @@
 
 .modalfooter {
    @apply mt-4;
-}
+} */
 
 
-/* ---------- MULTISELECT ---------- */
+/* ---------- MULTISELECT ----------
 .multiselect-wrapper {
    @apply relative;
 }
@@ -934,10 +934,10 @@
 
 .multiselect-error {
    @apply mr-2 px-1.5 h-5 bg-red-0 text-red-500 text-xs font-medium rounded-full flex items-center select-none whitespace-nowrap;
-}
+} */
 
 
-/* ---------- RADIO BUTTONS ---------- */
+/* ---------- RADIO BUTTONS ----------
 .radiowrapper {
    @apply mr-4 flex items-center;
 }
@@ -954,10 +954,10 @@
 
 .radiolabel {
    @apply text-gray-900 cursor-pointer select-none;
-}
+} */
 
 
-/* ---------- SWITCH ---------- */
+/* ---------- SWITCH ----------
 .switch {
    @apply w-8 h-5 mr-2 px-0.5 bg-gray-100 border-1 border-gray-200 shadow-gray rounded-full flex items-center cursor-pointer;
 }
@@ -996,11 +996,11 @@
 
 .switchlabel {
    @apply text-gray-900 select-none;
-}
+} */
 
 
 
-/* ---------- TABS ---------- */
+/* ---------- TABS ----------
 .tabswrapper {
    @apply h-10 flex items-end border-b-1 border-gray-200;
 }
@@ -1107,10 +1107,10 @@
 
 .tabdelete-hover {
    @apply mb-1 transition-all transform translate-y-0 duration-75 ease-in-out;
-}
+} */
 
 
-/* ---------- TEXT FIELD & SELECT ---------- */
+/* ---------- TEXT FIELD & SELECT ----------
 .textfield,
 .field {
    @apply appearance-none h-10 px-2 font-sans text-sm text-gray-900 placeholder-gray-600 bg-white border-1 border-gray-200 shadow-gray rounded flex items-center transition duration-200 ease-in-out;
@@ -1201,10 +1201,10 @@
 
 .fieldmessage {
    @apply ml-1 mt-1 text-xs text-red-500;
-}
+} */
 
 
-/* ---------- TOOLTIP ---------- */
+/* ---------- TOOLTIP ----------
 .tooltipwrapper {
    @apply relative inline-block;
 }
@@ -1259,4 +1259,4 @@
 
 .tooltip--gray {
    @apply shadow-md-gray;
-}
+} */
