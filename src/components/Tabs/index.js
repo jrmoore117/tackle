@@ -28,15 +28,15 @@ const TabLabel = ({
                padding={1}
                color={color}
                variant="clickable"
-               className={hover && multipleTabs ? 'tabdelete-hover' : 'tabdelete-default'}
+               className={hover && multipleTabs ? 'tab--delete--hover' : 'tab--delete--default'}
                onClick={(e) => removeTab(e, index)}
             />
          )}
-         <div className="tablabel">
+         <div className="tab--label">
             {icon && <Icon as={icon} className="mr-2" />}
             {title}
          </div>
-         <div className={active ? `tabmarker tabmarker--${color}` : 'tabmarker'} />
+         <div className={active ? `tab--marker tab--marker--${color}` : 'tab--marker'} />
       </div>
    );
 }
@@ -79,7 +79,7 @@ export const Tabs = ({
 
    return (
       <div {...props}>
-         <div className="tabswrapper">
+         <div className="tab--wrapper">
             {tabs.map((tab, i) => (
                <TabLabel
                   key={`tab-${i}`}

@@ -62,7 +62,7 @@ export const MenuItem = ({
       return (
          <Link
             onClick={onClick}
-            className={`menuitem ${isActive ? `menuitem--active--${color}` : 'menuitem--inactive'} ${className || ''}`}
+            className={`menu--item ${isActive ? `menu--item--active--${color}` : 'menu--item--inactive'} ${className || ''}`}
             {...props}
          >
             {label}
@@ -73,7 +73,7 @@ export const MenuItem = ({
    return (
       <div
          onClick={onClick}
-         className={`menuitem ${isActive ? `menuitem--active--${color}` : 'menuitem--inactive'} ${className || ''}`}
+         className={`menu--item ${isActive ? `menu--item--active--${color}` : 'menu--item--inactive'} ${className || ''}`}
          {...props}
       >
          {label}
@@ -98,7 +98,7 @@ export const MenuCategory = ({
 }) => (
    <div
       onClick={onClick}
-      className={`menucategory ${className || ''}`}
+      className={`menu--category ${className || ''}`}
       {...props}
    >
       {label}

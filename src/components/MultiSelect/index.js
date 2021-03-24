@@ -86,7 +86,7 @@ const MultiSelect = ({
    return (
       <div
          ref={multiSelectRef}
-         className={`multiselect-wrapper ${className}`}
+         className={`multiselect--wrapper ${className}`}
          {...props}
       >
          <Field
@@ -95,7 +95,7 @@ const MultiSelect = ({
             isFocused={isOpen}
             className="w-full"
          >
-            <span className="selected-items">
+            <span className="multiselect--selected--items">
                {selected.map((item, i) => (
                   <Chip
                      key={`selecteditem-${i}`}
@@ -105,7 +105,7 @@ const MultiSelect = ({
                      className={i === selected.length - 1 ? 'mr-2' : 'mr-1'}
                   />
                ))}
-               {errors && <div className="multiselect-error">{errors}</div>}
+               {errors && <div className="multiselect--error">{errors}</div>}
             </span>
             <TextField
                value={searchString}
@@ -115,7 +115,7 @@ const MultiSelect = ({
                onClick={() => setIsOpen(true)}
             />
          </Field>
-         <ul className={isOpen ? 'item-list' : 'hidden'}>
+         <ul className={isOpen ? 'multiselect--item-list' : 'hidden'}>
             {options.map((item, i) => (
                <MultiSelectItem
                   key={`multiselectitem-${i}`}
@@ -126,7 +126,7 @@ const MultiSelect = ({
                />
             ))}
             {options.length === 0 && (
-               <div className="multiselect-no-results">
+               <div className="multiselect--no-results">
                   No results for "{searchString}"
                </div>
             )}
@@ -159,7 +159,7 @@ export const MultiSelectItem = ({
    ...props
 }) => (
    <li
-      className={`multiselect-item ${isSelected ? 'font-medium' : 'font-normal'}`}
+      className={`multiselect--item ${isSelected ? 'font-medium' : 'font-normal'}`}
       onClick={isSelected ? removeItem : addItem}
       {...props}
    >

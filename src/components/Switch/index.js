@@ -25,10 +25,10 @@ const Switch = ({
             value={value}
             data-type="switch"
             onClick={onChange}
-            className={`switchbutton transform ${checked ? `switchbutton--active--${color}` : 'switchbutton--inactive'}`}
+            className={`switch--button transform ${checked ? `switch--button--active--${color}` : 'switch--button--inactive'}`}
          />
       </div>
-      <span className="switchlabel">
+      <span className="switch--label">
          {label}
       </span>
    </label>

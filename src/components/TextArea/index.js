@@ -12,7 +12,7 @@ const TextArea = ({
    <textarea
       rows={rows}
       cols={cols}
-      className={`textarea textarea--${errors ? 'error' : 'default'} ${className || ''}`}
+      className={`text-area text-area--${errors ? 'error' : 'default'} ${className || ''}`}
       disabled={isDisabled}
       {...props}
    />

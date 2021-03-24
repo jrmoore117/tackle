@@ -5,7 +5,7 @@ export const FieldElementLeft = ({
    className,
    ...props
 }) => (
-   <div className={`fieldelement--left ${className || ''}`} {...props}>
+   <div className={`field-element field-element--left ${className || ''}`} {...props}>
       {children}
    </div>
 );
@@ -17,7 +17,7 @@ export const FieldElementRight = ({
    className,
    ...props
 }) => (
-   <div className={`fieldelement--right ${className || ''}`} {...props}>
+   <div className={`field-element field-element--right ${className || ''}`} {...props}>
       {children}
    </div>
 );

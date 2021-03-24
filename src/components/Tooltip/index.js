@@ -18,10 +18,10 @@ const Tooltip = ({
       <div
          onMouseEnter={() => setVisible(true)}
          onMouseLeave={() => setVisible(false)}
-         className={`tooltipwrapper ${className || ''}`}
+         className={`tooltip--wrapper ${className || ''}`}
          {...props}
       >
-         <div className={visible ? `tooltipwrapper--${position}` : 'hidden'}>
+         <div className={visible ? `tooltip--wrapper--${position}` : 'hidden'}>
             <Box color={color} variant="frame" className={`tooltip tooltip--${color} ${isSmall ? 'tooltip--small' : ''} animate-fade-in-to-${position}`}>
                {content}
             </Box>

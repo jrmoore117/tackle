@@ -12,7 +12,7 @@ export const Modal = ({
 }) => (
    <div
       onClick={hide}
-      className={visible ? 'modalbackground' : 'hidden'}
+      className={visible ? 'modal--background' : 'hidden'}
    >
       <Box
          onClick={(e) => e.stopPropagation()}
@@ -42,7 +42,7 @@ export const ModalHeader = ({
    ...props
 }) => (
    <div
-      className={`modalheader ${className}`}
+      className={`modal--header ${className}`}
       {...props}
    >
       {children}
@@ -59,7 +59,7 @@ export const ModalBody = ({
    ...props
 }) => (
    <div
-      className={`modalbody ${className}`}
+      className={`modal--body ${className}`}
       {...props}
    >
       {children}
@@ -76,7 +76,7 @@ export const ModalFooter = ({
    ...props
 }) => (
    <div
-      className={`modalfooter ${className}`}
+      className={`modal--footer ${className}`}
       {...props}
    >
       {children}

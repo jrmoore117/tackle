@@ -10,12 +10,12 @@ export const Radio = ({
    className,
    ...props
 }) => (
-   <label className={`radiowrapper ${className || ''}`}>
+   <label className={`radio--wrapper ${className || ''}`}>
       <RadioButton
          className="radio"
          {...props}
       />
-      <span className="radiolabel">
+      <span className="radio--label">
          {label}
       </span>
    </label>
@@ -29,7 +29,7 @@ Radio.propTypes = {
 export const RadioGroup = ({ className, ...props }) => {
    return (
       <RadioButtonGroup
-         className={`radiogroup flex ${className}`}
+         className={`radio--group ${className}`}
          {...props}
       />
    );
