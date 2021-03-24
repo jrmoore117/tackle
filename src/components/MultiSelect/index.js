@@ -95,7 +95,7 @@ const MultiSelect = ({
             isFocused={isOpen}
             className="w-full"
          >
-            <span className="multiselect--selected--items">
+            <span className="multiselect--selected-items">
                {selected.map((item, i) => (
                   <Chip
                      key={`selecteditem-${i}`}
