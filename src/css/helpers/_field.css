@@ -1,0 +1,19 @@
+.field {
+   @apply appearance-none h-10 px-2 font-sans text-sm text-gray-900 placeholder-gray-600 bg-white border-1 border-gray-200 shadow-gray rounded flex items-center transition duration-200 ease-in-out;
+
+   &--disabled {
+      @apply text-gray-600 select-none bg-gray-0 shadow-none;
+   }
+   
+   &--small {
+      @apply h-8;
+   }
+   
+   &--focused {
+      @apply shadow-outline-blue border-blue-500;
+   }
+   
+   &--focused--error {
+      @apply shadow-outline-red border-red-500;
+   }
+}

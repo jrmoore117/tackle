@@ -1,0 +1,12 @@
+.list-item {
+   @apply p-4 flex items-center justify-between transition duration-100 ease-in-out border-b-1 border-gray-200;
+
+   &--last {
+      @apply p-4 flex items-center justify-between transition duration-75 ease-in-out;
+   }
+
+   &:hover,
+   &--last:hover {
+      @apply bg-gray-0;
+   }
+}

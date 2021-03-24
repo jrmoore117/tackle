@@ -1,0 +1,89 @@
+.tab {
+   @apply h-10 mr-6 flex flex-col items-center justify-end cursor-pointer select-none transition duration-150 ease-in-out;
+
+   &--wrapper {
+      @apply h-10 flex items-end border-b-1 border-gray-200;
+   }
+
+   &--label {
+      @apply mb-1 flex items-center text-sm;
+   }
+
+   &--active,
+   &--inactive {
+      &--blue,
+      &--blue:hover {
+         @apply  text-blue-500 ;
+      }
+      
+      &--red,
+      &--red:hover {
+         @apply text-red-500;
+      }
+      
+      &--green,
+      &--green:hover {
+         @apply text-green-500;
+      }
+      
+      &--yellow,
+      &--yellow:hover {
+         @apply text-yellow-500;
+      }
+      
+      &--purple,
+      &--purple:hover {
+         @apply text-purple-500;
+      }
+      
+      &--indigo,
+      &--indigo:hover {
+         @apply text-indigo-500;
+      }
+      
+      &--gray,
+      &--gray:hover {
+         @apply text-gray-900;
+      }
+   }
+
+   &--marker {
+      @apply h-0.5 w-full flex-shrink-0 rounded-t-full;
+   
+      &--blue {
+         @apply bg-blue-500 animate-small-ping-blue;
+      }
+      
+      &--red {
+         @apply bg-red-500 animate-small-ping-red;
+      }
+      
+      &--green {
+         @apply bg-green-500 animate-small-ping-green;
+      }
+      
+      &--yellow {
+         @apply bg-yellow-500 animate-small-ping-yellow;
+      }
+      
+      &--purple {
+         @apply bg-purple-500 animate-small-ping-purple;
+      }
+      
+      &--indigo {
+         @apply bg-indigo-500 animate-small-ping-indigo;
+      }
+      
+      &--gray {
+         @apply bg-gray-900 animate-small-ping-gray;
+      }
+   }
+   
+   &--delete--default {
+      @apply opacity-0 transition-all transform translate-y-1 duration-75 ease-in-out;
+   }
+   
+   &--delete--hover {
+      @apply mb-1 transition-all transform translate-y-0 duration-75 ease-in-out;
+   }
+}

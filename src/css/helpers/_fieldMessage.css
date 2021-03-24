@@ -1,0 +1,3 @@
+.field-message {
+   @apply ml-1 mt-1 text-xs text-red-500;
+}

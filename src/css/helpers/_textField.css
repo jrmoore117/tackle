@@ -1,0 +1,32 @@
+.textfield {
+   @apply appearance-none h-10 px-2 font-sans text-sm text-gray-900 placeholder-gray-600 bg-white border-1 border-gray-200 shadow-gray rounded flex items-center transition duration-200 ease-in-out;
+   
+   &--with-elements {
+      @apply w-full h-full placeholder-gray-600;
+   }
+   
+   &:disabled {
+      @apply text-gray-600 select-none bg-gray-0 shadow-none;
+   }
+   
+   &:focus,
+   &--with-elements:focus {
+      @apply outline-none;
+   }
+   
+   &--default:focus {
+      @apply shadow-outline-blue border-blue-500;
+   }
+   
+   &--success:focus {
+      @apply shadow-outline-green border-green-500;
+   }
+   
+   &--error:focus {
+      @apply shadow-outline-red border-red-500;
+   }
+
+   &--small {
+      @apply h-8;
+   }
+}

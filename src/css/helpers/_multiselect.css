@@ -1,0 +1,28 @@
+.multiselect {
+   &--wrapper {
+      @apply relative;
+   }
+   
+   &--item-list {
+      @apply mt-2 py-2 max-h-60 font-sans text-sm text-gray-900 bg-white border-1 border-gray-100 shadow-md rounded inline-block overflow-y-scroll z-10 absolute left-0 right-0 top-full animate-fade-in-to-b;
+   }
+   
+   &--selected-items {
+      @apply inline-flex items-center;
+   }
+   
+   &--item {
+      @apply h-8 px-2 flex items-center cursor-pointer select-none whitespace-nowrap;
+   }
+   &--item:hover {
+      @apply bg-gray-0;
+   }
+   
+   &--no-results {
+      @apply flex items-center text-gray-600 px-2;
+   }
+   
+   &--error {
+      @apply mr-2 px-1.5 h-5 bg-red-0 text-red-500 text-xs font-medium rounded-full flex items-center select-none whitespace-nowrap;
+   }
+}

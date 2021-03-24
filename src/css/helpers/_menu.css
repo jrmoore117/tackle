@@ -1,0 +1,41 @@
+.menu {
+   @apply flex flex-col;
+   
+   &--category {
+      @apply pr-2 py-1 text-sm text-gray-700 font-medium rounded;
+   }
+   
+   &--item {
+      @apply px-2 py-1 mb-1 text-sm font-medium rounded flex items-center cursor-pointer;
+
+      &--inactive:hover {
+         @apply bg-gray-0;
+      }
+      
+      &--active {
+         &--blue {
+            @apply bg-blue-0 text-blue-500;
+         }
+         
+         &--red {
+            @apply bg-red-0 text-red-500;
+         }
+         
+         &--green {
+            @apply bg-green-0 text-green-500;
+         }
+         
+         &--yellow {
+            @apply bg-yellow-0 text-yellow-500;
+         }
+         
+         &--purple {
+            @apply bg-purple-0 text-purple-500;
+         }
+         
+         &--indigo {
+            @apply bg-indigo-0 text-indigo-500;
+         }
+      }
+   }   
+}

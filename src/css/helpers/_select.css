@@ -1,0 +1,44 @@
+.select {
+   @apply appearance-none h-10 w-full px-2 font-sans text-sm bg-white border-1 border-gray-200 shadow-gray rounded flex items-center transition duration-200 ease-in-out;
+   background-image: url("../components/Select/assets/chevron-down.svg");
+   background-origin: content-box;
+   background-position-y: center;
+   background-position-x: right;
+   background-repeat: no-repeat;
+   background-size: 1rem;
+
+   &--with-elements {
+      @apply appearance-none w-full h-full;
+      background-image: url("../components/Select/assets/chevron-down.svg");
+      background-origin: content-box;
+      background-position-y: center;
+      background-position-x: right;
+      background-repeat: no-repeat;
+      background-size: 1rem;
+   }
+   
+   &:disabled {
+      @apply text-gray-600 select-none bg-gray-0 shadow-none;
+   }
+   
+   &:focus,
+   &--with-elements:focus {
+      @apply outline-none;
+   }
+   
+   &--default:focus {
+      @apply shadow-outline-blue border-blue-500;
+   }
+   
+   &--success:focus {
+      @apply shadow-outline-green border-green-500;
+   }
+   
+   &--error:focus {
+      @apply shadow-outline-red border-red-500;
+   }
+   
+   &--small {
+      @apply h-8;
+   }
+}

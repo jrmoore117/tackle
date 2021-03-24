@@ -1,0 +1,11 @@
+.field-element {
+   @apply flex items-center justify-center;
+
+   &--left {
+      @apply mr-2 ;
+   }
+   
+   &--right {
+      @apply ml-2;
+   }
+}
