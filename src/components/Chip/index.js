@@ -11,7 +11,7 @@ const Chip = ({
    ...props
 }) => (
    <span
-      className={`chip chip--${color} ${isSmall ? 'chip--small' : ''} ${className || ''}`}
+      className={`chip chip--${color} ${isSmall ? 'chip--small' : ''} ${className}`}
       {...props}
    >
       {label}
@@ -30,6 +30,7 @@ const Chip = ({
 
 Chip.defaultProps = {
    color: 'blue',
+   className: '',
 }
 
 Chip.propTypes = {
