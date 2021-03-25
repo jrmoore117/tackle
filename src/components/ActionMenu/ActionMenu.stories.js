@@ -8,12 +8,9 @@ export default {
 };
 
 export const ActionMenuWithLabelAndIcons = () => {
-   const [isOpen, setIsOpen] = React.useState(false);
    return (
       <ActionMenu
          color="blue"
-         isOpen={isOpen}
-         toggle={setIsOpen}
          icon="MoreHorizontal"
          className="mb-32"
       >
@@ -25,11 +22,8 @@ export const ActionMenuWithLabelAndIcons = () => {
 }
 
 export const BlueActionMenuWithLabel = () => {
-   const [isOpen, setIsOpen] = React.useState(false);
    return (
       <ActionMenu
-         isOpen={isOpen}
-         toggle={setIsOpen}
          color="blue"
          label="Tackle"
          className="mb-52"
@@ -45,11 +39,8 @@ export const BlueActionMenuWithLabel = () => {
 }
 
 export const BottomRightActionMenu = () => {
-   const [isOpen, setIsOpen] = React.useState(false);
    return (
       <ActionMenu
-         isOpen={isOpen}
-         toggle={setIsOpen}
          icon="MoreHorizontal"
          position="br"
          className="mb-52 ml-10"
@@ -65,11 +56,8 @@ export const BottomRightActionMenu = () => {
 }
 
 export const TopRightActionMenu = () => {
-   const [isOpen, setIsOpen] = React.useState(false);
    return (
       <ActionMenu
-         isOpen={isOpen}
-         toggle={setIsOpen}
          position="tr"
          className="mt-52 ml-10"
          icon="MoreHorizontal"
@@ -85,13 +73,10 @@ export const TopRightActionMenu = () => {
 }
 
 export const PurpleTopLeftActionMenu = () => {
-   const [isOpen, setIsOpen] = React.useState(false);
    return (
       <ActionMenu
          color="purple"
          position="tl"
-         isOpen={isOpen}
-         toggle={setIsOpen}
          className="mt-52"
          icon="MoreHorizontal"
       >

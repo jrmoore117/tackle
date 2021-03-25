@@ -4,6 +4,7 @@ import React, {
    isValidElement,
 } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import Icon from 'components/Icon';
 
 export const Accordion = ({
@@ -12,10 +13,10 @@ export const Accordion = ({
    className,
    ...props
 }) => {
-   const [panels, setPanels] = useState(children.map(c => false));
+   const [panelStates, setPanelStates] = useState(children.map(c => false));
 
    const togglePanel = (index) => {
-      setPanels(panels.map((panel, i) => i === index ? !panel : panel));
+      setPanelStates(panelStates.map((state, i) => i === index ? !state : state));
    }
 
    const childrenWithProps = children.map((child, i) => {
@@ -25,7 +26,7 @@ export const Accordion = ({
             color,
             index: i,
             togglePanel,
-            isOpen: panels[i],
+            isOpen: panelStates[i],
             isLast: i === children.length - 1 ? true : false,
          });
       }
@@ -53,7 +54,7 @@ Accordion.propTypes = {
    children: PropTypes.node.isRequired,
 }
 
-export const Panel = ({
+export const AccordionPanel = ({
    icon,
    label,
    color,
@@ -63,34 +64,48 @@ export const Panel = ({
    children,
    togglePanel,
    ...props
-}) => (
-   <div>
-      <div
-         onClick={() => togglePanel(index)}
-         className={`accordion--panel-header hover:text-${color}-500 ${isLast && !isOpen ? '' : 'border-b-1'}`}
-         {...props}
-      >
-         {icon
-            ? <Icon as={icon} color={color} variant="shaded" size={6} padding={1} className="mr-2" />
-            : <Icon as="ChevronRight" className={`mr-2 ${isOpen ? 'transform rotate-90' : ''}`} />}
-         {label}
-      </div>
-      <div
-         className={isOpen
-            ? `accordion--panel-content ${!isLast ? 'border-b-1 border-gray-200' : ''}`
-            : 'hidden'}
-      >
-         {children}
-      </div>
-   </div>
-);
+}) => {
+   const panelHeaderClasses = classNames(
+      'accordion--panel-header',
+      `hover:text-${color}-500`, {
+      'border-b-1': !isLast || (isLast && isOpen),
+   });
 
-Panel.defaultProps = {
+   const panelIconClasses = classNames(
+      'mr-2', {
+      'transform rotate-90': isOpen,
+   });
+
+   const panelContentClasses = classNames(
+      'accordion--panel-content', {
+      'border-b-1 border-gray-200': !isLast,
+   });
+
+   return (
+      <div>
+         <div
+            onClick={() => togglePanel(index)}
+            className={panelHeaderClasses}
+            {...props}
+         >
+            {icon
+               ? <Icon as={icon} color={color} variant="shaded" size={6} padding={1} className="mr-2" />
+               : <Icon as="ChevronRight" className={panelIconClasses} />}
+            {label}
+         </div>
+         <div className={isOpen ? panelContentClasses : 'hidden'}>
+            {children}
+         </div>
+      </div>
+   );
+}
+
+AccordionPanel.defaultProps = {
    icon: '',
    color: 'blue',
 }
 
-Panel.propTypes = {
+AccordionPanel.propTypes = {
    icon: PropTypes.string,
    isOpen: PropTypes.bool,
    isLast: PropTypes.bool,
