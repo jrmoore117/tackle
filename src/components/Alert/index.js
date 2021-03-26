@@ -2,6 +2,8 @@ import React from 'react';
 import Box from 'components/Box';
 import Icon from 'components/Icon';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
+
 
 const Alert = ({
    icon,
@@ -13,42 +15,72 @@ const Alert = ({
    pingColor,
    className,
    ...props
-}) => (
-   <Box
-      color={color}
-      variant="frame"
-      className={`alert ${pingColor ? `animate-ping-${pingColor}` : ''} ${className}`}
-      {...props}
-   >
-      {icon && (
-         <Box color={color} className="inline-block" isRounded={true}>
-            <Icon as={icon} size={6} color="white" />
-         </Box>
-      )}
-      <div className="alert--content">
-         {heading && (
-            <span className={`alert--heading alert--heading--${color} ${icon ? 'ml-3' : ''}`}>
-               {heading}
-            </span>
+}) => {
+   const alertClasses = classNames(
+      'alert',
+      className, {
+      [`animate-ping-${pingColor}`]: pingColor,
+   });
+   
+   const alertHeadingClasses = classNames(
+      'alert--heading',
+      `alert--heading--${color}`, {
+      'ml-3': icon,
+   });
+   
+   const alertMessageClasses = classNames(
+      'alert--message',
+      `alert--message--${color}`, {
+      'ml-3': icon,
+   });
+
+   return (
+      <Box
+         color={color}
+         variant="frame"
+         className={alertClasses}
+         {...props}
+      >
+         {icon && (
+            <Box color={color} className="inline-block" isRounded={true}>
+               <Icon as={icon} size={6} color="white" />
+            </Box>
          )}
-         <span className={`alert--message alert--message--${color} ${icon ? 'ml-3' : ''}`}>
-            {message}
-         </span>
-      </div>
-      <div className="alert--action">
-         {action}
-      </div>
-   </Box>
-);
+         <div className="alert--content">
+            {heading && (
+               <span className={alertHeadingClasses}>
+                  {heading}
+               </span>
+            )}
+            <span className={alertMessageClasses}>
+               {message}
+            </span>
+         </div>
+         <div className="alert--action">
+            {action}
+         </div>
+      </Box>
+   );
+}
 
 Alert.defaultProps = {
+   icon: '',
+   heading: '',
    color: 'gray',
    className: '',
+   isSmall: false,
+   pingColor: '',
 }
 
 Alert.propTypes = {
-   message: PropTypes.string,
-   variant: PropTypes.string,
+   icon: PropTypes.string,
+   action: PropTypes.node,
+   color: PropTypes.string,
+   isSmall: PropTypes.bool,
+   heading: PropTypes.string,
+   pingColor: PropTypes.string,
+   className: PropTypes.string,
+   message: PropTypes.string.isRequired,
 }
 
 export default Alert;

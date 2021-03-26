@@ -73,7 +73,6 @@ export const ActionMenu = ({
 }
 
 ActionMenu.defaultProps = {
-   isOpen: false,
    className: '',
    position: "bl",
 }
