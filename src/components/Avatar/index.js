@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames'
 
 const Avatar = ({
    src,
@@ -8,28 +9,41 @@ const Avatar = ({
    color,
    className,
    ...props
-}) => (
-   <div className={`avatar ${src ? '' : `avatar--${color}`} h-${size} w-${size} ${className}`}>
-      {src
-         ? (
-            <img src={src} alt="user-avatar" />
-         ) : (
-            <span className="avatar--label">
-               {label}
-            </span>
-         )
-      }
-   </div>
-);
+}) => {
+   const avatarClasses = classNames(
+      'avatar',
+      `h-${size}`,
+      `w-${size}`, 
+      className, {
+      [`avatar--${color}`]: !src,
+   });
+
+   return (
+      <div className={avatarClasses}>
+         {src
+            ? (
+               <img src={src} alt="user-avatar" />
+            ) : (
+               <span className="avatar--label">
+                  {label}
+               </span>
+            )
+         }
+      </div>
+   );
+}
 
 Avatar.defaultProps = {
+   src: '',
    size: 12,
+   color: 'blue',
    className: '',
-   color: 'gray',
 }
 
 Avatar.propTypes = {
+   src: PropTypes.string,
    size: PropTypes.number,
+   color: PropTypes.string,
    className: PropTypes.string,
 }
 
