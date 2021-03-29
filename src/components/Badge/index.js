@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 const Badge = ({
    label,
@@ -10,24 +11,43 @@ const Badge = ({
    pingColor,
    className,
    ...props
-}) => (
-   <span
-      className={`badge badge--${variant}--${color} ${isSmall ? 'badge--small' : ''} ${isRounded ? 'badge--rounded' : ''} ${pingColor ? `animate-ping-${pingColor}` : ''} ${className}`}
-      {...props}
-   >
-      {label}
-   </span>
-);
+}) => {
+   const badgeClasses = classNames(
+      'badge',
+      `badge--${variant}--${color}`,
+      className, {
+      'badge--small': isSmall,
+      'badge--rounded': isRounded,
+      [`animate-ping-${pingColor}`]: pingColor,
+   });
+
+   return (
+      <span
+         className={badgeClasses}
+         {...props}
+      >
+         {label}
+      </span>
+   );
+}
 
 Badge.defaultProps = {
    color: 'gray',
+   pingColor: '',
+   isSmall: false,
+   isRounded: false,
    variant: 'default',
    className: '',
 }
 
 Badge.propTypes = {
-   label: PropTypes.string,
+   color: PropTypes.string,
+   isSmall: PropTypes.bool,
+   isRounded: PropTypes.bool,
    variant: PropTypes.string,
+   pingColor: PropTypes.string,
+   className: PropTypes.string,
+   label: PropTypes.string.isRequired,
 }
 
 export default Badge;

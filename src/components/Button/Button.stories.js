@@ -8,11 +8,6 @@ export default {
 
 const Template = args => <Button {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
-   label: 'Primary',
-};
-
 export const PrimaryBlue = Template.bind({});
 PrimaryBlue.args = {
    label: 'Primary',
@@ -34,12 +29,12 @@ PrimaryGreen.args = {
    color: 'green',
 };
 
-export const PrimaryYellow = Template.bind({});
-PrimaryYellow.args = {
-   label: 'Primary',
-   variant: 'primary',
-   color: 'yellow',
-};
+// export const PrimaryYellow = Template.bind({});
+// PrimaryYellow.args = {
+//    label: 'Primary',
+//    variant: 'primary',
+//    color: 'yellow',
+// };
 
 export const PrimaryPurple = Template.bind({});
 PrimaryPurple.args = {
@@ -53,6 +48,11 @@ PrimaryIndigo.args = {
    label: 'Primary',
    variant: 'primary',
    color: 'indigo',
+};
+
+export const Primary = Template.bind({});
+Primary.args = {
+   label: 'Primary',
 };
 
 export const PrimaryWithLeftIcon = Template.bind({});
@@ -172,12 +172,12 @@ SecondarySmallWithRightIcon.args = {
    rightIcon: "DollarSign",
 };
 
-export const SecondarySmall = Template.bind({});
-SecondarySmall.args = {
-   label: 'Secondary Small',
-   variant: 'secondary',
-   isSmall: true,
-};
+// export const SecondarySmall = Template.bind({});
+// SecondarySmall.args = {
+//    label: 'Secondary Small',
+//    variant: 'secondary',
+//    isSmall: true,
+// };
 
 export const SecondaryDisabled = Template.bind({});
 SecondaryDisabled.args = {
@@ -193,9 +193,9 @@ SecondaryLoading.args = {
    isLoading: true,
 };
 
-export const TertiaryBlue = Template.bind({});
-TertiaryBlue.args = {
-   label: 'Tertiary',
-   variant: 'tertiary',
-   color: 'blue'
-};
+// export const TertiaryBlue = Template.bind({});
+// TertiaryBlue.args = {
+//    label: 'Tertiary',
+//    variant: 'tertiary',
+//    color: 'blue'
+// };

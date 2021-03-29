@@ -1,55 +1,65 @@
 import React from 'react';
-import Icon from 'components/Icon';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import Icon from 'components/Icon';
 
 const Button = ({
-   as,
-   variant,
-   color,
    label,
-   isDisabled,
+   color,
+   variant,
    isSmall,
-   isLoading,
-   className,
    leftIcon,
    rightIcon,
+   isLoading,
+   isDisabled,
+   className,
    ...props
-}) => (
-   <button
-      as={as}
-      className={`button ${isDisabled ? `button--${variant}--disabled` : `button--${variant}--${color}`} ${isSmall ? 'button--small' : ''} ${className || ''}`}
-      onAnimationEnd={(e) => e.target.blur()}
-      disabled={isDisabled || isLoading}
-      {...props}
-   >
-      {leftIcon && !isLoading && 
-         <Icon as={leftIcon} className="h-4 w-4 mr-2 -ml-1" />}
-      {isLoading
-         ? <Icon as="Loader" size={6} className="mx-2 text-gray-700 animate-spin" />
-         : label}
-      {rightIcon && !isLoading && 
-         <Icon as={rightIcon} className="h-4 w-4 ml-2 -mr-1" />}
-   </button>
-);
+}) => {
+   const buttonClasses = classNames(
+      'button',
+      className, {
+      'button--small': isSmall,
+      [`button--${variant}--disabled`]: isDisabled,
+      [`button--${variant}--${color}`]: !isDisabled,
+   });
+
+   return (
+      <button
+         className={buttonClasses}
+         onAnimationEnd={(e) => e.target.blur()}
+         disabled={isDisabled || isLoading}
+         {...props}
+      >
+         {leftIcon && !isLoading && 
+            <Icon as={leftIcon} className="button--left-icon" />}
+         {isLoading
+            ? <Icon as="Loader" size={6} className="button--loader" />
+            : label}
+         {rightIcon && !isLoading && 
+            <Icon as={rightIcon} className="button--right-icon" />}
+      </button>
+   );
+}
 
 Button.defaultProps = {
-   as: 'button',
    type: 'button',
-   variant: 'primary',
    color: 'default',
-   isDisabled: false,
+   variant: 'primary',
+   className: '',
+   leftIcon: '',
+   rightIcon: '',
    isSmall: false,
    isLoading: false,
+   isDisabled: false,
 }
 
 Button.propTypes = {
-   as: PropTypes.string,
    type: PropTypes.oneOf(['button', 'submit', 'reset']),
    variant: PropTypes.string,
    color: PropTypes.string,
    label: PropTypes.oneOfType([
       PropTypes.string,
-      PropTypes.object,
+      PropTypes.node,
    ]).isRequired,
    isDisabled: PropTypes.bool,
    isSmall: PropTypes.bool,

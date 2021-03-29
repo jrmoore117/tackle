@@ -235,4 +235,16 @@
    &--other--blue:hover {
       @apply bg-gray-0;
    }
+
+   &--left-icon {
+      @apply h-4 w-4 mr-2 -ml-1;
+   }
+   
+   &--right-icon {
+      @apply h-4 w-4 ml-2 -mr-1;
+   }
+
+   &--loader {
+      @apply mx-2 text-gray-700 animate-spin;
+   }
 }

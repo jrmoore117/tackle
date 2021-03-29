@@ -1,6 +1,10 @@
 .box {
-   @apply bg-white border-1;
-   
+   @apply bg-white border-1 rounded;
+
+   &--rounded {
+      @apply rounded-full;
+   }
+      
    &--default--white {
       @apply border-gray-200 shadow-gray;
    }

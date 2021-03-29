@@ -1,9 +1,8 @@
 import React from 'react';
-import Box from 'components/Box';
-import Icon from 'components/Icon';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-
+import Box from 'components/Box';
+import Icon from 'components/Icon';
 
 const Alert = ({
    icon,

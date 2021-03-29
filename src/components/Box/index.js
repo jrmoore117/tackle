@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 const Box = ({
    color,
@@ -9,14 +10,24 @@ const Box = ({
    className,
    children,
    ...props
-}) => (
-   <div
-      className={`box box--${variant}--${color} ${isRounded ? 'rounded-full' : 'rounded'} ${pingColor ? `animate-ping-${pingColor}` : ''} ${className}`}
-      {...props}
-   >
-      {children}
-   </div>
-);
+}) => {
+   const boxClasses = classNames(
+      'box',
+      `box--${variant}--${color}`,
+      className, {
+      'box--rounded': isRounded,
+      [`animate-ping-${pingColor}`]: pingColor,
+   });
+
+   return (
+      <div
+         className={boxClasses}
+         {...props}
+      >
+         {children}
+      </div>
+   );
+}
 
 Box.defaultProps = {
    color: 'white',
