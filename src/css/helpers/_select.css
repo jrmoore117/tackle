@@ -1,5 +1,5 @@
 .select {
-   @apply appearance-none h-10 w-full px-2 font-sans text-sm bg-white border-1 border-gray-200 shadow-gray rounded flex items-center transition duration-200 ease-in-out;
+   @apply cursor-pointer appearance-none h-10 w-full px-2 font-sans text-sm bg-white border-1 border-gray-200 shadow-gray rounded flex items-center transition duration-200 ease-in-out;
    background-image: url("../components/Select/assets/chevron-down.svg");
    background-origin: content-box;
    background-position-y: center;
@@ -8,7 +8,7 @@
    background-size: 1rem;
 
    &--with-elements {
-      @apply appearance-none w-full h-full;
+      @apply cursor-pointer appearance-none w-full h-full;
       background-image: url("../components/Select/assets/chevron-down.svg");
       background-origin: content-box;
       background-position-y: center;

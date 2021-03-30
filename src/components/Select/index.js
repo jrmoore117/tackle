@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 export const Select = ({
    value,
@@ -10,24 +11,41 @@ export const Select = ({
    className,
    children,
    ...props
-}) => (
-   <select
-      value={value}
-      className={`${withElements ? 'select--with-elements' : `select select--${errors ? 'error' : 'default'}`} ${isSmall ? 'select--small' : ''} ${value ? 'text-gray-900' : 'text-gray-600'} ${className || ''}`}
-      disabled={isDisabled}
-      {...props}
-   >
-      {children}
-   </select>
-);
+}) => {
+   const selectClasses = classNames({
+      'select': !withElements,
+      'select--default': !withElements && !errors,
+      'select--error': !withElements && errors,
+      'select--with-elements': withElements,
+      'text-gray-900': value,
+      'text-gray-600': !value,
+      'select--small': isSmall,
+   }, className);
+
+   return (
+      <select
+         value={value}
+         className={selectClasses}
+         disabled={isDisabled}
+         {...props}
+      >
+         {children}
+      </select>
+   );
+}
 
 Select.id = 'Select';
+
+Select.defaultProps = {
+   className: '',
+}
 
 Select.propTypes = {
    isSmall: PropTypes.bool,
    isDisabled: PropTypes.bool,
    withElements: PropTypes.bool,
    className: PropTypes.string,
+   children: PropTypes.node,
 }
 
 export const Option = ({
@@ -46,6 +64,6 @@ export const Option = ({
 Option.id = 'Option';
 
 Option.propTypes = {
-   value: PropTypes.string,
    isDisabled: PropTypes.bool,
+   children: PropTypes.node,
 }

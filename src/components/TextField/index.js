@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 const TextField = ({
   type,
@@ -9,19 +10,33 @@ const TextField = ({
   withElements,
   className,
   ...props
-}) => (
-  <input
-    type={type}
-    className={`${withElements ? 'textfield--with-elements' : `textfield textfield--${errors ? 'error' : 'default'}`} ${isSmall ? 'textfield--small' : ''} ${className || ''}`}
-    disabled={isDisabled}
-    {...props}
-  />
-);
+}) => {
+  const textFieldClasses = classNames({
+    'textfield': !withElements,
+    'textfield--default': !withElements && !errors,
+    'textfield--error': !withElements && errors,
+    'textfield--with-elements': withElements,
+    'textfield--small': isSmall,
+  }, className);
+
+  return (
+    <input
+      type={type}
+      className={textFieldClasses}
+      disabled={isDisabled}
+      {...props}
+    />
+  );
+}
 
 TextField.id = 'TextField';
 
 TextField.defaultProps = {
   type: 'text',
+  className: '',
+  isSmall: false,
+  isDisabled: false,
+  withElements: false,
 }
 
 TextField.propTypes = {

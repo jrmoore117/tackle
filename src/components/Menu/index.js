@@ -1,6 +1,10 @@
-import React, { isValidElement, cloneElement } from 'react';
-import { Link } from "@reach/router";
+import React, {
+   cloneElement,
+   isValidElement,
+} from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import { Link } from "@reach/router";
 
 export const Menu = ({
    color,
@@ -9,9 +13,7 @@ export const Menu = ({
    withLinks,
    ...props
 }) => {
-   
    const childrenWithProps = children.map((child, i) => {
-      
       if (isValidElement(child) && child.type.id === 'MenuItem') {
          return cloneElement(child, {
             key: `menuitem-${i}`,
@@ -31,7 +33,7 @@ export const Menu = ({
    
    return (
       <div
-         className={`menu ${className || ''}`}
+         className={`menu ${className}`}
          {...props}
       >
          {childrenWithProps}
@@ -40,12 +42,16 @@ export const Menu = ({
 }
 
 Menu.defaultProps = {
-   color: 'blue'
+   color: 'blue',
+   className: '',
+   withLinks: false,
 }
 
 Menu.propTypes = {
    color: PropTypes.string,
+   withLinks: PropTypes.bool,
    className: PropTypes.string,
+   children: PropTypes.node.isRequired,
 }
 
 export const MenuItem = ({
@@ -57,12 +63,18 @@ export const MenuItem = ({
    withLinks,
    ...props
 }) => {
+   const menuItemClasses = classNames(
+      'menu--item',
+      className, {
+      'menu--item--inactive': !isActive,
+      [`menu--item--active--${color}`]: isActive,
+   });
 
    if (withLinks) {
       return (
          <Link
             onClick={onClick}
-            className={`menu--item ${isActive ? `menu--item--active--${color}` : 'menu--item--inactive'} ${className || ''}`}
+            className={menuItemClasses}
             {...props}
          >
             {label}
@@ -73,7 +85,7 @@ export const MenuItem = ({
    return (
       <div
          onClick={onClick}
-         className={`menu--item ${isActive ? `menu--item--active--${color}` : 'menu--item--inactive'} ${className || ''}`}
+         className={menuItemClasses}
          {...props}
       >
          {label}
@@ -82,6 +94,10 @@ export const MenuItem = ({
 }
 
 MenuItem.id = 'MenuItem';
+
+MenuItem.defaultProps = {
+   className: '',
+}
 
 MenuItem.propTypes = {
    onClick: PropTypes.func,
@@ -98,7 +114,7 @@ export const MenuCategory = ({
 }) => (
    <div
       onClick={onClick}
-      className={`menu--category ${className || ''}`}
+      className={`menu--category ${className}`}
       {...props}
    >
       {label}
@@ -107,7 +123,11 @@ export const MenuCategory = ({
 
 MenuCategory.id = 'MenuCategory';
 
-MenuItem.propTypes = {
+MenuCategory.defaultProps = {
+   className: '',
+}
+
+MenuCategory.propTypes = {
    onClick: PropTypes.func,
    className: PropTypes.string,
    label: PropTypes.string.isRequired,

@@ -1,5 +1,6 @@
 import React, { cloneElement } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import * as Icons from 'react-feather';
 import { Clickable } from "reakit/Clickable";
 
@@ -18,6 +19,17 @@ const Icon = ({
    ...props
 }) => {
    const Icon = Icons[as];
+
+   const iconClasses = classNames(
+      `h-${size}`,
+      `w-${size}`,
+      `p-${padding}`,
+      className, {
+      'rounded': !isRounded,
+      'rounded-full': isRounded,
+      'fill-current': isSolid,
+   });
+
    return (
       variant === 'clickable' ? (
             <Clickable
@@ -28,12 +40,12 @@ const Icon = ({
                className="icon--clickable"
             >
                {cloneElement(<Icon />, { 
-                  className: `icon--clickable--${color} h-${size} w-${size} p-${padding} ${isRounded ? 'rounded-full' : 'rounded'} ${isSolid ? 'fill-current' : ''} ${className || ''}`
+                  className: `icon--clickable--${color} ${iconClasses}`
                })}
             </Clickable>
          ) : (
             cloneElement(<Icon />, {
-               className: `icon--${variant}--${color} h-${size} w-${size} p-${padding} ${isRounded ? 'rounded-full' : 'rounded'} ${isSolid ? 'fill-current' : ''} ${className || ''}`
+               className: `icon--${variant}--${color} ${iconClasses}`
             })
          )
    );
@@ -43,16 +55,27 @@ Icon.id = 'Icon';
 
 Icon.defaultProps = {
    size: 4,
+   padding: 0,
    variant: 'default',
+   isSolid: false,
+   isRounded: false,
+   isDisabled: false,
    isFocusable: false,
+   className: '',
 }
 
 Icon.propTypes = {
-   as: PropTypes.string.isRequired,
    size: PropTypes.number,
+   padding: PropTypes.number,
    color: PropTypes.string,
+   variant: PropTypes.string,
    onClick: PropTypes.func,
+   isSolid: PropTypes.bool,
+   isRounded: PropTypes.bool,
+   isDisabled: PropTypes.bool,
+   isFocusable: PropTypes.bool,
    className: PropTypes.string,
+   as: PropTypes.string.isRequired,
 }
 
 export default Icon;

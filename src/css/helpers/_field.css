@@ -11,9 +11,9 @@
    
    &--focused {
       @apply shadow-outline-blue border-blue-500;
-   }
-   
-   &--focused--error {
-      @apply shadow-outline-red border-red-500;
-   }
+
+      &--error {
+         @apply shadow-outline-red border-red-500;
+      }
+   }   
 }

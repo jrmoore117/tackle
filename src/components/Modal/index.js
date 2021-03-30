@@ -1,38 +1,51 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import Box from 'components/Box';
 
 export const Modal = ({
    size,
    hide,
-   visible,
+   isVisible,
    children,
    className,
    ...props
-}) => (
-   <div
-      onClick={hide}
-      className={visible ? 'modal--background' : 'hidden'}
-   >
-      <Box
-         onClick={(e) => e.stopPropagation()}
-         variant="frame"
-         className={`modal--${size} ${visible ? 'animate-fade-in' : ''}`}
-         {...props}
+}) => {
+   const modalClasses = classNames(
+      `modal--${size}`, {
+      'animate-fade-in': isVisible
+   });
+
+   const modalBackgroundClasses = classNames({
+      'hidden': !isVisible,
+      'modal--background': isVisible,
+   });
+
+   return (
+      <div
+         onClick={hide}
+         className={modalBackgroundClasses}
       >
-         {children}
-      </Box>
-   </div>
-);
+         <Box
+            onClick={(e) => e.stopPropagation()}
+            variant="frame"
+            className={modalClasses}
+            {...props}
+         >
+            {children}
+         </Box>
+      </div>
+   );
+}
 
 Modal.defaultProps = {
    size: "small",
-   visible: false,
+   isVisible: false,
 }
 
 Modal.propTypes = {
    hide: PropTypes.func.isRequired,
-   visible: PropTypes.bool.isRequired,
+   isVisible: PropTypes.bool.isRequired,
    className: PropTypes.string,
 }
 
@@ -48,6 +61,10 @@ export const ModalHeader = ({
       {children}
    </div>
 );
+
+ModalHeader.defaultProps = {
+   className: '',
+}
 
 ModalHeader.propTypes = {
    className: PropTypes.string,
@@ -66,6 +83,10 @@ export const ModalBody = ({
    </div>
 );
 
+ModalBody.defaultProps = {
+   className: '',
+}
+
 ModalBody.propTypes = {
    className: PropTypes.string,
 }
@@ -82,6 +103,10 @@ export const ModalFooter = ({
       {children}
    </div>
 );
+
+ModalFooter.defaultProps = {
+   className: '',
+}
 
 ModalFooter.propTypes = {
    className: PropTypes.string,

@@ -1,6 +1,7 @@
 import React, { useState, cloneElement } from 'react';
 import Icon from 'components/Icon';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 const TabLabel = ({
    icon,
@@ -14,12 +15,30 @@ const TabLabel = ({
    multipleTabs,
 }) => {
    const [hover, setHover] = useState(false);
+
+   const tabLabelClasses = classNames(
+      'tab', {
+      [`tab--active--${color}`]: active,
+      [`tab--inactive--${color}`]: !active,
+   });
+
+   const tabDeleteClasses = classNames({
+      'tab--delete--hover': multipleTabs && hover,
+      'tab--delete--default': !multipleTabs || (multipleTabs && !hover),
+   });
+
+   const tabMarkerClasses = classNames(
+      'tab--marker', {
+      'tab--marker': !active,
+      [`tab--marker--${color}`]: active,
+   });
+
    return (
       <div
          onClick={() => setActiveTab(index)}
          onMouseEnter={() => setHover(true)}
          onMouseLeave={() => setHover(false)}
-         className={active ? `tab tab--active--${color}` : `tab tab--inactive--${color}`}
+         className={tabLabelClasses}
       >
          {newTab && (
             <Icon
@@ -28,7 +47,7 @@ const TabLabel = ({
                padding={1}
                color={color}
                variant="clickable"
-               className={hover && multipleTabs ? 'tab--delete--hover' : 'tab--delete--default'}
+               className={tabDeleteClasses}
                onClick={(e) => removeTab(e, index)}
             />
          )}
@@ -36,7 +55,7 @@ const TabLabel = ({
             {icon && <Icon as={icon} className="mr-2" />}
             {title}
          </div>
-         <div className={active ? `tab--marker tab--marker--${color}` : 'tab--marker'} />
+         <div className={tabMarkerClasses} />
       </div>
    );
 }

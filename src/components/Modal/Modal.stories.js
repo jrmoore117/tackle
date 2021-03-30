@@ -9,11 +9,11 @@ export default {
 };
 
 export const SmallModal = () => {
-   const [visible, setVisible] = React.useState(false);
+   const [isVisible, setIsVisible] = React.useState(false);
    return (
       <div>
-         <Button onClick={() => setVisible(true)} color="blue" label="Open Modal" />
-         <Modal visible={visible} hide={() => setVisible(false)}>
+         <Button onClick={() => setIsVisible(true)} color="blue" label="Open Modal" />
+         <Modal isVisible={isVisible} hide={() => setIsVisible(false)}>
             <ModalHeader className="flex items-center mb-2">
                <Icon as="ArrowUpCircle" size={6} color="blue" className="mr-2" />
                Update Available
@@ -23,7 +23,7 @@ export const SmallModal = () => {
             </ModalBody>
             <ModalFooter className="flex">
                <Button color="blue" label="Update" className="mr-2" />
-               <Button color="blue" variant="secondary" label="Not now" onClick={() => setVisible(false)} />
+               <Button color="blue" variant="secondary" label="Not now" onClick={() => setIsVisible(false)} />
             </ModalFooter>
          </Modal>
       </div>
@@ -31,11 +31,11 @@ export const SmallModal = () => {
 }
 
 export const LargeModal = () => {
-   const [visible, setVisible] = React.useState(false);
+   const [isVisible, setIsVisible] = React.useState(false);
    return (
       <div>
-         <Button onClick={() => setVisible(true)} color="blue" label="Open Modal" />
-         <Modal size="large" visible={visible} hide={() => setVisible(false)}>
+         <Button onClick={() => setIsVisible(true)} color="blue" label="Open Modal" />
+         <Modal size="large" isVisible={isVisible} hide={() => setIsVisible(false)}>
             <ModalHeader className="flex items-center mb-2">
                <Icon as="ArrowUpCircle" size={6} color="blue" className="mr-2" />
                Update Available
@@ -50,7 +50,7 @@ export const LargeModal = () => {
             </ModalBody>
             <ModalFooter className="flex">
                <Button color="blue" label="Update" className="mr-2" />
-               <Button color="blue" variant="secondary" label="Not now" onClick={() => setVisible(false)} />
+               <Button color="blue" variant="secondary" label="Not now" onClick={() => setIsVisible(false)} />
             </ModalFooter>
          </Modal>
       </div>

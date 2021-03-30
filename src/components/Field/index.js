@@ -1,4 +1,10 @@
-import React, { useState } from 'react';
+import React, {
+   useState,
+   cloneElement,
+   isValidElement,
+} from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 const Field = ({
    errors,
@@ -9,7 +15,6 @@ const Field = ({
    children,
    ...props
 }) => {
-
    const [focused, setFocused] = useState(false);   
    const toggleFocus = (e) => {
       e.type === 'focus'
@@ -21,9 +26,8 @@ const Field = ({
    const fieldFocus = typeof isFocused !== 'undefined' ? isFocused : focused;
 
    const childrenWithProps = children.map((child, i) => {
-
-      if (React.isValidElement(child) && (child.type.id === 'TextField' || child.type.id === 'Select')) {
-         return React.cloneElement(child, {
+      if (isValidElement(child) && (child.type.id === 'TextField' || child.type.id === 'Select')) {
+         return cloneElement(child, {
             key: `${child.type.id}-${i}`,
             onBlur: toggleFocus,
             onFocus: toggleFocus,
@@ -33,31 +37,55 @@ const Field = ({
          });
       }
 
-      if (React.isValidElement(child) && child.type.id === 'FieldElementLeft') {
-         return React.cloneElement(child, {
+      if (isValidElement(child) && child.type.id === 'FieldElementLeft') {
+         return cloneElement(child, {
             key: `field-element-left-${i}`,
             ...child.props,
          });
       }
 
-      if (React.isValidElement(child) && child.type.id === 'FieldElementRight') {
-         return React.cloneElement(child, {
+      if (isValidElement(child) && child.type.id === 'FieldElementRight') {
+         return cloneElement(child, {
             key: `field-element-right-${i}`,
             ...child.props,
          });
       }
 
       return child;
-
    });
+
+   const fieldClasses = classNames(
+      'field',
+      className, {
+      'field--small': isSmall,
+      'field--disabled': isDisabled,
+      'field--focused': !isDisabled && fieldFocus && !errors,
+      'field--focused--errror': !isDisabled && fieldFocus && errors,
+   });
+
    return (
       <div
-         className={`field ${isDisabled ? 'field--disabled' : `${fieldFocus && !errors ? 'field--focused' : ''} ${fieldFocus && errors ? 'field--focused--error' : ''}`} ${isSmall ? 'field--small' : ''} ${className || ''}`}
+         className={fieldClasses}
          {...props}
       >
          {childrenWithProps}
       </div>
    );
+}
+
+Field.defaultProps = {
+   isSmall: false,
+   isDisabled: false,
+   className: '',
+}
+
+Field.propTypes = {
+   errors: PropTypes.string,
+   isSmall: PropTypes.bool,
+   isFocused: PropTypes.bool,
+   isDisabled: PropTypes.bool,
+   className: PropTypes.string,
+   children: PropTypes.node,
 }
 
 export default Field;

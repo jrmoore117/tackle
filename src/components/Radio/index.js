@@ -10,7 +10,7 @@ export const Radio = ({
    className,
    ...props
 }) => (
-   <label className={`radio--wrapper ${className || ''}`}>
+   <label className={`radio--wrapper ${className}`}>
       <RadioButton
          className="radio"
          {...props}
@@ -20,6 +20,10 @@ export const Radio = ({
       </span>
    </label>
 );
+
+Radio.defaultProps = {
+   className: '',
+}
 
 Radio.propTypes = {
    label: PropTypes.string,
@@ -33,6 +37,10 @@ export const RadioGroup = ({ className, ...props }) => {
          {...props}
       />
    );
+}
+
+RadioGroup.defaultProps = {
+   className: '',
 }
 
 RadioGroup.propTypes = {

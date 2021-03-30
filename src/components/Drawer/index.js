@@ -1,4 +1,7 @@
-import React, { cloneElement } from 'react';
+import React, {
+   cloneElement,
+   isValidElement,
+} from 'react';
 import PropTypes from 'prop-types';
 import Icon from 'components/Icon';
 
@@ -8,27 +11,40 @@ const Drawer = ({
    children,
    className,
    ...props
-}) => (
-   <div
-      onClick={hide}
-      className={isOpen ? 'drawer--background' : 'hidden'}
-   >
+}) => {
+   const childrenWithProps = children.map((child, i) => {
+      if (isValidElement(child)) {
+         return cloneElement(child, {
+            key: `drawerchild-${i}`,
+            hide: hide
+         });
+      }
+      return null;
+   });
+
+   return (
       <div
-         onClick={(e) => e.stopPropagation()}
-         variant="frame"
-         className={`drawer ${isOpen ? 'animate-slide-in' : ''}`}
-         {...props}
+         onClick={hide}
+         className={isOpen ? 'drawer--background' : 'hidden'}
       >
-         {children.map((child, i) => cloneElement(child, { key: `drawerchild-${i}`, hide: hide }))}
+         <div
+            onClick={(e) => e.stopPropagation()}
+            variant="frame"
+            className={`drawer ${isOpen ? 'animate-slide-in' : ''} ${className}`}
+            {...props}
+         >
+            {childrenWithProps}
+         </div>
       </div>
-   </div>
-);
+   );
+}
 
 Drawer.defaultProps = {
-   isOpen: false,
+   className: '',
 }
 
 Drawer.propTypes = {
+   hide: PropTypes.func.isRequired,
    isOpen: PropTypes.bool.isRequired,
    className: PropTypes.string,
 }
@@ -50,8 +66,13 @@ export const DrawerHeader = ({
    </div>
 );
 
+DrawerHeader.defaultProps = {
+   className: ''
+}
+
 DrawerHeader.propTypes = {
    hide: PropTypes.func,
+   children: PropTypes.node,
    className: PropTypes.string,
 }
 
@@ -69,8 +90,13 @@ export const DrawerBody = ({
    </div>
 );
 
+DrawerBody.defaultProps = {
+   className: ''
+}
+
 DrawerBody.propTypes = {
    hide: PropTypes.func,
+   children: PropTypes.node,
    className: PropTypes.string,
 }
 
@@ -88,7 +114,12 @@ export const DrawerFooter = ({
    </div>
 );
 
+DrawerFooter.defaultProps = {
+   className: ''
+}
+
 DrawerFooter.propTypes = {
    hide: PropTypes.func,
+   children: PropTypes.node,
    className: PropTypes.string,
 }
