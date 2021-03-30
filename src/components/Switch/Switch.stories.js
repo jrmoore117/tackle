@@ -51,20 +51,20 @@ export const SwitchGreen = () => {
    );
 }
 
-export const SwitchYellow = () => {
-   const { set, values } = useForm({
-      initialValues: {
-         checked: false,
-      },
-   });
-   return(
-      <Switch
-         {...set("checked")}
-         color="yellow"
-         label={values.checked ? 'On' : 'Off'}
-      />
-   );
-}
+// export const SwitchYellow = () => {
+//    const { set, values } = useForm({
+//       initialValues: {
+//          checked: false,
+//       },
+//    });
+//    return(
+//       <Switch
+//          {...set("checked")}
+//          color="yellow"
+//          label={values.checked ? 'On' : 'Off'}
+//       />
+//    );
+// }
 
 export const SwitchPurple = () => {
    const { set, values } = useForm({

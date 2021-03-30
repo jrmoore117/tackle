@@ -1,38 +1,47 @@
 .switch {
-   @apply w-8 h-5 mr-2 px-0.5 bg-gray-100 border-1 border-gray-200 shadow-gray rounded-full flex items-center cursor-pointer;
+   @apply w-8 h-5 mr-2 px-1 bg-gradient-to-b from-gray-200 to-gray-300 rounded-full cursor-pointer flex items-center;
+   
+   &--inactive {
+      @apply border-1 border-gray-200 shadow-gray;
+   }
 
-   &--button {
-      @apply h-4 w-4 transition duration-150 ease-in-out rounded-full;
-
-      &--inactive {
-         @apply -translate-x-px bg-white border-1 border-gray-200;
+   &--active {
+      &--blue {
+         @apply bg-gradient-to-b from-blue-400 to-blue-500 border-1 border-blue-500 shadow-blue;
       }
       
-      &--active {
-         &--blue {
-            @apply translate-x-2.5 bg-gradient-to-b from-blue-400 to-blue-500 border-2 border-blue-200 animate-small-ping-blue;
-         }
-         
-         &--red {
-            @apply translate-x-2.5 bg-gradient-to-b from-red-400 to-red-500 border-2 border-red-200 animate-small-ping-red;
-         }
-         
-         &--green {
-            @apply translate-x-2.5 bg-gradient-to-b from-green-400 to-green-500 border-2 border-green-200 animate-small-ping-green;
-         }
-         
-         &--yellow {
-            @apply translate-x-2.5 bg-gradient-to-b from-yellow-400 to-yellow-500 border-2 border-yellow-200 animate-small-ping-yellow;
-         }
-         
-         &--purple {
-            @apply translate-x-2.5 bg-gradient-to-b from-purple-400 to-purple-500 border-2 border-purple-200 animate-small-ping-purple;
-         }
-         
-         &--indigo {
-            @apply translate-x-2.5 bg-gradient-to-b from-indigo-400 to-indigo-500 border-2 border-indigo-200 animate-small-ping-indigo;
-         }
+      &--red {
+         @apply bg-gradient-to-b from-red-400 to-red-500 border-1 border-red-500 shadow-red;
       }
+      
+      &--green {
+         @apply bg-gradient-to-b from-green-400 to-green-500 border-1 border-green-500 shadow-green;
+      }
+      
+      &--yellow {
+         @apply bg-gradient-to-b from-yellow-400 to-yellow-500 border-1 border-yellow-500 shadow-yellow;
+      }
+      
+      &--purple {
+         @apply bg-gradient-to-b from-purple-400 to-purple-500 border-1 border-purple-500 shadow-purple;
+      }
+      
+      &--indigo {
+         @apply bg-gradient-to-b from-indigo-400 to-indigo-500 border-1 border-indigo-500 shadow-indigo;
+      }
+   }
+
+
+   &--button {
+      @apply h-3.5 w-3.5 bg-white transition duration-150 ease-in-out rounded-full;
+      
+      &--active {
+         @apply translate-x-2;
+      }
+   }
+   
+   &--wrapper {
+      @apply flex items-center;
    }
    
    &--label {
