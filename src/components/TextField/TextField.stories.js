@@ -107,9 +107,6 @@ export const FormExampleWithValidations = () => {
          savePassword: false,
       },
       validators: {
-         firstName: (value) => value.length < 5
-            ? 'Your name must be at least 5 characters long. Sorry, Chad!'
-            : null,
          username: (value) => helpers.checkIfAlphanumeric(value)
             ? 'Only letters or numbers allowed.'
             : null,
@@ -147,11 +144,9 @@ export const FormExampleWithValidations = () => {
          <div className="flex mt-2">
             <div className="mr-2 flex-1">
                <TextField placeholder="First Name" {...set("firstName")} className="w-full" />
-               <FieldMessage {...set("firstName")} />
             </div>
             <div className="flex-1">
                <TextField placeholder="Last Name" {...set("lastName")} className="w-full" />
-               <FieldMessage {...set("lastName")} />
             </div>
          </div>
          <TextField placeholder="Username" {...set("username")} className="w-full mt-2" />
