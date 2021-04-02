@@ -54,7 +54,6 @@ export const TextFieldWithRightElement = () => (
    </Field>
 );
 
-
 export const TextFieldWithConditionalRightElement = () => {
    const { set, reset, values, setValues } = useForm({
       initialValues: {
@@ -165,4 +164,3 @@ export const FormExampleWithValidations = () => {
       </form>
    );
 }
-
