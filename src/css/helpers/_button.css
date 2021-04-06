@@ -14,10 +14,10 @@
    }
 
    &--primary--default {
-      @apply text-gray-900 bg-gradient-to-b from-white to-gray-0 border-1 border-gray-200 shadow-gray transition-colors duration-200;
+      @apply text-gray-1000 bg-gradient-to-b from-white to-gray-0 border-1 border-gray-200 shadow-gray transition-colors duration-200;
    }
    &--primary--default:focus {
-      @apply outline-none animate-btn-ping-light-blue;
+      @apply outline-none animate-btn-ping-gray;
    }
    &--primary--default:active {
       @apply bg-gradient-to-b from-gray-0 to-gray-100 shadow-none;
@@ -27,7 +27,7 @@
    }
    
    &--primary--white {
-      @apply text-gray-900 bg-white;
+      @apply text-gray-1000 bg-white;
    }
    &--primary--white:focus {
       @apply outline-none animate-btn-ping-blue;
@@ -118,15 +118,15 @@
    }
    
    &--secondary--default {
-      @apply text-gray-900 border-1;
+      @apply text-gray-1000 border-1;
       background-color: transparent;
       border-color: transparent;
    }
    &--secondary--default:focus {
-      @apply border-gray-300 outline-none animate-btn-ping-blue;
+      @apply border-gray-200 outline-none animate-btn-ping-gray;
    }
    &--secondary--default:hover {
-      @apply bg-gray-100;
+      @apply bg-gray-0;
    }
    
    &--secondary--white {
@@ -137,7 +137,7 @@
       @apply outline-none animate-btn-ping-gray;
    }
    &--secondary--white:hover {
-      @apply text-gray-900 bg-gray-0;
+      @apply text-gray-1000 bg-gray-0;
    }
    
    &--secondary--blue {
@@ -177,7 +177,7 @@
    }
    
    &--secondary--yellow {
-      @apply text-gray-900 border-1;
+      @apply text-gray-1000 border-1;
       background-color: transparent;
       border-color: transparent;
    }

@@ -30,7 +30,7 @@
    }
    
    &--label {
-      @apply text-white font-semibold text-xl;
+      @apply text-white font-semibold text-lg;
    }
    
    img {

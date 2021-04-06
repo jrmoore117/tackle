@@ -14,7 +14,7 @@
    }
    
    &--label {
-      @apply text-gray-900 cursor-pointer select-none;
+      @apply text-gray-1000 cursor-pointer select-none;
    }
 
    &--group {

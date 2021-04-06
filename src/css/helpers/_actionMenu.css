@@ -1,5 +1,5 @@
 .action-menu {
-   @apply py-1 font-sans text-sm text-gray-900 bg-white border-1 border-gray-100 shadow-md rounded inline-block z-10;
+   @apply py-1 font-sans text-sm text-gray-1000 bg-white border-1 border-gray-100 shadow-md rounded inline-block z-10;
 
    &--to-bl {
       @apply mt-2 absolute left-0 top-full animate-fade-in-to-b;

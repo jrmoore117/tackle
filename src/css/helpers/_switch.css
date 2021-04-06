@@ -45,6 +45,6 @@
    }
    
    &--label {
-      @apply text-gray-900 select-none;
+      @apply text-gray-1000 select-none;
    }
 }

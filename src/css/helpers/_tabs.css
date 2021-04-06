@@ -43,7 +43,7 @@
       
       &--gray,
       &--gray:hover {
-         @apply text-gray-900;
+         @apply text-gray-1000;
       }
    }
 

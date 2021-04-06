@@ -6,7 +6,7 @@
    }
    
    &--item {
-      @apply px-2 py-1 mb-1 text-sm font-medium rounded flex items-center cursor-pointer;
+      @apply px-2 py-1 mb-1 text-sm text-gray-1000 font-medium rounded flex items-center cursor-pointer;
 
       &--inactive:hover {
          @apply bg-gray-0;

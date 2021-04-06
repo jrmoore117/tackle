@@ -2,7 +2,7 @@
    @apply text-white text-sm font-semibold bg-gradient-to-b tracking-wide px-2 py-1 rounded select-none;
 
    &--small {
-      @apply px-1 py-0 font-normal;
+      @apply px-1.5 py-0 font-medium;
    }
    
    &--rounded {
