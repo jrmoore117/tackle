@@ -8,52 +8,115 @@ export default {
 
 const Template = args => <Button {...args} />;
 
-export const PrimaryBlue = Template.bind({});
-PrimaryBlue.args = {
-   label: 'Primary',
-   variant: 'primary',
-   color: 'blue',
-};
+export const Blue = () => (
+   <div className="flex">
+      <Button
+         label="Primary"
+         variant="primary"
+         color="blue"
+         className="mr-2"
+      />
+      <Button
+         label="Secondary"
+         variant="secondary"
+         color="blue"
+      />
+   </div>
+);
 
-export const PrimaryRed = Template.bind({});
-PrimaryRed.args = {
-   label: 'Primary',
-   variant: 'primary',
-   color: 'red',
-};
+export const Red = () => (
+   <div className="flex">
+      <Button
+         label="Primary"
+         variant="primary"
+         color="red"
+         className="mr-2"
+      />
+      <Button
+         label="Secondary"
+         variant="secondary"
+         color="red"
+      />
+   </div>
+);
 
-export const PrimaryGreen = Template.bind({});
-PrimaryGreen.args = {
-   label: 'Primary',
-   variant: 'primary',
-   color: 'green',
-};
+export const Green = () => (
+   <div className="flex">
+      <Button
+         label="Primary"
+         variant="primary"
+         color="green"
+         className="mr-2"
+      />
+      <Button
+         label="Secondary"
+         variant="secondary"
+         color="green"
+      />
+   </div>
+);
 
-// export const PrimaryYellow = Template.bind({});
-// PrimaryYellow.args = {
-//    label: 'Primary',
-//    variant: 'primary',
-//    color: 'yellow',
-// };
+// export const Yellow = () => (
+//    <div className="flex">
+//       <Button
+//          label="Primary"
+//          variant="primary"
+//          color="yellow"
+//          className="mr-2"
+//       />
+//       <Button
+//          label="Secondary"
+//          variant="secondary"
+//          color="yellow"
+//       />
+//    </div>
+// );
 
-export const PrimaryPurple = Template.bind({});
-PrimaryPurple.args = {
-   label: 'Primary',
-   variant: 'primary',
-   color: 'purple',
-};
+export const Purple = () => (
+   <div className="flex">
+      <Button
+         label="Primary"
+         variant="primary"
+         color="purple"
+         className="mr-2"
+      />
+      <Button
+         label="Secondary"
+         variant="secondary"
+         color="purple"
+      />
+   </div>
+);
 
-export const PrimaryIndigo = Template.bind({});
-PrimaryIndigo.args = {
-   label: 'Primary',
-   variant: 'primary',
-   color: 'indigo',
-};
+export const Indigo = () => (
+   <div className="flex">
+      <Button
+         label="Primary"
+         variant="primary"
+         color="indigo"
+         className="mr-2"
+      />
+      <Button
+         label="Secondary"
+         variant="secondary"
+         color="indigo"
+      />
+   </div>
+);
 
-export const Primary = Template.bind({});
-Primary.args = {
-   label: 'Primary',
-};
+export const Default = () => (
+   <div className="flex">
+      <Button
+         label="Primary"
+         variant="primary"
+         className="mr-2"
+      />
+      <Button
+         label="Secondary"
+         variant="secondary"
+      />
+   </div>
+);
 
 export const PrimaryWithLeftIcon = Template.bind({});
 PrimaryWithLeftIcon.args = {
@@ -61,13 +124,6 @@ PrimaryWithLeftIcon.args = {
    variant: 'primary',
    color: 'red',
    leftIcon: "Zap",
-};
-
-export const PrimaryIconOnly = Template.bind({});
-PrimaryIconOnly.args = {
-   label: <Icon as="Twitch" size={6} />,
-   variant: 'primary',
-   color: 'purple',
 };
 
 export const PrimarySmallWithRightIcon = Template.bind({});
@@ -79,11 +135,11 @@ PrimarySmallWithRightIcon.args = {
    rightIcon: "DollarSign",
 };
 
-export const PrimarySmall = Template.bind({});
-PrimarySmall.args = {
-   label: 'Primary Small',
+export const PrimaryIconOnly = Template.bind({});
+PrimaryIconOnly.args = {
+   label: <Icon as="Twitch" size={6} />,
    variant: 'primary',
-   isSmall: true,
+   color: 'purple',
 };
 
 export const PrimaryDisabled = Template.bind({});
@@ -100,67 +156,12 @@ PrimaryLoading.args = {
    isLoading: true,
 };
 
-// export const SecondaryDefault = Template.bind({});
-// SecondaryDefault.args = {
-//    label: 'Secondary',
-//    variant: 'secondary',
-// };
-
-export const SecondaryBlue = Template.bind({});
-SecondaryBlue.args = {
-   label: 'Secondary',
-   variant: 'secondary',
-   color: 'blue',
-};
-
-export const SecondaryRed = Template.bind({});
-SecondaryRed.args = {
-   label: 'Secondary',
-   variant: 'secondary',
-   color: 'red',
-};
-
-export const SecondaryGreen = Template.bind({});
-SecondaryGreen.args = {
-   label: 'Secondary',
-   variant: 'secondary',
-   color: 'green',
-};
-
-// export const SecondaryYellow = Template.bind({});
-// SecondaryYellow.args = {
-//    label: 'Secondary',
-//    variant: 'secondary',
-//    color: 'yellow',
-// };
-
-export const SecondaryPurple = Template.bind({});
-SecondaryPurple.args = {
-   label: 'Secondary',
-   variant: 'secondary',
-   color: 'purple',
-};
-
-export const SecondaryIndigo = Template.bind({});
-SecondaryIndigo.args = {
-   label: 'Secondary',
-   variant: 'secondary',
-   color: 'indigo',
-};
-
 export const SecondaryWithLeftIcon = Template.bind({});
 SecondaryWithLeftIcon.args = {
    label: 'Tweet',
    variant: 'secondary',
    color: 'blue',
    leftIcon: "Twitter",
-};
-
-export const SecondaryIconOnly = Template.bind({});
-SecondaryIconOnly.args = {
-   label: <Icon as="Twitch" size={6} />,
-   variant: 'secondary',
-   color: 'purple',
 };
 
 export const SecondarySmallWithRightIcon = Template.bind({});
@@ -172,12 +173,12 @@ SecondarySmallWithRightIcon.args = {
    rightIcon: "DollarSign",
 };
 
-// export const SecondarySmall = Template.bind({});
-// SecondarySmall.args = {
-//    label: 'Secondary Small',
-//    variant: 'secondary',
-//    isSmall: true,
-// };
+export const SecondaryIconOnly = Template.bind({});
+SecondaryIconOnly.args = {
+   label: <Icon as="Twitch" size={6} />,
+   variant: 'secondary',
+   color: 'purple',
+};
 
 export const SecondaryDisabled = Template.bind({});
 SecondaryDisabled.args = {
