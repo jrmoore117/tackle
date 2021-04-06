@@ -29653,6 +29653,10 @@ video {
     white-space: nowrap;
   }
 
+.action-menu--item--small {
+      height: 1.5rem;
+    }
+
 .action-menu--item--blue:hover {
       --tw-bg-opacity: 1;
       background-color: rgba(233, 242, 255, var(--tw-bg-opacity));

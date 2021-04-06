@@ -20,6 +20,10 @@
    &--item {
       @apply mx-1 h-8 px-2 rounded flex items-center cursor-pointer select-none whitespace-nowrap;
 
+      &--small {
+         @apply h-6;
+      }
+
       &--blue:hover {
          @apply text-blue-500 bg-blue-0;
       }
