@@ -15,6 +15,7 @@ export const ActionMenu = ({
    label,
    color,
    variant,
+   isSmall,
    position,
    children,
    className,
@@ -41,6 +42,7 @@ export const ActionMenu = ({
          return cloneElement(child, {
             key: `actionmenuitem-${i}`,
             color,
+            isSmall,
          });
       }
       return null;
@@ -61,6 +63,7 @@ export const ActionMenu = ({
          <Button
             color={color}
             variant={variant}
+            isSmall={isSmall}
             label={icon
                ? <Icon as={icon} size={6} />
                : label}
@@ -75,12 +78,14 @@ export const ActionMenu = ({
 ActionMenu.defaultProps = {
    className: '',
    position: "bl",
+   isSmall: false,
 }
 
 ActionMenu.propTypes = {
    icon: PropTypes.string,
    label: PropTypes.string,
    color: PropTypes.string,
+   isSmall: PropTypes.bool,
    children: PropTypes.node,
    variant: PropTypes.string,
    position: PropTypes.string,
@@ -92,14 +97,16 @@ export const ActionMenuItem = ({
    label,
    color,
    onClick,
+   isSmall,
    className,
    ...props
 }) => {
    const itemClasses = classNames(
       'action-menu--item',
       `action-menu--item--${color}`,
-      className,
-   );
+      className, {
+      'action-menu--item--small': isSmall,
+   });
 
    return (
       <div
@@ -116,10 +123,12 @@ export const ActionMenuItem = ({
 ActionMenuItem.defaultProps = {
    color: 'blue',
    className: '',
+   isSmall: false,
 }
 
 ActionMenuItem.propTypes = {
    icon: PropTypes.string,
+   isSmall: PropTypes.bool,
    onClick: PropTypes.func,
    className: PropTypes.string,
    label: PropTypes.string.isRequired,

@@ -7,7 +7,7 @@ export default {
    title: 'ActionMenu',
 };
 
-export const ActionMenuWithLabelAndIcons = () => {
+export const BlueActionMenuWithIcons = () => {
    return (
       <ActionMenu
          color="blue"
@@ -21,12 +21,13 @@ export const ActionMenuWithLabelAndIcons = () => {
    );
 }
 
-export const BlueActionMenuWithLabel = () => {
+export const SmallBlueActionMenu = () => {
    return (
       <ActionMenu
          color="blue"
          label="Tackle"
-         className="mb-52"
+         className="mb-40"
+         isSmall
       >
          <ActionMenuItem label="Hook" />
          <ActionMenuItem label="Line" />
