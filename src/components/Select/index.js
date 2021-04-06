@@ -17,7 +17,7 @@ export const Select = ({
       'select--default': !withElements && !errors,
       'select--error': !withElements && errors,
       'select--with-elements': withElements,
-      'text-gray-900': value,
+      'text-gray-1000': value,
       'text-gray-600': !value,
       'select--small': isSmall,
    }, className);
@@ -49,12 +49,15 @@ Select.propTypes = {
 }
 
 export const Option = ({
-   isDisabled,
+   value,
    children,
+   isDisabled,
    ...props
 }) => (
    <option
+      value={value}
       disabled={isDisabled}
+      className={value ? 'text-gray-900' : 'text-gray-600'}
       {...props}
    >
       {children}
