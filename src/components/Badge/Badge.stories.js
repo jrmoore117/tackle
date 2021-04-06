@@ -109,9 +109,10 @@ RoundedBlue.args = {
    isRounded: true,
 };
 
-// export const SmallBlue = Template.bind({});
-// SmallBlue.args = {
-//    label: 'Badge',
-//    color: 'blue',
-//    isSmall: true,
-// };
+export const SmallBlue = Template.bind({});
+SmallBlue.args = {
+   label: 'Badge',
+   color: 'blue',
+   isSmall: true,
+   isRounded: true,
+};
