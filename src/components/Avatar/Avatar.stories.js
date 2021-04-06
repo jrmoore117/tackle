@@ -49,7 +49,7 @@ Image.args = {
    src: 'https://i.pravatar.cc/200',
 };
 
-export const Gray = Template.bind({});
-Gray.args = {
-   label: 'TK',
-};
+// export const Gray = Template.bind({});
+// Gray.args = {
+//    label: 'TK',
+// };
