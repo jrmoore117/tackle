@@ -1,6 +1,6 @@
 {
-  "name": "storybook",
-  "version": "0.1.0",
+  "name": "tackle",
+  "version": "1.0",
   "private": true,
   "dependencies": {
     "@reach/router": "^1.3.4",
@@ -27,11 +27,11 @@
     "prebuild": "npm run build:tackle",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "build:tackle": "postcss build src/css/tackle.css -o src/css/tackle.output.css",
     "docs": "start-storybook -p 6006 -s public",
-    "build:docs": "build-storybook -s public"
+    "build:docs": "build-storybook -s public",
+    "build:tackle": "postcss build src/css/tackle.css -o src/css/tackle.output.css",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
