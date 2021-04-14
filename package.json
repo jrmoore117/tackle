@@ -10,11 +10,6 @@
   "files": [
     "dist"
   ],
-  "dependencies": {
-    "classnames": "^2.2.6",
-    "react-feather": "^2.0.8",
-    "reakit": "^1.2.5"
-  },
   "scripts": {
     "prestart": "npm run build:tackle",
     "prebuild": "npm run build:tackle",
@@ -25,6 +20,9 @@
     "build:tackle": "postcss build src/css/tackle.css -o src/css/tackle.output.css",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "peerDependencies": {
+    "react": ">=16"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -40,6 +38,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "react-feather": "^2.0.8",
+    "reakit": "^1.2.5"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
