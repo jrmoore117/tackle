@@ -1,6 +1,6 @@
 {
   "name": "tackle-react",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "license": "MIT",
   "author": "Jacob Moore",
   "main": "dist/index.js",
