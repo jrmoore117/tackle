@@ -32,8 +32,7 @@
     "build:docs": "build-storybook -s public",
     "build:tackle": "postcss build src/css/tackle.css -o src/css/tackle.output.css",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "np": "np --no-tests"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
