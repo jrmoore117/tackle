@@ -11,24 +11,9 @@
     "dist"
   ],
   "dependencies": {
-    "@reach/router": "^1.3.4",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "autoprefixer": "^10.1.0",
     "classnames": "^2.2.6",
-    "postcss": "^8.2.1",
-    "postcss-cli": "^8.1.0",
-    "postcss-import": "^14.0.0",
-    "postcss-nested": "^5.0.4",
-    "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-feather": "^2.0.8",
-    "react-scripts": "3.4.3",
     "reakit": "^1.2.5",
-    "storybook": "^6.1.11",
-    "tailwindcss": "^2.0.2"
+    "react-feather": "^2.0.8"
   },
   "scripts": {
     "prestart": "npm run build:tackle",
@@ -65,6 +50,21 @@
     "@storybook/preset-create-react-app": "^3.1.5",
     "@storybook/react": "^6.1.11",
     "babel-loader": "^8.1.0",
-    "react-is": "^16.13.1"
+    "react-is": "^16.13.1",
+    "@reach/router": "^1.3.4",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "autoprefixer": "^10.1.0",
+    "postcss": "^8.2.1",
+    "postcss-cli": "^8.1.0",
+    "postcss-import": "^14.0.0",
+    "postcss-nested": "^5.0.4",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.3",
+    "storybook": "^6.1.11",
+    "tailwindcss": "^2.0.2"
   }
 }
