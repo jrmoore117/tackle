@@ -1,5 +1,5 @@
 import React from 'react';
-import Chip from 'components/Chip';
+import { Chip } from 'components/Chip';
 
 export default {
    component: Chip,

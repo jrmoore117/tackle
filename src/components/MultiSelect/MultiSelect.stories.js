@@ -1,7 +1,7 @@
 import React from 'react';
-import MultiSelect from 'components/MultiSelect';
-import Button from 'components/Button';
-import useForm from 'hooks/useForm';
+import { MultiSelect } from 'components/MultiSelect';
+import { Button } from 'components/Button';
+import { useForm } from 'hooks/useForm';
 
 export default {
    component: MultiSelect,

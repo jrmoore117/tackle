@@ -1,6 +1,6 @@
 import React from 'react';
-import Tooltip from 'components/Tooltip';
-import Icon from 'components/Icon';
+import { Tooltip } from 'components/Tooltip';
+import { Icon } from 'components/Icon';
 
 export default {
    component: Tooltip,

@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Box from 'components/Box';
-import Icon from 'components/Icon';
+import { Box } from 'components/Box';
+import { Icon } from 'components/Icon';
 
-const Alert = ({
+export const Alert = ({
    icon,
    color,
    action,
@@ -81,5 +81,3 @@ Alert.propTypes = {
    className: PropTypes.string,
    message: PropTypes.string.isRequired,
 }
-
-export default Alert;

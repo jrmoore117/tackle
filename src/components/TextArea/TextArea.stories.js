@@ -1,8 +1,8 @@
 import React from 'react';
-import TextArea from 'components/TextArea';
-import FieldMessage from 'components/FieldMessage';
+import { TextArea } from 'components/TextArea';
+import { FieldMessage } from 'components/FieldMessage';
 
-import useForm from 'hooks/useForm';
+import { useForm } from 'hooks/useForm';
 
 export default {
    component: TextArea,

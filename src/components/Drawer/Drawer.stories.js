@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Drawer, { DrawerHeader, DrawerBody, DrawerFooter } from 'components/Drawer';
-import Button from 'components/Button';
+import { Drawer, DrawerHeader, DrawerBody, DrawerFooter } from 'components/Drawer';
+import { Button } from 'components/Button';
 
 export default {
    component: Drawer,

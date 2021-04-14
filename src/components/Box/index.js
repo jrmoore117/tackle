@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const Box = ({
+export const Box = ({
    color,
    variant,
    isRounded,
@@ -41,5 +41,3 @@ Box.propTypes = {
    pingColor: PropTypes.string,
    className: PropTypes.string,
 }
-
-export default Box;

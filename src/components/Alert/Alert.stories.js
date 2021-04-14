@@ -1,7 +1,7 @@
 import React from 'react';
-import Alert from 'components/Alert';
-import Button from 'components/Button';
-import Icon from 'components/Icon';
+import { Alert } from 'components/Alert';
+import { Button } from 'components/Button';
+import { Icon } from 'components/Icon';
 
 export default {
    component: Alert,

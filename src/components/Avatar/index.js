@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames'
 
-const Avatar = ({
+export const Avatar = ({
    src,
    size,
    label,
@@ -46,5 +46,3 @@ Avatar.propTypes = {
    color: PropTypes.string,
    className: PropTypes.string,
 }
-
-export default Avatar;

@@ -2,7 +2,7 @@ import React from 'react';
 import { Checkbox as ReakitCheckbox, } from "reakit/Checkbox";
 import PropTypes from 'prop-types';
 
-const Checkbox = ({
+export const Checkbox = ({
    label,
    className,
    ...props
@@ -21,5 +21,3 @@ const Checkbox = ({
 Checkbox.propTypes = {
    className: PropTypes.string,
 }
-
-export default Checkbox;

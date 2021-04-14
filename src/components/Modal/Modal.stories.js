@@ -1,7 +1,7 @@
 import React from 'react';
 import { Modal, ModalHeader, ModalBody, ModalFooter } from 'components/Modal';
-import Button from 'components/Button';
-import Icon from 'components/Icon';
+import { Button } from 'components/Button';
+import { Icon } from 'components/Icon';
 
 export default {
    component: Modal,

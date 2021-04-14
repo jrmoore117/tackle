@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const TextArea = ({
+export const TextArea = ({
    rows,
    cols,
    errors,
@@ -43,5 +43,3 @@ TextArea.propTypes = {
    isDisabled: PropTypes.bool,
    className: PropTypes.string,
 }
-
-export default TextArea;

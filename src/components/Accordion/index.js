@@ -5,7 +5,7 @@ import React, {
 } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Icon from 'components/Icon';
+import { Icon } from 'components/Icon';
 
 export const Accordion = ({
    color,

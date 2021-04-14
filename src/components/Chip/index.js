@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Icon from 'components/Icon';
+import { Icon } from 'components/Icon';
 
-const Chip = ({
+export const Chip = ({
    label,
    color,
    isSmall,
@@ -51,5 +51,3 @@ Chip.propTypes = {
    className: PropTypes.string,
    label: PropTypes.string.isRequired,
 }
-
-export default Chip;

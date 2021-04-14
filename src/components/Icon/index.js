@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import * as Icons from 'react-feather';
 import { Clickable } from "reakit/Clickable";
 
-const Icon = ({
+export const Icon = ({
    as,
    size,
    color,
@@ -77,5 +77,3 @@ Icon.propTypes = {
    className: PropTypes.string,
    as: PropTypes.string.isRequired,
 }
-
-export default Icon;

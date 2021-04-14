@@ -6,7 +6,7 @@ import React, {
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const Field = ({
+export const Field = ({
    errors,
    isSmall,
    isFocused,
@@ -87,5 +87,3 @@ Field.propTypes = {
    className: PropTypes.string,
    children: PropTypes.node,
 }
-
-export default Field;

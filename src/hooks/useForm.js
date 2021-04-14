@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const useForm = ({ initialValues = {}, validators = {} } = {}) => {
+export const useForm = ({ initialValues = {}, validators = {} } = {}) => {
    const [values, setValues] = useState(initialValues);
    const [errors, setErrors] = useState({});
    return {
@@ -88,5 +88,3 @@ const useForm = ({ initialValues = {}, validators = {} } = {}) => {
       }
    }
 }
-
-export default useForm;

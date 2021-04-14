@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const TextField = ({
+export const TextField = ({
   type,
   errors,
   isSmall,
@@ -46,5 +46,3 @@ TextField.propTypes = {
   className: PropTypes.string,
   type: PropTypes.oneOf(['text', 'password']),
 }
-
-export default TextField;

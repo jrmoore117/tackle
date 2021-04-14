@@ -4,12 +4,12 @@ import React, {
    useEffect,
 } from 'react';
 import PropTypes from 'prop-types';
-import Chip from 'components/Chip';
-import Field from 'components/Field';
-import Checkbox from 'components/Checkbox';
-import TextField from 'components/TextField';
+import { Chip } from 'components/Chip';
+import { Field } from 'components/Field';
+import { Checkbox } from 'components/Checkbox';
+import { TextField } from 'components/TextField';
 
-const MultiSelect = ({
+export const MultiSelect = ({
    name,
    errors,   
    items,
@@ -151,9 +151,6 @@ MultiSelect.propTypes = {
    className: PropTypes.string,
    items: PropTypes.array.isRequired
 }
-
-export default MultiSelect;
-
 
 export const MultiSelectItem = ({
    label,

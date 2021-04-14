@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Divider = ({
+export const Divider = ({
    className,
    ...props
 }) => (
@@ -15,5 +15,3 @@ Divider.defaultProps = {
 Divider.propTypes = {
    className: PropTypes.string,
 }
-
-export default Divider;

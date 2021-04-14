@@ -1,6 +1,6 @@
 import React from 'react';
-import Switch from 'components/Switch';
-import useForm from 'hooks/useForm';
+import { Switch } from 'components/Switch';
+import { useForm } from 'hooks/useForm';
 
 export default {
    component: Switch,

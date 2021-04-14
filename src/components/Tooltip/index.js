@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Box from 'components/Box';
+import { Box } from 'components/Box';
 
-const Tooltip = ({
+export const Tooltip = ({
    color,
    content,
    isSmall,
@@ -55,5 +55,3 @@ Tooltip.propTypes = {
    position: PropTypes.string,
    className: PropTypes.string,
 }
-
-export default Tooltip;

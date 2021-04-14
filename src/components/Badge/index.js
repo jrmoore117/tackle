@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const Badge = ({
+export const Badge = ({
    label,
    color,
    variant,
@@ -49,5 +49,3 @@ Badge.propTypes = {
    className: PropTypes.string,
    label: PropTypes.string.isRequired,
 }
-
-export default Badge;

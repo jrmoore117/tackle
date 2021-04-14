@@ -3,9 +3,9 @@ import React, {
    isValidElement,
 } from 'react';
 import PropTypes from 'prop-types';
-import Icon from 'components/Icon';
+import { Icon } from 'components/Icon';
 
-const Drawer = ({
+export const Drawer = ({
    hide,
    isOpen,
    children,
@@ -48,8 +48,6 @@ Drawer.propTypes = {
    isOpen: PropTypes.bool.isRequired,
    className: PropTypes.string,
 }
-
-export default Drawer;
 
 export const DrawerHeader = ({
    hide,

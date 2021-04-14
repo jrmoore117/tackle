@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Icon from 'components/Icon';
+import { Icon } from 'components/Icon';
 
-const Button = ({
+export const Button = ({
    label,
    color,
    variant,
@@ -68,5 +68,3 @@ Button.propTypes = {
    leftIcon: PropTypes.string,
    rightIcon: PropTypes.string,
 }
-
-export default Button;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ActionMenu, ActionMenuItem } from 'components/ActionMenu';
-import Divider from 'components/Divider';
+import { Divider } from 'components/Divider';
 
 export default {
    component: ActionMenu,
