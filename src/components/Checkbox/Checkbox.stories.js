@@ -1,6 +1,6 @@
 import React from 'react';
 import { Checkbox } from 'components/Checkbox';
-import useForm from 'hooks/useForm';
+import { useForm } from 'hooks/useForm';
 
 export default {
    component: Checkbox,
