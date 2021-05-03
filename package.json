@@ -3,15 +3,13 @@
   "version": "0.1.9",
   "license": "MIT",
   "author": "Jacob Moore",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "prestart": "npm run build:tackle",
-    "prebuild": "npm run build:tackle",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rollup -c",
+    "start": "rollup -c -w",
     "docs": "start-storybook -p 6006 -s public",
     "build:docs": "build-storybook -s public",
     "build:tackle": "postcss build src/css/tackle.css -o src/css/tackle.output.css",
@@ -19,11 +17,12 @@
     "eject": "react-scripts eject"
   },
   "peerDependencies": {
-    "react": ">=16"
+    "react": ">=16",
+    "react-dom": ">=16"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
+  "files": [
+    "dist"
+  ],
   "browserslist": {
     "production": [
       ">0.2%",
@@ -42,7 +41,9 @@
     "reakit": "^1.2.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.6",
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.0",
+    "@babel/preset-react": "^7.13.13",
     "@reach/router": "^1.3.4",
     "@storybook/addon-actions": "^6.1.11",
     "@storybook/addon-essentials": "^6.1.11",
@@ -64,6 +65,10 @@
     "react-dom": "^16.13.1",
     "react-is": "^16.13.1",
     "react-scripts": "3.4.3",
+    "rollup": "^2.46.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
     "storybook": "^6.1.11",
     "tailwindcss": "^2.0.2"
   }
