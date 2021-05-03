@@ -4,8 +4,6 @@
       "jsx": "react"
    },
    "include": [
-      "src/**/*",
-      "cypress/**/*.js",
-      "./node_modules/cypress"
+      "src/**/*"
    ]
 }
