@@ -213,14 +213,14 @@
    }
    
    &--tertiary--blue {
-      @apply text-blue-500 border-1 bg-blue-0;
-      border-color: transparent;
+      @apply text-blue-500 border-1 border-blue-300;
+      background-color: transparent;
    }
    &--tertiary--blue:focus {
       @apply outline-none animate-btn-ping-blue;
    }
    &--tertiary--blue:hover {
-      @apply bg-blue-100;
+      @apply bg-blue-0;
    }
    
    &--other--blue {
