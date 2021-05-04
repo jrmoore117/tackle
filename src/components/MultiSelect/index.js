@@ -4,10 +4,10 @@ import React, {
    useEffect,
 } from 'react';
 import PropTypes from 'prop-types';
-import { Chip } from 'components/Chip';
-import { Field } from 'components/Field';
-import { Checkbox } from 'components/Checkbox';
-import { TextField } from 'components/TextField';
+import { Chip } from '../Chip';
+import { Field } from '../Field';
+import { Checkbox } from '../Checkbox';
+import { TextField } from '../TextField';
 
 export const MultiSelect = ({
    name,

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { Box } from 'components/Box';
+import { Box } from '../Box';
 
 export const Modal = ({
    size,

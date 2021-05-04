@@ -19,7 +19,7 @@ export const Avatar = ({
    });
 
    return (
-      <div className={avatarClasses}>
+      <div className={avatarClasses} {...props}>
          {src
             ? (
                <img src={src} alt="user-avatar" />

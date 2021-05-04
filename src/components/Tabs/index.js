@@ -1,5 +1,5 @@
 import React, { useState, cloneElement } from 'react';
-import { Icon } from 'components/Icon';
+import { Icon } from '../Icon';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
