@@ -4,6 +4,8 @@ import classNames from 'classnames';
 import * as Icons from 'react-feather';
 import { Clickable } from "reakit/Clickable";
 
+import '../../css/tackle.output.css';
+
 export const Icon = ({
    as,
    size,

@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import '../../css/tackle.output.css';
+
 const List = ({
    items,
    color,

@@ -38,7 +38,8 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "react-feather": "^2.0.8",
-    "reakit": "^1.2.5"
+    "reakit": "^1.2.5",
+    "rollup-plugin-import-css": "^2.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.14.0",

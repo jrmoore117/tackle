@@ -3,6 +3,8 @@ import { Icon } from '../Icon';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+import '../../css/tackle.output.css';
+
 const TabLabel = ({
    icon,
    index,

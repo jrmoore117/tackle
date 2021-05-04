@@ -2,6 +2,8 @@ import React from 'react';
 import { Checkbox as ReakitCheckbox, } from "reakit/Checkbox";
 import PropTypes from 'prop-types';
 
+import '../../css/tackle.output.css';
+
 export const Checkbox = ({
    label,
    className,

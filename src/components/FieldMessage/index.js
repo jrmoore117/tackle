@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import '../../css/tackle.output.css';
+
 export const FieldMessage = ({ errors, ...props }) => {
    if (!errors) return null;
    return (
