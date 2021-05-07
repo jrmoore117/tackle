@@ -5,8 +5,6 @@ import {
 } from "reakit/Radio";
 import PropTypes from 'prop-types';
 
-import '../../css/tackle.output.css';
-
 export const Radio = ({
    label,
    className,

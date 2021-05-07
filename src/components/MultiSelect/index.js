@@ -9,8 +9,6 @@ import { Field } from '../Field';
 import { Checkbox } from '../Checkbox';
 import { TextField } from '../TextField';
 
-import '../../css/tackle.output.css';
-
 export const MultiSelect = ({
    name,
    errors,   

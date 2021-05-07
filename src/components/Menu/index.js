@@ -6,8 +6,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Link } from "@reach/router";
 
-import '../../css/tackle.output.css';
-
 export const Menu = ({
    color,
    children,

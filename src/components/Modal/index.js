@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Box } from '../Box';
 
-import '../../css/tackle.output.css';
-
 export const Modal = ({
    size,
    hide,

@@ -2,7 +2,7 @@ import pkg from './package.json'
 
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
-import css from 'rollup-plugin-import-css'
+import postcss from 'rollup-plugin-postcss';
 import babel from 'rollup-plugin-babel';
 
 export default {
@@ -21,9 +21,11 @@ export default {
          exclude: 'node_modules/**',
          presets: ['@babel/env', '@babel/preset-react']
       }),
+      postcss({
+         extensions: ['.css'],
+      }),
       resolve(),
       commonjs(),
-      css()
    ],
    external: ['react', 'react-dom']
 }

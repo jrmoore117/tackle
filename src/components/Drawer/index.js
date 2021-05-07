@@ -5,8 +5,6 @@ import React, {
 import PropTypes from 'prop-types';
 import { Icon } from '../Icon';
 
-import '../../css/tackle.output.css';
-
 export const Drawer = ({
    hide,
    isOpen,

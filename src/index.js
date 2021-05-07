@@ -1,3 +1,5 @@
+import './css/tackle.output.css';
+
 export * from './components/Accordion';
 export * from './components/ActionMenu';
 export * from './components/Alert';

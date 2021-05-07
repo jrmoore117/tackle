@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Icon } from '../Icon';
 
-import '../../css/tackle.output.css';
-
 export const Chip = ({
    label,
    color,

@@ -10,8 +10,6 @@ import classNames from 'classnames';
 import { Button } from '../Button';
 import { Icon } from '../Icon';
 
-import '../../css/tackle.output.css';
-
 export const ActionMenu = ({
    icon,
    label,

@@ -4,8 +4,6 @@ import classNames from 'classnames';
 import { Box } from '../Box';
 import { Icon } from '../Icon';
 
-import '../../css/tackle.output.css';
-
 export const Alert = ({
    icon,
    color,
