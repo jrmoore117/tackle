@@ -10,6 +10,12 @@ const animation = require('./animation');
 const keyframes = require('./keyframes');
 
 module.exports = {
+   mode: 'jit',
+   purge: [
+      './src/**/*.js',
+      './src/css/tackle.css',
+      './src/css/helpers/*.css',
+   ],
    theme: {
       extend: {
          borderWidth,
@@ -23,12 +29,5 @@ module.exports = {
          animation,
          keyframes,
       },
-   },
-   variants: {
-      backgroundColor: ['active', 'hover'],
-      borderColor: ['responsive', 'hover', 'focus'],
-      borderWidth: ['responsive', 'focus'],
-      animation: ['responsive', 'focus', 'active'],
-      textColor: ['hover'],
    },
 }
