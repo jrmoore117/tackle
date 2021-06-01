@@ -4,6 +4,11 @@
   "license": "MIT",
   "author": "Jacob Moore",
   "main": "dist/index.js",
+  "homepage": "https://tackle.netlify.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jrmoore117/tackle"
+  },
   "publishConfig": {
     "access": "public"
   },
