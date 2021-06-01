@@ -22,7 +22,7 @@ export const Tooltip = ({
    const tooltipClasses = classNames(
       'tooltip',
       `tooltip--${color}`,
-      `animate-fade-in-to-${position}`, {
+      `tooltip--fade-in-to-${position}`, {
       'tooltip--small': isSmall,
    });
 

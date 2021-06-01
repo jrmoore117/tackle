@@ -80,10 +80,10 @@
    }
    
    &--delete--default {
-      @apply opacity-0 transition-all transform translate-y-1 duration-75 ease-in-out;
+      @apply p-1 opacity-0 transition-all transform translate-y-1 duration-75 ease-in-out;
    }
    
    &--delete--hover {
-      @apply mb-1 transition-all transform translate-y-0 duration-75 ease-in-out;
+      @apply p-1 mb-1 transition-all transform translate-y-0 duration-75 ease-in-out;
    }
 }

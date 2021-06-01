@@ -29,9 +29,8 @@ export const Chip = ({
             color={color}
             variant="clickable"
             isRounded
-            size={5}
-            padding={1}
-            className="ml-0.5"
+            size="lg"
+            className="ml-0.5 p-1"
             onClick={onClick}
          />
       </span>

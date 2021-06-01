@@ -65,7 +65,7 @@ export const ActionMenu = ({
             variant={variant}
             isSmall={isSmall}
             label={icon
-               ? <Icon as={icon} size={6} />
+               ? <Icon as={icon} size="xl" />
                : label}
          />
          <div className={actionMenuClasses}>

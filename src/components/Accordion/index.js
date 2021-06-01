@@ -89,7 +89,7 @@ export const AccordionPanel = ({
             {...props}
          >
             {icon
-               ? <Icon as={icon} color={color} variant="shaded" size={6} padding={1} className="mr-2" />
+               ? <Icon as={icon} color={color} variant="shaded" size="xl" className="mr-2 p-1" />
                : <Icon as="ChevronRight" className={panelIconClasses} />}
             {label}
          </div>

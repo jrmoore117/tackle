@@ -33,6 +33,22 @@
       @apply shadow-md-gray;
    }
 
+   &--fade-in-to-t {
+      @apply animate-fade-in-to-t;
+   }
+
+   &--fade-in-to-r {
+      @apply animate-fade-in-to-r;
+   }
+
+   &--fade-in-to-b {
+      @apply animate-fade-in-to-b;
+   }
+
+   &--fade-in-to-l {
+      @apply animate-fade-in-to-l;
+   }
+
    &--wrapper {
       @apply relative inline-block;
 

@@ -10,7 +10,7 @@
    }
    
    &--header-button {
-      @apply absolute -left-5 top-5 shadow-blue;
+      @apply p-2 absolute -left-5 top-5 shadow-blue;
    }
    
    &--body {

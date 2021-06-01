@@ -10,7 +10,7 @@ const Template = args => <Icon {...args} />;
 
 export const FeatherIcons = () => (
    <div className="flex items-center font-medium">
-      Tackle uses Feather <Icon as="Feather" size={5} className="mx-1" /> icons.
+      Tackle uses Feather <Icon as="Feather" className="mx-1" /> icons.
    </div>
 );
 
@@ -30,49 +30,51 @@ Green.args = {
 export const LargeShadedBlue = Template.bind({});
 LargeShadedBlue.args = {
    as: 'Calendar',
-   size: 10,
-   padding: 2,
+   size: '3xl',
    color: 'blue',
    variant: 'shaded',
+   className: 'p-2',
    onClick: () => {},
 };
 
 export const LargeShadedGray = Template.bind({});
 LargeShadedGray.args = {
    as: 'MapPin',
-   size: 10,
+   size: '3xl',
    padding: 2,
    color: 'gray',
    variant: 'shaded',
+   className: 'p-2',
    onClick: () => {},
 };
 
 export const LargeShadedPurple = Template.bind({});
 LargeShadedPurple.args = {
    as: 'Twitch',
-   size: 10,
+   size: '3xl',
    padding: 2,
    color: 'purple',
    variant: 'shaded',
+   className: 'p-2',
 };
 
 export const ShadedGreenRounded = Template.bind({});
 ShadedGreenRounded.args = {
    as: 'Check',
-   size: 6,
-   padding: 1,
+   size:'xl',
    isRounded: true,
    color: 'green',
    variant: 'shaded',
+   className: 'p-1',
 };
 
 export const ClickableBlueRounded = Template.bind({});
 ClickableBlueRounded.args = {
    as: 'X',
-   size: 6,
-   padding: 1,
+   size: 'xl',
    color: 'blue',
    isRounded: true,
    variant: 'clickable',
+   className: 'p-1',
    onClick: () => console.log("Deleted!"),
 };

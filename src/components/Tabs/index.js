@@ -44,7 +44,6 @@ const TabLabel = ({
             <Icon
                as="X"
                isRounded
-               padding={1}
                color={color}
                variant="clickable"
                className={tabDeleteClasses}
@@ -116,12 +115,11 @@ export const Tabs = ({
             {newTab && (
                <Icon
                   as="Plus"
-                  size={5}
+                  size="lg"
                   isRounded
-                  padding={1}
                   color={color}
                   variant="clickable"
-                  className="mb-2"
+                  className="mb-2 p-1"
                   onClick={addTab}
                />
             )}

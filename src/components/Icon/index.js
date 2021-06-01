@@ -9,7 +9,6 @@ export const Icon = ({
    size,
    color,
    variant,
-   padding,
    onClick,
    isSolid,
    isDisabled,
@@ -21,9 +20,7 @@ export const Icon = ({
    const Icon = Icons[as];
 
    const iconClasses = classNames(
-      `h-${size}`,
-      `w-${size}`,
-      `p-${padding}`,
+      `icon--${size}`,
       className, {
       'rounded': !isRounded,
       'rounded-full': isRounded,
@@ -54,8 +51,7 @@ export const Icon = ({
 Icon.id = 'Icon';
 
 Icon.defaultProps = {
-   size: 4,
-   padding: 0,
+   size: 'md',
    variant: 'default',
    isSolid: false,
    isRounded: false,
@@ -65,8 +61,7 @@ Icon.defaultProps = {
 }
 
 Icon.propTypes = {
-   size: PropTypes.number,
-   padding: PropTypes.number,
+   size: PropTypes.string,
    color: PropTypes.string,
    variant: PropTypes.string,
    onClick: PropTypes.func,
