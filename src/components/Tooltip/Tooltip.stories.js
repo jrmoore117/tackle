@@ -27,7 +27,7 @@ export const TooltipWithContent = () => (
             variant="shaded"
             isRounded
             size={8}
-            padding={1}
+            className="p-1"
          />
       </Tooltip>
    </div>
@@ -48,7 +48,7 @@ export const SmallTooltipWithTextToLeft = () => (
             variant="shaded"
             isRounded
             size={8}
-            padding={1}
+            className="p-1"
          />
       </Tooltip>
    </div>
@@ -69,7 +69,7 @@ export const SmallTooltipWithTextToTop = () => (
             variant="shaded"
             isRounded
             size={8}
-            padding={1}
+            className="p-1"
          />
       </Tooltip>
    </div>
@@ -90,7 +90,7 @@ export const SmallTooltipWithTextToBottom = () => (
             variant="shaded"
             isRounded
             size={8}
-            padding={1}
+            className="p-1"
          />
       </Tooltip>
    </div>

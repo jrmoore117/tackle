@@ -721,6 +721,9 @@ video {
 .h-10 {
 	height: 2.5rem;
 }
+.h-12 {
+	height: 3rem;
+}
 .h-4 {
 	height: 1rem;
 }
@@ -2111,6 +2114,24 @@ video {
 .avatar img {
 	--tw-shadow: 0 1px 2px 0 #e2e5ea;
 	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.avatar--sm {
+	height: 2rem;
+}
+.avatar--sm {
+	width: 2rem;
+}
+.avatar--md {
+	height: 2.5rem;
+}
+.avatar--md {
+	width: 2.5rem;
+}
+.avatar--lg {
+	height: 3rem;
+}
+.avatar--lg {
+	width: 3rem;
 }
 .badge {
 	-webkit-user-select: none;

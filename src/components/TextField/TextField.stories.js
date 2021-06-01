@@ -75,10 +75,10 @@ export const TextFieldWithConditionalRightElement = () => {
                <FieldElementRight>
                   <Icon
                      as="X"
-                     size={5}
-                     padding={1}
+                     size="lg"
                      color="blue"
                      variant="clickable"
+                     className="p-1"
                      isRounded
                      onClick={() => setValues({ search: '' })}
                   />

@@ -41,7 +41,6 @@ export const LargeShadedGray = Template.bind({});
 LargeShadedGray.args = {
    as: 'MapPin',
    size: '3xl',
-   padding: 2,
    color: 'gray',
    variant: 'shaded',
    className: 'p-2',
@@ -52,7 +51,6 @@ export const LargeShadedPurple = Template.bind({});
 LargeShadedPurple.args = {
    as: 'Twitch',
    size: '3xl',
-   padding: 2,
    color: 'purple',
    variant: 'shaded',
    className: 'p-2',

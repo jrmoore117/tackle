@@ -12,8 +12,7 @@ export const Avatar = ({
 }) => {
    const avatarClasses = classNames(
       'avatar',
-      `h-${size}`,
-      `w-${size}`, 
+      `avatar--${size}`, 
       className, {
       [`avatar--${color}`]: !src,
    });
@@ -35,14 +34,14 @@ export const Avatar = ({
 
 Avatar.defaultProps = {
    src: '',
-   size: 10,
+   size: 'md',
    color: 'blue',
    className: '',
 }
 
 Avatar.propTypes = {
    src: PropTypes.string,
-   size: PropTypes.number,
+   size: PropTypes.string,
    color: PropTypes.string,
    className: PropTypes.string,
 }

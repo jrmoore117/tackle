@@ -36,4 +36,16 @@
    img {
       @apply h-full w-full rounded-full shadow-gray;
    }
+
+   &--sm {
+      @apply h-8 w-8;
+   }
+   
+   &--md {
+      @apply h-10 w-10;
+   }
+   
+   &--lg {
+      @apply h-12 w-12;
+   }
 }
