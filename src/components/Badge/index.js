@@ -18,7 +18,7 @@ export const Badge = ({
       className, {
       'badge--small': isSmall,
       'badge--rounded': isRounded,
-      [`animate-ping-${pingColor}`]: pingColor,
+      [`ping--${pingColor}`]: pingColor,
    });
 
    return (

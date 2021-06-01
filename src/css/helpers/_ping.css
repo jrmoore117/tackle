@@ -1,0 +1,29 @@
+.ping {
+   &--blue {
+      @apply animate-ping-blue;
+   }
+   
+   &--red {
+      @apply animate-ping-red;
+   }
+
+   &--green {
+      @apply animate-ping-green;
+   }
+
+   &--yellow {
+      @apply animate-ping-yellow;
+   }
+
+   &--purple {
+      @apply animate-ping-purple;
+   }
+
+   &--indigo {
+      @apply animate-ping-indigo;
+   }
+
+   &--gray {
+      @apply animate-ping-gray;
+   }
+}

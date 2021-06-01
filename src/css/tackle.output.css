@@ -4863,6 +4863,110 @@ video {
 	--tw-text-opacity: 1;
 	color: rgba(245, 66, 81, var(--tw-text-opacity));
 }
+@keyframes ping-blue {
+
+	15% {
+		box-shadow: 0 0 0 3px #bdd7ff;
+	}
+
+	100% {
+		box-shadow: 0 0 0 5px transparent;
+	}
+}
+.ping--blue {
+	animation: ping-blue 1s cubic-bezier(0,.656,0,.58) infinite;
+}
+@keyframes small-ping-blue {
+
+	20% {
+		box-shadow: 0 0 0 2px #bdd7ff;
+	}
+
+	100% {
+		box-shadow: 0 0 0 4px transparent;
+	}
+}
+.ping--blue--small {
+	animation: small-ping-blue 0.65s cubic-bezier(0,.656,0,.58) 1;
+}
+@keyframes ping-red {
+
+	15% {
+		box-shadow: 0 0 0 3px #fcc6cb;
+	}
+
+	100% {
+		box-shadow: 0 0 0 5px transparent;
+	}
+}
+.ping--red {
+	animation: ping-red 1s cubic-bezier(0,.656,0,.58) infinite;
+}
+@keyframes ping-green {
+
+	15% {
+		box-shadow: 0 0 0 3px #b3ead4;
+	}
+
+	100% {
+		box-shadow: 0 0 0 5px transparent;
+	}
+}
+.ping--green {
+	animation: ping-green 1s cubic-bezier(0,.656,0,.58) infinite;
+}
+@keyframes ping-yellow {
+
+	15% {
+		box-shadow: 0 0 0 3px #feecbd;
+	}
+
+	100% {
+		box-shadow: 0 0 0 5px transparent;
+	}
+}
+.ping--yellow {
+	animation: ping-yellow 1s cubic-bezier(0,.656,0,.58) infinite;
+}
+@keyframes ping-purple {
+
+	15% {
+		box-shadow: 0 0 0 3px #dbd5ff;
+	}
+
+	100% {
+		box-shadow: 0 0 0 5px transparent;
+	}
+}
+.ping--purple {
+	animation: ping-purple 1s cubic-bezier(0,.656,0,.58) infinite;
+}
+@keyframes ping-indigo {
+
+	15% {
+		box-shadow: 0 0 0 3px #c3cce6;
+	}
+
+	100% {
+		box-shadow: 0 0 0 5px transparent;
+	}
+}
+.ping--indigo {
+	animation: ping-indigo 1s cubic-bezier(0,.656,0,.58) infinite;
+}
+@keyframes ping-gray {
+
+	15% {
+		box-shadow: 0 0 0 3px #e9ecef;
+	}
+
+	100% {
+		box-shadow: 0 0 0 5px transparent;
+	}
+}
+.ping--gray {
+	animation: ping-gray 1s cubic-bezier(0,.656,0,.58) infinite;
+}
 .radio {
 	margin-right: 0.5rem;
 	display: flex;
