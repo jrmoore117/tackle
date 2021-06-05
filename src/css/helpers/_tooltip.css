@@ -1,9 +1,5 @@
 .tooltip {
-   @apply p-4 text-sm inline-block;
-
-   &--small {
-      @apply p-2 text-xs;
-   }
+   @apply p-2 text-xs inline-block;
    
    &--blue {
       @apply shadow-md-blue;
@@ -53,19 +49,31 @@
       @apply relative inline-block;
 
       &--t {
-         @apply mb-2 w-80 absolute bottom-full left-1/2 transform -translate-x-1/2 flex justify-center;
+         @apply mb-2 absolute bottom-full left-1/2 transform -translate-x-1/2 flex justify-center;
       }
       
       &--r {
-         @apply ml-2 w-80 absolute left-full top-1/2 transform -translate-y-1/2;
+         @apply ml-2 absolute left-full top-1/2 transform -translate-y-1/2;
       }
       
       &--b {
-         @apply mt-2 w-80 absolute top-full left-1/2 transform -translate-x-1/2 flex justify-center;
+         @apply mt-2 absolute top-full left-1/2 transform -translate-x-1/2 flex justify-center;
       }
       
       &--l {
-         @apply mr-2 w-80 absolute right-full top-1/2 transform -translate-y-1/2 flex justify-end;
+         @apply mr-2 absolute right-full top-1/2 transform -translate-y-1/2 flex justify-end;
+      }
+
+      &--sm {
+         @apply w-40;
+      }
+
+      &--md{
+         @apply w-60;
+      }
+
+      &--lg {
+         @apply w-80;
       }
    }
 }
