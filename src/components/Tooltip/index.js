@@ -1,35 +1,35 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Box } from '../Box';
+import { useHover } from 'hooks/useHover';
 
 export const Tooltip = ({
+   size,
    color,
    content,
-   isSmall,
    position,
    children,
    className,
    ...props
 }) => {
-   const [visible, setVisible] = useState(false);
+   const [hoverRef, isHovered] = useHover();
 
-   const wrapperPositionClasses = classNames({
-      'hidden': !visible,
-      [`tooltip--wrapper--${position}`]: visible,
+   const wrapperPositionClasses = classNames(
+      `tooltip--wrapper--${size}`, {
+      'hidden': !isHovered,
+      [`tooltip--wrapper--${position}`]: isHovered,
    });
 
    const tooltipClasses = classNames(
       'tooltip',
       `tooltip--${color}`,
-      `tooltip--fade-in-to-${position}`, {
-      'tooltip--small': isSmall,
-   });
+      `tooltip--fade-in-to-${position}`,
+   );
 
    return (
       <div
-         onMouseEnter={() => setVisible(true)}
-         onMouseLeave={() => setVisible(false)}
+         ref={hoverRef}
          className={`tooltip--wrapper ${className}`}
          {...props}
       >
@@ -44,12 +44,14 @@ export const Tooltip = ({
 }
 
 Tooltip.defaultProps = {
+   size: 'sm',
    color: 'blue',
    position: 'r',
    className: '',
 }
 
 Tooltip.propTypes = {
+   size: PropTypes.string,
    color: PropTypes.string,
    isSmall: PropTypes.bool,
    position: PropTypes.string,
