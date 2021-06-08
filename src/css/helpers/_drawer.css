@@ -1,5 +1,5 @@
 .drawer {
-   @apply bg-white h-screen min-w-120 shadow-dark-gray-left flex flex-col;
+   @apply bg-white h-screen min-w-120 shadow-dark-gray-left flex flex-col animate-slide-in;
 
    &--background {
       @apply bg-opacity-50 bg-gray-200 fixed top-0 left-0 flex justify-end h-screen w-screen z-10;

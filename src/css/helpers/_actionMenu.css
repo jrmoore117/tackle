@@ -1,22 +1,4 @@
 .action-menu {
-   @apply py-1 font-sans text-sm text-gray-1000 bg-white border-1 border-gray-100 shadow-md rounded inline-block z-10;
-
-   &--to-bl {
-      @apply mt-2 absolute left-0 top-full animate-fade-in-to-b;
-   }
-
-   &--to-br {
-      @apply mt-2 absolute right-0 top-full animate-fade-in-to-b;
-   }
-
-   &--to-tl {
-      @apply mb-2 absolute left-0 bottom-full animate-fade-in-to-t;
-   }
-
-   &--to-tr {
-      @apply mb-2 absolute right-0 bottom-full animate-fade-in-to-t;
-   }
-
    &--item {
       @apply mx-1 h-8 px-2 rounded flex items-center cursor-pointer select-none whitespace-nowrap;
 
@@ -47,10 +29,10 @@
       &--indigo:hover {
          @apply text-indigo-500 bg-indigo-0;
       }
-   }
-
-   &--wrapper {
-      @apply relative inline-block;
+   
+      &--default:hover {
+         @apply bg-gray-100;
+      }
    }
 
    &--icon {

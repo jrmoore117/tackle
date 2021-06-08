@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Drawer, DrawerHeader, DrawerBody, DrawerFooter } from 'components/Drawer';
+import { Drawer } from 'components/Drawer';
 import { Button } from 'components/Button';
 
 export default {
@@ -13,16 +13,16 @@ export const DefaultBlue = () => {
       <div>
          <Button onClick={() => setIsOpen(true)} color="blue" label="Open Drawer" />
          <Drawer isOpen={isOpen} hide={() => setIsOpen(false)}>
-            <DrawerHeader>
+            <Drawer.Header>
                List Item
-            </DrawerHeader>
-            <DrawerBody>
+            </Drawer.Header>
+            <Drawer.Body>
                <div style={{ height: 5000 }}>Scrollale list item details</div>
-            </DrawerBody>
-            <DrawerFooter className="flex justify-end">
+            </Drawer.Body>
+            <Drawer.Footer className="flex justify-end">
                <Button color="blue" variant="secondary" label="Previous" className="mr-2" />
                <Button color="blue" label="Next" />
-            </DrawerFooter>
+            </Drawer.Footer>
          </Drawer>
       </div>
    );

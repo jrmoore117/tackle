@@ -1,11 +1,44 @@
 .accordion {
    @apply bg-white border-1 border-gray-200 shadow-gray rounded overflow-hidden;
 
-   &--panel-header {
-      @apply p-4 text-gray-1000 font-medium border-gray-200 cursor-pointer select-none flex items-center transition duration-200 ease-in-out;
+   &--panel {
+      @apply border-b-1 border-gray-200;
+
+      &--header {
+         @apply p-4 text-gray-1000 font-medium cursor-pointer select-none flex items-center transition duration-200 ease-in-out;
+         
+         &--blue:hover {
+            @apply text-blue-500;
+         }
+         
+         &--red:hover {
+            @apply text-red-500;
+         }
+         
+         &--green:hover {
+            @apply text-green-500;
+         }
+         
+         &--yellow:hover {
+            @apply text-yellow-500;
+         }
+         
+         &--purple:hover {
+            @apply text-purple-500;
+         }
+         
+         &--indigo:hover {
+            @apply text-indigo-500;
+         }
+      }
+
+      &--content {
+         @apply p-4 bg-gray-0 border-t-1 border-gray-200;
+      }
    }
 
-   &--panel-content {
-      @apply p-4 bg-gray-0;
+   &--panel:last-child {
+      border-bottom-style: none;
+      border-bottom-width: 0px;      
    }
 }

@@ -15,7 +15,6 @@ export * from './components/Field';
 export * from './components/FieldElement';
 export * from './components/FieldMessage';
 export * from './components/Icon';
-export * from './components/Menu';
 export * from './components/Modal';
 export * from './components/MultiSelect';
 export * from './components/Radio';

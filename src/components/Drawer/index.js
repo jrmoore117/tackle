@@ -1,41 +1,47 @@
-import React, {
-   cloneElement,
-   isValidElement,
-} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { Icon } from '../Icon';
+import classNames from 'classnames';
+import { DrawerProvider } from './useDrawerContext';
+import {
+   Header,
+   Body,
+   Footer
+} from './components';
 
-export const Drawer = ({
+const Drawer = ({
    hide,
    isOpen,
    children,
    className,
    ...props
 }) => {
-   const childrenWithProps = children.map((child, i) => {
-      if (isValidElement(child)) {
-         return cloneElement(child, {
-            key: `drawerchild-${i}`,
-            hide: hide
-         });
-      }
-      return null;
+
+   const drawerClasses = classNames(
+      'drawer',
+      className
+   );
+
+   const drawerBackgroundClasses = classNames({
+      'hidden': !isOpen,
+      'drawer--background': isOpen
    });
 
    return (
-      <div
-         onClick={hide}
-         className={isOpen ? 'drawer--background' : 'hidden'}
-      >
+      <DrawerProvider value={{ hide }}>
          <div
-            onClick={(e) => e.stopPropagation()}
-            variant="frame"
-            className={`drawer ${isOpen ? 'animate-slide-in' : ''} ${className}`}
-            {...props}
+            onClick={hide}
+            className={drawerBackgroundClasses}
          >
-            {childrenWithProps}
+            <div
+               onClick={(e) => e.stopPropagation()}
+               variant="frame"
+               className={drawerClasses}
+               {...props}
+            >
+               {children}
+            </div>
          </div>
-      </div>
+      </DrawerProvider>
    );
 }
 
@@ -44,80 +50,14 @@ Drawer.defaultProps = {
 }
 
 Drawer.propTypes = {
+   className: PropTypes.string,
    hide: PropTypes.func.isRequired,
    isOpen: PropTypes.bool.isRequired,
-   className: PropTypes.string,
+   children: PropTypes.node.isRequired,
 }
 
-export const DrawerHeader = ({
-   hide,
-   className,
-   children,
-   ...props
-}) => (
-   <div
-      className={`drawer--header ${className}`}
-      {...props}
-   >
-      <Icon as="X" variant="clickable" color="blue" size="3xl" isRounded onClick={hide} className="drawer--header-button" />
-      {children}
-   </div>
-);
+Drawer.Header = Header;
+Drawer.Body = Body;
+Drawer.Footer = Footer;
 
-DrawerHeader.defaultProps = {
-   className: ''
-}
-
-DrawerHeader.propTypes = {
-   hide: PropTypes.func,
-   children: PropTypes.node,
-   className: PropTypes.string,
-}
-
-export const DrawerBody = ({
-   hide,
-   className,
-   children,
-   ...props
-}) => (
-   <div
-      className={`drawer--body ${className}`}
-      {...props}
-   >
-      {children}
-   </div>
-);
-
-DrawerBody.defaultProps = {
-   className: ''
-}
-
-DrawerBody.propTypes = {
-   hide: PropTypes.func,
-   children: PropTypes.node,
-   className: PropTypes.string,
-}
-
-export const DrawerFooter = ({
-   hide,
-   className,
-   children,
-   ...props
-}) => (
-   <div
-      className={`drawer--footer ${className}`}
-      {...props}
-   >
-      {children}
-   </div>
-);
-
-DrawerFooter.defaultProps = {
-   className: ''
-}
-
-DrawerFooter.propTypes = {
-   hide: PropTypes.func,
-   children: PropTypes.node,
-   className: PropTypes.string,
-}
+export { Drawer };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ActionMenu, ActionMenuItem } from 'components/ActionMenu';
+import { ActionMenu } from 'components/ActionMenu';
 import { Divider } from 'components/Divider';
 
 export default {
@@ -14,9 +14,9 @@ export const BlueActionMenuWithIcons = () => {
          icon="MoreHorizontal"
          className="mb-32"
       >
-         <ActionMenuItem icon="Share" label="Share" />
-         <ActionMenuItem icon="Clipboard" label="Copy link" />
-         <ActionMenuItem icon="Flag" label="Report" />
+         <ActionMenu.Item icon="Share" label="Share" />
+         <ActionMenu.Item icon="Clipboard" label="Copy link" />
+         <ActionMenu.Item icon="Flag" label="Report" />
       </ActionMenu>
    );
 }
@@ -29,12 +29,12 @@ export const SmallBlueActionMenu = () => {
          className="mb-40"
          isSmall
       >
-         <ActionMenuItem label="Hook" />
-         <ActionMenuItem label="Line" />
-         <ActionMenuItem label="Sinker" />
+         <ActionMenu.Item label="Hook" />
+         <ActionMenu.Item label="Line" />
+         <ActionMenu.Item label="Sinker" />
          <Divider className="my-1" />
-         <ActionMenuItem label="Bobber" />
-         <ActionMenuItem label="Lure" />
+         <ActionMenu.Item label="Bobber" />
+         <ActionMenu.Item label="Lure" />
       </ActionMenu>
    );
 }
@@ -46,12 +46,12 @@ export const BottomRightActionMenu = () => {
          position="br"
          className="mb-52 ml-10"
       >
-         <ActionMenuItem label="Hook" />
-         <ActionMenuItem label="Line" />
-         <ActionMenuItem label="Sinker" />
+         <ActionMenu.Item label="Hook" />
+         <ActionMenu.Item label="Line" />
+         <ActionMenu.Item label="Sinker" />
          <Divider className="my-1" />
-         <ActionMenuItem label="Bobber" />
-         <ActionMenuItem label="Lure" />
+         <ActionMenu.Item label="Bobber" />
+         <ActionMenu.Item label="Lure" />
       </ActionMenu>
    );
 }
@@ -63,12 +63,12 @@ export const TopRightActionMenu = () => {
          className="mt-52 ml-10"
          icon="MoreHorizontal"
       >
-         <ActionMenuItem label="Hook" />
-         <ActionMenuItem label="Line" />
-         <ActionMenuItem label="Sinker" />
+         <ActionMenu.Item label="Hook" />
+         <ActionMenu.Item label="Line" />
+         <ActionMenu.Item label="Sinker" />
          <Divider className="my-1" />
-         <ActionMenuItem label="Bobber" />
-         <ActionMenuItem label="Lure" />
+         <ActionMenu.Item label="Bobber" />
+         <ActionMenu.Item label="Lure" />
       </ActionMenu>
    );
 }
@@ -81,12 +81,12 @@ export const PurpleTopLeftActionMenu = () => {
          className="mt-52"
          icon="MoreHorizontal"
       >
-         <ActionMenuItem label="Hook" />
-         <ActionMenuItem label="Line" />
-         <ActionMenuItem label="Sinker" />
+         <ActionMenu.Item label="Hook" />
+         <ActionMenu.Item label="Line" />
+         <ActionMenu.Item label="Sinker" />
          <Divider className="my-1" />
-         <ActionMenuItem label="Bobber" />
-         <ActionMenuItem label="Lure" />
+         <ActionMenu.Item label="Bobber" />
+         <ActionMenu.Item label="Lure" />
       </ActionMenu>
    );
 }

@@ -1,0 +1,23 @@
+.popover {
+   @apply py-1 font-sans text-sm text-gray-1000 bg-white border-1 border-gray-100 shadow-md rounded inline-block z-10;
+
+   &--to-bl {
+      @apply mt-2 absolute left-0 top-full animate-fade-in-to-b;
+   }
+
+   &--to-br {
+      @apply mt-2 absolute right-0 top-full animate-fade-in-to-b;
+   }
+
+   &--to-tl {
+      @apply mb-2 absolute left-0 bottom-full animate-fade-in-to-t;
+   }
+
+   &--to-tr {
+      @apply mb-2 absolute right-0 bottom-full animate-fade-in-to-t;
+   }
+
+   &--wrapper {
+      @apply relative inline-block;
+   }
+}
