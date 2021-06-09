@@ -772,12 +772,6 @@ video {
 .w-screen {
 	width: 100vw;
 }
-.w-96 {
-	width: 24rem;
-}
-.w-120 {
-	width: 40rem;
-}
 .w-8 {
 	width: 2rem;
 }
@@ -4529,25 +4523,19 @@ video {
 	--tw-text-opacity: 1;
 	color: rgba(54, 85, 171, var(--tw-text-opacity));
 }
-.modal--small {
+.modal {
+	padding: 1rem;
+	--tw-shadow: 0 10px 25px -3px #d6dae1;
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.modal--sm {
 	width: 24rem;
 }
-.modal--small {
-	padding: 1rem;
+.modal--md {
+	width: 30rem;
 }
-.modal--small {
-	--tw-shadow: 0 10px 25px -3px #d6dae1;
-	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-.modal--large {
+.modal--lg {
 	width: 40rem;
-}
-.modal--large {
-	padding: 1rem;
-}
-.modal--large {
-	--tw-shadow: 0 10px 25px -3px #d6dae1;
-	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .modal--background {
 	position: fixed;

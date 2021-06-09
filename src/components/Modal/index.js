@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Box } from '../Box';
+import { Header, Body, Footer } from './components';
 
-export const Modal = ({
+const Modal = ({
    size,
    hide,
    isVisible,
@@ -12,6 +13,7 @@ export const Modal = ({
    ...props
 }) => {
    const modalClasses = classNames(
+      'modal',
       `modal--${size}`, {
       'animate-fade-in': isVisible
    });
@@ -39,7 +41,7 @@ export const Modal = ({
 }
 
 Modal.defaultProps = {
-   size: "small",
+   size: "sm",
    isVisible: false,
 }
 
@@ -49,65 +51,8 @@ Modal.propTypes = {
    className: PropTypes.string,
 }
 
-export const ModalHeader = ({
-   className,
-   children,
-   ...props
-}) => (
-   <div
-      className={`modal--header ${className}`}
-      {...props}
-   >
-      {children}
-   </div>
-);
+Modal.Header = Header;
+Modal.Body = Body;
+Modal.Footer = Footer;
 
-ModalHeader.defaultProps = {
-   className: '',
-}
-
-ModalHeader.propTypes = {
-   className: PropTypes.string,
-}
-
-export const ModalBody = ({
-   className,
-   children,
-   ...props
-}) => (
-   <div
-      className={`modal--body ${className}`}
-      {...props}
-   >
-      {children}
-   </div>
-);
-
-ModalBody.defaultProps = {
-   className: '',
-}
-
-ModalBody.propTypes = {
-   className: PropTypes.string,
-}
-
-export const ModalFooter = ({
-   className,
-   children,
-   ...props
-}) => (
-   <div
-      className={`modal--footer ${className}`}
-      {...props}
-   >
-      {children}
-   </div>
-);
-
-ModalFooter.defaultProps = {
-   className: '',
-}
-
-ModalFooter.propTypes = {
-   className: PropTypes.string,
-}
+export { Modal };

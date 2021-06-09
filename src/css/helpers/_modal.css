@@ -1,10 +1,16 @@
 .modal {
-   &--small {
-      @apply w-96 p-4 shadow-dark-gray;
+   @apply p-4 shadow-dark-gray;
+
+   &--sm {
+      @apply w-96;
    }
    
-   &--large {
-      @apply w-120 p-4 shadow-dark-gray;
+   &--md {
+      @apply w-120;
+   }
+   
+   &--lg {
+      @apply w-160;
    }
    
    &--background {
