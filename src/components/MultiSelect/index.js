@@ -56,22 +56,6 @@ export const MultiSelect = ({
       setSearchString(value);
    }
 
-   // select matching item when Enter is pressed
-   const handleOnKeyUp = (e) => {
-      if (e.key === 'Enter') {
-         const searchStringMatch = options.find(item => item.label.toLowerCase() === searchString.toLocaleLowerCase());
-         const matchAlreadySelected = searchStringMatch
-            ? selected.find(item => item.label === searchStringMatch.label)
-            : null;
-         
-         if (searchStringMatch && !matchAlreadySelected) {
-            setSearchString('');
-            setOptions(uniqueItems);
-            setSelected([...selected, searchStringMatch]);
-         }
-      }
-   }
-
    const handleSetSelected = (selectedItems) => {
       // onChange handled in useForm hook
       if (onChange) {
@@ -85,6 +69,22 @@ export const MultiSelect = ({
          });
       }
       setSelected(selectedItems);
+   }
+
+   // select matching item when Enter is pressed
+   const handleOnKeyUp = (e) => {
+      if (e.key === 'Enter') {
+         const searchStringMatch = options.find(item => item.label.toLowerCase() === searchString.toLocaleLowerCase());
+         const matchAlreadySelected = searchStringMatch
+            ? selected.find(item => item.label === searchStringMatch.label)
+            : null;
+         
+         if (searchStringMatch && !matchAlreadySelected) {
+            setSearchString('');
+            setOptions(uniqueItems);
+            handleSetSelected([...selected, searchStringMatch]);
+         }
+      }
    }
    
    return (

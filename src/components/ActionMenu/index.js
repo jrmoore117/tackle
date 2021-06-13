@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Icon } from '../Icon';
 import { Button } from '../Button';
@@ -17,9 +17,13 @@ const ActionMenu = ({
    className,
    ...props
 }) => {
+   const [isOpen, setIsOpen] = useState(false);
+   
    return (
       <ActionMenuProvider value={{ color, isSmall }}>
          <Popover
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
             position={position}
             popoverContent={children}
             className={className}

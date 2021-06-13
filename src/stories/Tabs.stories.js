@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Tabs, Tab } from 'components/Tabs';
+import { Tabs } from 'components/Tabs';
 
 export default {
    component: Tabs,
@@ -10,15 +10,15 @@ export const DefaultTabs = () => {
    const [index, setIndex] = useState(0);
    return (
       <Tabs index={index} onClick={setIndex}>
-         <Tab tabTitle="Profile">
+         <Tabs.Tab tabTitle="Profile">
             Profile Settings
-         </Tab>
-         <Tab tabTitle="Notifications">
+         </Tabs.Tab>
+         <Tabs.Tab tabTitle="Notifications">
             Notifications Settings
-         </Tab>
-         <Tab tabTitle="Security">
+         </Tabs.Tab>
+         <Tabs.Tab tabTitle="Security">
             Security Settings
-         </Tab>
+         </Tabs.Tab>
       </Tabs>
    );
 }
@@ -27,15 +27,15 @@ export const PurpleTabsWithIcons = () => {
    const [index, setIndex] = useState(0);
    return (
       <Tabs color="purple" index={index} onClick={setIndex}>
-         <Tab tabTitle="Profile" icon="User">
+         <Tabs.Tab tabTitle="Profile" icon="User">
             Profile Settings
-         </Tab>
-         <Tab tabTitle="Notifications" icon="Bell">
+         </Tabs.Tab>
+         <Tabs.Tab tabTitle="Notifications" icon="Bell">
             Notifications Settings
-         </Tab>
-         <Tab tabTitle="Security" icon="Shield">
+         </Tabs.Tab>
+         <Tabs.Tab tabTitle="Security" icon="Shield">
             Security Settings
-         </Tab>
+         </Tabs.Tab>
       </Tabs>
    );
 }
@@ -47,14 +47,14 @@ export const TabsWithAddNewTab = () => {
          index={index}
          onClick={setIndex}
          newTab={
-            <Tab tabTitle="New Tab">
+            <Tabs.Tab tabTitle="New Tab">
                This is a new tab.
-            </Tab>
+            </Tabs.Tab>
          }
       >
-         <Tab tabTitle="Tab 1">
+         <Tabs.Tab tabTitle="Tab 1">
             Tab 1
-         </Tab>
+         </Tabs.Tab>
       </Tabs>
    );
 }

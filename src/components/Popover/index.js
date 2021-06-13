@@ -1,9 +1,10 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { usePopover } from 'hooks/usePopover';
 
 export const Popover = ({
+   isOpen,
+   setIsOpen,
    position,
    popoverContent,
    className,
@@ -11,7 +12,15 @@ export const Popover = ({
    ...props
 }) => {
    const popoverRef = useRef();
-   const [isOpen, setIsOpen] = usePopover(popoverRef);
+
+   useEffect(() => {
+      const handleClickAway = (e) => {
+         if (popoverRef.current.contains(e.target)) return;
+         setIsOpen(false);
+      }
+      document.addEventListener("mousedown", handleClickAway);      
+      return () => document.removeEventListener("mousedown", handleClickAway);
+   }, [setIsOpen]);
 
    const popoverClasses = classNames({
       'hidden': !isOpen,
@@ -39,6 +48,8 @@ Popover.defaultProps = {
 }
 
 Popover.propTypes = {
+   isOpen: PropTypes.bool,
+   setIsOpen: PropTypes.func,
    position: PropTypes.string,
    className: PropTypes.string,
    children: PropTypes.node.isRequired,

@@ -59,7 +59,7 @@ const TabLabel = ({
    );
 }
 
-export const Tabs = ({
+const Tabs = ({
    index,
    color,
    newTab,
@@ -144,7 +144,7 @@ Tabs.propTypes = {
    onClick: PropTypes.func.isRequired,
 }
 
-export const Tab = ({
+const Tab = ({
    icon,
    tabTitle,
    children,
@@ -161,3 +161,7 @@ Tab.propTypes = {
    icon: PropTypes.string,
    tabTitle: PropTypes.string.isRequired,
 }
+
+Tabs.Tab = Tab;
+
+export { Tabs };
