@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Box } from '../Box';
-import { useHover } from 'hooks/useHover';
+import { useHover } from '../../hooks/useHover';
 
 export const Tooltip = ({
    size,
