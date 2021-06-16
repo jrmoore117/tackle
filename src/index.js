@@ -17,6 +17,7 @@ export * from './components/FieldMessage';
 export * from './components/Icon';
 export * from './components/Modal';
 export * from './components/MultiSelect';
+export * from './components/Popover';
 export * from './components/Radio';
 export * from './components/Select';
 export * from './components/Switch';
@@ -26,4 +27,5 @@ export * from './components/TextField';
 export * from './components/Tooltip';
 
 export * from './hooks/useForm';
+export * from './hooks/useHover';
 export { useRadioState } from 'reakit';
