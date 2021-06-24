@@ -17,7 +17,7 @@
     "start": "rollup -c -w",
     "docs": "start-storybook -p 6006 -s public",
     "build:docs": "build-storybook -s public",
-    "build:tackle": "postcss build src/css/tackle.css -o src/css/tackle.output.css",
+    "watch:css": "postcss -w src/css/tackle.css -o src/css/tackle.output.css",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
