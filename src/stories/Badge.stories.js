@@ -89,19 +89,6 @@ SolidIndigo.args = {
    color: 'indigo',
 };
 
-// export const SolidYellow = Template.bind({});
-// SolidYellow.args = {
-//    label: 'Badge',
-//    variant: 'solid',
-//    color: 'yellow',
-// };
-
-// export const SolidGray = Template.bind({});
-// SolidGray.args = {
-//    variant: 'solid',
-//    label: 'Badge',
-// };
-
 export const RoundedBlue = Template.bind({});
 RoundedBlue.args = {
    label: 'Badge',
@@ -114,5 +101,17 @@ SmallBlue.args = {
    label: 'Badge',
    color: 'blue',
    isSmall: true,
-   isRounded: true,
 };
+
+// export const SolidYellow = Template.bind({});
+// SolidYellow.args = {
+//    label: 'Badge',
+//    variant: 'solid',
+//    color: 'yellow',
+// };
+
+// export const SolidGray = Template.bind({});
+// SolidGray.args = {
+//    variant: 'solid',
+//    label: 'Badge',
+// };

@@ -1,6 +1,34 @@
 .avatar {
    @apply rounded-full flex items-center justify-center bg-gradient-to-tr border-1;
    
+   &--xs {
+      @apply h-6 w-6 font-medium text-xs;
+   }
+
+   &--sm {
+      @apply h-8 w-8 font-semibold text-sm;
+   }
+   
+   &--md {
+      @apply h-10 w-10 font-semibold text-lg;
+   }
+   
+   &--lg {
+      @apply h-12 w-12 font-semibold text-xl;
+   }
+   
+   &--xl {
+      @apply h-14 w-14 font-semibold text-2xl;
+   }
+   
+   &--2xl {
+      @apply h-20 w-20 font-semibold text-2xl;
+   }
+   
+   &--3xl {
+      @apply h-28 w-28 font-semibold text-2xl;
+   }
+
    &--blue {
       @apply from-blue-400 to-blue-300 border-blue-400 shadow-blue;
    }
@@ -30,22 +58,10 @@
    }
    
    &--label {
-      @apply text-white font-semibold text-lg;
+      @apply text-white;
    }
    
    img {
       @apply h-full w-full rounded-full shadow-gray;
-   }
-
-   &--sm {
-      @apply h-8 w-8;
-   }
-   
-   &--md {
-      @apply h-10 w-10;
-   }
-   
-   &--lg {
-      @apply h-12 w-12;
    }
 }

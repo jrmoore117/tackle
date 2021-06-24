@@ -14,40 +14,58 @@ Blue.args = {
    color: 'blue',
 };
 
-export const Red = Template.bind({});
-Red.args = {
+export const XSRed = Template.bind({});
+XSRed.args = {
    label: 'TK',
    color: 'red',
+   size: 'xs',
 };
 
-export const Yellow = Template.bind({});
-Yellow.args = {
-   label: 'TK',
-   color: 'yellow',
-};
-
-export const Green = Template.bind({});
-Green.args = {
+export const SmallGreen = Template.bind({});
+SmallGreen.args = {
    label: 'TK',
    color: 'green',
+   size: 'sm',
 };
 
-export const Purple = Template.bind({});
-Purple.args = {
+export const LargePurple = Template.bind({});
+LargePurple.args = {
    label: 'TK',
    color: 'purple',
+   size: 'lg',
 };
 
-export const Indigo = Template.bind({});
-Indigo.args = {
+export const XLIndigo = Template.bind({});
+XLIndigo.args = {
    label: 'TK',
    color: 'indigo',
+   size: 'xl',
 };
 
-export const Image = Template.bind({});
-Image.args = {
+export const XLImage = Template.bind({});
+XLImage.args = {
    src: 'https://i.pravatar.cc/200',
+   size: 'xl',
 };
+
+export const XXLImage = Template.bind({});
+XXLImage.args = {
+   src: 'https://i.pravatar.cc/200',
+   size: '2xl',
+};
+
+export const XXXLImage = Template.bind({});
+XXXLImage.args = {
+   src: 'https://i.pravatar.cc/200',
+   size: '3xl',
+};
+
+// export const LargeYellow = Template.bind({});
+// LargeYellow.args = {
+//    label: 'TK',
+//    color: 'yellow',
+//    size: 'lg',
+// };
 
 // export const Gray = Template.bind({});
 // Gray.args = {

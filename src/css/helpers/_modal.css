@@ -1,16 +1,32 @@
 .modal {
    @apply p-4 shadow-dark-gray;
 
+   &--xs {
+      @apply w-3xs;
+   }
+
    &--sm {
-      @apply w-96;
+      @apply w-2xs;
    }
    
    &--md {
-      @apply w-120;
+      @apply w-xs;
    }
    
    &--lg {
-      @apply w-160;
+      @apply w-md;
+   }
+   
+   &--xl {
+      @apply w-lg;
+   }
+   
+   &--2xl {
+      @apply w-xl;
+   }
+   
+   &--3xl {
+      @apply w-2xl;
    }
    
    &--background {
@@ -22,7 +38,7 @@
    }
    
    &--body {
-      @apply mt-1 text-sm;
+      @apply mt-2 text-sm;
    }
    
    &--footer {
