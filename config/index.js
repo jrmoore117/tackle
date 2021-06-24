@@ -5,6 +5,7 @@ const fontFamily = require('./fontFamily');
 const height = require('./height');
 const width = require('./width');
 const minWidth = require('./minWidth');
+const spacing = require('./spacing');
 const translate = require('./translate');
 const animation = require('./animation');
 const keyframes = require('./keyframes');
@@ -25,6 +26,7 @@ module.exports = {
          height,
          width,
          minWidth,
+         spacing,
          translate,
          animation,
          keyframes,
