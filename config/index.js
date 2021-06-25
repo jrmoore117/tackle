@@ -2,9 +2,6 @@ const borderWidth = require('./borderWidth');
 const boxShadow = require('./boxShadow');
 const colors = require('./colors');
 const fontFamily = require('./fontFamily');
-const height = require('./height');
-const width = require('./width');
-const minWidth = require('./minWidth');
 const spacing = require('./spacing');
 const translate = require('./translate');
 const animation = require('./animation');
@@ -23,9 +20,6 @@ module.exports = {
          boxShadow,
          colors,
          fontFamily,
-         height,
-         width,
-         minWidth,
          spacing,
          translate,
          animation,
