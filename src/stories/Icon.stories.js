@@ -27,8 +27,8 @@ Green.args = {
    color: 'green',
 };
 
-export const LargeShadedBlue = Template.bind({});
-LargeShadedBlue.args = {
+export const ShadedBlue = Template.bind({});
+ShadedBlue.args = {
    as: 'Calendar',
    size: '3xl',
    color: 'blue',
@@ -37,8 +37,8 @@ LargeShadedBlue.args = {
    onClick: () => {},
 };
 
-export const LargeShadedGray = Template.bind({});
-LargeShadedGray.args = {
+export const ShadedGray = Template.bind({});
+ShadedGray.args = {
    as: 'MapPin',
    size: '3xl',
    color: 'gray',
@@ -47,8 +47,8 @@ LargeShadedGray.args = {
    onClick: () => {},
 };
 
-export const LargeShadedPurple = Template.bind({});
-LargeShadedPurple.args = {
+export const ShadedPurple = Template.bind({});
+ShadedPurple.args = {
    as: 'Twitch',
    size: '3xl',
    color: 'purple',

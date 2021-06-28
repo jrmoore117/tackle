@@ -46,7 +46,7 @@ export const TextFieldWithRightElement = () => (
             as="Check"
             isRounded
             size={6}
-            padding={1}
+            className="p-1"
             color="green"
             variant="shaded"
          />
